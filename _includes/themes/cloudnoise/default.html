@@ -1,0 +1,81 @@
+<!doctype html>
+<html charset="utf-8">
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" media="screen" href="{{ ASSET_PATH }}/stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="{{ ASSET_PATH }}/stylesheets/cloudnoise.css">
+  <title>{{ page.title }}</title>
+  <meta name="author" content="{{ site.author.name }}">
+</head>
+<body>
+
+<div class="container">
+
+  <header class="header__master" role="banner">
+    <nav class="navigation__master">
+      <ul>
+        <li><a href="#b"><i class="icon-align-left"></i> blog</a></li>
+        <li><a href="#a"><i class="icon-question-sign"></i> about</a></li>
+        <li><a href="#c"><i class="icon-cloud"></i> contacts</a></li>
+      </ul>
+      <ul class="social__links">
+        <li><a href="#" class="profile twitter__profile"><i class="icon-twitter"></i> twitter</a></li>
+        <li><a href="#" class="profile github__profile"><i class="icon-github"></i> github</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="blog main" role="">
+    <h1 class="section__title">Articles</h1>
+    <article class="blog__post">
+      <time class="article__time">feb. 16, 2013</time>
+      <h2 class="article__title"><a href="#1a">Why waste resources with css resets?</a></h2>
+      <div class="blog__content">
+        <p>Search is front-and-center in the new SoundCloud, key to the consumer experience. We've made the search box one of the first things you see, and beefed it up with suggestions that allow you to jump directly to people, sounds, groups, and sets of interest. We've also added a brand-new Explore section that guides you through the huge and dynamic landscape of sounds on SoundCloud. We've also completely overhauled our search infrastructure, which helps us provide more relevant results, scale with ease, and experiment quickly with new features and models.</p>
+        <p>New paragrah with list:</p>
+        <ul>
+          <li>reset to zero</li>
+          <li>apply new margin overriding</li>
+        </ul>
+        <p>A code block:</p>
+        <pre><code data-language="javascript">$(function() {
+
+  // ...
+  var x = "1"
+
+})</code></pre>
+        <p>Here's a quote:</p>
+        <blockquote>
+          Search is front-and-center in the new SoundCloud, key to the consumer experience. We've made the search box one of the first things you see, and beefed it up with suggestions that allow you to jump directly to people
+        </blockquote>
+      </div>
+    </article>
+     <article class="blog__post">
+      <time class="article__time">feb. 14, 2013</time>
+      <h2 class="article__title"><a href="#2a">List of parameters is the agony of hope</a></h2>
+      <div class="blog__content">
+        <p>Search is front-and-center in the new SoundCloud, key to the consumer experience. We've made the search box one of the first things you see, and beefed it up with suggestions that allow you to jump directly to people, sounds, groups, and sets of interest. We've also added a brand-new Explore section that guides you through the huge and dynamic landscape of sounds on SoundCloud. We've also completely overhauled our search infrastructure, which helps us provide more relevant results, scale with ease, and experiment quickly with new features and models. </p>
+
+      <img src="img/ph.jpg" class="article__img">
+
+      </div>
+    </article>
+  </section>
+
+  <aside class="aside__sidebar">
+    <h1 class="logo"><img src="{{ ASSET_PATH }}/img/logo.png"></h1>
+    <p class="aside__bio">L&#8217;&#233;num&#233;ration des param&#232;tres, c&#8217;est l&#8217;agonie de l&#8217;esp&#233;rance. Rien ne peut jamais marcher si l&#8217;on songe &#224; tout ce qu&#8217;il faut pour que &#231;a marche.<p class="quote__author"><a href="http://www.amazon.it/s?_encoding=UTF8&field-author=Daniel%20Pennac&search-alias=stripbooks">&ndash; D. Pennac</a></p></p>
+  </aside>
+
+  <footer class="footer__master" role="">
+    <a href="#">back to top</a>
+  </footer>
+  
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/rainbow.js"></script>
+  
+</body>
+</html>
