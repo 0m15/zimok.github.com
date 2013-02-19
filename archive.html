@@ -1,11 +1,14 @@
 ---
 layout: page
-title : Blog
-header : Articles
+title: Articles
+header: Articles
 group: navigation
 icon: align-left
 ---
 {% include JB/setup %}
 
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
+{% for post in site.posts %}
+  {% assign page=post %}
+  {% assign content=post.content %}
+  {% include themes/cloudnoise/post-short.html %}
+{% endfor %}
