@@ -40,12 +40,12 @@ We can simply predict, but never be sure to know what the medium will become tom
 So, at the end, we can simply adapt ourselves &ndash; and our processes &ndash; 
 to adhere to the medium and its ecosystem. 
 
-Another factor is our mood. It seems that nobody take in consideration the psychology aspect.
-This assumes that we're like robots, and that we work like a robot in an assembly line.
+Another factor is my mood. It seems that nobody take in consideration the psychologic aspect.
+This assumes that we're like robots, and that we work like a robot in an assembly line, without any superstructure conditioning our work.
+Instead, it's likely that the process I'm following will be heavily influenced by how I feel.
+Therefore, with the wrong mood applied to the wrong process, chances are that the process will fail, if it's unchangeable and adaptable to us human beings. 
 
-But we fail.
-
-Because there are some moments I'm confident with a technology, or a library, or a framework, and I'll rely on it.
-Other times, I like to put myself into learning new things and adopt it in the process.
+I feel that there are some moments I'm confident with a technology, or a library, or a framework, and I'll rely on it.Other times, I like to put myself into learning new things and adopt it in the process, updating it.
+This way I can experiment with several process, I can try to understand why and how that process failed and how I can refine it. I can then arbitrarily choose to radically change it, getting the most out of it and start again.
 
 This is how I think we should evolve.
