@@ -732,6 +732,10 @@ h1, h2 {
 
 /* tablets and smartphones (1) */
 @media screen and (max-width: 768px) {
+  body {
+    padding: 0 4%;
+  }
+
   .logo {
     margin-top: 60px;
   }
@@ -850,7 +854,7 @@ h1, h2 {
   }
 
   .aside__bio, .quote__author {
-    padding: 0 4%;
+    padding: 0 20px;
   }
 
   .navigation__master {
@@ -876,14 +880,26 @@ h1, h2 {
   }
 
   .main p, .main ul li, .main ol li, .main blockquote {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .section__title {
     font-size: 28px;
   }
 
+  .article__time {
+    font-size: 11px;
+  }
+  
   .article__title, .page__title {
     font-size: 24px;
+  }
+
+  .short .article__title {
+    font-size: 20px;
+  }
+
+  .blog__content blockquote {
+    padding-left: 20px;
   }
 }

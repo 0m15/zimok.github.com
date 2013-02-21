@@ -3,26 +3,22 @@ layout: post
 title: The agony of hope
 ---
 
-{% include JB/setup %}
+I hope you noticed the cite from [Daniel Pennac](http://en.wikipedia.org/wiki/Daniel_Pennac)
+on this blog's sidebar (or from the header, if you're on a smartphone). If you don't know a little bit of french, it says:
 
-I hope you noticed the quote from [Daniel Pennac](http://en.wikipedia.org/wiki/Daniel_Pennac) 
-on this blog's sidebar.
-If you don't know a little bit of french, in a nutshell, it states:
+> <cite>Parameter's list is the agony of hope. Nothing will ever work fine
+> if you think about every thing it needs to work fine</cite>
 
-> <cite>Parameters list is the agony of hope. Nothing will ever work fine
-> if you think about every thing it needs so it'll work fine</cite>
+This quote is becoming like a mantra, for me.
+Because it's, and it has been, unquestionably true.
 
-This statement is becoming like a mantra, for me.
+Our minds are full of workflows and processes to follow.
+Full of parameters list to attach on the wall. To repeat them mumbling, with the same obsession a practicing catholic says the rosary.
+It seems we won't start anything without assuming that we have to  religiously take the pattern *XYZ* in order to get everything done in the right way.
 
-Because, today, our mind is full of workflow and processes to follow.
-Full of parameters list to attach on the wall.
-It seems we won't start anything without assuming that we have to 
-religiously take the pattern *XYZ* in order to get everything done in the right way.
+There are a lot of people telling you to abandon Photoshop, that you don't need wireframes, that you have to first sketch it on paper, that you have to do style tiles, that you have to do it in vectorial, no wait, in Fireworks, no, wait again, design everything in the browser with LiveReload. Embrace that Agile pattern, approach it with Mobile first.
 
-There are a lot of people telling you to don't use Photoshop, that
-you don't need wireframes, that you have to do style tiles, that you have to do it in vectorial, 
-no wait, in Fireworks, no, wait again, design everything in the Browser with LiveReload. 
-You have to use _this Library_, _that Process_, _this Workflow_, otherwise bad things will happen.
+Use _this Library_, _that Process_, _this Workflow_, otherwise bad things will happen.
 
 For me, there's no definitive process.
 
@@ -32,20 +28,24 @@ My process changes given two variables:
 2. my current mood
 
 The same workflow will never work the same way for every different product we are building.
-And nobody can tell if a workflow that once used to work well will continue to work in the future.
 
-This is due to the nature of the medium we build for.
-User needs raises and changes as technology does. Design processes too.
-We can simply predict, but never be sure to know what the medium will become tomorrow. 
-So, at the end, we can simply adapt ourselves &ndash; and our processes &ndash; 
-to adhere to the medium and its ecosystem. 
+This is due to the nature of the __medium__ we build for.
+User needs raises and changes as the medium does. Design processes too.
+We can simply predict, but never be sure to know what all this thing called *web* will become tomorrow.
 
-Another factor is my mood. It seems that nobody take in consideration the psychologic aspect.
+Therefore, we can simply adapt ourselves &ndash; and our processes &ndash; 
+to adhere to the medium and its ecosystem, composed by different users, devices and __contexts__.
+
+Another factor is our mood. It seems that nobody take in consideration the psychologic side.
 This assumes that we're like robots, and that we work like a robot in an assembly line, without any superstructure conditioning our work.
 Instead, it's likely that the process I'm following will be heavily influenced by how I feel.
-Therefore, with the wrong mood applied to the wrong process, chances are that the process will fail, if it's unchangeable and adaptable to us human beings. 
 
-I feel that there are some moments I'm confident with a technology, or a library, or a framework, and I'll rely on it.Other times, I like to put myself into learning new things and adopt it in the process, updating it.
-This way I can experiment with several process, I can try to understand why and how that process failed and how I can refine it. I can then arbitrarily choose to radically change it, getting the most out of it and start again.
+The perfect workflow should be conformable to us human beings, so it should be imperfect by nature, as we are. 
 
-This is how I think we should evolve.
+Conclusion: the perfect workflow still does not exist, and never it will.
+
+I simply feel there are some moments I'm confident with a process, and I rely on it. Other times, I like to make the process driven by my __sentiments__.
+
+And never let an aseptic list of parameters kill my hope.
+
+Note: this applies for everything.
