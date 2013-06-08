@@ -1,12 +1,74 @@
 ---
 layout: default
-title: ☁
+title: @zimok
 class: home
 ---
 {% include JB/setup %}
-
-{% for post in site.posts %}
-  {% assign page=post %}
-  {% assign content=post.content %}
-  {% include themes/cloudnoise/post.html %}
-{% endfor %}
+<div class="container">
+  <div role="main" class="main row"> 
+    <section class="section-view" id="latest-posts">
+      <h1 class="section-title">latest posts</h1>
+      <ul class="list-view">
+        {% for post in site.posts %}
+        {% if post.categories[0] != 'hacks' %}
+        <li>
+          <a class="article-link cf" href="{{ post.url }}">
+            <div class="article-meta threecol">
+              <time datetime="{{ post.date|date_to_rfc822 }}">
+                {{ post.date|date_to_string }}
+              </time>
+            </div>
+            <div class="article-headline ninecol">
+              <h2>{{ post.title }}</h2>
+            </div>
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="section-view" id="latest-hacks">
+      <h1 class="section-title">hacks</h1>
+      <ul class="list-view">
+        {% for post in site.posts %}
+        {% if post.categories[0] == 'hacks' %}
+        <li>
+          <a class="article-link cf" href="{{ post.url }}">
+            <div class="article-meta threecol">
+              <time datetime="{{ post.date|date_to_rfc822 }}">
+                {{ post.date|date_to_string }}
+              </time>
+            </div>
+            <div class="article-headline ninecol">
+              <h2>{{ post.title }}</h2>
+            </div>
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+    <aside class="section-view meta-view" role="complementary" id="about">
+      <dl class="meta-descriptor cf">
+        <dt class="semi-bold threecol">me</dt>
+        <dd class="ninecol">front end developer, currently at stereomood.com</dd>
+      </dl>
+      <dl class="meta-descriptor cf">
+        <dt class="semi-bold threecol">contacts</dt>
+        <dd class="ninecol">write me at simonecarella at gmail dot com</dd>
+      </dl>
+      <dl class="meta-descriptor cf">
+        <dt class="semi-bold threecol">github</dt>
+        <dd class="ninecol">you can find me @zimok</dd>
+      </dl>
+    </aside>
+    <footer class="">
+      <p>
+        Typography is based on <br>
+        <strong>FacitWeb</strong> 
+        by <strong><a href="#">Just Another Foundry</a></strong><br><br>
+        <small>&copy; 2013 &ndash; simone carella</small>
+      </p>
+    </footer>
+  </div>
+</div>

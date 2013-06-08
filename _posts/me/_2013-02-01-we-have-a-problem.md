@@ -1,6 +1,7 @@
 ---
 layout: post
 title: We have a problem
+categories: [me, politics, acab]
 ---
 
 {% include JB/setup %}
