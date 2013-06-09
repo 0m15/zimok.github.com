@@ -8,8 +8,8 @@ class: post
 
 During my attend at [Music Tech Fest](http://musictechfest.org), I took part at the Music Hack Day too.
 
-The hack topic was to "make noise". 
-More precisely, judges asked participants to show the "best noise in da house".
+The hack theme was to "make noise". 
+More precisely, judges asked participants to show off "The Best Noise in da House".
 So, with [Davide](http://twitter.com/tanototo) we decided to pick up 
 labels that were present at the MTF on Soundcloud (one of the available providers).
 Davide exctracted comments from the hottest tracks and then I turned data into
