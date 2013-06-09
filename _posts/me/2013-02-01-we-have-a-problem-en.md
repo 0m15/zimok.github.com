@@ -14,7 +14,6 @@ We use to torture inside police stations, inside jails, inside judicial hospital
 they torture you in court's security rooms too. I'm not exaggerating. Torture happens
 in this country and this fact is [well documented].
 
-It's the first time I write about those argoments in my not so perfect English.
 There aren't so much journalists writing about it, and informations are hard to spot, they usually take little space on newspapers and are badly treated from Italian main stream media whom, due to fear or servility &ndash; or both, always avoid to take position and tell the very truth.
 
 We are the "Diaz" country.
