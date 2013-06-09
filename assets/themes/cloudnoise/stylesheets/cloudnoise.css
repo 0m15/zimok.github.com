@@ -382,6 +382,39 @@ sub {
   vertical-align: top; /* 2 */
 }
 
+/*
+
+Facit Web by Just Another Foundry
+See http://justanotherfoundry.com for details.
+
+The font files linked from this file may not be downloaded,
+hosted or installed on a computer.
+
+You may host this file provided that you do not remove or
+modify this comment. You can remove unused styles but you
+should not alter the @font-face definitions.
+
+(c) Just Another Foundry 2010 for this and all linked files.
+
+*/
+
+/* FacitWeb                    */ @font-face{font-family:'FacitWeb';src:url('http://webfonts.justanotherfoundry.com/Facit/FR')}
+/* FacitWeb, italic            */ @font-face{font-family:'FacitWeb';src:url('http://webfonts.justanotherfoundry.com/Facit/FR-i');font-style:italic}
+/* FacitWeb, bold              */ @font-face{font-family:'FacitWeb';src:url('http://webfonts.justanotherfoundry.com/Facit/FB');font-weight:bold}
+/* FacitWeb, bold, italic      */ @font-face{font-family:'FacitWeb';src:url('http://webfonts.justanotherfoundry.com/Facit/FB-i');font-weight:bold;font-style:italic}
+
+/* FacitWeb-Extralight         */ @font-face{font-family:'FacitWeb-Extralight';src:url('http://webfonts.justanotherfoundry.com/Facit/FXL');font-weight:bold}
+/* FacitWeb-Extralight, italic */ @font-face{font-family:'FacitWeb-Extralight';src:url('http://webfonts.justanotherfoundry.com/Facit/FXL-i');font-weight:bold;font-style:italic}
+/* FacitWeb-Light              */ @font-face{font-family:'FacitWeb-Light';src:url('http://webfonts.justanotherfoundry.com/Facit/FL');font-weight:bold}
+/* FacitWeb-Light, italic      */ @font-face{font-family:'FacitWeb-Light';src:url('http://webfonts.justanotherfoundry.com/Facit/FL-i');font-weight:bold;font-style:italic}
+/* FacitWeb-Bold               */ @font-face{font-family:'FacitWeb-Bold';src:url('http://webfonts.justanotherfoundry.com/Facit/FB');font-weight:bold}
+/* FacitWeb-Bold, italic       */ @font-face{font-family:'FacitWeb-Bold';src:url('http://webfonts.justanotherfoundry.com/Facit/FB-i');font-weight:bold;font-style:italic}
+/* FacitWeb-Semibold           */ @font-face{font-family:'FacitWeb-Semibold';src:url('http://webfonts.justanotherfoundry.com/Facit/FSB');font-weight:bold}
+/* FacitWeb-Semibold, italic   */ @font-face{font-family:'FacitWeb-Semibold';src:url('http://webfonts.justanotherfoundry.com/Facit/FSB-i');font-weight:bold;font-style:italic}
+/* FacitWeb-Extrabold          */ @font-face{font-family:'FacitWeb-Extrabold';src:url('http://webfonts.justanotherfoundry.com/Facit/FXB');font-weight:bold}
+/* FacitWeb-Extrabold, italic  */ @font-face{font-family:'FacitWeb-Extrabold';src:url('http://webfonts.justanotherfoundry.com/Facit/FXB-i');font-weight:bold;font-style:italic}
+html{text-rendering:optimizeLegibility}
+
 /* ==========================================================================
    Tables
    ========================================================================== */
