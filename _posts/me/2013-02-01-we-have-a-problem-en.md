@@ -65,9 +65,9 @@ After another day of protests and violences, the following night, the one betwee
 About 100 men broke into the School while almost all people were sleeping.
 What followed was a total massacre, cruel and premeditated.
 
-93 people were arrested and all of them were injuried, a lot of them in very serious conditions.
+93 people were arrested and all of them were injuried, some in very serious conditions.
 Two of them went in a coma.
-One was a British journalist who didn't found any other place in the city to have a rest, but even if he had been a dangerous "black block" (like Italian press use to call some protestor), the question would have irrimediably been the same.
+One was a British journalist who didn't spot any other place in the city to have a rest, but even if he had been a dangerous "black block" (like Italian press use to call some protestor), the question would have irrimediably been the same.
 
 Although it happened just by chance, there were no deads, luckly.
 Police said that they found 2 molotov bombs inside the school, but, as successively demonstrated, they were brought there from the same policeman as a fake evidence to justify the irruption.
@@ -75,7 +75,7 @@ Police said that they found 2 molotov bombs inside the school, but, as successiv
 Of all the Diaz massacre responsibles, nobody have ever spent a single day in prison.
 On the contrary, 10 demonstrators, accused of "devastation and looting" (so, only for damages at things and not at people) have seen far heavy pains inflicted and confirmed in the *Cassazione* (Italy's last degree of judicement), pains varying from 6 years to 14 (fourteen) [years of reclusion].
 
-Everything passed last summer under total indifference from the press, the government and the so-called civil society.
+Everything passed under total indifference from the press, the government and the so-called civil society.
 
 After 10 years, nothing is changed.
 There are a lot of other stories about police crimes, most of them unpunished.
