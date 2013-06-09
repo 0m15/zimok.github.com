@@ -32,8 +32,7 @@ G8 summit was taking place in Genova, the first Italian city to free up itself f
 Genova is a town with continuous references with our country most recent History, due to its numerous Working Class and Port struggles ("Portuali genovesi" have a certain fame).
 Fascists expulsion on June 30, 1960 - when the city was literally in the hand of antifascist protestors for 3 days in order to prevent a provocatory convention of the MSI (Italian Social Movement), a party mainly composed by some of the worst remembered former figures of Italian fascist experience - give a clear idea of what Genova is and what kind of people *Genovesi* are.
 
-In order to guarantee the *security*, Genova was militarized and blinded months before.
-It has been seen as an heavy provocation. 
+In order to guarantee the *security* of g8 attendees, the city of Genova was militarized and blinded months before.
 Citizens was denied to access some areas, unless they owned a special pass.
 Lot of policemen and military forces came in the city from all over the Italy.
 
