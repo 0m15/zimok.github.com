@@ -736,6 +736,7 @@ footer {
 
 .list-view .article-link .article-meta {
   color: #8d8e86;
+  display: block;
 }
 
 .list-view li:last-child .article-link {

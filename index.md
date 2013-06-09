@@ -51,7 +51,7 @@ class: home
     <aside class="section-view meta-view" role="complementary" id="about">
       <dl class="meta-descriptor cf">
         <dt class="semi-bold threecol">me</dt>
-        <dd class="ninecol">front end developer, currently at stereomood.com</dd>
+        <dd class="ninecol">front end developer, currently at <a href="http://stereomood.com">stereomood.com</a></dd>
       </dl>
       <dl class="meta-descriptor cf">
         <dt class="semi-bold threecol">contacts</dt>
@@ -59,7 +59,11 @@ class: home
       </dl>
       <dl class="meta-descriptor cf">
         <dt class="semi-bold threecol">github</dt>
-        <dd class="ninecol">you can find me @zimok</dd>
+        <dd class="ninecol"><a href="http://github.com/zimok">github.com/zimok</a></dd>
+      </dl>
+      <dl class="meta-descriptor cf">
+        <dt class="semi-bold threecol">twitter</dt>
+        <dd class="ninecol">follow <a href="http://github.com/zimok">@zimok</a></dd>
       </dl>
     </aside>
     <footer class="">
