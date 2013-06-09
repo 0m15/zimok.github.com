@@ -413,7 +413,8 @@ should not alter the @font-face definitions.
 /* FacitWeb-Semibold, italic   */ @font-face{font-family:'FacitWeb-Semibold';src:url('http://webfonts.justanotherfoundry.com/Facit/FSB-i');font-weight:bold;font-style:italic}
 /* FacitWeb-Extrabold          */ @font-face{font-family:'FacitWeb-Extrabold';src:url('http://webfonts.justanotherfoundry.com/Facit/FXB');font-weight:bold}
 /* FacitWeb-Extrabold, italic  */ @font-face{font-family:'FacitWeb-Extrabold';src:url('http://webfonts.justanotherfoundry.com/Facit/FXB-i');font-weight:bold;font-style:italic}
-html{text-rendering:optimizeLegibility}
+
+html { text-rendering:optimizeLegibility }
 
 /* ==========================================================================
    Tables
@@ -537,6 +538,25 @@ a:visited {
 
 a:hover { 
   color: #c0392b;
+}
+
+/* buttons */
+.btn,
+a.btn {
+  font-family:'FacitWeb';
+  background: #e74c3c;
+  color: rgba(255, 255, 255, .7);
+  line-height: 40px;
+  height: 40px;
+  display: inline-block;
+  padding: 0 20px;
+  border-radius: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.btn:hover,
+a.btn:hover {
+  background: #c0392b;
 }
 
 /* lists */
@@ -745,11 +765,62 @@ footer {
 .article-image {
   height: 450px;
   overflow: hidden;
+  position: relative;
+}
+
+.article-image .article-headline {
+  width: 720px;
+  left: 50%;
+  margin-left: -360px;
+  font-size: 4em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+  color: #13181d;
 }
 
 .article-image img {
   min-width: 1200px;
   width: 100%;
+}
+
+.article-head .article-time {
+  position: relative;
+  line-height: 1em;
+  height: 1em;
+}
+
+.article-head .article-time:before,
+.article-head .article-time:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  height: 1px;
+  background: rgba(255, 255, 255, .1);
+}
+
+.article-head .article-time:before {
+  left: 25%;
+  right: 60%;
+  top: 50%;
+  background: -webkit-gradient(linear, 0 0, 50% 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .15))); 
+}
+
+.article-head .article-time:after {
+  right: 25%;
+  left: 60%;
+  top: 50%;
+  background: -webkit-gradient(linear, 100% 0, 0 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .15))); 
+}
+
+.article-head .article-time,
+.article-head .article-headline {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-bottom: 60px;
+}
+
+.article-head .article-headline {
+  font-size: 3em;
 }
 
 /* typography */
