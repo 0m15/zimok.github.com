@@ -398,22 +398,6 @@ should not alter the @font-face definitions.
 
 */
 
-/* FacitWeb                    */ @font-face{font-family:'FacitWeb';src:url('http://webfonts.justanotherfoundry.com/Facit/FR')}
-/* FacitWeb, italic            */ @font-face{font-family:'FacitWeb';src:url('http://webfonts.justanotherfoundry.com/Facit/FR-i');font-style:italic}
-/* FacitWeb, bold              */ @font-face{font-family:'FacitWeb';src:url('http://webfonts.justanotherfoundry.com/Facit/FB');font-weight:bold}
-/* FacitWeb, bold, italic      */ @font-face{font-family:'FacitWeb';src:url('http://webfonts.justanotherfoundry.com/Facit/FB-i');font-weight:bold;font-style:italic}
-
-/* FacitWeb-Extralight         */ @font-face{font-family:'FacitWeb-Extralight';src:url('http://webfonts.justanotherfoundry.com/Facit/FXL');font-weight:bold}
-/* FacitWeb-Extralight, italic */ @font-face{font-family:'FacitWeb-Extralight';src:url('http://webfonts.justanotherfoundry.com/Facit/FXL-i');font-weight:bold;font-style:italic}
-/* FacitWeb-Light              */ @font-face{font-family:'FacitWeb-Light';src:url('http://webfonts.justanotherfoundry.com/Facit/FL');font-weight:bold}
-/* FacitWeb-Light, italic      */ @font-face{font-family:'FacitWeb-Light';src:url('http://webfonts.justanotherfoundry.com/Facit/FL-i');font-weight:bold;font-style:italic}
-/* FacitWeb-Bold               */ @font-face{font-family:'FacitWeb-Bold';src:url('http://webfonts.justanotherfoundry.com/Facit/FB');font-weight:bold}
-/* FacitWeb-Bold, italic       */ @font-face{font-family:'FacitWeb-Bold';src:url('http://webfonts.justanotherfoundry.com/Facit/FB-i');font-weight:bold;font-style:italic}
-/* FacitWeb-Semibold           */ @font-face{font-family:'FacitWeb-Semibold';src:url('http://webfonts.justanotherfoundry.com/Facit/FSB');font-weight:bold}
-/* FacitWeb-Semibold, italic   */ @font-face{font-family:'FacitWeb-Semibold';src:url('http://webfonts.justanotherfoundry.com/Facit/FSB-i');font-weight:bold;font-style:italic}
-/* FacitWeb-Extrabold          */ @font-face{font-family:'FacitWeb-Extrabold';src:url('http://webfonts.justanotherfoundry.com/Facit/FXB');font-weight:bold}
-/* FacitWeb-Extrabold, italic  */ @font-face{font-family:'FacitWeb-Extrabold';src:url('http://webfonts.justanotherfoundry.com/Facit/FXB-i');font-weight:bold;font-style:italic}
-
 html { text-rendering:optimizeLegibility }
 
 /* ==========================================================================
@@ -543,7 +527,7 @@ a:hover {
 /* buttons */
 .btn,
 a.btn {
-  font-family:'FacitWeb';
+  font-family:'Open Sans', 'FacitWeb';
   background: #e74c3c;
   color: rgba(255, 255, 255, .7);
   line-height: 40px;
@@ -553,10 +537,12 @@ a.btn {
   border-radius: 2px;
   font-size: 13px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 .btn:hover,
 a.btn:hover {
   background: #c0392b;
+  color: rgba(255, 255, 255, .5);
 }
 
 /* lists */
@@ -604,8 +590,8 @@ dt {
    Typography
    ========================================================================== */
 body {
-  font-family: 'FacitWeb-ExtraLight', 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
+  font-family:'Open Sans', 'FacitWeb-ExtraLight', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6 { 
@@ -622,14 +608,16 @@ pre, code {
 .x-light,
 .section-title,
 .ui-subhead {
-  font-family: 'FacitWeb-ExtraLight', 'Helvetica Neue UltraLight', Arial, sans-serif;
+  font-family:'Open Sans', 'FacitWeb-ExtraLight', 'Helvetica Neue UltraLight', Arial, sans-serif;
+  font-weight: 300;
 }
 
 .go-back,
 .logo,
 .semi-bold,
 .article-headline {
-  font-family: 'FacitWeb-SemiBold', 'Helvetica Neue Bold', Arial, sans-serif;
+  font-family:'Open Sans', 'FacitWeb-SemiBold', 'Helvetica Neue Bold', Arial, sans-serif;
+  font-weight: 900;
 }
 
 
@@ -827,6 +815,7 @@ footer {
 /* typography */
 .article-content p {
   font-size: 1.1em;
+  font-weight: 300;
 }
 
 .article-headline h1,
