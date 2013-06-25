@@ -502,12 +502,6 @@ img {
    Commons
    ========================================================================== */
 
-body {
-  margin: 0 auto;
-  background: #13181d;
-}
-
-body, 
 select, 
 input, 
 textarea { 
@@ -590,6 +584,9 @@ dt {
    Typography
    ========================================================================== */
 body {
+  margin:0;
+  background: #13181d;
+  color: #8d8e86;
   font-family:'Open Sans', 'FacitWeb-ExtraLight', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.7;
 }
@@ -597,11 +594,6 @@ body {
 h1, h2, h3, h4, h5, h6 { 
   font-weight: bold;
   line-height: 1;
-}
-
-pre, code {
-  font-family:'Andale Mono';
-  font-size:13px;
 }
 
 /* custom text appearences */
@@ -813,7 +805,9 @@ footer {
 }
 
 /* typography */
-.article-content p {
+.article-content p,
+.article-content ul,
+.article-content ol {
   font-size: 1.1em;
   font-weight: 300;
 }
@@ -834,6 +828,32 @@ footer {
 
 .post cite {
   margin: 0;
+}
+
+.post pre,
+.post code {
+  font-family: 'PT Mono';
+  font-size: .9em;
+  font-weight: normal;
+  background: rgba(141, 142, 143, .05);
+}
+
+.post p code {
+  padding: 3px 6px;
+  background: rgba(141, 142, 143, .05);
+  margin: 0 3px;
+}
+
+.post pre {
+  padding: 12px;
+}
+
+.post pre code {
+  background: transparent; 
+}
+
+.post-actions {
+  margin-top: 2em;
 }
 
 /* ==========================================================================

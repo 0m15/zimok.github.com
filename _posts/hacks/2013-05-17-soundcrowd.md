@@ -22,4 +22,6 @@ that makes browser based speech synthesis very easy to implement.
 
 You can see it in action (you're going to hear a lot of voices, so turn down the volume):
 
-<a class="btn" href="http://bit.ly/17xPMwv">launch the hack</a>
+<div class="post-actions">
+  <a class="btn" href="http://bit.ly/17xPMwv">launch the hack</a>
+</div>

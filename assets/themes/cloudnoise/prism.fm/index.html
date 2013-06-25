@@ -1,0 +1,403 @@
+<html ng-app>
+<head>
+  <title></title>
+
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: #34495e;
+      color: #ecf0f1;
+      font-family: 'Gotham';
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #ecf0f1;
+      text-decoration: none;
+    }
+
+    a:hover, active {
+      color: #95a5a6;
+    }
+
+    .hero {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .hero h1,
+    .hero h2 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      border-top: 12px solid #ecf0f1;
+      border-bottom: 12px solid #ecf0f1;
+      padding: 12px 0;
+    }
+    
+    .logo {
+      text-align: center;
+      border-radius: 320px;
+      width: 320px;
+      height: 320px;
+      overflow: hidden;
+      border: 24px solid #ecf0f1; 
+      box-shadow: inset 0 0 64px rgba(0, 0, 0, .45);
+      margin: 0 auto;
+      margin-top: 40px;
+      z-index: 9999;
+      background: url(logo.jpg) center center no-repeat;
+    }
+
+    .logo img {
+      position: absolute;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .form {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .form input[type="text"] {  
+      font-size: 24px;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 12px;
+      width: 720px;
+      box-sizing: border-box;
+      border: 1px solid #2c3e50;
+      background: #2c3e50;
+      font-family: 'Gotham';
+      color: rgba(255, 255, 255, .25);
+      text-align: left;
+    }
+
+    ::-webkit-input-placeholder { 
+      color: rgba(255, 255, 255, .15);
+    }
+
+    /* artist */
+    .artist-list {
+      padding: 0;
+      list-style: none;
+      display: table;
+    }
+    .artist-list li  {
+      padding: 10px;
+      display: block;
+      border-bottom: 1px solid #efefef;
+      display: table-row;
+      height: 90px;
+    }
+    .artist-list li:first-child,
+    .artist-list li:nth-child(2n+3) {
+      background: rgba(255, 255, 255, .1);
+    }
+    .artist-list li.playing {
+      background: #e74c3c;
+    }
+    .artist-avatar,
+    .artist-username,
+    .artist-meta {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .artist-username {
+      width: 520px;
+      padding: 10px 0;
+      padding-left: 20px;
+    }
+    .artist-name {
+      font-size: 1.5em;
+    }
+    .artist-terms {
+      color: rgba(0, 0, 0, .45);
+    }
+    .artist-avatar {
+      width: 50px;
+      margin-right: 20px;
+      padding-left: 20px;
+    }
+    .artist-avatar img {
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+      border: 8px solid rgba(0, 0, 0, .25);
+    }
+    .artist-meta {
+      width: 120px;
+      padding-right: 20px;
+    }
+
+    .btn {
+      background: #e74c3c;
+      color: #ecf0f1;
+      padding: 12px 24px;
+      border-radius: 2px;
+      display: block;
+      
+      text-decoration: none;
+      width: 120px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    /* logo animation */
+    /* loader */
+    .logo {
+      -webkit-animation: spin 2.25s linear 0s infinite;
+      -webkit-transform: translate3d(0,0,0);
+    }
+
+    @-webkit-keyframes spin {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body ng-controller="AppController">
+
+  <div class="hero">
+
+    <div>
+      <h1 style="margin-top:10px">
+        prism.<span style="color:#e74c3c">fm</span>
+      </h1>
+      <div class="logo"></div>
+
+      <h1>
+        <span style="font-size:160px;line-height:100px">they're</span><br> 
+        <span style="font-size:130px;line-height:100px;color:#e74c3c">listening</span><br>
+        <span style="font-size:84px;line-height:68px">to your music</span><br>
+      </h1>
+      <br>
+      <h2>
+        give us your privacy
+        in change of goody music
+      </h2>
+
+      <div class="form">
+        <form ng-submit="submit()">
+          <input type="text" name="handle" ng-model="handle" placeholder="enter your soundcloud @username">
+          <p class="form-error" ng-show="invalidUsername">oooops, our scanner didn't match any soundcloud citizen</p>
+          <img src="loader.gif" ng-show="loading" style="margin:15px 0">
+          <p class="form-success" ng-show="recommendations.length">
+            we found {{ uniq.length }} users to conspire with <br>
+            <a class="btn" href="" ng-show="uniq.length" ng-click="showPlaylistView()">show all</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div ng-show="showPlaylist">
+      <p style="font-size:1.25em;line-height:1;">PRISM.fm knows you listened to</p>
+      <span ng-repeat="term in userTerms.slice(0,10)">
+        {{ term }}<span ng-show=" ! $last ">, </span>
+      </span>
+      <ul class="artist-list">
+        <li ng-repeat="artist in uniq" ng-class="{ 'playing': artist.playing == true}">
+          <div class="artist-avatar">
+            <a href="http://soundcloud.com/{{ artist.permalink }}"><img src="{{ artist.avatar_url }}"></a>
+          </div>
+          <div class="artist-username">
+            <a href="http://soundcloud.com/{{ artist.permalink }}">
+              <span class="artist-name">{{ artist.username }}</span>
+              <div class="artist-terms" ng-show="artist.terms.length">
+                <span>Genres:</span>
+                <span ng-repeat="term in artist.terms.slice(0,5)">
+                {{ term.name }}<span ng-show=" ! $last ">, </span>
+              </span>
+              </div>
+            </a>
+          </div>
+          <div class="artist-meta">
+            <a href="" ng-click="play(artist)" ng-show="!artist.playing">play</a>
+            <a href="" ng-click="pause(artist)" ng-show="artist.playing">pause</a>
+          </div>
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="text-align:center">
+    <small style="opacity:.1">powered by</small><br>
+    <img src="sc-logo.png" width="60" style="margin:10px 0">
+  </div>
+</body>
+  <script src="//connect.soundcloud.com/sdk.js"></script>
+  <script src="http://underscorejs.org/underscore-min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script>
+  var app = angular.module('app', [])
+
+  function AppController($scope, $http) {
+    
+    SC.initialize({
+      client_id: "214ddb6899775cbf94841d2204b9cfc6",
+      redirect_uri: "http://localhost:5000",
+    })
+
+    $scope.dataSet = []
+    $scope.recommendations = []
+    $scope.handle = ''
+    $scope.user = {}
+    $scope.followings = []
+    $scope.userTerms = []
+    $scope.loading = false
+    $scope.showPlaylist = false
+
+    $scope.submit = function() {
+      $scope.loading = true
+      $scope.dataSet = []
+      $scope.uniq = []
+      $scope.recommendations = []
+      $scope.userTerms = []
+      $scope.showPlaylist = false
+      SC.get('/users', { q: $scope.handle }, function(users) {
+        if(!users.length) {
+          $scope.invalidUsername = true
+          if(!$scope.$$phase) $scope.$apply()
+          $scope.loading = false
+          return
+        }
+        $scope.invalidUsername = false
+        $scope.user = users[0]
+        $scope.getFollowing()
+        if(!$scope.$$phase) $scope.$apply()
+      })
+    }
+
+    
+    // get followers of first 3 followings
+    // get first 5 followings of each of 3 followers
+
+    $scope.getFollowing = function() {
+      var i = 0
+      $scope.uniq = [], dups = []
+      // get user followings
+      SC.get('/users/' + $scope.user.id + '/followings', function(followings) {
+        if(!followings.length) {
+          $scope.noFollowers = true
+        }
+        $scope.followings = followings
+
+        // get first 5 followings
+        angular.forEach(followings.slice(0,4), function(user) {
+          if(user.full_name.length > 0) $scope.dataSet.push(user)
+          _.uniq($scope.dataSet)
+
+          // get first 5 followers of each user
+          angular.forEach($scope.dataSet, function(user1) {
+            SC.get('/users/' + user1.id + '/followings', function(users) {
+              angular.forEach(users, function(user2) {
+                if(user2.followers_count > 1000 && user2.track_count > 15) {
+                  if($scope.recommendations.indexOf(user2) < 0) $scope.recommendations.push(user2)
+                    
+                    angular.forEach($scope.recommendations, function(r) {
+                      if(dups.indexOf(r.username) < 0) $scope.uniq.push(r)
+                      dups.push(r.username)
+                    })
+                    _.uniq($scope.uniq)
+                    if(i >= $scope.dataSet.length) $scope.loading = false
+                    if(!$scope.$$phase) $scope.$apply()
+                    i += 1
+                }
+
+              })
+            })
+          })
+          
+        })
+        
+      })
+    }
+
+    $scope.showPlaylistView = function() {
+      $scope.showPlaylist = true
+
+      angular.forEach($scope.uniq, function(artist) {
+        // get artist term on echonest
+        artist.full_name = artist.full_name.replace(/[^a-z0-9]/gi,'')
+
+        if(artist.full_name.length) {
+          
+          var echonest_url = 'http://developer.echonest.com/api/v4/artist/terms?api_key=TYW8FXPYZHYYXG1FK&name='+artist.full_name+'&format=jsonp&callback=JSON_CALLBACK'
+          
+          $http.jsonp(echonest_url).success(function(terms) {
+            if(terms.response.terms) {
+              artist.terms = []
+              angular.forEach(terms.response.terms, function(term) {
+                artist.terms.push({ name: term.name, freq: term.frequency})
+                $scope.userTerms.push(term.name)
+                _.unique($scope.userTerms)
+                if(!$scope.$$phase) $scope.$apply()
+              })
+            }
+          })
+        }
+
+      })
+    }
+
+    $scope.play = function(artist) {
+      var idx = 0
+      SC.get('/users/' + artist.id + '/tracks', function(tracks) {
+        $scope.currentPlaylist = tracks
+        if(!$scope.$$phase) $scope.$apply()
+        playTrack(idx, artist)
+      })
+    }
+
+    function playTrack(idx, artist) {
+      if($scope.sound) $scope.sound.stop().destruct()
+      SC.stream('/tracks/'+$scope.currentPlaylist[idx].id, {
+          autoPlay: true,
+          onfinish: function() {
+            idx = (idx + 1 <= tracks.length) ? (idx += 1) : (idx = 0)
+            playTrack(idx)
+          },
+          onstop: function() {
+            artist.playing = false
+            if(!$scope.$$phase) $scope.$apply()
+          },
+          onplay: function() {
+            $scope.sound = this
+            artist.playing = true
+            if(!$scope.$$phase) $scope.$apply()
+          },
+          onpause: function() {
+            artist.playing = false
+            if(!$scope.$$phase) $scope.$apply()
+          },
+          whileplaying: function() {
+            if(!$scope.$$phase) $scope.$apply()
+          },
+        })
+    }
+
+    $scope.pause = function(artist) {
+      // artist.playing = false
+      $scope.sound.pause()
+      if(!$scope.$$phase) $scope.$apply()
+    }
+  }
+  </script>
+
+</html>
