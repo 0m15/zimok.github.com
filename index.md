@@ -6,11 +6,11 @@ class: home
 {% include JB/setup %}
 <div class="container">
   <div role="main" class="main row"> 
-    <section class="section-view" id="latest-posts">
-      <h1 class="section-title">latest posts</h1>
+    <section class="section-view" id="latest-hacks">
+      <h1 class="section-title">hacks</h1>
       <ul class="list-view">
         {% for post in site.posts %}
-        {% if post.categories[0] != 'hacks' %}
+        {% if post.categories[0] == 'hacks' %}
         <li>
           <a class="article-link cf" href="{{ post.url }}">
             <div class="article-meta threecol">
@@ -27,11 +27,11 @@ class: home
         {% endfor %}
       </ul>
     </section>
-    <section class="section-view" id="latest-hacks">
-      <h1 class="section-title">hacks</h1>
+    <section class="section-view" id="latest-posts">
+      <h1 class="section-title">posts</h1>
       <ul class="list-view">
         {% for post in site.posts %}
-        {% if post.categories[0] == 'hacks' %}
+        {% if post.categories[0] != 'hacks' %}
         <li>
           <a class="article-link cf" href="{{ post.url }}">
             <div class="article-meta threecol">
