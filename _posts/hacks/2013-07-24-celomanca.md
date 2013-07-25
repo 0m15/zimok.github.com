@@ -21,7 +21,7 @@ The hack could be extended with some other ideas, like:
 - add a karaoke game 
 - display a list of songs with missing lyrics from musixmatch
 
-In order to see it in action, you'll need the latest version of Google Chrome.
+To see it in action, you'll need the latest version of Google Chrome.
 
 <div class="post-actions">
   <a class="btn" href="http://devel.stereomood.com/hackitaly/#/sing/62651">launch the hack</a>
