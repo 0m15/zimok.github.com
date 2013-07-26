@@ -1,6 +1,6 @@
 ---
 layout: default
-title: @zimok
+title: cloudnoise
 class: home
 ---
 {% include JB/setup %}
@@ -68,9 +68,6 @@ class: home
     </aside>
     <footer class="">
       <p>
-        Typography is based on <br>
-        <strong>FacitWeb</strong> 
-        by <strong><a href="#">Just Another Foundry</a></strong><br><br>
         <small>&copy; 2013 &ndash; simone carella</small>
       </p>
     </footer>
