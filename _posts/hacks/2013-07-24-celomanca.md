@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Celo-manca
+title: Celo manca
 post_image: celo-manca.jpg
 categories: [hacks, webSpeechRecognitionAPI, hackitaly, musixmatch, lyrics]
 class: post
