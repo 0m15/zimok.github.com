@@ -26,5 +26,7 @@ To see it in action, you'll need the latest version of Google Chrome.
 <div class="post-actions">
   <a class="btn" href="http://devel.stereomood.com/hackitaly/#/sing/62651">launch the hack</a>
 </div>
-<br><br>
+
+
+
 <small>Header logo credits: Eleonora Viviani</small>
