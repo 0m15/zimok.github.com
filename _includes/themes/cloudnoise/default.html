@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>cloudnoise</title>
+  
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- <link rel="stylesheet" href="http://webfonts.justanotherfoundry.com/Facit/" type="text/css" /> -->
+  <link rel="stylesheet" href="http://webfonts.justanotherfoundry.com/DomusTitling/" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|PT+Mono' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" media="screen" href="{{ASSET_PATH}}/stylesheets/cloudnoise.css">
+
+</head>
+
+<body class="{{ page.class }}">
+
+  <header class="master-head clearfix">
+    <div class="head twelvecol">
+      <div class="threecol">
+        <a href="/" class="logo">
+          cloud<span>noise</span>
+        </a>
+        <a href="/" class="go-back">
+          <span class="arrow">&lsaquo;</span> back to home<span>page</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  {{ content }}
+  
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41590826-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>
