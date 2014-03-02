@@ -71,7 +71,7 @@
   var popularTracks = []
 
   //SC.get('/tracks', { q: 'skrillex'}, function(tracks) {
-  $.getJSON('/mtf/sc.json', function(tracks) {
+  $.getJSON('sc.json', function(tracks) {
 
     var nodes = [],
       links = [],
