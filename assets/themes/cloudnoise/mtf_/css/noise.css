@@ -1,0 +1,194 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  background: #444;
+  font-family: 'Lato';
+  font-size: 11px;
+  color: rgba(0, 0, 0, .45);
+}
+#canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 40, 40, .25);
+  background: #212933;
+    -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  display: table;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: none !important;
+  /*-webkit-transform: translate3d(0, 0, 0);*/
+  /*-webkit-transition: border-radius .1s ease-in-out, width .1s ease-in-out, height .1s ease-in-out ;*/
+}
+.player {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  top: -20px;
+  left: -20px;
+  z-index: 9999;
+  display: none;
+  cursor: pointer;
+}
+.player.playing {
+  display: block;
+}
+.controls {
+  display: block;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  width: 120px;
+  height: 120px;
+  font-weight: 300;
+}
+.track-label {
+  font-size: 14px; 
+  display: block;
+  margin-top: 5px;
+}
+.controls i {
+  display: block;
+  font-size: 30px;
+  margin-top: 15px;
+}
+.circle {
+  display: table-cell;
+  vertical-align: middle;
+  background: transparent;
+  background-size: cover !important;
+}
+.parent-node {
+  z-index: 1000;
+}
+.mood-name {
+  text-transform: capitalize;
+  margin: 0 auto;
+}
+.node .mood-name {
+  color: rgba(255, 255, 255, .45);
+  text-shadow: none;
+  font-weight: 300;
+  display: none;
+}
+.node:hover .mood-name {
+  display: block;
+}
+.parent-node .mood-name {
+  color: rgba(0, 0, 0, .45);
+  display: block;
+}
+.parent-node.active .mood-name {
+  font-size: 28px;
+  display: block;
+}
+.node.active {
+  cursor: move;
+  color: rgba(255, 255, 255, .75);
+  z-index: 9999;
+  -webkit-transform: scale(1.5);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, .45);
+}
+.node.active .player {
+  display: block;
+}
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  letter-spacing: 11px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 100;
+  color: rgba(255, 255, 255, .25);
+}
+.logo span {
+  font-weight: 400;
+  color: #ff3300;
+}
+.logo small {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+.mood-label {
+  font-size: 24px;
+  font-weight: 300;
+}
+.mood-plays {
+  font-size: 16px;
+  font-weight: 900;
+}
+.background {
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#comment {
+  border:1px solid rgba(255, 51, 0, .25);
+  background: rgba(255, 255, 255, .05);
+  padding: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 400px;
+  z-index: 9999;
+  font-size: 16px;
+  font-weight: 100;
+  color: #ff3300;
+}
+
+#comment a {
+  color: #ff3300;
+}
+
+#comment-text {
+  margin: 0;
+  color: rgba(255, 255, 255, .45);
+}
+
+#comment-username {
+  color: #ff3300;
+}
+
+#comment-user-avatar {
+  position: absolute;
+  right: 20px;
+  border-radius: 60px;
+  width: 40px;
+  height: 40px;
+  border: 6px solid rgba(255, 51, 0, .15);
+}
+
+#comment-track-title {
+  margin: 0;
+  line-height: 1;
+  font-weight: 100;
+  padding-right: 80px;
+}
