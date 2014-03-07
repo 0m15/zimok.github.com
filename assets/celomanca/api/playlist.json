@@ -1,0 +1,65 @@
+{
+    "title": "happy",
+    "creator": "Stereomood",
+    "tracksTotal": "1310",
+    "trackList": [
+        {
+            "location": "/azzurro.mp3",
+            "title": "Azzurro",
+            "creator": "Adriano Celentano",
+            "album": "Too Busy Dreamin'",
+            "image": "http://userserve-ak.last.fm/serve/126s/78026628.jpg",
+            "trackNum": "1",
+            "identifier": "62651",
+            "code": "dzM1SGNWeTlLNkI5WTVMdHdmN3QzYWdxRUlmRXpBK1Q2cmFOUWk5dUZFQT0%3D"
+        },
+        {
+            "location": "http://www.stereomood.com/listen/62658/Whatcha%2BGot.mp3",
+            "title": "Whatcha Got",
+            "creator": "Chris Hurn",
+            "album": "Too Busy Dreamin'",
+            "image": "http://userserve-ak.last.fm/serve/126s/78026628.jpg",
+            "trackNum": "1",
+            "identifier": "62658",
+            "code": "dzM1SGNWeTlLNkI5WTVMdHdmN3QzYWdxRUlmRXpBK1Q2cmFOUWk5dUZFQT0%3D"
+        },
+        {
+            "location": "http://www.stereomood.com/listen/62685/Swing%2BFlirt%2B%2521.mp3",
+            "title": "Swing Flirt !",
+            "creator": "Monetrik",
+            "image": "http://www.stereomood.com/gui/img/default_album_player.png",
+            "trackNum": "2",
+            "identifier": "62685",
+            "code": "anhxZXQ1L0tSTFFaYm5XNVhCT2EvT25qZkxqd2dQLzB2SWZZcHhCczRkWT0%3D"
+        },
+        {
+            "location": "http://www.stereomood.com/listen/65486/Turn%2BMe%2BOn.mp3",
+            "title": "Turn Me On",
+            "creator": "Lelia Broussard",
+            "image": "http://www.stereomood.com/gui/img/default_album_player.png",
+            "trackNum": "3",
+            "identifier": "65486",
+            "code": "dTdOSURNVFNsN2hwTHBRZjJaVFhnZkl0bi9NRnFLVDlRYnR0TDdleHVXND0%3D"
+        },
+        {
+            "location": "http://www.stereomood.com/listen/59021/April%2Bshowers.mp3",
+            "title": "April showers",
+            "creator": "ProleteR",
+            "album": "Curses From Past Times",
+            "image": "http://userserve-ak.last.fm/serve/126s/74408912.jpg",
+            "trackNum": "4",
+            "identifier": "59021",
+            "code": "NXZQSE03cmNoUjMwQTVnRXlXOUlCV24wb0ZOdkJ2eWx0QUtFQmZZZnJaTT0%3D",
+            "owner": "e9cb0790a8dca7451127fea54d57d00b"
+        },
+        {
+            "location": "http://www.stereomood.com/listen/70410/Gimme%2BSome%2BLovin%2B%2528scratchandsniff%2Bre-rub%2529.mp3",
+            "title": "Gimme Some Lovin (scratchandsniff re-rub)",
+            "creator": "The Spencer Davis Group",
+            "image": "http://www.stereomood.com/gui/img/default_album_player.png",
+            "trackNum": "5",
+            "identifier": "70410",
+            "code": "SXFBbURxODd0YVJidHlOVm1oQXFGcE90dHVJeldJd1hUa2c2THU4ODh0bz0%3D"
+        }
+    ]
+}

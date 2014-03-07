@@ -1,0 +1,21 @@
+<!-- mood -->
+<h1>
+  <strong>Pick a song and sing along! 
+  <small></small>
+</h1>
+
+<!-- playlist -->
+<ul class="playlist">
+  <li 
+    ng-repeat="track in tracks" 
+    ng-class="{playing: track.playing}" class="track">
+    <span class="track-artist">{{ track.creator }}</span>
+    <strong class="track-title">
+      <a href="#/sing/{{ track.identifier }}">{{ track.title }}</a>
+    </strong>
+    <span class="loader">
+      <time class="loaded" progress="track"></time>
+      <time class="seeker" seeker="track"></time>
+    </span>    
+  </li>
+</ul>

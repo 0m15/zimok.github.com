@@ -1,0 +1,53 @@
+<h2 ng-hide="started">
+  Please give us access to your microphone
+</h2>
+
+<h2 ng-show="currentTrack">
+  Sing along <strong>{{ currentTrack.title }}</strong> by {{ currentTrack.creator }} 
+</h2>
+
+<!-- controls -->
+<ul class="controls" ng-show="started">
+  <li>
+    <a href="">
+      <i class="icon-backward" ng-click="prevTrack()"></i>
+    </a>
+  </li>
+  <li>
+    <a href="" ng-click="togglePlay()">
+      <i ng-class="{'icon-pause': getPlaying().playing == true, 'icon-play' :  getPlaying().playing == false}"></i>
+    </a>
+  </li>
+  <li>
+    <a href="">
+      <i class="icon-forward" ng-click="nextTrack()"></i>
+    </a>
+  </li>
+</ul>
+
+<div class="song-lyric" ng-show="started" style="text-align:center">
+  <span ng-hide="!started || interim_transcript.length" class="start-singing-label">just sing!</span>
+  <p><strong>{{ interim_transcript }}</strong></p>
+</div>
+
+<div class="show-lyric-button" ng-show="finished && final_transcript.length">
+  <a href="" ng-click="showLyrics()">show the results</a>
+</div>
+
+<div class="final-lyric" style="padding:20px;background:rgba(0,0,0,.1)" ng-show="lyricsOpen">
+  Your lyric:
+  <p>
+    
+    <div 
+      title="click to edit" 
+      ng-model="user.text"
+      ng-click="edit()"
+      ng-hide="editing">
+      {{ raw }}
+    </div>
+    
+    <div contentEditable="true" ng-model="raw" ng-show="editing"></div>
+    <a href="" ng-show="editing" ng-click="edit()">finish</a>
+  </p>
+  <a href="" ng-click="showLyrics()">submit to musixmatch!</a>
+</div>
