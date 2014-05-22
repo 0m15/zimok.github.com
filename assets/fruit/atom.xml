@@ -67,6 +67,9 @@
 	opacity: 0;
 	transition: opacity 0.5s ease;
 }&lt;/style&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/twitter-bootstrap.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+
+	&lt;link href=&quot;http://zimok.github.io/assets/fruit/styles/twitter-bootstrap.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;
+	&lt;link href=&quot;http://zimok.github.io/assets/fruit/styles/style.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;
 &lt;/head&gt;
 &lt;body class=&quot;this is a goodbye blog post&quot;&gt;
 	&lt;!-- Menu --&gt;
@@ -294,6 +297,9 @@ var inject = function(){
 	opacity: 0;
 	transition: opacity 0.5s ease;
 }&lt;/style&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/twitter-bootstrap.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+
+	&lt;link href=&quot;http://zimok.github.io/assets/fruit/styles/twitter-bootstrap.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;
+	&lt;link href=&quot;http://zimok.github.io/assets/fruit/styles/style.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;
 &lt;/head&gt;
 &lt;body class=&quot;this is a hello blog post&quot;&gt;
 	&lt;!-- Menu --&gt;
