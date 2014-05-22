@@ -3,7 +3,7 @@
 	<title>Your Website</title>
 	<link href="http://website.com/atom.xml" rel="self"/>
 	<link href="http://website.com"/>
-	<updated>2014-05-22T21:36:01.038Z</updated>
+	<updated>2014-05-22T21:40:32.765Z</updated>
 	<id>http://website.com</id>
 	<author>
 		<name>Your Name</name>
@@ -32,6 +32,8 @@
 	&lt;meta name=&quot;description&quot; content=&quot;When your website appears in search results in say Google, the text here will be shown underneath your website's title.&quot; /&gt;
 	&lt;meta name=&quot;keywords&quot; content=&quot;place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website&quot; /&gt;
 	&lt;meta name=&quot;author&quot; content=&quot;Your Name&quot; /&gt;
+	
+	&lt;base href=&quot;http://zimok.github.io/assets/fruit/&quot;&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
 	&lt;meta name=&quot;generator&quot; content=&quot;DocPad v6.65.0&quot; /&gt;
@@ -179,7 +181,7 @@
 		&lt;footer&gt;
 			&lt;p class=&quot;pull-left&quot;&gt;&amp;copy; fruit 2014&lt;/p&gt;
 			&lt;p class=&quot;pull-right&quot;&gt;
-				This website was last updated at 2014-05-22T21:36:01.038Z
+				This website was last updated at 2014-05-22T21:40:32.765Z
 			&lt;/p&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;
@@ -257,6 +259,8 @@ var inject = function(){
 	&lt;meta name=&quot;description&quot; content=&quot;When your website appears in search results in say Google, the text here will be shown underneath your website's title.&quot; /&gt;
 	&lt;meta name=&quot;keywords&quot; content=&quot;place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website&quot; /&gt;
 	&lt;meta name=&quot;author&quot; content=&quot;Your Name&quot; /&gt;
+	
+	&lt;base href=&quot;http://zimok.github.io/assets/fruit/&quot;&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
 	&lt;meta name=&quot;generator&quot; content=&quot;DocPad v6.65.0&quot; /&gt;
@@ -404,7 +408,7 @@ var inject = function(){
 		&lt;footer&gt;
 			&lt;p class=&quot;pull-left&quot;&gt;&amp;copy; fruit 2014&lt;/p&gt;
 			&lt;p class=&quot;pull-right&quot;&gt;
-				This website was last updated at 2014-05-22T21:36:01.038Z
+				This website was last updated at 2014-05-22T21:40:32.765Z
 			&lt;/p&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;
