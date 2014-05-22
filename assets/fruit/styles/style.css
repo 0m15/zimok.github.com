@@ -1,0 +1,234 @@
+html,
+body,
+.container {
+  height: 100%;
+  min-height: 100%;
+}
+a,
+a:link {
+  cursor: pointer;
+  color: #5c9ad0;
+}
+table tfoot th,
+table tbody th {
+  border-top: 1px solid #ddd;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Helvetica Neue, Raleway;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+}
+p {
+  font-weight: 200;
+}
+.page-header {
+  margin-bottom: 4rem;
+  border-bottom: none;
+}
+.page-header h1,
+.page-header .page-title {
+  font-size: 6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.headline {
+  font-weight: 800;
+  font-size: 4em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.large-text {
+  font-size: 1.5em;
+  font-weight: 200;
+  line-height: 1.7;
+}
+.white {
+  color: #fff;
+}
+.white-bg {
+  background-color: #fff;
+}
+.orangered {
+  color: #ff4500;
+}
+.tomato {
+  color: #ff6347;
+}
+.darkturquoise {
+  color: #00ced1;
+}
+.darkturquoise-bg {
+  background: #00ced1;
+}
+.brand-bg {
+  background: #5c9ad0;
+}
+.brand-alt-bg {
+  background: #f6dc2e;
+}
+.btn,
+.btn:hover {
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  color: #5c9ad0;
+  border: 2px solid;
+  background: transparent;
+}
+.btn-primary {
+  color: #fff;
+}
+.btn-lg {
+  font-size: 1rem;
+  padding: 10px 32px;
+}
+.navbar {
+  min-height: 120px;
+  background: rgba(255,255,255,0.75);
+  background: #f6dc2e;
+  background: #fff;
+  border-bottom: none;
+  text-align: center;
+}
+.navbar .navbar-header {
+  text-align: center;
+  width: 100%;
+}
+.navbar .navbar-header .navbar-brand-alt {
+  margin: 0 auto;
+  padding: 24px 0;
+  display: inline-block;
+}
+.navbar .navbar-nav {
+  float: none;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.navbar .navbar-nav li {
+  display: inline-block;
+  float: none;
+}
+.navbar-brand {
+  margin: 0 auto;
+  display: block;
+}
+.navbar-brand img {
+  width: 70%;
+}
+.navbar-nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 14px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+.navbar-nav > li > a:hover,
+.navbar-nav active {
+  background: none;
+}
+.navbar-nav > li.active > a {
+  font-weight: bold;
+  border-bottom-color: #5c9ad0;
+}
+#j1 {
+  background: url("http://www.editionlidu.com/image/cache/data/News/2013/Fruit/Fruit-Bologna-Artelibro2013-900x563w.jpg") fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+#j2 {
+  background: url("http://www.bolomagazine.com/wordpress/wp-content/uploads/2013/05/venus-et-milo1-640x478.jpg") fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.jumbotron {
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  margin-bottom: 0;
+  background: transparent;
+}
+.jumbotron .jumbotron-text h1 {
+  font-size: 48px;
+  margin-bottom: 0;
+  padding-top: 12px;
+}
+.jumbotron .jumbotron-text h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: bold;
+  padding: 0 0 24px 0;
+  color: #5c9ad0;
+  margin-bottom: 1em;
+  font-weight: 800;
+}
+.jumbotron .jumbotron-text p {
+  font-size: 2rem;
+}
+.jumbotron-cta {
+  padding: 32px 0;
+}
+.jumbotron-cta .separator {
+  display: inline-block;
+  border-right: 1px dashed #eee;
+  padding: 0 8px;
+  margin-right: 16px;
+  height: 80px;
+  vertical-align: middle;
+}
+.jumbotron-cta .btn-primary {
+  background: transparent;
+  color: #ff6347;
+  font-size: 1.5rem;
+}
+.jumbotron-cta .jumbotron-footer {
+  margin-top: 4em;
+}
+.section {
+  padding: 5% 0;
+  min-height: 90%;
+}
+.section-expo .thumbnail {
+  border: 1px solid #fff;
+}
+.thumbnail {
+  margin-bottom: 2.75em;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+}
+.item-list li a {
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+.item-list li a h2 {
+  font-size: 1.5rem;
+}
+.item-list li a p {
+  font-size: 1.5rem;
+}
+.social-links .tw {
+  width: 28px;
+  height: 28px;
+  background: url("http://www.fruitexhibition.com/images/social.png") left top no-repeat;
+  margin-right: 8px;
+  float: left;
+}
+.social-links .fb {
+  width: 28px;
+  height: 28px;
+  background: url("http://www.fruitexhibition.com/images/social.png") -36px top no-repeat;
+  float: left;
+  margin-right: 8px;
+}
