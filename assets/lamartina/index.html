@@ -3,259 +3,172 @@
 <head>
 	<meta charset="UTF-8">
 	<title>lamartina</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-	<!-- Animate.css library -->
+
+	
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/3.1.0/animate.css">
 
-	<style>
-	
-	/* globals
-	==============================================
-	*/
 
-	html,
-	body,
-	.section > .container-fluid {
-		height: 100%;
-	}
-	
-	/* typography
-	==============================================
-	*/
-	html,
-	body {
-		font-family: 'Roboto Condensed', 'Oswald', Helvetica Neue, Helvetica, sans-serif;
-	}
-
-	h1,
-	h2 {
-		font-family: 'Roboto Slab', Helvetica Neue;
-	}
-
-	.section-headline {
-		font-weight: 400;
-		font-size: 1.5em;
-		letter-spacing: .1em;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
-	}
-
-	.section-copy {
-		font-size: .9em;
-		padding: 0 2em;
-		letter-spacing: .1em;
-	}
-
-	.section-headline {
-		position: relative;
-		text-transform: uppercase;
-		margin: 0;
-		line-height: 1;
-		font-size: 2.9em;
-		margin-bottom: 1.5em;
-	}
-
-	.section-headline:before {
-		content: "";
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: 2em;
-		top: -1em;
-		background: url(assets/text-separator-down.png) top center no-repeat;	
-	}
-
-	.section-headline:after {
-		content: "";
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: 2em;
-		bottom: -2.4em;
-		background: url(assets/text-separator.png) top center no-repeat;	
-	}
-
-	.section-copy {
-		margin: 0 auto;
-		line-height: 2;
-		text-transform: uppercase;
-	}
-
-
-	/* navbar 
-	==============================================
-	*/
-	.navbar {
-		border-bottom: 1px solid rgba(255, 255, 255, .2);
-	}
-	.navbar-nav {
-		float: right;
-	}
-
-	.navbar-nav > li a {
-		text-transform: uppercase;
-		color: #fff;
-	}
-
-	/* sections 
-	==============================================
-	*/
-	
-	#outro {
-		background: url(assets/intro.jpg) top center no-repeat;
-		background-size: cover;
-	}
-
-	#zip {
-		background: #000 url(assets/zip.jpg) top center no-repeat;
-		background-size: cover;
-	}
-
-	#intro {
-		background: url(assets/outro.jpg) top center no-repeat;
-		background-size: cover;
-	}
-
-	.section {
-		min-height: 100%;
-		color: rgba(255, 255, 255, .95);
-	}
-
-	.section-text {
-		height: 50vh;
-		-webkit-transform: translateY(75%);
-		-moz-transform: translateY(75%);
-		-ms-transform: translateY(75%);
-		transform: translateY(75%);
-		text-align: center;
-	}
-
-	#intro .section-text {
-		-webkit-transform: translateY(120%);
-		-moz-transform: translateY(120%);
-		-ms-transform: translateY(120%);
-		transform: translateY(120%);
-	}
-
-	#intro .section-copy {
-		padding: 0;
-		-webkit-animation-delay: 1.4s;
-		-moz-animation-delay: 1.4s;
-		-o-animation-delay: 1.4s;
-		animation-delay: 1.4s;	
+ <link rel="stylesheet" href="/styles/style.css">
+	<script>
+	// window.onload = function() {
 		
+	// 	var HANDLERS = [
+	// 		'onscroll-enter', 
+	// 		'onscroll-leave', 
+	// 		'while-scroll'
+	// 	]
+
+	// 	var HANDLERS_CONSTANTS = {
+	// 		SCROLL_ENTER: 'onscroll-enter',
+	// 		SCROLL_LEAVE: 'onscroll-leave',
+	// 		WHILE_SCROLL: 'while-scroll',
+	// 	}
+
+	// 	var COMMANDS_MAP = {
+	// 		"addClass": function(el, className) {
+	// 			var currentClass = el.className
+	// 			return el.className = currentClass + " " + className
+	// 		},
+
+	// 		"animate": function(el, className) {
+
+	// 		}
+	// 	}
+	// 	var isScrolling = false
+	// 	var scrollTop = 0
+	// 	var elements = document.querySelectorAll('.onscroll')
 		
-	}
+	// 	document.onscroll = function() {
+	// 		isScrolling = true
+	// 	}
 
-	#intro .section-headline {
-		padding: 0;
-		-webkit-animation-delay: .2s;
-		-moz-animation-delay: .2s;
-		-o-animation-delay: .2s;
-		animation-delay: .2s;
-		-webkit-transition-timing-function: ease-out-cubic;
-		-moz-transition-timing-function: ease-out-cubic;
-		-ms-transition-timing-function: ease-out-cubic;
-		-o-transition-timing-function: ease-out-cubic;
-		transition-timing-function: ease-out-cubic;
-	}
+	// 	var getElementOffset = function(i, el) {
 
-	#intro-1 {
-		-webkit-animation-delay: .2s;
-		-moz-animation-delay: .2s;
-		-o-animation-delay: .2s;
-		animation-delay: .2s;		
-	}
+	// 	}
 
-	#intro-2 {
-		-webkit-animation-delay: .4s;
-		-moz-animation-delay: .4s;
-		-o-animation-delay: .4s;
-		animation-delay: .4s;		
-	}
+	// 	var parseOperations = function(ops) {
+	// 		return JSON.parse(ops)
+	// 	}
 
-	#intro-3 {
-		-webkit-animation-delay: .6s;
-		-moz-animation-delay: .6s;
-		-o-animation-delay: .6s;
-		animation-delay: .6s;		
-	}
+	// 	var getElementHandlers = function(element) {
+	// 		var i = 0, len = HANDLERS.length, ops, handlerName
+	// 		var handlers = {}
 
-	#intro-4 {
-		-webkit-animation-delay: .8s;
-		-moz-animation-delay: .8s;
-		-o-animation-delay: .8s;
-		animation-delay: .8s;		
-	}
+	// 		for(; i < len; i++) {
+	// 			handlerName = HANDLERS[i]
+	// 			ops = element.getAttribute('data-'+handlerName)
+	// 			if(ops && ops.length) handlers[handlerName] = parseOperations(ops)
+	// 		}
 
-	#intro-5 {
-		-webkit-animation-delay: 1s;
-		-moz-animation-delay: 1s;
-		-o-animation-delay: 1s;
-		animation-delay: 1s;		
-	}
+	// 		return handlers
+	// 	}
 
-	#intro-6 {
-		-webkit-animation-delay: 1.2s;
-		-moz-animation-delay: 1.2s;
-		-o-animation-delay: 1.2s;
-		animation-delay: 1.2s;		
-	}
+	// 	var _i = 0, _element, _elementOffset, elementHandlers
 
+	// 	var onScroll = function() {
 
+	// 		if(!isScrolling) return setTimeout(onScroll, 25)
+			
+	// 		isScrolling = false	
+	// 		scrollTop = window.scrollY
+	// 		_i = 0
 
-	</style>
+	// 		// loop through elements
+	// 		for(; _i < elements.length; _i++) {
+	// 			_element = elements[_i]
+	// 			elementHandlers = getElementHandlers(_element)
+
+	// 			// check handlers type and apply commands
+	// 			// todo: clean animations?
+
+	// 			// enter
+	// 			if(elementHandlers[HANDLERS_CONSTANTS.SCROLL_ENTER]) {
+	// 				var currentHandler = elementHandlers[HANDLERS_CONSTANTS.SCROLL_ENTER]
+					
+	// 				// get x|y
+	// 				if(currentHandler.y !== null) {
+
+	// 					if(scrollTop >= currentHandler.y) {
+	// 						COMMANDS_MAP["addClass"](_element, currentHandler.addClass)
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+
+	// 		// call scroll handler
+	// 		setTimeout(onScroll, 25)
+			
+	// 	}
+
+	// 	onScroll()
+	// }
+
+	</script>
 </head>
 <body>
 
-	<header class="navbar navbar-fixed-top">
+	
+	
+	<section id="media" class="section">
+	
+		<div class="section-media">
+			<iframe src="//player.vimeo.com/video/97594519?byline=0&amp;portrait=0&amp;color=ffffff" width="100%" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+			<div class="main-brand">
+				<a href="#intro" class="with-down-arrow">
+					<img src="/assets/logo-hd.png" width="320"><br>
+					<span class="double-lined">discover the new boot</span>
+				</a>
+			</div>
+		</div>
+
+	</section>
+	
+	
+	<header class="navbar">
 		<div class="container-fluid">
-			<div class="logo"></div>
+			<div class="logo">
+				<img src="/assets/logo-hd.png" width="180">
+			</div>
 			<nav class="main-navigation">
 				<ul class="nav navbar-nav">
-					<li><a href="">intro</a></li>
-					<li><a href="">zip</a></li>
-					<li><a href="">outro</a></li>
+					<li><a href="">home</a></li>
+					<li><a href="">storia</a></li>
+					<li><a href="">cortos</a></li>
+					<li><a href="">store</a></li>
+					<li><a href="">contacts</a></li>
+					<li><a href="">code</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
-	<section id="intro" class="section">
-		<div class="container-fluid">
-			<div class="section-text col-md-6 col-md-offset-3">
-				<h1 class="section-headline"
-					data-anijs="if: load, on: window, do: fadeInDown animated"
-					>
-					<span
-						data-anijs="if: load, on: window, do: fadeInDown animated" id="intro-1">the</span> 
-					<span
-						data-anijs="if: load, on: window, do: fadeInDown animated" id="intro-2">boot</span> 
-						<span
-						data-anijs="if: load, on: window, do: fadeInDown animated" id="intro-3">born</span> 
-						<br>
-						<span
-						data-anijs="if: load, on: window, do: fadeInDown animated" id="intro-4">from</span> 
-						<span
-						data-anijs="if: load, on: window, do: fadeInDown animated" id="intro-5">the</span> 
-						<span
-						data-anijs="if: load, on: window, do: fadeInDown animated" id="intro-6">field</span> 
+	<section id="intro" class="section section--overlay">
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay">
+				<h1 class="section-headline">
+					the boot born from the field
 				</h1>
 
-				<p class="section-copy"
-					data-anijs="if: load, on: window, do: fadeInDown animated"
+				<p class="section-copy" 
 					>
-					An exceptional product stands on the highest step of the podium. The new LA MARTINA “Cortos “are born to walk the pleasant steps towards the Polo prize ceremonies and mingle in the club house in style.
+					An exceptional product stands on the highest step of the podium. The new la martina.
+					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
+					mingle in the club house in style.
 				</p>
 			</div>
 		</div>
 	</section>
+
 	
-	<section id="zip" class="section">
-		<div class="container-fluid col-md-4 col-sm-6">
-			<div class="section-text">
+	<section id="zip" class="section section--overlay">
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay">
 				<h1 class="section-headline">
 					details
 				</h1>
@@ -267,26 +180,176 @@
 		</div>
 	</section>
 
-	<section id="outro" class="section container-fluid">
-		<div class="section-text col-sm-6 col-md-4">
-			<h1 class="section-headline">
-				handcrafted <br/> 
-				by the stars
-			</h1>
+	<section id="outro" class="section section--overlay">
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay">
+				<h1 class="section-headline">
+					handcrafted by the stars
+				</h1>
 
-			<p class="section-copy">
-				The most avid devotee of LA MARTINA boot master has been challenged to lay out an exceptionally rare piece as a tribute to the on-field iconic Polo boot.
-			</p>
+				<p class="section-copy">
+					The most avid devotee of LA MARTINA boot master has been challenged to lay out an exceptionally rare piece as a tribute to the on-	field iconic Polo boot.
+				</p>
+			</div>
 		</div>
 	</section>
 
+	<section id="stores" class="section">
+		<div class="container-fluid">
+			<h1 class="section-headline">find your store</h1>
 
-	
+			<div class="row">
+				<div class="col-md-4 col--with-separator">
+					<div class="store">
+						<a href="">
+							<h2 class="headline">rome</h2>
+							<p>via del corso, 13</p>
+						</a>
+						<a href="#">map</a>
+					</div>
+
+					<div class="store">
+						<a href="">
+							<h2 class="headline">rome</h2>
+							<p>via del corso, 13</p>
+						</a>
+						<a href="#">map</a>
+					</div>
+
+					<div class="store">
+						<a href="">
+							<h2 class="headline">rome</h2>
+							<p>via del corso, 13</p>
+						</a>
+						<a href="#">map</a>
+					</div>
+
+					<div class="store">
+						<a href="">
+							<h2 class="headline">rome</h2>
+							<p>via del corso, 13</p>
+						</a>
+						<a href="#">map</a>
+					</div>
+				</div>
+			
+
+			<div class="col-md-4 col--with-separator">
+					
+				<div class="store">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+			</div>
+
+			<div class="col-md-4 col--with-separator">
+					
+				<div class="store">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="register" class="section">
+		<div class="container-fluid">
+			<h1 class="section-headline">register your booth</h1>
+			<p class="text-center">register your product to lorem ipsum dolor</p>
+		
+			<div class="registration-form">
+				<div class="row row--form">
+					<div class="col-md-3 col-md-offset-2">
+						<label class="label-lg">Please enter your email</label>
+					</div>
+					<div class="col-md-5">
+						<input type="text" class="text-input input-lg col-md-12" placeholder="your@email.com">
+					</div>
+				</div>
+				<div class="row row--form">
+					<div class="col-md-3  col-md-offset-2">
+						<label class="label-lg">Please enter your code</label>
+					</div>
+					<div class="col-md-5">
+						<input type="text" class="text-input input-lg col-md-12" placeholder="5612AH">
+					</div>
+				</div>
+			
+				<div class="row row--form">
+					<div class="col-md-3 col-md-offset-2">
+					</div>
+					<div class="col-md-5">
+						<button class="btn btn-lg">register</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="footer" class="section">
+		<div class="section-text"></div>
+		<p class="text-center">
+			<img src="/assets/logo-hd.png" width="160">
+		</p>
+	</section>
 
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="bower_components/skrollr/dist/skrollr.min.js"></script>
-	<script src="bower_components/anijs/dist/anijs-min.js"></script>
 
 
 </body>
