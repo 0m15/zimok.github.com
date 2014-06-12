@@ -33,7 +33,7 @@ $(document).ready(function() {
 	//$('#debug').html(navigator.userAgent)
 	
 	if(!isMobile){
-	var scarto_nav = 160
+	var scarto_nav = 60
 	}else{
 	var scarto_nav = -60
 	}
@@ -238,7 +238,7 @@ $('.anchor-link').anchorAnimate()
       		$('#home-link').parent().addClass('current');
 		}
 		if($trans0.hasClass("inview")){
-			$trans0.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+150)*2, 0.3)}); 
+			$trans0.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra)*2, 0.3)}); 
 		}
 		if($vision.hasClass("inview")){
 			$vision.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*3, 0.2)}); 
