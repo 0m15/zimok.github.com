@@ -233,7 +233,7 @@ $('.anchor-link').anchorAnimate()
 		
 		
 		if($home.hasClass("inview")){
-			$home.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*2, 0.3)}); 
+			$home.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra)*2, 0.3)}); 
 			$('nav ul li').removeClass(curClass);
       		$('#home-link').parent().addClass('current');
 		}
