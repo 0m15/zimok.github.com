@@ -238,7 +238,7 @@ $('.anchor-link').anchorAnimate()
       		$('#home-link').parent().addClass('current');
 		}
 		if($trans0.hasClass("inview")){
-			$trans0.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra-750)*3, 0.3)}); 
+			$trans0.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra-600)*2, 0.3)}); 
 		}
 		if($vision.hasClass("inview")){
 			$vision.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*3, 0.2)}); 
