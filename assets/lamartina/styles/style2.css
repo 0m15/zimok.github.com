@@ -155,14 +155,8 @@
 		opacity: 1;
 	}
 
-	.navbar.navbar-fixed-top {
-			position: inherit;
-		}
-
+	
 	@media screen and (min-width: 800px) {
-		.navbar.navbar-fixed-top {
-			position: fixed;
-		}
 		.navbar .main-navigation {
 			position: relative;
 			width: 100%;
@@ -279,7 +273,6 @@
 	/* sections 
 	==============================================
 	*/	
-
 	.section {
 		color: rgba(255, 255, 255, .95);
 		min-height: 100%;
@@ -288,18 +281,17 @@
 		position: relative;
 	}
 
-	.fade-in,
-	img.fade-in {
-		opacity: 0;
-	}
-
 	.section-bg {
 		position: absolute;
+		height: 100%;
 		top: 0;
 		width: 100%;
-		overflow: hidden;
+		bottom: 0;
 	}
 
+	.section-bg img {
+		width: 100%;
+	}
 
 	@media screen and (min-width: 800px) {
 		.section {
@@ -307,24 +299,19 @@
 			margin: 0 auto;
 			position: relative;
 			min-height: 100%;
-			padding-top: 4em;
 			min-height: 100%;
 		}	
 
-		.section-bg.section--overlay:after {
+		/*.section-bg.section--overlay:after {
 			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.8));
+			background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25));
 			z-index: 1;
-		}
-
-		.section--fadeout:after {
-			background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,1));
-		}
+		}*/
 	}
 		
 		.section-media {
@@ -415,7 +402,7 @@
 		background-size: cover;*/
 	}
 
-	#intro .section-text {
+	.section-text--centered {
 		margin: 0 auto;
 		width: 50%;
 	}	
@@ -479,9 +466,6 @@
 	}
 
 	/* footer */
-	#footer {
-		margin-top: 100%;
-	}
 
 	/* z-indexes */
 /*	#1 {

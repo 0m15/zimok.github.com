@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Bebas:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 
 	
@@ -15,126 +15,274 @@
 
  <link rel="stylesheet" href="styles/style.css">
 	<script>
-	window.onload = function() {
-		
-		var HANDLERS = [
-			'onscroll-enter', 
-			'onscroll-leave', 
-			'while-scroll'
-		]
+	var PROPS = [
+		'transform',
+		'webkitTransform', 
+		'MozTransform', 
+		'msTransform', 
+	]
 
-		var HANDLERS_CONSTANTS = {
-			SCROLL_ENTER: 'onscroll-enter',
-			SCROLL_LEAVE: 'onscroll-leave',
-			WHILE_SCROLL: 'while-scroll',
-		}
+	function Backstretch(elements) {
+		var width = window.innerWidth
+		var height = window.innerHeight
+		var elementsLength = elements.length
+		var i = 0
+		var currentImg = null
+		var currentRatio
+		var imgWidth
+		var _this = this
+		this.elements = elements
 
-		var COMMANDS_MAP = {
-			"addClass": function(el, className) {
-				var currentClass = el.className
-				if(currentClass.indexOf(className) >- 1) return
-				return el.className = currentClass + " " + className
-			},
+		window.addEventListener('resize', resize)
+		resize()
 
-			"removeClass": function(el, className) {
+		function resize() {
 
-			},
+			for(; i < elementsLength; i++) {
+				currentImg = _this.elements[i]
+				currentRatio = currentImg.width / currentImg.height
+				var hRatio = currentImg.width / currentImg.height
+				var vRatio = currentImg.height / currentImg.width
+				imgWidth = height * hRatio
+				currentImg.width = imgWidth
+				currentImg.height = height
 
-			"animate": function(el, className) {
+				if(currentImg.width >= width) {
+					currentImg.style['margin-left'] = -1 * (currentImg.width - width) / 2 + 'px'
+				} else {
+					currentImg.width = width
+					currentImg.height = currentImg.width * vRatio
+				}
 
 			}
 		}
+	}
+
+	function Scrollable(elements) {
+
+		var RATIO = .03428
+		var elementsLength = elements.length
+		var currentElement = null
+		var lastYOffset = 0
+		var currentYOffset = 0
 		var isScrolling = false
-		var scrollTop = 0
-		var elements = document.querySelectorAll('.onscroll')
 
-		var scrollingElements = document.querySelectorAll('.px')
-		
-		document.onscroll = function() {
+		for(var _i = 0; _i < elements.length; _i++) {
+			var el = elements[_i]
+			translate3D(el, {x: 0, y: 0, z: 0})
+		}
+
+		window.addEventListener('scroll', function() {
 			isScrolling = true
-		}
-
-		var getElementOffset = function(i, el) {
-
-		}
-
-		var parseOperations = function(ops) {
-			return JSON.parse(ops)
-		}
-
-		var getElementHandlers = function(element) {
-			var i = 0, len = HANDLERS.length, ops, handlerName
-			var handlers = {}
-
-			for(; i < len; i++) {
-				handlerName = HANDLERS[i]
-				ops = element.getAttribute('data-'+handlerName)
-				if(ops && ops.length) handlers[handlerName] = parseOperations(ops)
-			}
-
-			return handlers
-		}
-
-		var _i = 0, _k = 0, _element, _elementOffset, elementHandlers
-
-		var onScroll = function() {
-
-			if(!isScrolling) return setTimeout(onScroll, 25)
-			
-			isScrolling = false	
-			scrollTop = window.scrollY
-			_i = 0
-			_k = 0
-
-
-			for(; _k < scrollingElements.length; _k++) { 
-				var scrollEl = scrollingElements[_k]
-				var ratio = .18
-				//var scrollElTop = Math.round(window.scrollY * ratio) * -1 + 'px'
-				var scrollElTop = Math.round(window.scrollY * ratio) * -1 + 'px'
-
-				scrollEl.style['webkitTransform'] = 'translate3d(0,'+scrollElTop+',0)'
-				console.log(scrollElTop)
-				// scrollEl.style		
-			}
-
-			// loop through elements
-			// for(; _i < elements.length; _i++) {
-			// 	_element = elements[_i]
-			// 	elementHandlers = getElementHandlers(_element)
-
-			// 	// check handlers type and apply commands
-			// 	// todo: clean animations?
-
-			// 	// enter
-			// 	if(elementHandlers[HANDLERS_CONSTANTS.SCROLL_ENTER]) {
-			// 		var currentHandler = elementHandlers[HANDLERS_CONSTANTS.SCROLL_ENTER]
-					
-			// 		// get x|y
-			// 		if(currentHandler.y !== null) {
-			// 			if(scrollTop < currentHandler.y) return setTimeout(onScroll, 25)
-						
-			// 			currentHandler.ops.forEach(function(op) {
-
-			// 				Object.keys(op).forEach(function(opKey) {
-			// 					if(!COMMANDS_MAP[opKey]) throw new Error("Operation not supported", opKey)
-			// 					var fn = COMMANDS_MAP[opKey]
-			// 					var valueToApply = op[opKey]
-			// 					fn(_element, valueToApply)
-			// 				})
-			// 			})
-			// 		}
-			// 		// -end enter-
-			// 	}
-			// }
-
-			// call scroll handler
-			setTimeout(onScroll, 25)
-			
-		}
+		})
 
 		onScroll()
+
+		function onScroll() {
+			if(!isScrolling) return setTimeout(onScroll, 25)
+			translateElements()
+			setTimeout(onScroll, 25)
+		}
+
+		var elementsToFade = document.querySelectorAll('.fade-in')
+		function mapOpacity(el, offsetY) {
+			var elOffset = el.offsetParent.offsetTop
+			var treshold = 350
+			var offsetYDiff = 0
+			var opacity
+
+			if(offsetY + treshold >= elOffset) {
+				offsetYDiff = offsetY + treshold - elOffset
+				opacity = (offsetYDiff / treshold) * 100
+				el.style.opacity = opacity / 100
+			}
+
+		}
+
+		function translateElements() {
+			var i = 0, k = 0
+			currentYOffset = window.pageYOffset
+			var currentElementToFade = null
+
+			for(; k < elementsToFade.length; k++) {
+				currentElementToFade = elementsToFade[k]
+				mapOpacity(currentElementToFade, currentYOffset)
+			}
+
+			for(; i < elementsLength; i++) {
+				currentElement = elements[i]
+				// currentYOffset <= currentElement.offsetHeight + currentElement.offsetParent.offsetTop
+				if(currentYOffset + window.innerHeight + 200 >= currentElement.offsetParent.offsetTop) {
+					// translate
+					var translation = getCurrentTranslation(currentElement)
+					var multiplier = 1
+					var zIndex = parseInt(currentElement.getAttribute('data-index'))
+					translation.y = Math.floor(window.pageYOffset * RATIO * zIndex * -1)
+					translate3D(currentElement, translation)
+					lastYOffset = window.pageYOffset
+				}
+			}
+		}
+
+		function getElementTopScroll(el) {
+			return el.offsetTop||el.scrollTop
+		}
+
+		function getCurrentTranslation(el) {
+			var ref
+			PROPS.forEach(function(prop) {
+				if(el.style[prop] !== undefined) ref = el.style[prop]
+			})
+			return parseTranslationProps(ref)
+		}
+
+		function parseTranslationProps(value) {
+			var match = value.match(/(\d+(px|\%))/g)
+			return {
+				x: parseInt(match[0]),
+				y: parseInt(match[1]),
+				z: parseInt(match[2]),
+			}
+		}
+
+		function translate3D(el, translation) {
+			PROPS.forEach(function(prop) {
+				var elStyle = el.style[prop]
+				if(elStyle !== undefined) {
+					el.style[prop] = "translate3D("+translation.x+"px,"+translation.y+"px,"+translation.z+"px)"
+				}
+			})
+		}
 	}
+
+	window.onload = function() {
+		var elements = document.querySelectorAll('.px')
+		window.scrollable = new Scrollable(elements)
+
+		var fullscreenImgs = document.querySelectorAll('.fullscreen')
+		new Backstretch(fullscreenImgs)
+	}
+
+	// window.onload = function() {
+		
+	// 	var HANDLERS = [
+	// 		'onscroll-enter', 
+	// 		'onscroll-leave', 
+	// 		'while-scroll'
+	// 	]
+
+	// 	var HANDLERS_CONSTANTS = {
+	// 		SCROLL_ENTER: 'onscroll-enter',
+	// 		SCROLL_LEAVE: 'onscroll-leave',
+	// 		WHILE_SCROLL: 'while-scroll',
+	// 	}
+
+	// 	var COMMANDS_MAP = {
+	// 		"addClass": function(el, className) {
+	// 			var currentClass = el.className
+	// 			if(currentClass.indexOf(className) >- 1) return
+	// 			return el.className = currentClass + " " + className
+	// 		},
+
+	// 		"removeClass": function(el, className) {
+
+	// 		},
+
+	// 		"animate": function(el, className) {
+
+	// 		}
+	// 	}
+	// 	var isScrolling = false
+	// 	var scrollTop = 0
+	// 	var elements = document.querySelectorAll('.onscroll')
+
+	// 	var scrollingElements = document.querySelectorAll('.px')
+		
+	// 	document.onscroll = function() {
+	// 		isScrolling = true
+	// 	}
+
+	// 	var getElementOffset = function(i, el) {
+
+	// 	}
+
+	// 	var parseOperations = function(ops) {
+	// 		return JSON.parse(ops)
+	// 	}
+
+	// 	var getElementHandlers = function(element) {
+	// 		var i = 0, len = HANDLERS.length, ops, handlerName
+	// 		var handlers = {}
+
+	// 		for(; i < len; i++) {
+	// 			handlerName = HANDLERS[i]
+	// 			ops = element.getAttribute('data-'+handlerName)
+	// 			if(ops && ops.length) handlers[handlerName] = parseOperations(ops)
+	// 		}
+
+	// 		return handlers
+	// 	}
+
+	// 	var _i = 0, _k = 0, _element, _elementOffset, elementHandlers
+
+	// 	var onScroll = function() {
+
+	// 		if(!isScrolling) return setTimeout(onScroll, 25)
+			
+	// 		isScrolling = false	
+	// 		scrollTop = window.scrollY
+	// 		_i = 0
+	// 		_k = 0
+
+
+	// 		for(; _k < scrollingElements.length; _k++) { 
+	// 			var scrollEl = scrollingElements[_k]
+	// 			var ratio = .18
+	// 			//var scrollElTop = Math.round(window.scrollY * ratio) * -1 + 'px'
+	// 			var scrollElTop = Math.round(window.scrollY * ratio) * -1 + 'px'
+
+	// 			scrollEl.style['webkitTransform'] = 'translate3d(0,'+scrollElTop+',0)'
+	// 			console.log(scrollElTop)
+	// 			// scrollEl.style		
+	// 		}
+
+	// 		// loop through elements
+	// 		// for(; _i < elements.length; _i++) {
+	// 		// 	_element = elements[_i]
+	// 		// 	elementHandlers = getElementHandlers(_element)
+
+	// 		// 	// check handlers type and apply commands
+	// 		// 	// todo: clean animations?
+
+	// 		// 	// enter
+	// 		// 	if(elementHandlers[HANDLERS_CONSTANTS.SCROLL_ENTER]) {
+	// 		// 		var currentHandler = elementHandlers[HANDLERS_CONSTANTS.SCROLL_ENTER]
+					
+	// 		// 		// get x|y
+	// 		// 		if(currentHandler.y !== null) {
+	// 		// 			if(scrollTop < currentHandler.y) return setTimeout(onScroll, 25)
+						
+	// 		// 			currentHandler.ops.forEach(function(op) {
+
+	// 		// 				Object.keys(op).forEach(function(opKey) {
+	// 		// 					if(!COMMANDS_MAP[opKey]) throw new Error("Operation not supported", opKey)
+	// 		// 					var fn = COMMANDS_MAP[opKey]
+	// 		// 					var valueToApply = op[opKey]
+	// 		// 					fn(_element, valueToApply)
+	// 		// 				})
+	// 		// 			})
+	// 		// 		}
+	// 		// 		// -end enter-
+	// 		// 	}
+	// 		// }
+
+	// 		// call scroll handler
+	// 		setTimeout(onScroll, 25)
+			
+	// 	}
+
+	// 	onScroll()
+	// }
 
 	</script>
 </head>
@@ -145,8 +293,8 @@
 	<section id="media" class="section">
 	
 		<div class="section-media">
-			<iframe src="//player.vimeo.com/video/97594519?byline=0&amp;portrait=0&amp;color=ffffff" width="100%" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
+			<!-- <iframe src="//player.vimeo.com/video/97594519?byline=0&amp;portrait=0&amp;color=ffffff" width="100%" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+			<img src="http://placehold.it/1400x600" class="img-responsive">
 			<div class="main-brand">
 				<a href="#intro" class="with-down-arrow">
 					<img src="assets/logo-hd.png" width="320"><br>
@@ -171,18 +319,21 @@
 			</nav>
 		</div>
 	</header>
+	
+	<div style="padding-top:50%"></div>
 
-	<section id="intro" class="section section--overlay">
-		<div class="section-bg">
-			<img src="/assets/slide.jpg">
+	<!-- 1 -->
+	<section id="intro" class="section" style="box-shadow:0 0 10px #000">
+		<div class="section-bg section--overlay px" data-index="-1">
+			<img src="/assets/slide.jpg" class="fullscreen">
 		</div>
 		<div class="section-text section-text--bottom">
-			<div class="section-overlay px">
+			<div class="section-overlay fade-in px" data-index="-4">
 				<h1 class="section-headline">
 					the boot born from the field
 				</h1>
 
-				<p class="section-copy">
+				<p class="section-copy px">
 					An exceptional product stands on the highest step of the podium. The new la martina.
 					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
 					mingle in the club house in style.
@@ -190,36 +341,20 @@
 			</div>
 		</div>
 	</section>
+	
 
-	<section id="intro" class="section section--overlay">
-		<div class="section-bg">
-			<img src="/assets/intro.jpg">
+	<!-- 2 -->
+	<section id="intro" class="section">
+		<div class="section-bg section--overlay px" data-index="-1">
+			<img src="/assets/intro.jpg" class="fullscreen">
 		</div>
 		<div class="section-text section-text--bottom">
-			<div class="section-overlay">
+			<div class="section-overlay fade-in px" data-index="-4">
 				<h1 class="section-headline">
 					handcrafted by the stars
 				</h1>
+
 				<p class="section-copy">
-					The most avid devotee of LA MARTINA boot master has been challenged to lay out 
-					an exceptionally rare piece as a tribute to the on-field iconic Polo boot.
-				</p>
-			</div>
-		</div>
-	</section>
-
-	<section id="buenos-aires" class="section">
-		<div class="section-bg">
-			<img src="/assets/slide-04.jpg">
-		</div>
-		<div class="section-text section-text--bottom">
-			<div class="section-overlay px">
-				<h1 class="section-headline">
-					the origin made in buenos aires
-				</h1>
-
-				<p class="section-copy" 
-					>
 					An exceptional product stands on the highest step of the podium. The new la martina.
 					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
 					mingle in the club house in style.
@@ -228,18 +363,17 @@
 		</div>
 	</section>
 
-	<section id="intro" class="section section--overlay">
-		<div class="section-bg px">
-			<img src="/assets/slide-03.jpg">
+	<section id="intro" class="section">
+		<div class="section-bg section--overlay px" data-index="-2">
+			<img src="/assets/slide-03.jpg" class="fullscreen">
 		</div>
 		<div class="section-text section-text--bottom">
-			<div class="section-overlay">
+			<div class="section-overlay fade-in px" data-index="-4">
 				<h1 class="section-headline">
 					the boot born from the field
 				</h1>
 
-				<p class="section-copy" 
-					>
+				<p class="section-copy">
 					An exceptional product stands on the highest step of the podium. The new la martina.
 					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
 					mingle in the club house in style.
@@ -247,19 +381,18 @@
 			</div>
 		</div>
 	</section>
-
-	<section id="intro" class="section section--overlay">
-		<div class="section-bg">
-			<img src="/assets/slide-04.jpg">
+	
+	<section id="intro" class="section">
+		<div class="section-bg section--overlay px" data-index="-6">
+			<img src="/assets/slide-01.jpg" class="fullscreen">
 		</div>
-		<div class="section-text section-text--bottom">
-			<div class="section-overlay">
+		<div class="section-text section-text--bottom" style="margin-left:25% !important;text-align:left">
+			<div class="section-overlay fade-in px" data-index="-3">
 				<h1 class="section-headline">
-					the boot born from the field
+					zip
 				</h1>
 
-				<p class="section-copy" 
-					>
+				<p class="section-copy">
 					An exceptional product stands on the highest step of the podium. The new la martina.
 					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
 					mingle in the club house in style.
@@ -267,6 +400,46 @@
 			</div>
 		</div>
 	</section>
+
+	<section id="intro" class="section">
+		<div class="section-bg section--overlay px" data-index="-5">
+			<img src="/assets/slide-02.jpg" class="fullscreen">
+		</div>
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay fade-in px" data-index="-2.5">
+				<h1 class="section-headline">
+					handcrafted by the stars
+				</h1>
+
+				<p class="section-copy px">
+					An exceptional product stands on the highest step of the podium. The new la martina.
+					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
+					mingle in the club house in style.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="intro" class="section">
+		<div class="section-bg section--overlay section--fadeout px" data-index="-4">
+			<img src="/assets/zip.jpg" class="fullscreen">
+		</div>
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay fade-in px" data-index="-2">
+				<h1 class="section-headline">
+					details
+				</h1>
+
+				<p class="section-copy px">
+					An exceptional product stands on the highest step of the podium. The new la martina.
+					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
+					mingle in the club house in style.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	
 
 	
 	<!-- <section id="zip" class="section section--overlay">
@@ -295,78 +468,78 @@
 				</p>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
-	<section id="gallery" class="section">
+	 <section id="gallery" class="section px" data-index="-2">
 		<div class="container-fluid">
 			<h1 class="section-headline">look at it</h1>
 
 			<div class="row" style="padding-top:4em">
-				<div class="col-md-6 col--with-separator">
+				<div class="col-md-6 col--with-separator px" data-index="-1.5">
 					<div class="store">
 						<a href="">
-							<img src="http://placehold.it/800x410" class="img-responsive">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
 						</a>
 					</div>
 
 					<div class="store">
 						<a href="">
-							<img src="http://placehold.it/800x410" class="img-responsive">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
 						</a>
 					</div>
 					
 				</div>
 
-				<div class="col-md-4 col--with-separator">
+				<div class="col-md-4 col--with-separator px" data-index="-0.5">
 					<div class="store">
 						<a href="">
-							<img src="http://placehold.it/800x400" class="img-responsive">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
 						</a>
 					</div>
 
 					<div class="store">
 						<a href="">
-							<img src="http://placehold.it/800x400" class="img-responsive">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
 						</a>
 					</div>
 
 					<div class="store">
 						<a href="">
-							<img src="http://placehold.it/800x400" class="img-responsive">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
 						</a>
 					</div>
 
 					
 				</div>
 
-				<div class="col-md-2 col--with-separator">
-					<div class="store">
+				<div class="col-md-2 col--with-separator px" data-index="-1">
+					<div class="store px" data-index="0.3">
 						<a href="">
-							<img src="http://placehold.it/800x465" class="img-responsive">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
 						</a>
 					</div>
 
-					<div class="store">
+					<div class="store px" data-index="-0.1">
 						<a href="">
-							<img src="http://placehold.it/800x465" class="img-responsive">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
 						</a>
 					</div>
 
-					<div class="store">
+					<div class="store px" data-index="0.4">
 						<a href="">
-							<img src="http://placehold.it/800x465" class="img-responsive">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
 						</a>
 					</div>
 
-					<div class="store">
+					<div class="store px" data-index="-0.3">
 						<a href="">
-							<img src="http://placehold.it/800x465" class="img-responsive">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
 						</a>
 					</div>
 
-					<div class="store">
+					<div class="store px" data-index="-0.6">
 						<a href="">
-							<img src="http://placehold.it/800x465" class="img-responsive">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
 						</a>
 					</div>
 
@@ -377,12 +550,12 @@
 		</div>
 	</section>
 
-	<section id="stores" class="section">
+	<section id="stores" class="section px" data-index="-3">
 		<div class="container-fluid">
 			<h1 class="section-headline">find your store</h1>
 
-			<div class="row">
-				<div class="col-md-4 col--with-separator">
+			<div class="row px" data-index="0.5">
+				<div class="col-md-4 col--with-separator px" data-index="-0.5">
 					<div class="store">
 						<a href="">
 							<h2 class="headline">rome</h2>
@@ -391,7 +564,7 @@
 						<a href="#">map</a>
 					</div>
 
-					<div class="store">
+					<div class="store  px" data-index="0.5">
 						<a href="">
 							<h2 class="headline">rome</h2>
 							<p>via del corso, 13</p>
@@ -399,7 +572,7 @@
 						<a href="#">map</a>
 					</div>
 
-					<div class="store">
+					<div class="store  px" data-index="-0.5">
 						<a href="">
 							<h2 class="headline">rome</h2>
 							<p>via del corso, 13</p>
@@ -407,7 +580,7 @@
 						<a href="#">map</a>
 					</div>
 
-					<div class="store">
+					<div class="store px" data-index="0.5">
 						<a href="">
 							<h2 class="headline">rome</h2>
 							<p>via del corso, 13</p>
@@ -419,7 +592,7 @@
 
 			<div class="col-md-4 col--with-separator">
 					
-				<div class="store">
+				<div class="store px" data-index="-0.1">
 					<a href="">
 						<h2 class="headline">rome</h2>
 						<p>via del corso, 13</p>
@@ -427,7 +600,7 @@
 					<a href="#">map</a>
 				</div>
 
-				<div class="store">
+				<div class="store px" data-index="0.1">
 					<a href="">
 						<h2 class="headline">rome</h2>
 						<p>via del corso, 13</p>
@@ -435,7 +608,7 @@
 					<a href="#">map</a>
 				</div>
 
-				<div class="store">
+				<div class="store px" data-index="-0.1">
 					<a href="">
 						<h2 class="headline">rome</h2>
 						<p>via del corso, 13</p>
@@ -443,7 +616,7 @@
 					<a href="#">map</a>
 				</div>
 
-				<div class="store">
+				<div class="store px" data-index="0.2">
 					<a href="">
 						<h2 class="headline">rome</h2>
 						<p>via del corso, 13</p>
@@ -454,7 +627,7 @@
 
 			<div class="col-md-4 col--with-separator">
 					
-				<div class="store">
+				<div class="store px" data-index="-0.51">
 					<a href="">
 						<h2 class="headline">rome</h2>
 						<p>via del corso, 13</p>
@@ -462,7 +635,7 @@
 					<a href="#">map</a>
 				</div>
 
-				<div class="store">
+				<div class="store px" data-index="-0.4">
 					<a href="">
 						<h2 class="headline">rome</h2>
 						<p>via del corso, 13</p>
@@ -470,7 +643,7 @@
 					<a href="#">map</a>
 				</div>
 
-				<div class="store">
+				<div class="store px" data-index="0.2">
 					<a href="">
 						<h2 class="headline">rome</h2>
 						<p>via del corso, 13</p>
@@ -478,7 +651,7 @@
 					<a href="#">map</a>
 				</div>
 
-				<div class="store">
+				<div class="store px" data-index="-0.8">
 					<a href="">
 						<h2 class="headline">rome</h2>
 						<p>via del corso, 13</p>
@@ -489,12 +662,12 @@
 		</div>
 	</section>
 
-	<section id="register" class="section">
+	<section id="register" class="section px" data-index="-3">
 		<div class="container-fluid">
 			<h1 class="section-headline">register your boot</h1>
 			<p class="text-center">register your product to lorem ipsum dolor</p>
 		
-			<div class="registration-form">
+			<div class="registration-form px" data-index="-0.5">
 				<div class="row row--form">
 					<div class="col-md-3 col-md-offset-2">
 						<label class="label-lg">Your email</label>
@@ -524,14 +697,14 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<section id="footer" class="section">
 		<div class="section-text"></div>
 		<p class="text-center">
 			<img src="assets/logo-hd.png" width="160">
 		</p>
-	</section>
+	</section> 
 
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
