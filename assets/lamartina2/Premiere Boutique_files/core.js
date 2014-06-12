@@ -33,7 +33,7 @@ $(document).ready(function() {
 	//$('#debug').html(navigator.userAgent)
 	
 	if(!isMobile){
-	var scarto_nav = 120
+	var scarto_nav = 160
 	}else{
 	var scarto_nav = -60
 	}
@@ -147,6 +147,8 @@ $('.anchor-link').anchorAnimate()
 	var $introhl = $('#intro .pay-off');
 	var $home = $('#home');
 	var $trans0 = $('#trans-0');
+	var $transx = $('#trans-x');
+	var $transy = $('#trans-y');
 	var $vision = $('#vision');
 	var $trans1 = $('#trans-1');
 	var $showroom = $('#showroom');
@@ -231,7 +233,7 @@ $('.anchor-link').anchorAnimate()
 		
 		
 		if($home.hasClass("inview")){
-			$home.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+500)*1, 0.3)}); 
+			$home.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+150)*2, 0.3)}); 
 			$('nav ul li').removeClass(curClass);
       		$('#home-link').parent().addClass('current');
 		}
@@ -245,6 +247,12 @@ $('.anchor-link').anchorAnimate()
 		}
 		if($trans1.hasClass("inview")){
 			$trans1.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*4, 0.3)});
+		}
+		if($transx.hasClass("inview")){
+			$transx.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*4, 0.3)});
+		}
+		if($transy.hasClass("inview")){
+			$transy.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*4, 0.3)});
 		}
 		if($showroom.hasClass("inview")){
 			$showroom.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*5, 0.3)}); 
