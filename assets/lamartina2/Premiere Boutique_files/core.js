@@ -33,7 +33,7 @@ $(document).ready(function() {
 	//$('#debug').html(navigator.userAgent)
 	
 	if(!isMobile){
-	var scarto_nav = 60
+	var scarto_nav = 160
 	}else{
 	var scarto_nav = -60
 	}
@@ -241,12 +241,12 @@ $('.anchor-link').anchorAnimate()
 			$trans0.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra)*2, 0.3)}); 
 		}
 		if($vision.hasClass("inview")){
-			$vision.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*3, 0.2)}); 
+			$vision.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra)*3, 0.2)}); 
 			$('nav ul li').removeClass(curClass);
       		$('#vision-link').parent().addClass('current');
 		}
 		if($trans1.hasClass("inview")){
-			$trans1.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*4, 0.3)});
+			$trans1.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra)*4, 0.3)});
 		}
 		if($transx.hasClass("inview")){
 			$transx.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*4, 0.3)});
