@@ -240,7 +240,9 @@ a.jp-pause{
 
 
 
-
+section h2 {
+	font-size: 1em !important;
+} 
 
 
 #intro {
@@ -463,6 +465,10 @@ a {
 
 #trans-x {
 	background:url(../assets/slide-04.jpg) 50% 0% no-repeat fixed;
+}
+
+#trans-y {
+	background:url(../assets/slide-03.jpg) 50% 0% no-repeat fixed;
 }
 
 
