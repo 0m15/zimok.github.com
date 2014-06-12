@@ -241,18 +241,18 @@ $('.anchor-link').anchorAnimate()
 			$trans0.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra-450)*3, 0.3)}); 
 		}
 		if($vision.hasClass("inview")){
-			$vision.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*3, 0.2)}); 
+			$vision.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+150)*3, 0.2)}); 
 			$('nav ul li').removeClass(curClass);
       		$('#vision-link').parent().addClass('current');
 		}
 		if($trans1.hasClass("inview")){
-			$trans1.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*4, 0.3)});
+			$trans1.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+150)*4, 0.3)});
 		}
 		if($transx.hasClass("inview")){
-			$transx.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*4, 0.3)});
+			$transx.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+150)*4, 0.3)});
 		}
 		if($transy.hasClass("inview")){
-			$transy.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*4, 0.3)});
+			$transy.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+150)*4, 0.3)});
 		}
 		if($showroom.hasClass("inview")){
 			$showroom.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*5, 0.3)}); 
