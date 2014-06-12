@@ -238,29 +238,29 @@ $('.anchor-link').anchorAnimate()
       		$('#home-link').parent().addClass('current');
 		}
 		if($trans0.hasClass("inview")){
-			$trans0.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra)*2, 0.3)}); 
+			$trans0.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*2, 0.3)}); 
 		}
 		if($vision.hasClass("inview")){
-			$vision.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra)*3, 0.2)}); 
+			$vision.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*3, 0.2)}); 
 			$('nav ul li').removeClass(curClass);
       		$('#vision-link').parent().addClass('current');
 		}
 		if($trans1.hasClass("inview")){
-			$trans1.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra)*4, 0.3)});
+			$trans1.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*4, 0.3)});
 		}
 		if($transx.hasClass("inview")){
-			$transx.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*4, 0.3)});
+			$transx.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*4, 0.3)});
 		}
 		if($transy.hasClass("inview")){
-			$transy.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*4, 0.3)});
+			$transy.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*4, 0.3)});
 		}
 		if($showroom.hasClass("inview")){
-			$showroom.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*5, 0.3)}); 
+			$showroom.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*5, 0.3)}); 
 			$('nav ul li').removeClass(curClass);
       		$('#showroom-link').parent().addClass('current');
 		}
 		if($trans2.hasClass("inview")){
-			$trans2.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*6, 0.3)});
+			$trans2.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto+450)*6, 0.3)});
 		}
 		if($brands.hasClass("inview")){
 			$brands.css({'backgroundPosition': newPos(50, windowHeight, pos, (altezza_finestra+scarto)*7, 0.3)});
