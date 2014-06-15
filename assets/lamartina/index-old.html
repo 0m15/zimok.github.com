@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lamartina</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Bebas:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+	
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/3.1.0/animate.css">
+
+
+ <link rel="stylesheet" href="styles/style.css">
+	<script>
+	var PROPS = [
+		'transform',
+		'webkitTransform', 
+		'MozTransform', 
+		'msTransform', 
+	]
+
+	function Backstretch(elements) {
+		var width = window.innerWidth
+		var height = window.innerHeight + 100
+		var elementsLength = elements.length
+		var i = 0
+		var currentImg = null
+		var currentRatio
+		var imgWidth
+		var _this = this
+		this.elements = elements
+
+		window.addEventListener('resize', resize)
+		resize()
+
+		function resize() {
+
+			for(; i < elementsLength; i++) {
+				currentImg = _this.elements[i]
+				currentRatio = currentImg.width / currentImg.height
+				var hRatio = currentImg.width / currentImg.height
+				var vRatio = currentImg.height / currentImg.width
+				imgWidth = height * hRatio
+				currentImg.width = imgWidth
+				currentImg.height = height
+
+				if(currentImg.width >= width) {
+					currentImg.style['margin-left'] = -1 * (currentImg.width - width) / 2 + 'px'
+				} else {
+					currentImg.width = width
+					currentImg.height = currentImg.width * vRatio
+				}
+
+			}
+		}
+	}
+
+	function Scrollable(elements) {
+
+		var RATIO = .2428
+		var elementsLength = elements.length
+		var currentElement = null
+		var lastYOffset = 0
+		var currentYOffset = 0
+		var cY= 0
+		var isScrolling = false
+		var lastElementIndex
+		var initialOffsetTop = $('[data-father]').eq(0).offset().top
+
+		for(var _i = 0; _i < elements.length; _i++) {
+			var el = elements[_i]
+			translate3D(el, {x: 0, y: 0, z: 0})
+		}
+
+		window.addEventListener('scroll', function() {
+			isScrolling = true
+		})
+
+		reflow()
+		onScroll()	
+
+		function onScroll() {
+			if(!isScrolling) return setTimeout(onScroll, 25)
+			isScrolling = false
+			//translateElements()
+			setTimeout(onScroll, 25)
+		}
+
+		function reflow() {
+			var $el, currentOffsetTop = initialOffsetTop
+			var i = 0
+			$('[data-father]').each(function() {
+				$el = $(this)
+				if(i > 0) {
+					currentOffsetTop += $(this).height()
+					$el.css('position', 'absolute').css('top', currentOffsetTop + 'px')
+				}
+				i++
+			})
+		}
+
+		var elementsToFade = document.querySelectorAll('.fade-in')
+		function mapOpacity(el, offsetY) {
+			var elOffset = el.offsetParent.offsetTop
+			var treshold = 350
+			var offsetYDiff = 0
+			var opacity
+
+			if(offsetY + treshold >= elOffset) {
+				offsetYDiff = offsetY + treshold - elOffset
+				opacity = (offsetYDiff / treshold) * 100
+				el.style.opacity = opacity / 100
+			}
+
+		}
+
+		function getOffsetTop(el) {
+			if(el.offsetParent && el.offsetParent.tagName !== "BODY") {
+				return el.offsetParent.offsetTop
+			} else {
+				return el.offsetTop
+			} 
+		}
+
+		function translateElements() {
+			var i = 0, k = 0
+			currentYOffset = window.pageYOffset
+			var currentElementToFade = null
+			var lastY
+
+			for(; k < elementsToFade.length; k++) {
+				currentElementToFade = elementsToFade[k]
+				// map opacity to el
+				//mapOpacity(currentElementToFade, currentYOffset)
+			}
+
+			for(; i < elementsLength; i++) {
+				currentElement = elements[i]
+				// currentYOffset <= currentElement.offsetHeight + currentElement.offsetParent.offsetTop
+
+				
+
+				if(!currentElement) return
+				var currentElementOffsetTop = getOffsetTop(currentElement)
+				if(currentYOffset + window.innerHeight >= currentElementOffsetTop) {
+					// translate
+					var translation = getCurrentTranslation(currentElement)
+					var isFather = currentElement.getAttribute('data-father') != null
+					var multiplier = 1
+					var zIndex = parseInt(currentElement.getAttribute('data-index'))
+					var currentRatio = 1
+
+					if(isFather) {
+						
+						var _translation = getCurrentTranslation(currentElement)
+						var currentElementIndex = $(currentElement).index() - 1
+
+						var currentElementOffsetY = getOffsetTop(currentElement)
+						var currentElementOffsetYThird = (currentElement.offsetHeight / 3) + getOffsetTop(currentElement)
+						var currentElementHeight = currentElement.offsetHeight
+						
+						// add class fixed if we are over 2/3 of the element
+						if(currentYOffset >= currentElement.offsetTop && 
+								isFather && 
+								$(currentElement).css('position') != 'fixed') {
+							
+							$(currentElement).css('position', 'fixed')
+							$(currentElement).css('top', '-20px')
+							//$(currentElement).css('margin-top', 0)
+							var currentElementIndex = $(currentElement).index()
+							
+							// if(currentElementIndex > 0 && isFather) {
+							// 	var idx = currentElementIndex-1
+							// 	var $el = $('[data-father]:eq('+idx+')')
+							// 	if($el.css('position') == 'fixed') {
+							// 		$el.css('margin-top', 0).css('positon', 'relative')
+							// 	}
+							// }
+
+						} else if(currentYOffset >= currentElementOffsetY + currentElement.offsetHeight && $(currentElement).css('position') == 'fixed') {
+							// $(currentElement).css('position', 'absolute')
+						} else if(currentYOffset <= currentElementOffsetY + currentElement.offsetHeight && $(currentElement).css('position') == 'fixed') {
+							//$(currentElement).css('position', 'relative')
+						}
+					}
+
+					var tY = window.pageYOffset
+					
+					if(tY > 0) translation.y = Math.floor(tY * RATIO * -1)
+					
+					
+					translate3D(currentElement, translation)
+					lastYOffset = window.pageYOffset
+					lastElementIndex = currentElementIndex
+					lastY = translation.y
+				}
+			}
+		}
+
+		function getElementTopScroll(el) {
+			return el.offsetTop||el.scrollTop
+		}
+
+		function getCurrentTranslation(el) {
+			var ref
+			PROPS.forEach(function(prop) {
+				if(el.style[prop] !== undefined) ref = el.style[prop]
+			})
+			return parseTranslationProps(ref)
+		}
+
+		function parseTranslationProps(value) {
+			var match = value.match(/(\d+(px|\%))/g)
+			return {
+				x: parseInt(match[0]),
+				y: parseInt(match[1]),
+				z: parseInt(match[2]),
+			}
+		}
+
+		function translate3D(el, translation) {
+			PROPS.forEach(function(prop) {
+				var elStyle = el.style[prop]
+				if(elStyle !== undefined) {
+					el.style[prop] = "translate3D("+translation.x+"px,"+translation.y+"px,"+translation.z+"px)"
+				}
+			})
+		}
+	}
+
+	window.onload = function() {
+		var fullscreenImgs = document.querySelectorAll('.fullscreen')
+		new Backstretch(fullscreenImgs)
+
+		var elements = document.querySelectorAll('.px')
+		window.scrollable = new Scrollable(elements)
+
+		
+	}
+	</script>
+</head>
+<body>
+
+	
+	
+	<!-- <section id="media" class="x">
+	
+		<div class="section-media">
+			<img src="http://placehold.it/1400x600" class="img-responsive">
+			<div class="main-brand">
+				<a href="#intro" class="with-down-arrow">
+					<img src="assets/logo-hd.png" width="320"><br>
+					<span class="double-lined">discover the new boot</span>
+				</a>
+			</div>
+		</div>
+	</section> -->
+	
+	<header class="navbar navbar-fixed-top">
+		<div class="-fluid">
+			<nav class="main-navigation clearfix">
+				<ul class="nav navbar-nav">
+					<li class="small-brand"><a href="#"><img src="assets/logo-hd.png" width="64"></a></li>
+					<li><a href="#">home</a></li>
+					<li><a href="#intro">storia</a></li>
+					<li><a href="#zip">cortos</a></li>
+					<li><a href="#stores">store</a></li>
+					<li><a href="#register">contacts</a></li>
+					<li><a href="#register">code</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<section id="intro" class="section px" data-father>
+		<div class="section-bg section--overlay">
+			<img src="assets/slide.jpg" class="fullscreen">
+		</div>
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay px" data-index="1">
+				<h1 class="section-headline">
+					the boot born from the field
+				</h1>
+
+				<p class="section-copy">
+					An exceptional product stands on the highest step of the podium. The new la martina.
+					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
+					mingle in the club house in style.
+				</p>
+			</div>
+		</div>
+	</section>
+	
+
+	<section id="intro" class="section px" data-father>
+		<div class="section-bg section--overlay">
+			<img src="assets/intro.jpg" class="fullscreen">
+		</div>
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay px" data-index="1">
+				<h1 class="section-headline">
+					the boot born from the field
+				</h1>
+
+				<p class="section-copy">
+					An exceptional product stands on the highest step of the podium. The new la martina.
+					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
+					mingle in the club house in style.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section id="intro" class="section px" data-father>
+		<div class="section-bg section--overlay">
+			<img src="assets/slide-03.jpg" class="fullscreen">
+		</div>
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay px" data-index="1">
+				<h1 class="section-headline">
+					the boot born from the field
+				</h1>
+
+				<p class="section-copy">
+					An exceptional product stands on the highest step of the podium. The new la martina.
+					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
+					mingle in the club house in style.
+				</p>
+			</div>
+		</div>
+	</section>
+	
+	<section id="intro" class="section px" data-father>
+		<div class="section-bg section--overlay">
+			<img src="assets/slide-01.jpg" class="fullscreen">
+		</div>
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay px" data-index="1">
+				<h1 class="section-headline">
+					the boot born from the field
+				</h1>
+
+				<p class="section-copy">
+					An exceptional product stands on the highest step of the podium. The new la martina.
+					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
+					mingle in the club house in style.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="intro" class="section  px" data-father>
+		<div class="section-bg section--overlay">
+			<img src="assets/slide-02.jpg" class="fullscreen">
+		</div>
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay px" data-index="1">
+				<h1 class="section-headline">
+					the boot born from the field
+				</h1>
+
+				<p class="section-copy">
+					An exceptional product stands on the highest step of the podium. The new la martina.
+					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
+					mingle in the club house in style.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="intro" class="section  px" data-father>
+		<div class="section-bg section--overlay section--fadeout">
+			<img src="assets/zip.jpg" class="fullscreen">
+		</div>
+		<div class="section-text section-text--bottom">
+			<div class="section-overlay px" data-index="1">
+				<h1 class="section-headline">
+					the boot born from the field
+				</h1>
+
+				<p class="section-copy">
+					An exceptional product stands on the highest step of the podium. The new la martina.
+					"cortos" are born to walk the pleasant steps towards the polo prize ceremonies and
+					mingle in the club house in style.
+				</p>
+			</div>
+		</div>
+	</section> -->
+
+	<!-- <section id="gallery" class="section px">
+		<div class="container-fluid">
+			<h1 class="section-headline">look at it</h1>
+
+			<div class="row" style="padding-top:4em">
+				<div class="col-md-6 col--with-separator px" data-index="-1.5">
+					<div class="store">
+						<a href="">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
+						</a>
+					</div>
+
+					<div class="store">
+						<a href="">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
+						</a>
+					</div>
+					
+				</div>
+
+				<div class="col-md-4 col--with-separator px" data-index="-0.5">
+					<div class="store">
+						<a href="">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
+						</a>
+					</div>
+
+					<div class="store">
+						<a href="">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
+						</a>
+					</div>
+
+					<div class="store">
+						<a href="">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
+						</a>
+					</div>
+
+					
+				</div>
+
+				<div class="col-md-2 col--with-separator px" data-index="-1">
+					<div class="store px" data-index="0.3">
+						<a href="">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
+						</a>
+					</div>
+
+					<div class="store px" data-index="-0.1">
+						<a href="">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
+						</a>
+					</div>
+
+					<div class="store px" data-index="0.4">
+						<a href="">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
+						</a>
+					</div>
+
+					<div class="store px" data-index="-0.3">
+						<a href="">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
+						</a>
+					</div>
+
+					<div class="store px" data-index="-0.6">
+						<a href="">
+							<img src="assets/slide-01.jpg" class="img-responsive fade-in">
+						</a>
+					</div>
+
+
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="stores" class="section px" data-index="-3">
+		<div class="container-fluid">
+			<h1 class="section-headline">find your store</h1>
+
+			<div class="row px" data-index="0.5">
+				<div class="col-md-4 col--with-separator px" data-index="-0.5">
+					<div class="store">
+						<a href="">
+							<h2 class="headline">rome</h2>
+							<p>via del corso, 13</p>
+						</a>
+						<a href="#">map</a>
+					</div>
+
+					<div class="store  px" data-index="0.5">
+						<a href="">
+							<h2 class="headline">rome</h2>
+							<p>via del corso, 13</p>
+						</a>
+						<a href="#">map</a>
+					</div>
+
+					<div class="store  px" data-index="-0.5">
+						<a href="">
+							<h2 class="headline">rome</h2>
+							<p>via del corso, 13</p>
+						</a>
+						<a href="#">map</a>
+					</div>
+
+					<div class="store px" data-index="0.5">
+						<a href="">
+							<h2 class="headline">rome</h2>
+							<p>via del corso, 13</p>
+						</a>
+						<a href="#">map</a>
+					</div>
+				</div>
+			
+
+			<div class="col-md-4 col--with-separator">
+					
+				<div class="store px" data-index="-0.1">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store px" data-index="0.1">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store px" data-index="-0.1">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store px" data-index="0.2">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+			</div>
+
+			<div class="col-md-4 col--with-separator">
+					
+				<div class="store px" data-index="-0.51">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store px" data-index="-0.4">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store px" data-index="0.2">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+
+				<div class="store px" data-index="-0.8">
+					<a href="">
+						<h2 class="headline">rome</h2>
+						<p>via del corso, 13</p>
+					</a>
+					<a href="#">map</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="register" class="section px" data-index="-3">
+		<div class="container-fluid">
+			<h1 class="section-headline">register your boot</h1>
+			<p class="text-center">register your product to lorem ipsum dolor</p>
+		
+			<div class="registration-form px" data-index="-0.5">
+				<div class="row row--form">
+					<div class="col-md-3 col-md-offset-2">
+						<label class="label-lg">Your email</label>
+					</div>
+					<div class="col-md-5">
+						<input type="text" class="text-input input-lg col-md-12" placeholder="your@email.com">
+					</div>
+				</div>
+				<div class="row row--form">
+					<div class="col-md-3  col-md-offset-2">
+						<label class="label-lg">Product code</label><br>
+					</div>
+					<div class="col-md-5">
+						<input type="text" class="text-input input-lg col-md-12" placeholder="5612AH">
+						<small class="help-text text-secondary">You can find it in the box</small>
+					</div>
+				</div>
+			
+				<div class="row row--form">
+					<div class="col-md-3 col-md-offset-2">
+					</div>
+					<div class="col-md-5">
+						<button class="btn btn-lg btn-primary">register</button>
+						<br><br>
+						<p class="text-secondary"><small>by registering Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, molestias, eaque, eos explicabo delectus rem </small></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+	<section id="footer" class="section">
+		<div class="section-text"></div>
+		<p class="text-center">
+			<img src="assets/logo-hd.png" width="160">
+		</p>
+	</section>
+
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/skrollr/dist/skrollr.min.js"></script>
+
+
+</body>
+</html>
