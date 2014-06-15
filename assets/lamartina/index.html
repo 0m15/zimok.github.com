@@ -24,11 +24,10 @@
 			var caller = this
 			$(caller).click(function (event) {	
 				event.preventDefault()
-				//var locationHref = window.location.href
+
 				var elementClick = $(caller).attr("href")
 				var destination = $(elementClick).offset().top - 115
 				$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, {duration:1500, queue: false, complete:function() {
-					//window.location.hash = elementClick
 				}});
 			  	return false;
 			})
@@ -60,7 +59,6 @@
 			var _this = this
 			this.elements = elements
 
-
 			window.addEventListener('resize', resize)
 			resize()
 
@@ -85,7 +83,7 @@
 		// adapt video
 		function resizeVideo() {
 			var currentImg = $('#media').find('video')[0]
-			var width = $window.width()
+			var width = $window.width() - 200
 			var height = $window.height() - 400
 			var hRatio = 16 / 9
 			var vRatio = 9 / 16
@@ -133,12 +131,23 @@
 			$el.css({ backgroundPosition: coords });
     }
 
+    var $menuItems = $('.navbar-nav').find('li a')
+
     function parallax() {
 		  var origCurrentY
 		  var i = 0
 
 		  // apply opacity to navbar
-		  if($window.width() > 600) mapOpacity($('.navbar')[0], $window.scrollTop())
+		  if($window.width() >= 600) {
+		  	
+		  	mapOpacity($('.navbar')[0], $window.scrollTop())
+
+			  if($window.scrollTop() >= $('.video').height()) {
+			  	$('.navbar').addClass('navbar-fixed-top')	
+			  } else {
+			  	$('.navbar').removeClass('navbar-fixed-top')	
+			  }
+			}
 
 		  function mapOpacity(el, offsetY) {
 				var elOffset = $(el).offset().top
@@ -158,6 +167,18 @@
 
 			}
 
+			$('section').each(function() {
+				var $el = $(this)
+				// add active class to menu item
+		    if($window.scrollTop() + 200 >= $el.offset().top && 
+		    	 $window.scrollTop() <= $el.offset().top + $el.height()) {
+					var $menuItem = $('.navbar-nav').find('a[href="#'+$el.attr('id')+'"]')
+					if($menuItem.length) {
+						$menuItems.removeClass('active')
+						$menuItem.addClass('active')
+					}
+				}
+			})
 
     	$('section[data-type="background"]').each(function(){
 
@@ -214,7 +235,7 @@
 		</div>
 	</section>
 	
-	<header class="navbar navbar-fixed-top">
+	<header class="navbar">
 		<div class="main-brand text-center">
 			<a href="">
 				<img src="assets/logo-hd.png" width="160" class="align-center" style="margin:0 auto">

@@ -148,7 +148,6 @@
 	==============================================
 	*/
 	.navbar {
-		border-bottom: 1px solid rgba(255, 255, 255, .2);
 		-webkit-transition: opacity 1s ease-in-out;
 		-moz-transition: opacity 1s ease-in-out;
 		-ms-transition: opacity 1s ease-in-out;
@@ -184,6 +183,11 @@
 			width: 100%;
 			margin: 0 auto;
 			background: rgba(0, 0, 0, .25);
+			transition: all .75s ease-in-out;
+			font-size: .9em;
+		}
+		.navbar-nav:hover {
+			background: rgba(0, 0, 0, .75);
 		}
 	}
 	
@@ -202,7 +206,7 @@
 	}
 	
 	.navbar-nav > li a:hover,active {
-		background: rgba(0, 0, 0, .45);		
+		background: transparent;
 	}
 	
 	.logo {
@@ -243,10 +247,11 @@
 			margin: 0 auto;
 		}
 		.navbar-nav > li a {
-			border: none;
+			border-bottom: 2px solid transparent;
 		}
+		.navbar-nav > li a:hover,
 		.navbar-nav > li a.active {
-			border-bottom: 1px solid #222;
+			border-bottom: 2px solid #fff;
 		}
 		.navbar-nav > li {
 			float: none;
