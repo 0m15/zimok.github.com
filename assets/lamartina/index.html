@@ -66,9 +66,11 @@
 				for(; i < elementsLength; i++) {
 					var el = _this.elements[i]
 					if(height <= 800) {
+						if(console) console.log('resize')
 						el.style['min-height'] = height - 80 + 'px'
 					} else {
 						el.style['min-height'] = 800 + 'px'
+
 					}
 				}
 			}
