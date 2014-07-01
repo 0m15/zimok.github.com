@@ -65,7 +65,11 @@
 			function resize() {
 				for(; i < elementsLength; i++) {
 					var el = _this.elements[i]
-					el.style['min-height'] = height - 80 + 'px'
+					if(height <= 800) {
+						el.style['min-height'] = height - 80 + 'px'
+					} else {
+						el.style['min-height'] = 800 + 'px'
+					}
 				}
 			}
 		}
@@ -140,10 +144,10 @@
 		  // apply opacity to navbar
 		  if($window.width() >= 600) {
 		  	
-		  	mapOpacity($('.navbar')[0], $window.scrollTop())
+		  	//mapOpacity($('.navbar')[0], $window.scrollTop())
 
 			  if($window.scrollTop() >= $('.video').height()) {
-			  	$('.navbar').addClass('navbar-fixed-top')	
+			  	$('.navbar').addClass('navbar-fixed-top')
 			  } else {
 			  	$('.navbar').removeClass('navbar-fixed-top')	
 			  }
