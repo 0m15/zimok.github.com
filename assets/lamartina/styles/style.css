@@ -394,6 +394,15 @@
 		padding: 2em;
 	}
 	
+	#media .logo-hover {
+		opacity: 0;
+		transition: opacity .5s ease-in-out;
+	}
+
+	#media:hover .logo-hover {
+		opacity: 1;
+	}
+	
 
 	/* intro */
 	#section-1 {
