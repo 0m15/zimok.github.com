@@ -65,11 +65,11 @@
 			function resize() {
 				for(; i < elementsLength; i++) {
 					var el = _this.elements[i]
-					if(height <= 800) {
+					if(height <= 700) {
 						if(console) console.log('resize')
 						el.style['min-height'] = height - 80 + 'px'
 					} else {
-						el.style['min-height'] = 800 + 'px'
+						el.style['min-height'] = 700 + 'px'
 
 					}
 				}
@@ -231,7 +231,11 @@
 	<section id="media" style="margin-bottom:50%">
 	
 		<div class="section-media" style="position:relative">
-			<video src="assets/video.ogg" class="video" preload autoplay></video>
+			<video class="video" preload autoplay>
+				<source src="assets/video.m4v">
+				<source src="assets/video.ogg">
+				
+			</video>
 			<div class="main-brand" style="position:absolute;width:100%;bottom:10em;">
 				<a href="#section-1" class="with-down-arrow">
 					<img src="assets/logo-hd.png" width="320"><br>
