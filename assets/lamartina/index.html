@@ -65,11 +65,11 @@
 			function resize() {
 				for(; i < elementsLength; i++) {
 					var el = _this.elements[i]
-					if(height <= 700) {
+					if(height <= 800) {
 						if(console) console.log('resize')
 						el.style['min-height'] = height - 80 + 'px'
 					} else {
-						el.style['min-height'] = 700 + 'px'
+						el.style['min-height'] = 800 + 'px'
 
 					}
 				}
@@ -124,7 +124,7 @@
    	}
    	onScroll() 
 
-   	var INITIAL_Y = 240
+   	var INITIAL_Y = 80
    	var currentIndex = 0
    	var i = 0
 
@@ -145,28 +145,29 @@
 
 		  // apply opacity to navbar
 		  if($window.width() >= 600) {
-		  	
-		  	//mapOpacity($('.navbar')[0], $window.scrollTop())
+				var $navbar = $('.navbar')
+				var $media = $('#media')
+		  	mapOpacity($navbar[0], $window.scrollTop())
 
-			  if($window.scrollTop() >= $('.video').height()) {
-			  	$('.navbar').addClass('navbar-fixed-top')
+			  if($window.scrollTop() - 200 >= $media.height()) {
+			  	$navbar.addClass('navbar-fixed-top')
 			  } else {
-			  	$('.navbar').removeClass('navbar-fixed-top')	
+			  	$navbar.removeClass('navbar-fixed-top')	
 			  }
 			}
 
-		  function mapOpacity(el, offsetY) {
-				var elOffset = $(el).offset().top
-				var treshold = $('.video').height()
+		  function mapOpacity(el, scrolY) {
+				var elOffset = $(el).offset()
+				var treshold = $(window).height()
 				var offsetYDiff = 0
 				var opacity
 
-				if(offsetY >= treshold) {
-					offsetYDiff = offsetY + treshold - elOffset
-					opacity = (offsetYDiff / treshold) * 100
-				} else if (offsetY <= treshold) {
-					offsetYDiff = offsetY + treshold - elOffset
+				if(scrollY + treshold >= elOffset.top) {	
+					offsetYDiff = elOffset.top - scrollY
 					opacity = 100 - (offsetYDiff / treshold) * 100
+				} else if (scrollY + treshold <= elOffset.top) {
+					offsetYDiff = elOffset.top - scrollY
+					opacity = (offsetYDiff / treshold) * 100
 				}
 
 				el.style.opacity = opacity / 100
@@ -228,7 +229,7 @@
 
 	
 	
-	<section id="media" style="margin-bottom:50%">
+	<section id="media">
 	
 		<div class="section-media" style="position:relative">
 			<video class="video" preload autoplay>
@@ -236,7 +237,7 @@
 				<source src="assets/video.ogg">
 				
 			</video>
-			<div class="main-brand" style="position:absolute;width:100%;bottom:10em;">
+			<div class="main-brand">
 				<a href="#section-1" class="with-down-arrow logo-hover">
 					<img src="assets/logo-hd.png" width="320"><br>
 					<span class="double-lined">discover the new boot</span>

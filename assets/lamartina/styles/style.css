@@ -148,14 +148,9 @@
 	==============================================
 	*/
 	.navbar {
-		-webkit-transition: opacity 1s ease-in-out;
-		-moz-transition: opacity 1s ease-in-out;
-		-ms-transition: opacity 1s ease-in-out;
-		-o-transition: opacity 1s ease-in-out;
-		transition: opacity 1s ease-in-out;
 		border-bottom: none;
 		min-height: 160px;
-		opacity: 0;
+		/*opacity: 0;*/
 	}
 
 	.navbar .main-brand {
@@ -177,11 +172,10 @@
 		}
 		.navbar {
 			opacity: 0;
-			transition: opacity 1s ease-in-out;
 		}
 		.navbar.navbar-fixed-top {
 			position: fixed;
-			opacity: 1;
+			/*opacity: 1;*/
 		}
 
 		.navbar-nav {
@@ -385,6 +379,14 @@
 		text-align: center;
 	}
 	
+	#media .main-brand {
+		position:absolute;
+		width: 320px;
+		left: 50%;
+		margin-left: -160px;
+		bottom:10em;
+	}
+
 	#media .main-brand span {
 		display: inline-block;
 	}
