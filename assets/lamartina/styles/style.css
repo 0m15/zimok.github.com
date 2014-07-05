@@ -270,6 +270,7 @@
 		position: relative;
 		margin-bottom: 0;
 		overflow: hidden;
+		padding-top: 2em;
 	}
 
 	.fade-in,
@@ -316,6 +317,7 @@
 			position: relative;
 			text-transform: uppercase;
 			margin: 0;
+			margin-top: 1em;
 			padding-top: 2em;
 			line-height: 1;
 			font-size: 2.25em;
@@ -324,6 +326,7 @@
 			letter-spacing: .1em;
 			text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
 			text-align: center;
+
 		}
 
 			.section-headline:before {
@@ -480,8 +483,6 @@
 		background: #ebebeb;
 	}
 
-
-
 	#gallery,
 	#stores {
 		position: relative;
@@ -513,7 +514,6 @@
 		opacity: 1;
 	}
 
-	
 	/* stores */
 	#stores .store-list {
 		list-style: none;
@@ -548,6 +548,17 @@
 
 	#stores .row {
 		margin: 6em 0;
+	}
+
+	#stores .map-container {
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 1em;
+	}
+
+	#map-canvas {
+		width: 100%;
+		height: 450px;
 	}
 
 	.store {
