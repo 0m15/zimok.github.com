@@ -1,0 +1,89 @@
+body,
+html {
+	font-family: Georgia;
+}
+
+body {
+	background: #dea75f url(../images/logo-bg.png) center center no-repeat;
+}
+
+a, a:link {
+	color: #444;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+.nav-primary {
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 1.75em;
+}
+
+h1,
+h2 {
+	text-transform: uppercase;
+}
+
+.page-header {
+	border-bottom: 1px solid rgba(0, 0, 0, .25);
+}
+
+p {
+	font-size: 1.25em;
+	line-height: 1.5;
+}
+
+.nav-primary {
+	margin-top: 3em;	
+	text-transform: uppercase;
+}
+
+/* modules */
+.content .address {
+	margin-bottom: 1em;
+}
+.address strong {
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+/* home */
+.preview h2 {
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+/* footer */
+.footer {
+	margin-top: 10em;
+	border-top: 1px solid rgba(0,0,0,.2);
+	letter-spacing: .1em;
+}
+
+.footer > div {
+	padding: 2em 0 3em;
+}
+
+.footer .legal {
+	margin: 2rem 0;
+	font-size: .75em;
+	color: rgba(0, 0, 0, .5);
+}
+
+.footer a {
+	text-transform: uppercase;
+}
+
+.footer i {
+	position: relative;
+	top: .25em;
+	opacity: .7;
+	font-size: 1.5em;
+}
+
+/* dove-siamo */
+#map-canvas {
+	margin-top: 2em;
+	width: 100%;
+}
