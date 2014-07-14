@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
 	<title>lamartina</title>
@@ -7,8 +7,6 @@
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-
-	
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/3.1.0/animate.css">
 
 
@@ -16,16 +14,12 @@
 
 </head>
 <body>
-
-	
-	
 	<section id="media">
 	
 		<div class="section-media" style="position:relative">
 			<video class="video" autoplay preload>
 				<source src="assets/video.m4v">
 				<source src="assets/video.ogg">
-				
 			</video>
 			<div class="main-brand">
 				<a href="#section-1" class="with-down-arrow logo-hover">
@@ -152,7 +146,7 @@
 			<div class="row" style="padding-top:4em">
 				<div class="col-md-4 col--with-separator" data-index="-1.5">
 					<div class="thumb" data-index="0.4">
-						<a href="">
+						<a href="assets/gallery/06.jpg">
 							<img src="assets/gallery/06.jpg" class="img-responsive">
 						</a>
 					</div>
@@ -160,19 +154,19 @@
 
 				<div class="col-md-4 col--with-separator" data-index="-0.5">
 					<div class="thumb">
-						<a href="">
+						<a href="assets/gallery/03.jpg">
 							<img src="assets/gallery/03-thumb.jpg" class="img-responsive">
 						</a>
 					</div>
 
 					<div class="thumb">
-						<a href="">
+						<a href="assets/gallery/04.jpg">
 							<img src="assets/gallery/04-thumb.jpg" class="img-responsive">
 						</a>
 					</div>
 
 					<div class="thumb">
-						<a href="">
+						<a href="assets/gallery/05.jpg">
 							<img src="assets/gallery/05-thumb.jpg" class="img-responsive">
 						</a>
 					</div>
@@ -182,12 +176,12 @@
 
 				<div class="col-md-4 col--with-separator" data-index="-1">
 					<div class="thumb">
-						<a href="">
+						<a href="assets/gallery/01.jpg">
 							<img src="assets/gallery/01-thumb.jpg" class="img-responsive">
 						</a>
 					</div>					
 					<div class="thumb">
-						<a href="">
+						<a href="assets/gallery/02.jpg">
 							<img src="assets/gallery/02-thumb.jpg" class="img-responsive">
 						</a>
 					</div>		
@@ -195,30 +189,57 @@
 			</div>
 		</div>
 	</section>
-
-	<section id="stores" class="section px" data-speed="5" data-type="background">
+	
+	<section 
+		id="stores" 
+		class="section px" 
+		ng-class={'open':open} data-speed="5" data-type="background" ng-controller="StoreFinderCtrl">
 		<div class="container-fluid">
-			<h1 class="section-headline">stores</h1>
-
-			<div class="" data-index="0.5">
-				<div class="" data-index="-0.5">
-					<ul class="store-list">
-						<li><a href="">rome</a></li>
-						<li><a href="">florence</a></li>
-						<li><a href="">milan</a></li>
-						<li><a href="">paris</a></li>
-						<li><a href="">london</a></li>
-						<li><a href="">madrid</a></li>
-						<li><a href="">new york</a></li>
-						<li><a href="">buenos aires</a></li>
-					</ul>
-				</div>
+			<h1 class="section-headline">stores <button class="btn btn-icon" ng-click="toggle()" ng-show="open">&times;</button></h1>
 			
-				
-				<div class="col-md-9 map-container">
-					<div id="map-canvas"></div>
-						
+			<!-- <div class="text-center">
+				<button type="button" class="btn btn-xl" ng-click="toggle()">find your local retailer</button>
+			</div> -->
+
+			<div class="search-bar clearfix">
+				<input type="text" ng-model="searchQuery" class="text-input input-xl col-md-4 col-md-offset-4" placeholder="enter your zip, town or state">
+			</div>
+			
+			<div class="clearfix">
+				<div class="col-md-10 col-md-offset-1" data-index="0.5">
+					<div class="clearfix" data-index="-0.5">
+						<ul class="store-list clearfix">
+							<li 
+								ng-show="currentTown"
+								>
+								<span class="pull-left">
+									<button class="btn btn-icon" ng-click="showAll()">&times; show all</button>
+								</span>
+							</li>
+							<li 
+								ng-repeat="(town, props) in storesByTown"
+								ng-show="props.selected == undefined || props.selected == true" 
+								ng-class="{selected: props.selected, animated: true}"
+							>
+								<a href="" ng-click="selectTown(town)">{{town}}</a></li>
+						</ul>
+					</div>
+					<br><br>
+
+					<div class="current-area" ng-show="currentTown">
+						<ul class="list-unstyled">
+							<li ng-repeat="store in currentTown.stores|orderBy:store.town" class="col-sm-4 col-md-3 store-detail">
+								<p class="store-town">{{store.town}}</p>
+								<p class="store-name">{{store.name}}</p>
+								<p class="store-address">{{store.address}}</p>
+							</li>
+						</ul>
+					</div>
 				</div>
+			</div>
+		</div>
+		<div class="map-container">
+			<div id="map-canvas"></div>
 		</div>
 	</section>
 
@@ -265,317 +286,15 @@
 			<img src="assets/logo-hd.png" width="160">
 		</p>
 	</section>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDToCE_kRLo_41eqc4NEk2quNQS5JjG5Dk"></script>
+	<script src="http://code.angularjs.org/1.2.0/angular.js"></script>
+  <script src="http://code.angularjs.org/1.2.0/angular-animate.js"></script>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-	<script>
-	jQuery.fn.anchorAnimate = function() {	 	
-		return this.each(function(){
-			var caller = this
-			$(caller).click(function (event) {	
-				event.preventDefault()
-
-				var elementClick = $(caller).attr("href")
-				var destination = $(elementClick).offset().top - 115
-				$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, {duration:1500, queue: false, complete:function() {
-				}});
-			  	return false;
-			})
-		})
-	}
-
-	$(document).ready(function(){
-
-		// animate anchors
-		$('.navbar a').anchorAnimate()
-
-		// Cache the Window object
-		$window = $(window);
-    var isScrolling = false, _currentTimer = null
-
-    $window.on('resize', function() {
-    	resizeVideo()
-    })
-
-    // resize slides accordingly to height
-		function Backstretch(elements) {
-			var width = window.innerWidth
-			var height = window.innerHeight
-			var elementsLength = elements.length
-			var i = 0
-			var currentImg = null
-			var currentRatio
-			var imgWidth
-			var _this = this
-			this.elements = elements
-
-			window.addEventListener('resize', resize)
-			resize()
-
-			function resize() {
-				for(; i < elementsLength; i++) {
-					var el = _this.elements[i]
-					if(height <= 800) {
-						if(console) console.log('resize')
-						el.style['min-height'] = height - 80 + 'px'
-					} else {
-						el.style['min-height'] = 800 + 'px'
-
-					}
-				}
-			}
-		}
-
-		// resize elements
-		new Backstretch(document.querySelectorAll('.px'))
-
-		// video controls
-		var player = null
-		$('.video').on('click', function() {
-			player = this
-			player.paused ? player.play() : player.pause()
-		})
-
-		// adapt video
-		function resizeVideo() {
-			var currentImg = $('#media').find('video')[0]
-			var width = $window.width() - 200
-			var height = $window.height() - 400
-			var hRatio = 16 / 9
-			var vRatio = 9 / 16
-			var imgWidth = height * hRatio
-			
-			currentImg.width = imgWidth
-			currentImg.height = height
-
-			if(currentImg.width >= width) {
-				currentImg.style['margin-left'] = -1 * (currentImg.width - width) / 2 + 'px'
-			} else {
-				currentImg.width = width
-				currentImg.height = currentImg.width * vRatio
-			}
-		}
-		resizeVideo()
-
-    $(window).on('scroll', function() {
-   		isScrolling = true
-   	})
-
-   	function timer() {
-   		if(_currentTimer) clearTimeout(_currentTimer)
-   		_currentTimer = setTimeout(onScroll, 10)
-   	}
-   	
-   	function onScroll() {
-   		if(!isScrolling) return timer()
-   		isScrolling = false
-   		parallax()
-   		timer()
-   	}
-   	onScroll() 
-
-   	var INITIAL_Y = 120
-   	var currentIndex = 0
-   	var i = 0
-
-   	$('section[data-type="background"]').each(function(){
-   		translateBg($(this), INITIAL_Y)
-   	})
-
-   	function translateBg($el, y) {
-    	var coords = '50% '+ y + 'px';
-			$el.css({ backgroundPosition: coords });
-    }
-
-    var $menuItems = $('.navbar-nav').find('li a')
-
-    function parallax() {
-		  var origCurrentY
-		  var i = 0
-
-		  // apply opacity to navbar
-		  if($window.width() >= 600) {
-				var $navbar = $('.navbar')
-				var $media = $('#media')
-		  	mapOpacity($navbar[0], $window.scrollTop())
-
-			  if($window.scrollTop() - 200 >= $media.height()) {
-			  	$navbar.addClass('navbar-fixed-top')
-			  } else {
-			  	$navbar.removeClass('navbar-fixed-top')	
-			  }
-			}
-
-		  function mapOpacity(el, scrolY) {
-				var elOffset = $(el).offset()
-				var treshold = $(window).height()
-				var offsetYDiff = 0
-				var opacity
-
-				if(scrollY + treshold >= elOffset.top) {	
-					offsetYDiff = elOffset.top - scrollY
-					opacity = 100 - (offsetYDiff / treshold) * 100
-				} else if (scrollY + treshold <= elOffset.top) {
-					offsetYDiff = elOffset.top - scrollY
-					opacity = (offsetYDiff / treshold) * 100
-				}
-
-				el.style.opacity = opacity / 100
-
-			}
-
-			$('section').each(function() {
-				var $el = $(this)
-				// add active class to menu item
-		    if($window.scrollTop() + 200 >= $el.offset().top && 
-		    	 $window.scrollTop() <= $el.offset().top + $el.height()) {
-					var $menuItem = $('.navbar-nav').find('a[href="#'+$el.attr('id')+'"]')
-					if($menuItem.length) {
-						$menuItems.removeClass('active')
-						$menuItem.addClass('active')
-					}
-				}
-			})
-
-    	$('section[data-type="background"]').each(function(){
-
-		    var $el = $(this); // assigning the object
-		    var isScrolling = false, _currentTimer = null
-		    var yPos
-		    var adjust = $el.data("adjust")
-
-		    currentIndex = $el.index() - 1
-
-		    function getY($el) {
-		    	var str = $el.css('backgroundPosition')
-		    	var group = str.match(/(\d+)px/g)
-		    	if(!group) return 0
-		    	return parseInt(group[0])
-		    }
-
-		    //$el.addClass('moving')
-
-		    var relativeScroll = $window.scrollTop() - (i * $el.height()) - $('.video').height()
-		    var speed = $el.data('speed')
-		    origCurrentY = getY($el)
-
-		    if(adjust) adjust = 0
-
-	    	_y = Math.floor(relativeScroll / speed) * -1	 
-	    	if(origCurrentY >= 0) {
-	    		yPos = _y + INITIAL_Y
-	    	} else {
-	    		yPos = _y
-	    	}
-	    	translateBg($el, yPos)
-				i++
-			})
-		}
-
-		var map;
-        var chicago = new google.maps.LatLng(41.878114, -87.629798);
-
-        function initialize() {
-
-            var roadAtlasStyles = [
-  {
-      "featureType": "road.highway",
-      "elementType": "geometry",
-      "stylers": [
-        { "saturation": -100 },
-        { "lightness": -8 },
-        { "gamma": 1.18 }
-      ]
-  }, {
-      "featureType": "road.arterial",
-      "elementType": "geometry",
-      "stylers": [
-        { "saturation": -100 },
-        { "gamma": 1 },
-        { "lightness": -24 }
-      ]
-  }, {
-      "featureType": "poi",
-      "elementType": "geometry",
-      "stylers": [
-        { "saturation": -100 }
-      ]
-  }, {
-      "featureType": "administrative",
-      "stylers": [
-        { "saturation": -100 }
-      ]
-  }, {
-      "featureType": "transit",
-      "stylers": [
-        { "saturation": -100 }
-      ]
-  }, {
-      "featureType": "water",
-      "elementType": "geometry.fill",
-      "stylers": [
-        { "saturation": -100 }
-      ]
-  }, {
-      "featureType": "road",
-      "stylers": [
-        { "saturation": -100 }
-      ]
-  }, {
-      "featureType": "administrative",
-      "stylers": [
-        { "saturation": -100 }
-      ]
-  }, {
-      "featureType": "landscape",
-      "stylers": [
-        { "saturation": -100 }
-      ]
-  }, {
-      "featureType": "poi",
-      "stylers": [
-        { "saturation": -100 }
-      ]
-  }, {
-  }
-	  ]
-
-	  var mapOptions = {
-	      zoom: 14,
-	      center: chicago,
-	      scrollwheel: false,
-		    navigationControl: false,
-		    mapTypeControl: false,
-		    scaleControl: false,
-		    disableDefaultUI: true,
-	      mapTypeControlOptions: {
-	          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'usroadatlas']
-	      }
-	  };
-
-	  map = new google.maps.Map(document.getElementById('map-canvas'),
-	      mapOptions);
-
-	  var styledMapOptions = {
-	      
-	  };
-
-	  var usRoadMapType = new google.maps.StyledMapType(
-	      roadAtlasStyles, styledMapOptions);
-
-	  map.mapTypes.set('usroadatlas', usRoadMapType);
-	  map.setMapTypeId('usroadatlas');
-	}
-
-	google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
-	}); 
-	</script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDToCE_kRLo_41eqc4NEk2quNQS5JjG5Dk"></script>
-	<script type="text/javascript">
-      
-    </script>
+	<script src="assets/mapConfig.js"></script>
+	<script src="assets/site.js"></script>
+	<script src="assets/stores.js"></script>
+	<script src="assets/storeFinder.js"></script>
 	
 
 </body>
