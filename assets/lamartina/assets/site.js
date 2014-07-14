@@ -84,7 +84,12 @@ $(document).ready(function(){
 	var player = null
 	$('.video').on('click', function() {
 		player = this
-		player.paused ? player.play() : player.pause()
+		if(player.paused) {
+			player.volume = 0.8
+			player.play()
+		} else {
+			player.pause()
+		}
 	})
 
 	// adapt video
@@ -145,12 +150,33 @@ $(document).ready(function(){
 		$el.css({ backgroundPosition: coords });
   }
 
+  var player = $('.video')[0]
+  var currentVolume = player.volume
+  var step = 0.025
+
+  function fadeOutVolume(done) {
+
+  	function _fade() {
+  		var newLevel = player.volume - step
+	  	if(newLevel <= 0) {
+	  		player.volume = 0
+	  		done && done()
+	  		return
+	  	}
+  		setTimeout(function() {
+  			player.volume = newLevel
+  			_fade()
+  		}, 100)
+  	}
+  	_fade()
+  }
+
   function parallax() {
 	  var origCurrentY
 	  var i = 0
 
 	  // apply opacity to navbar
-	  if($window.width() >= 600) {
+	  if(!isMobile) {
 			var $navbar = $('.navbar')
 			var $media = $('#media')
 	  	mapOpacity($navbar[0], $window.scrollTop())
@@ -162,6 +188,14 @@ $(document).ready(function(){
 		  	$navbar.removeClass('navbar-fixed-top')	
 		  	$body.removeClass('with-navbar-fixed')
 		  }
+		}
+
+		// pause video
+		if($window.scrollTop() >= $('.video').height() + $('.video').scrollTop()) {
+			fadeOutVolume(function() {
+				player.pause()	
+			})
+			
 		}
 
 	  function mapOpacity(el, scrolY) {
