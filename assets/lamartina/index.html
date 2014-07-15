@@ -15,7 +15,7 @@
 </head>
 <body>
 	<section id="media">
-	
+
 		<div class="section-media" style="position:relative">
 			<video class="video" autoplay preload>
 				<source src="assets/video.m4v">
@@ -29,7 +29,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<header class="navbar">
 		<div class="main-brand text-center">
 			<a href="">
@@ -66,7 +66,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 
 	<section id="section-2" class="section px" data-father data-speed="5" data-type="background">
 		<div class="section-text section-text--bottom section-text-center">
@@ -139,7 +139,7 @@
 		</div>
 	</section>
 
-	
+
 
 	<section id="gallery" class="section px" data-speed="5" data-adjust="900" data-type="background" style="padding-bottom:10%">
 		<div class="container-fluid">
@@ -171,7 +171,7 @@
 						</a>
 					</div>
 
-					
+
 				</div>
 
 				<div class="col-md-4 col--with-separator" data-index="-1">
@@ -179,46 +179,47 @@
 						<a href="assets/gallery/01.jpg">
 							<img src="assets/gallery/01-thumb.jpg" class="img-responsive">
 						</a>
-					</div>					
+					</div>
 					<div class="thumb">
 						<a href="assets/gallery/02.jpg">
 							<img src="assets/gallery/02-thumb.jpg" class="img-responsive">
 						</a>
-					</div>		
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
-	<section 
-		id="stores" 
-		class="section px" 
-		ng-class={'open':open} data-speed="5" data-type="background" ng-controller="StoreFinderCtrl">
+
+	<section
+		id="stores"
+		class="section px"
+		ng-class={'open':open}
+		ng-controller="StoreFinderCtrl">
 		<div class="container-fluid">
 			<h1 class="section-headline">stores <button class="btn btn-icon" ng-click="toggle()" ng-show="open">&times;</button></h1>
-			
+
+			<div class="search-bar clearfix">
+				<input type="text" ng-model="searchQuery" ng-focus="open=true" class="text-input input-xl col-xs-12 col-md-4 col-sm-offset-4" placeholder="enter your zip, town or state">
+			</div>
+
 			<!-- <div class="text-center">
 				<button type="button" class="btn btn-xl" ng-click="toggle()">find your local retailer</button>
 			</div> -->
 
-			<div class="search-bar clearfix">
-				<input type="text" ng-model="searchQuery" class="text-input input-xl col-md-4 col-md-offset-4" placeholder="enter your zip, town or state">
-			</div>
-			
 			<div class="clearfix">
 				<div class="col-md-10 col-md-offset-1" data-index="0.5">
 					<div class="clearfix" data-index="-0.5">
 						<ul class="store-list clearfix">
-							<li 
+							<li
 								ng-show="currentTown"
 								>
 								<span class="pull-left">
 									<button class="btn btn-icon" ng-click="showAll()">&times; show all</button>
 								</span>
 							</li>
-							<li 
+							<li
 								ng-repeat="(town, props) in storesByTown"
-								ng-show="props.selected == undefined || props.selected == true" 
+								ng-show="props.selected == undefined || props.selected == true"
 								ng-class="{selected: props.selected, animated: true}"
 							>
 								<a href="" ng-click="selectTown(town)">{{town}}</a></li>
@@ -239,7 +240,7 @@
 			</div>
 		</div>
 		<div class="map-container">
-			<div id="map-canvas"></div>
+			<google-map center="map.center" draggable="true" zoom="map.zoom" options="map.options"></google-map>
 		</div>
 	</section>
 
@@ -247,7 +248,7 @@
 		<div class="container-fluid">
 			<h1 class="section-headline">register your boot</h1>
 			<p class="text-center">register your product to lorem ipsum dolor</p>
-		
+
 			<div class="registration-form" data-index="-0.5">
 				<div class="row row--form">
 					<div class="col-md-3 col-md-offset-2">
@@ -266,7 +267,7 @@
 						<br><small class="help-text text-secondary">You can find it in the box</small>
 					</div>
 				</div>
-			
+
 				<div class="row row--form">
 					<div class="col-md-3 col-md-offset-2">
 					</div>
@@ -287,15 +288,16 @@
 		</p>
 	</section>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDToCE_kRLo_41eqc4NEk2quNQS5JjG5Dk"></script>
-	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+	<script src="bower_components/lodash/dist/lodash.underscore.js"></script>
+	<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="assets/mapConfig.js"></script>
 	<script src="assets/site.js"></script>
 	<script src="assets/stores.js"></script>
 	<script src="assets/storeFinder.js"></script>
-	
+
 
 </body>
 </html>
