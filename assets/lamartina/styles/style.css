@@ -346,7 +346,7 @@
 	}
 
 		.section-media {
-			margin-top: 1em;
+			margin-top: 2em;
 		}
 
 		.section-headline {
@@ -795,7 +795,48 @@
 
 	/* footer */
 	#footer {
-		margin-top: 100%;
+		margin-top: 5em;
+		padding-top: 6em;
+	}
+
+	#footer .address-card {
+		margin: 4em 0;
+		font-size: .9em;
+	}
+
+	#footer .social-links {
+		margin: 2.5rem 0;
+	}
+
+	#footer .social-links .label-follow {
+		display: inline-block;
+		margin: 2rem 0;
+		padding: .5rem 3rem .75rem;
+		line-height: 1.7;
+		text-transform: uppercase;
+		font-size: .8em;
+		letter-spacing: .2em;
+		border-radius: 0;
+		background: rgba(255, 255, 255, .1);
+		color: rgba(255, 255, 255, .65);
+
+	}
+
+	#footer .social-link {
+		display: inline-block;
+		padding: 0 2em;
+	}
+
+	#footer .social-link img {
+		width: 4em;
+	}
+
+	#footer .social-link span {
+		margin-top: 1.5rem;
+		font-size: .75em;
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
 	}
 
 	/* visual helpers */
