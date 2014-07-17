@@ -148,6 +148,19 @@
 			}
 	}
 
+	.label-subtitle {
+		display: inline-block;
+		margin: 2rem 0;
+		padding: .5rem 3rem .75rem;
+		line-height: 1.7;
+		text-transform: uppercase;
+		font-size: .8em;
+		letter-spacing: .2em;
+		border-radius: 0;
+		background: rgba(255, 255, 255, .1);
+		color: rgba(255, 255, 255, .65);
+	}
+
 
 
 
@@ -584,7 +597,8 @@
 		/* open state */
 		#stores.open {
 			position: fixed;
-			top: 0;
+			padding-top: 0;
+			top: 2em;
 			bottom: 0;
 			left: 0;
 			right: 0;
@@ -592,17 +606,6 @@
 			background: rgba(0, 0, 0, .65);
 		}
 
-	#stores .search-bar {
-		margin-bottom: 4em;
-	}
-
-	#stores .search-bar .text-input {
-		text-align: center;
-	}
-
-	#stores .search-bar .text-input {
-		background: rgba(0, 0, 0, .25);
-	}
 
 	#stores .store-list {
 		list-style: none;
@@ -737,8 +740,24 @@
 	}
 
 	#stores .map-container {
+		position: relative;
 		width: 100%;
 		margin-left: 0;
+		margin-bottom: 1.5em;
+	}
+
+	#stores .map-container .search-bar {
+		position: absolute;
+		top: 1em;
+		left: 3em;
+		z-index: 9999;
+	}
+
+	.map-container .search-bar .text-input {
+		background: #fff;
+		color: #444;
+		padding-left: .75em;
+		padding-right: .75em;
 	}
 
 	#map-canvas,
@@ -806,20 +825,6 @@
 
 	#footer .social-links {
 		margin: 2.5rem 0;
-	}
-
-	#footer .social-links .label-follow {
-		display: inline-block;
-		margin: 2rem 0;
-		padding: .5rem 3rem .75rem;
-		line-height: 1.7;
-		text-transform: uppercase;
-		font-size: .8em;
-		letter-spacing: .2em;
-		border-radius: 0;
-		background: rgba(255, 255, 255, .1);
-		color: rgba(255, 255, 255, .65);
-
 	}
 
 	#footer .social-link {

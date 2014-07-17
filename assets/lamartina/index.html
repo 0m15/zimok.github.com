@@ -18,8 +18,8 @@
 
 		<div class="section-media" style="position:relative">
 			<video class="video" autoplay preload>
-				<source src="assets/video.m4v">
-				<source src="assets/video.ogg">
+				<!--<source src="assets/video.m4v">
+				<source src="assets/video.ogg">-->
 			</video>
 			<div class="main-brand">
 				<a href="#section-1" class="with-down-arrow logo-hover">
@@ -198,16 +198,23 @@
 		<div class="container-fluid">
 			<h1 class="section-headline">stores <button class="btn btn-icon" ng-click="toggle()" ng-show="open">&times;</button></h1>
 
-			<div class="search-bar clearfix">
-				<input type="text" ng-model="searchQuery" ng-focus="open=true" class="text-input input-xl col-xs-12 col-md-4 col-sm-offset-4" placeholder="enter your zip, town or state">
+			<div class="map-container">
+				<div class="search-bar clearfix">
+					<input type="text" ng-model="searchQuery" class="text-input input-xl col-xs-12" placeholder="enter your zip, town or state">
+				</div>
+				<google-map center="map.center" draggable="true" zoom="map.zoom" options="map.options" control="map.control">
+					<markers models="map.markers" coords="'self'" fit="false"></markers>
+				</google-map>
 			</div>
+
+
 
 			<!-- <div class="text-center">
 				<button type="button" class="btn btn-xl" ng-click="toggle()">find your local retailer</button>
 			</div> -->
 
 			<div class="clearfix">
-				<div class="col-md-10 col-md-offset-1" data-index="0.5">
+				<div class="col-md-10 col-md-offset-1 clearfix" data-index="0.5">
 					<div class="clearfix" data-index="-0.5">
 						<ul class="store-list clearfix">
 							<li
@@ -225,7 +232,7 @@
 								<a href="" ng-click="selectTown(town)">{{town}}</a></li>
 						</ul>
 					</div>
-					<br><br>
+					<br>
 
 					<div class="current-area" ng-show="currentTown">
 						<ul class="list-unstyled">
@@ -239,15 +246,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="map-container">
-			<google-map center="map.center" draggable="true" zoom="map.zoom" options="map.options"></google-map>
-		</div>
+
 	</section>
 
 	<section id="register" class="section" data-index="-3">
 		<div class="container-fluid">
 			<h1 class="section-headline">register your boot</h1>
-			<p class="text-center">register your product to lorem ipsum dolor</p>
+			<p class="text-center"><span class="label label-default label-subtitle">register your boot to access special features</span></p>
 
 			<div class="registration-form" data-index="-0.5">
 				<div class="row row--form">
@@ -291,7 +296,7 @@
 				<a href="http://lamartina.com" class="org-address">lamartina.com</a><br>
 			</div>
 			<div class="social-links text-center">
-				<p><span class="label label-default label-follow">follow us on</span></p>
+				<p><span class="label label-default label-subtitle">follow us on</span></p>
 				<a target="_blank" class="social-link fb" href="https://www.facebook.com/LaMartinapoloshop">
 					<img src="assets/facebook-square.svg">
 					<span>facebook</span>

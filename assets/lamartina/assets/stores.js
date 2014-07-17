@@ -1,99 +1,15 @@
 var storeList = [
     {
-        "name": "ANTONIO DE LUCA",
-        "address": "SS TIBURTINA KM126",
-        "zipCode": 67043,
-        "town": "Celano",
-        "province": "AQ",
-        "region": "ABRUZZO"
-    },
-    {
-        "name": "BALDUCCI CALZATURE S.R.L.",
-        "address": "Corso De Michetti, 16/18",
-        "zipCode": 64100,
-        "town": "Teramo",
-        "province": "TE",
-        "region": "ABRUZZO"
-    },
-    {
-        "name": "DAUTILIO 1908 SRL",
-        "address": "C.SO TRENTO e TRIESTE",
-        "zipCode": 66034,
-        "town": "Lanciano",
-        "province": "CH",
-        "region": "ABRUZZO"
-    },
-    {
-        "name": "DI ZITTI ELISA",
-        "address": "C.SO UMBERTO 15",
-        "zipCode": 67043,
-        "town": "Celano",
-        "province": "AQ",
-        "region": "ABRUZZO"
-    },
-    {
-        "name": "DISIDORO AMERIGO",
-        "address": "VIA LEONARDO DA VINCI 9",
-        "zipCode": 64016,
-        "town": "SantEgidio alla Vibrata",
-        "province": "TE",
-        "region": "ABRUZZO"
-    },
-    {
-        "name": "MARGIOTTA G.&M.SNC",
-        "address": "C.SO OVIDIO 228",
-        "zipCode": 67039,
-        "town": "Sulmona",
-        "province": "AQ",
-        "region": "ABRUZZO"
-    },
-    {
-        "name": "MAZZITTI LEATHER SAS DI MAZZITTI R. & C.",
-        "address": "C.SO FEDERICO II 24",
-        "zipCode": 67100,
-        "town": "LAQUILA",
-        "province": "AQ",
-        "region": "ABRUZZO"
-    },
-    {
-        "name": "PIERGIGLI CALZATURE S.R.L.",
-        "address": "Viale della Vittoria 106",
-        "zipCode": 64011,
-        "town": "Alba Adriatica",
-        "province": "TE",
-        "region": "ABRUZZO"
-    },
-    {
-        "name": "CANNIZZARO CONCETTA",
-        "address": "VIA TRIESTE , 11",
-        "zipCode": 89024,
-        "town": "Polistena",
-        "province": "RC",
-        "region": "CALABRIA"
-    },
-    {
-        "name": "CEMME DI ROMEO MARIA",
-        "address": "C.SO GARIBALDI 139",
-        "zipCode": 87012,
-        "town": "Castrovillari",
+        "name": "IL QUADRIFOGLIO BY PINO RITACCO",
+        "address": "VIA DELLA RESISTENZA",
+        "zipCode": 87041,
+        "town": "Acri",
         "province": "CS",
-        "region": "CALABRIA"
-    },
-    {
-        "name": "EFFELLE FASHION SAS DI PENNESTRI T.M. & C.",
-        "address": "VIA S. PERTINI, 16/B",
-        "zipCode": 89063,
-        "town": "MELITO DI PORTO SALVO",
-        "province": "RC",
-        "region": "CALABRIA"
-    },
-    {
-        "name": "EMPORIO GIGLIO SRL",
-        "address": "P.ZZA I MAGGIO,18",
-        "zipCode": 87100,
-        "town": "COSENZA",
-        "province": "CS",
-        "region": "CALABRIA"
+        "region": "CALABRIA",
+        "coords": {
+            "lat": 39.4997481,
+            "lng": 16.3909425
+        }
     },
     {
         "name": "FA.MI SRL",
@@ -101,15 +17,11 @@ var storeList = [
         "zipCode": 87064,
         "town": "Corigliano Calabro",
         "province": "CS",
-        "region": "CALABRIA"
-    },
-    {
-        "name": "G&G COLLECTION SRL",
-        "address": "VIA VITTORIO VENETO 14",
-        "zipCode": 88900,
-        "town": "Crotone",
-        "province": "KR",
-        "region": "CALABRIA"
+        "region": "CALABRIA",
+        "coords": {
+            "lat": 39.627607,
+            "lng": 16.507443
+        }
     },
     {
         "name": "GIGLIO BOUTIQUE S.R.L.",
@@ -117,71 +29,11 @@ var storeList = [
         "zipCode": 88046,
         "town": "LAMEZIA TERME",
         "province": "CZ",
-        "region": "CALABRIA"
-    },
-    {
-        "name": "IL QUADRIFOGLIO BY PINO RITACCO",
-        "address": "VIA DELLA RESISTENZA",
-        "zipCode": 87041,
-        "town": "Acri",
-        "province": "CS",
-        "region": "CALABRIA"
-    },
-    {
-        "name": "PASQUALINO SRL",
-        "address": "C.DA PETRARO",
-        "zipCode": 87040,
-        "town": "ROSE",
-        "province": "CS",
-        "region": "CALABRIA"
-    },
-    {
-        "name": "PIEMMEFFE SAS",
-        "address": "C.SO VITTORIO EMANUELE III, 133",
-        "zipCode": 89900,
-        "town": "Vibo Valentia",
-        "province": "VV",
-        "region": "CALABRIA"
-    },
-    {
-        "name": "SCIALB SAS DI SCIARRONE E ALBANESE",
-        "address": "C.SO GARIBALDI 40",
-        "zipCode": 89100,
-        "town": "Reggio Calabria",
-        "province": "RC",
-        "region": "CALABRIA"
-    },
-    {
-        "name": "SPATARELLA VOMERO S.R.L.",
-        "address": "VIA LUCA GIORDANO, 69/B/C",
-        "zipCode": 80129,
-        "town": "NAPOLI",
-        "province": "NA",
-        "region": "CAMPANIA"
-    },
-    {
-        "name": "DELLA MARTIRA SRL",
-        "address": "VIA ARIOSTO, 4/B",
-        "zipCode": 41012,
-        "town": "CARPI",
-        "province": "MO",
-        "region": "EMILIA ROMAGNA"
-    },
-    {
-        "name": "LA MARTINA STORE MILANO MARITTIMA",
-        "address": "VIA MATTEOTTI 44",
-        "zipCode": 48016,
-        "town": "CERVIA MILANO MARITTIMA",
-        "province": "RA",
-        "region": "EMILIA ROMAGNA"
-    },
-    {
-        "name": "NATI CON LA CAMICIA TREVISANI DAVIDE",
-        "address": "VIA GARIBALDI 56",
-        "zipCode": 44100,
-        "town": "Ferrara",
-        "province": "FE",
-        "region": "EMILIA ROMAGNA"
+        "region": "CALABRIA",
+        "coords": {
+            "lat": 38.968596,
+            "lng": 16.3202552
+        }
     },
     {
         "name": "ENNIO SHOES SRL",
@@ -189,159 +41,119 @@ var storeList = [
         "zipCode": 100,
         "town": "ROMA",
         "province": "RM",
-        "region": "LAZIO"
+        "region": "LAZIO",
+        "coords": {
+            "lat": 41.9378863,
+            "lng": 12.467654
+        }
     },
     {
-        "name": "G.R.G. SRL",
-        "address": "VIALE CARLO FELICE, 101",
-        "zipCode": 185,
-        "town": "ROMA",
-        "province": "RM",
-        "region": "LAZIO"
+        "name": "DELLA MARTIRA SRL",
+        "address": "VIA ARIOSTO, 4/B",
+        "zipCode": 41012,
+        "town": "CARPI",
+        "province": "MO",
+        "region": "EMILIA ROMAGNA",
+        "coords": {
+            "lat": 44.7840911,
+            "lng": 10.8896938
+        }
     },
     {
-        "name": "GOTHA SRL",
-        "address": "VIA DELLA SAPIENZA, 12",
-        "zipCode": 1100,
-        "town": "Viterbo",
-        "province": "VT",
-        "region": "LAZIO"
+        "name": "G&G COLLECTION SRL",
+        "address": "VIA VITTORIO VENETO 14",
+        "zipCode": 88900,
+        "town": "Crotone",
+        "province": "KR",
+        "region": "CALABRIA",
+        "coords": {
+            "lat": 39.0804253,
+            "lng": 17.1266418
+        }
     },
     {
-        "name": "GRUPPO LANGOLO DELLO SPORT SRL",
-        "address": "VIA DEL PONTE PISANO, 50",
-        "zipCode": 148,
-        "town": "ROMA",
-        "province": "RM",
-        "region": "LAZIO"
+        "name": "SCIALB SAS DI SCIARRONE E ALBANESE",
+        "address": "C.SO GARIBALDI 40",
+        "zipCode": 89100,
+        "town": "Reggio Calabria",
+        "province": "RC",
+        "region": "CALABRIA",
+        "coords": {
+            "lat": 38.4892186,
+            "lng": 15.9745666
+        }
     },
     {
-        "name": "HASSAN STORE SRL",
-        "address": "VIA DELLA BALDUINA, 65",
-        "zipCode": 136,
-        "town": "ROMA",
-        "province": "RM",
-        "region": "LAZIO"
+        "name": "SPATARELLA VOMERO S.R.L.",
+        "address": "VIA LUCA GIORDANO, 69/B/C",
+        "zipCode": 80129,
+        "town": "NAPOLI",
+        "province": "NA",
+        "region": "CAMPANIA",
+        "coords": {
+            "lat": 40.8445414,
+            "lng": 14.2280401
+        }
     },
     {
-        "name": "MISHELLE S.R.L.",
-        "address": "VIA TARANTO , 1",
-        "zipCode": 100,
-        "town": "ROMA",
-        "province": "RM",
-        "region": "LAZIO"
+        "name": "NATI CON LA CAMICIA TREVISANI DAVIDE",
+        "address": "VIA GARIBALDI 56",
+        "zipCode": 44100,
+        "town": "Ferrara",
+        "province": "FE",
+        "region": "EMILIA ROMAGNA",
+        "coords": {
+            "lat": 45.5095549,
+            "lng": 7.9646609
+        }
     },
     {
-        "name": "PIERROT SRL",
-        "address": "VIA C.COLOMBO 440",
-        "zipCode": 145,
-        "town": "ROMA",
-        "province": "RM",
-        "region": "LAZIO"
+        "name": "PIEMMEFFE SAS",
+        "address": "C.SO VITTORIO EMANUELE III, 133",
+        "zipCode": 89900,
+        "town": "Vibo Valentia",
+        "province": "VV",
+        "region": "CALABRIA",
+        "coords": {
+            "lat": 38.5594848,
+            "lng": 15.960865
+        }
     },
     {
-        "name": "SABBADINI S.R.L.",
-        "address": "VIA APPIA NUOVA, 1",
-        "zipCode": 183,
-        "town": "ROMA",
-        "province": "RM",
-        "region": "LAZIO"
+        "name": "LA MARTINA STORE MILANO MARITTIMA",
+        "address": "VIA MATTEOTTI 44",
+        "zipCode": 48016,
+        "town": "CERVIA MILANO MARITTIMA",
+        "province": "RA",
+        "region": "EMILIA ROMAGNA",
+        "coords": {
+            "lat": 44.2789595,
+            "lng": 12.3478872
+        }
     },
     {
-        "name": "SERPICO 80 SHOES DI LOCONTE PINA",
-        "address": "C.SO BORGHESE, 26",
-        "zipCode": 31,
-        "town": "Artena",
-        "province": "RM",
-        "region": "LAZIO"
+        "name": "PIERGIGLI CALZATURE S.R.L.",
+        "address": "Viale della Vittoria 106",
+        "zipCode": 64011,
+        "town": "Alba Adriatica",
+        "province": "TE",
+        "region": "ABRUZZO",
+        "coords": {
+            "lat": 42.836208,
+            "lng": 13.923878
+        }
     },
     {
-        "name": "VIMAR",
-        "address": "VIA C.LORENZINI,11",
-        "zipCode": 100,
-        "town": "ROMA",
-        "province": "RM",
-        "region": "LAZIO"
-    },
-    {
-        "name": "CONTI EMANUELA DI DURETTO EMANUELA E C.SAS",
-        "address": "VIA CARLI,3",
-        "zipCode": 18038,
-        "town": "SANREMO",
-        "province": "IM",
-        "region": "LIGURIA"
-    },
-    {
-        "name": "MAXMODA S.P.A.",
-        "address": "VIA SANTA MARIA, SNC",
-        "zipCode": 20015,
-        "town": "Parabiago",
-        "province": "MI",
-        "region": "LOMBARDIA"
-    },
-    {
-        "name": "VERGELIO CALZATURE S.P.A.",
-        "address": "VIA CADUTI DI MARCINELLE 3",
-        "zipCode": 20134,
-        "town": "Milano",
-        "province": "MI",
-        "region": "LOMBARDIA"
-    },
-    {
-        "name": "LM RETAIL S.R.L. UNIPERSONALE",
-        "address": "PIAZZA DELLA REPUBBLICA, 32",
-        "zipCode": 20124,
-        "town": "Milano",
-        "province": "MI",
-        "region": "LOMBARDIA"
-    },
-    {
-        "name": "LA COMPAGNIA DELLE PELLI S.P.A.",
-        "address": "VIA LEGA LOMBARDA 1",
-        "zipCode": 24040,
-        "town": "BONATE SOPRA",
-        "province": "BG",
-        "region": "LOMBARDIA"
-    },
-    {
-        "name": "CAMERUCCI LUCA",
-        "address": "VIA AURELIO SAFFI",
-        "zipCode": 60033,
-        "town": "Chiaravalle",
-        "province": "AN",
-        "region": "MARCHE"
-    },
-    {
-        "name": "CARESSE DI MARISA ORTOLANI",
-        "address": "P.ZZA GARIBALDI 21",
-        "zipCode": 62024,
-        "town": "Matelica",
-        "province": "MC",
-        "region": "MARCHE"
-    },
-    {
-        "name": "I GEMELLI SRL",
-        "address": "VIA RAINERIO16",
-        "zipCode": 61032,
-        "town": "Fano",
-        "province": "PU",
-        "region": "MARCHE"
-    },
-    {
-        "name": "MANCINI PIERO SRL",
-        "address": "CORSO XI SETTEMBRE,147/153",
-        "zipCode": 61100,
-        "town": "PESARO",
-        "province": "PU",
-        "region": "MARCHE"
-    },
-    {
-        "name": "ROSSO PICCANTE SNC DI ESPOSTI LARA & C.",
-        "address": "C.so Garibaldi 33",
-        "zipCode": 61034,
-        "town": "Fossombrone",
-        "province": "PU",
-        "region": "MARCHE"
+        "name": "BALDUCCI CALZATURE S.R.L.",
+        "address": "Corso De Michetti, 16/18",
+        "zipCode": 64100,
+        "town": "Teramo",
+        "province": "TE",
+        "region": "ABRUZZO",
+        "coords": {
+            "lat": 42.6577987,
+            "lng": 13.7069577
+        }
     },
     {
         "name": "SHYLOCK SRL",
@@ -349,207 +161,59 @@ var storeList = [
         "zipCode": 62010,
         "town": "MONTECOSARO",
         "province": "MC",
-        "region": "MARCHE"
+        "region": "MARCHE",
+        "coords": {
+            "lat": 43.3163622,
+            "lng": 13.6392334
+        }
     },
     {
-        "name": "TUTTI TIPI SRL",
-        "address": "C.SO MATTEOTTI 114",
-        "zipCode": 60100,
-        "town": "Ancona",
-        "province": "AN",
-        "region": "MARCHE"
+        "name": "MAZZITTI LEATHER SAS DI MAZZITTI R. & C.",
+        "address": "C.SO FEDERICO II 24",
+        "zipCode": 67100,
+        "town": "LAQUILA",
+        "province": "AQ",
+        "region": "ABRUZZO",
+        "coords": {
+            "lat": 42.346848,
+            "lng": 13.3980111
+        }
     },
     {
-        "name": "CALZOLERIA PARMIGIANA 1887 SNC DI ANTONELLA MOTTA &",
-        "address": "via migliara 39",
-        "zipCode": 15121,
-        "town": "Alessandria",
-        "province": "AL",
-        "region": "PIEMONTE"
+        "name": "MANCINI PIERO SRL",
+        "address": "CORSO XI SETTEMBRE,147/153",
+        "zipCode": 61100,
+        "town": "PESARO",
+        "province": "PU",
+        "region": "MARCHE",
+        "coords": {
+            "lat": 43.9117748,
+            "lng": 12.909663
+        }
     },
     {
-        "name": "E.LE..SHOES DI GAGLIARDI RITA",
-        "address": "via cavour 35",
-        "zipCode": 14100,
-        "town": "Asti",
-        "province": "AT",
-        "region": "PIEMONTE"
+        "name": "ROSSO PICCANTE SNC DI ESPOSTI LARA & C.",
+        "address": "C.so Garibaldi 33",
+        "zipCode": 61034,
+        "town": "Fossombrone",
+        "province": "PU",
+        "region": "MARCHE",
+        "coords": {
+            "lat": 43.689108,
+            "lng": 12.80638
+        }
     },
     {
-        "name": "GALLES SRL",
-        "address": "via santa teresa 6",
-        "zipCode": 10121,
-        "town": "Torino",
-        "province": "TO",
-        "region": "PIEMONTE"
-    },
-    {
-        "name": "MADDALENA FERRARA",
-        "address": "CORSO VITTORIO EMANUELE 90",
-        "zipCode": 10121,
-        "town": "Torino",
-        "province": "TO",
-        "region": "PIEMONTE"
-    },
-    {
-        "name": "PRIMO PIANO DI BORGHESI PAOLA",
-        "address": "VIA LAMARMORA14",
-        "zipCode": 13900,
-        "town": "Biella",
-        "province": "BI",
-        "region": "PIEMONTE"
-    },
-    {
-        "name": "VI.VI. SRL",
-        "address": "VIA BAVA 1/bis",
-        "zipCode": 10100,
-        "town": "Torino",
-        "province": "TO",
-        "region": "PIEMONTE"
-    },
-    {
-        "name": "FIGURELLI SRL",
-        "address": "Via G. Matteotti 81",
-        "zipCode": 71100,
-        "town": "Foggia",
-        "province": "FG",
-        "region": "PUGLIA"
-    },
-    {
-        "name": "IMPRONTE SNC",
-        "address": "Via Milano n 1/3",
-        "zipCode": 70024,
-        "town": "Gravina in Puglia",
-        "province": "BA",
-        "region": "PUGLIA"
-    },
-    {
-        "name": "MARY RAHO DI MARIA DONATA RAHO",
-        "address": "C.so Roma 30",
-        "zipCode": 73014,
-        "town": "Gallipoli",
-        "province": "LE",
-        "region": "PUGLIA"
-    },
-    {
-        "name": "MICOCCIO CARMELO 1945",
-        "address": "Piazza Plebiscito, 3",
-        "zipCode": 73054,
-        "town": "PRESICCE",
-        "province": "LE",
-        "region": "PUGLIA"
-    },
-    {
-        "name": "PASSI DANGELO DI FRANCA GENIO",
-        "address": "C.so Mazzini 35",
-        "zipCode": 70018,
-        "town": "Rutigliano",
-        "province": "BA",
-        "region": "PUGLIA"
-    },
-    {
-        "name": "DE RISO CALZATURE DI CAMILLO DE RISO",
-        "address": "VIA BAYLLE,23",
-        "zipCode": 9124,
-        "town": "Cagliari",
-        "province": "CA",
-        "region": "SARDEGNA"
-    },
-    {
-        "name": "F.LLI COLOMBINO DI CARLO E PAOLO COLOMBINO SAS",
-        "address": "VIA LUZZATTI, 16",
-        "zipCode": 7100,
-        "town": "Sassari",
-        "province": "SS",
-        "region": "SARDEGNA"
-    },
-    {
-        "name": "RAGGIO MARCO GIUSEPPE & C. SNC",
-        "address": "VIA UMBRIA 2",
-        "zipCode": 9170,
-        "town": "ORISTANO",
-        "province": "OR",
-        "region": "SARDEGNA"
-    },
-    {
-        "name": "GAIA SRL",
-        "address": "VIA ROMA, 97",
-        "zipCode": 90135,
-        "town": "Palermo",
-        "province": "PA",
-        "region": "SICILIA"
-    },
-    {
-        "name": "TOMASELLO ROSALBA",
-        "address": "VIA E. BELLIA 24",
-        "zipCode": 95047,
-        "town": "Patern",
-        "province": "CT",
-        "region": "SICILIA"
-    },
-    {
-        "name": "V.M.P. GROUP SRL",
-        "address": "VIA XI MAGGIO 121",
-        "zipCode": 91025,
-        "town": "Marsala",
-        "province": "TP",
-        "region": "SICILIA"
-    },
-    {
-        "name": "CALZATURE ALADINO SNC",
-        "address": "Via Trento, 52",
-        "zipCode": 52025,
-        "town": "Montevarchi",
-        "province": "AR",
-        "region": "TOSCANA"
-    },
-    {
-        "name": "CUOIERIA FIORENTINA SRL",
-        "address": "Via dei Ciliegi, 25",
-        "zipCode": 50066,
-        "town": "Reggello",
-        "province": "FI",
-        "region": "TOSCANA"
-    },
-    {
-        "name": "FRANCESCA PIU DI BOLOGNOSI GIULIANA",
-        "address": "Via della Pace, 126",
-        "zipCode": 58100,
-        "town": "Grosseto",
-        "province": "GR",
-        "region": "TOSCANA"
-    },
-    {
-        "name": "LA MARTINA STORE FORTE DEI MARMI",
-        "address": "VIA IV^ NOVEMBRE 10",
-        "zipCode": 55042,
-        "town": "FORTE DEI MARMI",
-        "province": "LU",
-        "region": "TOSCANA"
-    },
-    {
-        "name": "MASSETANI SNC",
-        "address": "Via Bruceto, 108",
-        "zipCode": 51010,
-        "town": "Massa e Cozzile",
-        "province": "PT",
-        "region": "TOSCANA"
-    },
-    {
-        "name": "MORI ROMAS DI MORI ROSSELLA & C. SNC",
-        "address": "VIA BANCHI DI SOPRA,32",
-        "zipCode": 53100,
-        "town": "SIENA",
-        "province": "SI",
-        "region": "TOSCANA"
-    },
-    {
-        "name": "ROSE ROSA SRL",
-        "address": "Via Cesare Guasti, 32/34",
-        "zipCode": 59100,
-        "town": "Prato",
-        "province": "PO",
-        "region": "TOSCANA"
+        "name": "EFFELLE FASHION SAS DI PENNESTRI T.M. & C.",
+        "address": "VIA S. PERTINI, 16/B",
+        "zipCode": 89063,
+        "town": "MELITO DI PORTO SALVO",
+        "province": "RC",
+        "region": "CALABRIA",
+        "coords": {
+            "lat": 37.919309,
+            "lng": 15.778587
+        }
     },
     {
         "name": "TEMY SRL",
@@ -557,15 +221,287 @@ var storeList = [
         "zipCode": 50053,
         "town": "Empoli",
         "province": "FI",
-        "region": "TOSCANA"
+        "region": "TOSCANA",
+        "coords": {
+            "lat": 43.69089020000001,
+            "lng": 10.8981883
+        }
     },
     {
-        "name": "VANNINI MAURIZIO OTTAVIO",
-        "address": "Viale della Resistenza, 33",
-        "zipCode": 54011,
-        "town": "Aulla",
-        "province": "MS",
-        "region": "TOSCANA"
+        "name": "G.R.G. SRL",
+        "address": "VIALE CARLO FELICE, 101",
+        "zipCode": 185,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "lat": 41.8878495,
+            "lng": 12.5130918
+        }
+    },
+    {
+        "name": "CALZATURE ALADINO SNC",
+        "address": "Via Trento, 52",
+        "zipCode": 52025,
+        "town": "Montevarchi",
+        "province": "AR",
+        "region": "TOSCANA",
+        "coords": {
+            "lat": 43.52326720000001,
+            "lng": 11.5697256
+        }
+    },
+    {
+        "name": "TUTTI TIPI SRL",
+        "address": "C.SO MATTEOTTI 114",
+        "zipCode": 60100,
+        "town": "Ancona",
+        "province": "AN",
+        "region": "MARCHE",
+        "coords": {
+            "lat": 43.6180185,
+            "lng": 13.5179295
+        }
+    },
+    {
+        "name": "FRANCESCA PIU DI BOLOGNOSI GIULIANA",
+        "address": "Via della Pace, 126",
+        "zipCode": 58100,
+        "town": "Grosseto",
+        "province": "GR",
+        "region": "TOSCANA",
+        "coords": {
+            "lat": 42.7669412,
+            "lng": 11.1156605
+        }
+    },
+    {
+        "name": "PRIMO PIANO DI BORGHESI PAOLA",
+        "address": "VIA LAMARMORA14",
+        "zipCode": 13900,
+        "town": "Biella",
+        "province": "BI",
+        "region": "PIEMONTE",
+        "coords": {
+            "lat": 45.5612111,
+            "lng": 8.0514674
+        }
+    },
+    {
+        "name": "VI.VI. SRL",
+        "address": "VIA BAVA 1/bis",
+        "zipCode": 10100,
+        "town": "Torino",
+        "province": "TO",
+        "region": "PIEMONTE",
+        "coords": {
+            "lat": 45.065208,
+            "lng": 7.696745599999999
+        }
+    },
+    {
+        "name": "DISIDORO AMERIGO",
+        "address": "VIA LEONARDO DA VINCI 9",
+        "zipCode": 64016,
+        "town": "SantEgidio alla Vibrata",
+        "province": "TE",
+        "region": "ABRUZZO",
+        "coords": {
+            "lat": 42.811528,
+            "lng": 13.72948
+        }
+    },
+    {
+        "name": "RAGGIO MARCO GIUSEPPE & C. SNC",
+        "address": "VIA UMBRIA 2",
+        "zipCode": 9170,
+        "town": "ORISTANO",
+        "province": "OR",
+        "region": "SARDEGNA",
+        "coords": {
+            "lat": 39.9109813,
+            "lng": 8.5905795
+        }
+    },
+    {
+        "name": "CONTI EMANUELA DI DURETTO EMANUELA E C.SAS",
+        "address": "VIA CARLI,3",
+        "zipCode": 18038,
+        "town": "SANREMO",
+        "province": "IM",
+        "region": "LIGURIA",
+        "coords": {
+            "lat": 43.81559,
+            "lng": 7.774369999999999
+        }
+    },
+    {
+        "name": "CALZOLERIA PARMIGIANA 1887 SNC DI ANTONELLA MOTTA &",
+        "address": "via migliara 39",
+        "zipCode": 15121,
+        "town": "Alessandria",
+        "province": "AL",
+        "region": "PIEMONTE",
+        "coords": {
+            "lat": 44.9146249,
+            "lng": 8.6135714
+        }
+    },
+    {
+        "name": "CANNIZZARO CONCETTA",
+        "address": "VIA TRIESTE , 11",
+        "zipCode": 89024,
+        "town": "Polistena",
+        "province": "RC",
+        "region": "CALABRIA",
+        "coords": {
+            "lat": 38.4069523,
+            "lng": 16.0766168
+        }
+    },
+    {
+        "name": "GALLES SRL",
+        "address": "via santa teresa 6",
+        "zipCode": 10121,
+        "town": "Torino",
+        "province": "TO",
+        "region": "PIEMONTE",
+        "coords": {
+            "lat": 45.06886979999999,
+            "lng": 7.681605299999998
+        }
+    },
+    {
+        "name": "GOTHA SRL",
+        "address": "VIA DELLA SAPIENZA, 12",
+        "zipCode": 1100,
+        "town": "Viterbo",
+        "province": "VT",
+        "region": "LAZIO",
+        "coords": {
+            "lat": 42.4189217,
+            "lng": 12.1056729
+        }
+    },
+    {
+        "name": "V.M.P. GROUP SRL",
+        "address": "VIA XI MAGGIO 121",
+        "zipCode": 91025,
+        "town": "Marsala",
+        "province": "TP",
+        "region": "SICILIA",
+        "coords": {
+            "lat": 37.7997539,
+            "lng": 12.4343624
+        }
+    },
+    {
+        "name": "FIGURELLI SRL",
+        "address": "Via G. Matteotti 81",
+        "zipCode": 71100,
+        "town": "Foggia",
+        "province": "FG",
+        "region": "PUGLIA",
+        "coords": {
+            "lat": 41.4593411,
+            "lng": 15.5487438
+        }
+    },
+    {
+        "name": "MISHELLE S.R.L.",
+        "address": "VIA TARANTO , 1",
+        "zipCode": 100,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "lat": 41.8853879,
+            "lng": 12.511904
+        }
+    },
+    {
+        "name": "I GEMELLI SRL",
+        "address": "VIA RAINERIO16",
+        "zipCode": 61032,
+        "town": "Fano",
+        "province": "PU",
+        "region": "MARCHE",
+        "coords": {
+            "lat": 43.843812,
+            "lng": 13.016005
+        }
+    },
+    {
+        "name": "VIMAR",
+        "address": "VIA C.LORENZINI,11",
+        "zipCode": 100,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "lat": 41.9439217,
+            "lng": 12.5566529
+        }
+    },
+    {
+        "name": "CAMERUCCI LUCA",
+        "address": "VIA AURELIO SAFFI",
+        "zipCode": 60033,
+        "town": "Chiaravalle",
+        "province": "AN",
+        "region": "MARCHE",
+        "coords": {
+            "lat": 43.62807859999999,
+            "lng": 13.3950605
+        }
+    },
+    {
+        "name": "MADDALENA FERRARA",
+        "address": "CORSO VITTORIO EMANUELE 90",
+        "zipCode": 10121,
+        "town": "Torino",
+        "province": "TO",
+        "region": "PIEMONTE",
+        "coords": {
+            "lat": 45.0663317,
+            "lng": 7.6693599
+        }
+    },
+    {
+        "name": "MAXMODA S.P.A.",
+        "address": "VIA SANTA MARIA, SNC",
+        "zipCode": 20015,
+        "town": "Parabiago",
+        "province": "MI",
+        "region": "LOMBARDIA",
+        "coords": {
+            "lat": 45.558189,
+            "lng": 8.9478154
+        }
+    },
+    {
+        "name": "SERPICO 80 SHOES DI LOCONTE PINA",
+        "address": "C.SO BORGHESE, 26",
+        "zipCode": 31,
+        "town": "Artena",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "lat": 41.740603,
+            "lng": 12.913525
+        }
+    },
+    {
+        "name": "GRUPPO LANGOLO DELLO SPORT SRL",
+        "address": "VIA DEL PONTE PISANO, 50",
+        "zipCode": 148,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "lat": 41.8432043,
+            "lng": 12.4084777
+        }
     },
     {
         "name": "NARDIS SPORT SAS DI MANZONI F.& C.",
@@ -573,55 +509,11 @@ var storeList = [
         "zipCode": 38086,
         "town": "PINZOLO",
         "province": "TN",
-        "region": "TRENTINO ALTO ADIGE"
-    },
-    {
-        "name": "CALZATURE NELLA DI MARSILI F. & C. SAS",
-        "address": "Via Leonardo da Vinci 52/54 fraz. Casamo",
-        "zipCode": 6024,
-        "town": "Gubbio",
-        "province": "PG",
-        "region": "UMBRIA"
-    },
-    {
-        "name": "DIGIE CALZATURE DI LENTICCHIA D. SNC",
-        "address": "LOC.PONTE RIO 79",
-        "zipCode": 6059,
-        "town": "Todi",
-        "province": "PG",
-        "region": "UMBRIA"
-    },
-    {
-        "name": "GALEOTTI SAS DI GALEOTTI GIULIANO & C.",
-        "address": "VIA CARDUCCI 2",
-        "zipCode": 6012,
-        "town": "Citt di Castello",
-        "province": "PG",
-        "region": "UMBRIA"
-    },
-    {
-        "name": "PROFUMERIA DURANTI SAS DI SILVIA PELLICCIA",
-        "address": "VIA DUOMO 13/15",
-        "zipCode": 5018,
-        "town": "Orvieto",
-        "province": "TR",
-        "region": "UMBRIA"
-    },
-    {
-        "name": "BERTOLDO di Bertoldo Renzo",
-        "address": "Via Roma, 85",
-        "zipCode": 35010,
-        "town": "MASSANZAGO",
-        "province": "PD",
-        "region": "VENETO"
-    },
-    {
-        "name": "BIDON",
-        "address": "VIA NOBEL, 2",
-        "zipCode": 30025,
-        "town": "Fossalta di Portogruaro",
-        "province": "VE",
-        "region": "VENETO"
+        "region": "TRENTINO ALTO ADIGE",
+        "coords": {
+            "lat": 46.16110580000001,
+            "lng": 10.7654017
+        }
     },
     {
         "name": "CALZATUREDESIDERIOdi BERTASSELLO STEFANIA",
@@ -629,15 +521,35 @@ var storeList = [
         "zipCode": 37054,
         "town": "NOGARA",
         "province": "VR",
-        "region": "VENETO"
+        "region": "VENETO",
+        "coords": {
+            "lat": 45.1805982,
+            "lng": 11.0632036
+        }
     },
     {
-        "name": "COM.CA S.R.L",
-        "address": "VIA DANTONA, 10/12",
-        "zipCode": 37048,
-        "town": "S.PIETRO DI LEGNAGO",
-        "province": "VR",
-        "region": "VENETO"
+        "name": "HASSAN STORE SRL",
+        "address": "VIA DELLA BALDUINA, 65",
+        "zipCode": 136,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "lat": 41.9168369,
+            "lng": 12.4418205
+        }
+    },
+    {
+        "name": "F.LLI COLOMBINO DI CARLO E PAOLO COLOMBINO SAS",
+        "address": "VIA LUZZATTI, 16",
+        "zipCode": 7100,
+        "town": "Sassari",
+        "province": "SS",
+        "region": "SARDEGNA",
+        "coords": {
+            "lat": 40.7262969,
+            "lng": 8.5622819
+        }
     },
     {
         "name": "LE FOLLIE DI BERSAN M.& BERTASSELLO E.SNC",
@@ -645,15 +557,179 @@ var storeList = [
         "zipCode": 37010,
         "town": "AFFI",
         "province": "VR",
-        "region": "VENETO"
+        "region": "VENETO",
+        "coords": {
+            "lat": 45.5529596,
+            "lng": 10.785885
+        }
     },
     {
-        "name": "MAGIC DI DALLICANI ANTONELLA E C. SAS",
-        "address": "CORSO UMBERTO I, 18",
-        "zipCode": 37011,
-        "town": "Bardolino",
-        "province": "VR",
-        "region": "VENETO"
+        "name": "SABBADINI S.R.L.",
+        "address": "VIA APPIA NUOVA, 1",
+        "zipCode": 183,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "lat": 41.8853618,
+            "lng": 12.510245
+        }
+    },
+    {
+        "name": "VERGELIO CALZATURE S.P.A.",
+        "address": "VIA CADUTI DI MARCINELLE 3",
+        "zipCode": 20134,
+        "town": "Milano",
+        "province": "MI",
+        "region": "LOMBARDIA",
+        "coords": {
+            "lat": 45.4805371,
+            "lng": 9.247142799999999
+        }
+    },
+    {
+        "name": "LM RETAIL S.R.L. UNIPERSONALE",
+        "address": "PIAZZA DELLA REPUBBLICA, 32",
+        "zipCode": 20124,
+        "town": "Milano",
+        "province": "MI",
+        "region": "LOMBARDIA",
+        "coords": {
+            "lat": 45.4800835,
+            "lng": 9.1992425
+        }
+    },
+    {
+        "name": "LA COMPAGNIA DELLE PELLI S.P.A.",
+        "address": "VIA LEGA LOMBARDA 1",
+        "zipCode": 24040,
+        "town": "BONATE SOPRA",
+        "province": "BG",
+        "region": "LOMBARDIA",
+        "coords": {
+            "lat": 45.687297,
+            "lng": 9.573625
+        }
+    },
+    {
+        "name": "IMPRONTE SNC",
+        "address": "Via Milano n 1/3",
+        "zipCode": 70024,
+        "town": "Gravina in Puglia",
+        "province": "BA",
+        "region": "PUGLIA",
+        "coords": {
+            "lat": 40.8155214,
+            "lng": 16.4182102
+        }
+    },
+    {
+        "name": "DIGIE CALZATURE DI LENTICCHIA D. SNC",
+        "address": "LOC.PONTE RIO 79",
+        "zipCode": 6059,
+        "town": "Todi",
+        "province": "PG",
+        "region": "UMBRIA",
+        "coords": {
+            "lat": 42.7819352,
+            "lng": 12.4065686
+        }
+    },
+    {
+        "name": "GAIA SRL",
+        "address": "VIA ROMA, 97",
+        "zipCode": 90135,
+        "town": "Palermo",
+        "province": "PA",
+        "region": "SICILIA",
+        "coords": {
+            "lat": 38.1140338,
+            "lng": 13.3648758
+        }
+    },
+    {
+        "name": "PROFUMERIA DURANTI SAS DI SILVIA PELLICCIA",
+        "address": "VIA DUOMO 13/15",
+        "zipCode": 5018,
+        "town": "Orvieto",
+        "province": "TR",
+        "region": "UMBRIA",
+        "coords": {
+            "lat": 42.718272,
+            "lng": 12.1111419
+        }
+    },
+    {
+        "name": "CARESSE DI MARISA ORTOLANI",
+        "address": "P.ZZA GARIBALDI 21",
+        "zipCode": 62024,
+        "town": "Matelica",
+        "province": "MC",
+        "region": "MARCHE",
+        "coords": {
+            "lat": 43.254373,
+            "lng": 13.008405
+        }
+    },
+    {
+        "name": "LA MARTINA STORE FORTE DEI MARMI",
+        "address": "VIA IV^ NOVEMBRE 10",
+        "zipCode": 55042,
+        "town": "FORTE DEI MARMI",
+        "province": "LU",
+        "region": "TOSCANA",
+        "coords": {
+            "lat": 43.9581563,
+            "lng": 10.1688154
+        }
+    },
+    {
+        "name": "CUOIERIA FIORENTINA SRL",
+        "address": "Via dei Ciliegi, 25",
+        "zipCode": 50066,
+        "town": "Reggello",
+        "province": "FI",
+        "region": "TOSCANA",
+        "coords": {
+            "lat": 43.66921,
+            "lng": 11.454855
+        }
+    },
+    {
+        "name": "GALEOTTI SAS DI GALEOTTI GIULIANO & C.",
+        "address": "VIA CARDUCCI 2",
+        "zipCode": 6012,
+        "town": "Citt di Castello",
+        "province": "PG",
+        "region": "UMBRIA",
+        "coords": {
+            "lat": 40.9143467,
+            "lng": 14.4086126
+        }
+    },
+    {
+        "name": "PIERROT SRL",
+        "address": "VIA C.COLOMBO 440",
+        "zipCode": 145,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "lat": 41.8517129,
+            "lng": 12.4858609
+        }
+    },
+    {
+        "name": "ROSE ROSA SRL",
+        "address": "Via Cesare Guasti, 32/34",
+        "zipCode": 59100,
+        "town": "Prato",
+        "province": "PO",
+        "region": "TOSCANA",
+        "coords": {
+            "lat": 43.8817272,
+            "lng": 11.0943651
+        }
     },
     {
         "name": "PASS COMPANY SRL",
@@ -661,7 +737,119 @@ var storeList = [
         "zipCode": 35044,
         "town": "Montagnana",
         "province": "PD",
-        "region": "VENETO"
+        "region": "VENETO",
+        "coords": {
+            "lat": 45.225122,
+            "lng": 11.4965689
+        }
+    },
+    {
+        "name": "BIDON",
+        "address": "VIA NOBEL, 2",
+        "zipCode": 30025,
+        "town": "Fossalta di Portogruaro",
+        "province": "VE",
+        "region": "VENETO",
+        "coords": {
+            "lat": 45.7777426,
+            "lng": 12.906906
+        }
+    },
+    {
+        "name": "MAGIC DI DALLICANI ANTONELLA E C. SAS",
+        "address": "CORSO UMBERTO I, 18",
+        "zipCode": 37011,
+        "town": "Bardolino",
+        "province": "VR",
+        "region": "VENETO",
+        "coords": {
+            "lat": 45.54727,
+            "lng": 10.72131
+        }
+    },
+    {
+        "name": "BERTOLDO di Bertoldo Renzo",
+        "address": "Via Roma, 85",
+        "zipCode": 35010,
+        "town": "MASSANZAGO",
+        "province": "PD",
+        "region": "VENETO",
+        "coords": {
+            "lat": 45.555278,
+            "lng": 12.003065
+        }
+    },
+    {
+        "name": "DE RISO CALZATURE DI CAMILLO DE RISO",
+        "address": "VIA BAYLLE,23",
+        "zipCode": 9124,
+        "town": "Cagliari",
+        "province": "CA",
+        "region": "SARDEGNA",
+        "coords": {
+            "lat": 39.2147446,
+            "lng": 9.112246299999999
+        }
+    },
+    {
+        "name": "COM.CA S.R.L",
+        "address": "VIA DANTONA, 10/12",
+        "zipCode": 37048,
+        "town": "S.PIETRO DI LEGNAGO",
+        "province": "VR",
+        "region": "VENETO",
+        "coords": {
+            "lat": 45.1850669,
+            "lng": 11.255345
+        }
+    },
+    {
+        "name": "E.LE..SHOES DI GAGLIARDI RITA",
+        "address": "via cavour 35",
+        "zipCode": 14100,
+        "town": "Asti",
+        "province": "AT",
+        "region": "PIEMONTE",
+        "coords": {
+            "lat": 45.0067,
+            "lng": 8.258438
+        }
+    },
+    {
+        "name": "EMPORIO GIGLIO SRL",
+        "address": "P.ZZA I MAGGIO,18",
+        "zipCode": 87100,
+        "town": "COSENZA",
+        "province": "CS",
+        "region": "CALABRIA",
+        "coords": {
+            "lat": 39.9358002,
+            "lng": 15.9774205
+        }
+    },
+    {
+        "name": "MASSETANI SNC",
+        "address": "Via Bruceto, 108",
+        "zipCode": 51010,
+        "town": "Massa e Cozzile",
+        "province": "PT",
+        "region": "TOSCANA",
+        "coords": {
+            "lat": 43.87665699999999,
+            "lng": 10.757293
+        }
+    },
+    {
+        "name": "MORI ROMAS DI MORI ROSSELLA & C. SNC",
+        "address": "VIA BANCHI DI SOPRA,32",
+        "zipCode": 53100,
+        "town": "SIENA",
+        "province": "SI",
+        "region": "TOSCANA",
+        "coords": {
+            "lat": 43.3198091,
+            "lng": 11.3313687
+        }
     }
 ]
 

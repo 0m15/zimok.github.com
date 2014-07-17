@@ -2,12 +2,25 @@ var app = angular.module("app", ['google-maps']);
 
 app.filter('storeFilter', function() {
 	return function(items, filter) {
+		if(!filter) return items
 		var results = []
+		var propsToMatch = ['town', 'address', 'name', 'region', 'zipCode']
+		var regex = new RegExp(filter.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"), "gi")
 		angular.forEach(items, function(region, props) {
-			//angular.forEach(props)
+
+			angular.forEach(region.stores, function(store) {
+
+				angular.forEach(propsToMatch, function(prop) {
+					if(regex.test(store[prop])) {
+						if(results.indexOf(store) < 0) results.push(store)
+					}
+				})
+
+			})
+
 		})
 
-		return items
+		return results
 	}
 
 })
@@ -28,6 +41,8 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', function($sc
 	$scope.markers = []
 	$scope.open = false
 	$scope.map = {
+		control: {},
+		markers: [],
 		zoom: 5,
 		center: {
 			latitude: 42,
@@ -43,32 +58,13 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', function($sc
 			mapTypeControl: false,
 			scaleControl: true,
 			zoomControlOptions: { style: google.maps.ZoomControlStyle.SMALL },
-			mapTypeControlOptions: { mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'usroadatlas'] }
+			mapTypeControlOptions: { mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'usroadatlas'] },
+			mapTypeId: google.maps.MapTypeId.TERRAIN
 		}
 
 	};
 
 	var self = this
-
-	// this.initializeMap = function() {
-	// 	$scope.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-	//   var styledMapOptions = {};
-	//   var usRoadMapType = new google.maps.StyledMapType(roadAtlasStyles, styledMapOptions);
-	//   $scope.map.mapTypes.set('usroadatlas', usRoadMapType);
-	//   $scope.map.setMapTypeId('usroadatlas');
-	//   google.maps.event.addDomListener(window, 'load', this.initializeMap);
-	// }
-	// this.initializeMap()
-
-	// $scope.addMarker = function(store) {
-	// 	var coords = new google.maps.LatLng(store.coords.lat, store.coords.lng)
-	// 	var marker = new google.maps.Marker({
-	// 		position: coords,
-	// 		map: this.map,
-	// 		title: store.name + " - " + store.address
-	// 	})
-	// 	$scope.markers.push(marker)
-	// }
 
 	this.getStoresByTown = function() {
 		var townList, storesByTown = {}, self=this
@@ -83,15 +79,22 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', function($sc
 	}
 	this.getStoresByTown()
 
-	// this.addMarkers = function() {
-	// 	angular.forEach($scope.stores, function(store, idx) {
-	// 		if(idx == 0) {
-	// 			store.coords = {lat: 42.12, lng: 12.23}
-	// 			$scope.addMarker(store)
-	// 		}
-	// 	})
-	// }
-	// this.addMarkers()
+	$scope.addMarker = function(store, id) {
+		var marker = {
+			id: id,
+			title: store.name,
+			"latitude": store.coords.lat,
+			"longitude": store.coords.lng,
+		}
+		$scope.map.markers.push(marker)
+	}
+
+	this.addMarkers = function() {
+		angular.forEach($scope.stores, function(store, idx) {
+			$scope.addMarker(store, idx)
+		})
+	}
+	this.addMarkers()
 
 	$scope.deselectTown = function() {
 		angular.forEach($scope.storesByTown, function(store) {
@@ -101,12 +104,31 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', function($sc
 		if(!$scope.$$phase) $scope.$apply()
 	}
 
+	$scope.resetMarkers = function() {
+		$scope.map.markers = []
+		self.addMarkers()
+	}
+
 	$scope.showAll = function() {
+		$scope.resetMarkers()
 		angular.forEach($scope.storesByTown, function(store) {
 			store.selected = undefined
 		})
 		$scope.currentTown = null
+		self.fitToPoints($scope.map.markers)
 		if(!$scope.$$phase) $scope.$apply()
+	}
+
+	this.fitToPoints = function(points) {
+		var pointsArray = []
+		var bounds = new google.maps.LatLngBounds()
+		angular.forEach(points, function(point) {
+			pointsArray.push(new google.maps.LatLng(point.latitude, point.longitude))
+		})
+		angular.forEach(pointsArray, function(point) {
+			bounds.extend(point)
+		})
+		$scope.map.control.getGMap().fitBounds(bounds)
 	}
 
 	$scope.selectTown = function(town) {
@@ -115,6 +137,11 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', function($sc
 		currentTown.town = town
 		currentTown.selected = true
 		$scope.currentTown = currentTown
+		$scope.map.markers = []
+		angular.forEach(currentTown.stores, function(store, idx) {
+			$scope.addMarker(store, idx)
+		})
+		self.fitToPoints($scope.map.markers)
 		if(!$scope.$$phase) $scope.$apply()
 	}
 
