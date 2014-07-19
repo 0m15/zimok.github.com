@@ -26,9 +26,12 @@ app.filter('storeFilter', function() {
 
 })
 
+var MAX_DISTANCE_TRESHOLD = 150
+
 // google maps initialization
 var map;
 var initialCenter = new google.maps.LatLng(42, 12);
+
 
 // var styledMapOptions = {};
 // var usRoadMapType = new google.maps.StyledMapType(roadAtlasStyles, styledMapOptions);
@@ -36,15 +39,17 @@ var initialCenter = new google.maps.LatLng(42, 12);
 // $scope.map.setMapTypeId('usroadatlas');
 
 var mapOptions = {}
-
+var isMobile = $(window).width() <= 600
 var GEOCODE_API_KEY = "AIzaSyDToCE_kRLo_41eqc4NEk2quNQS5JjG5Dk";
 var GEOCODE_BASE_URL = "https://maps.googleapis.com/maps/api/geocode/jsonp?callback=callback&key=" + GEOCODE_API_KEY;
 var GEOCODE_URL = "&address=";
 
-app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', '$filter', '$http', function($scope, $window, $animate, $filter, $http) {
+app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', '$filter', '$http', function($scope, $timeout, $window, $animate, $filter, $http) {
 	$scope.stores = $window.storeList
 	$scope.markers = []
 	$scope.open = false
+	$scope.showMap = true
+	$scope.showList = false
 	$scope.map = {
 		control: {},
 		markers: [],
@@ -54,7 +59,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', '$filter', '
 			longitude: 12
 		},
 		options: {
-			draggable: true,
+			draggable: !isMobile,
 			scrollwheel: false,
 			styles: roadAtlasStyles,
 			navigationControl: false,
@@ -82,11 +87,19 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', '$filter', '
 	var self = this
 	this.geocoder = new google.maps.Geocoder()
 
+	//
 	// geocoding
+	//
 	this.getLocation = function(address) {
 		this.geocoder.geocode( { 'address': address + ' italy'}, function(results, status) {
 			if(status == google.maps.GeocoderStatus.OK) {
-				$scope.userLocation = results[0].geometry.location
+
+				$scope.userLocation = {
+					latitude: results[0].geometry.location['k'],
+					longitude: results[0].geometry.location['B'],
+					address: results[0].formatted_address
+				}
+				$scope.searchQuery = results[0].formatted_address
 				//self.fitToPoints([{latitude:$scope.userLocation['k'],longitude:$scope.userLocation['B']}])
 				self.getNearestStores(address, 10)
 			} else {
@@ -100,8 +113,8 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', '$filter', '
 		if(!$scope.userLocation) return
 		var distances = {}
 		var userLocation = {
-			latitude: $scope.userLocation['k'],
-			longitude: $scope.userLocation['B']
+			latitude: $scope.userLocation.latitude,
+			longitude: $scope.userLocation.longitude,
 		}
 		angular.forEach($scope.stores, function(store) {
 			if(store.coords) {
@@ -127,25 +140,46 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', '$filter', '
 		console.log(sortedStores)
 	}
 
+	function getDirectionsUrl(store) {
+		var startAddress = ""
+		if($scope.userLocation) {
+			startAddress = $scope.userLocation.address
+		}
+		var endAddress = store.address + " " + store.town + " " + store.zipCode
+		return "https://www.google.com/maps?saddr="+startAddress+"&daddr="+endAddress
+	}
+
 	function createInfoBox(marker, data) {
 		console.log('createInfoBox', marker)
 		var content = document.createElement('div')
-		content.innerHTML = '<h2>'+data.title+'</h2><p>'+data.address+' – '+data.town+'</p>'
+		var directionsUrl = getDirectionsUrl(data)
+		var distanceLabel = '<a href="'+directionsUrl+'" target="_blank">Get directions</a>'
+
+		if($scope.userLocation) {
+			directionsUrl = getDirectionsUrl(data)
+			distanceLabel = 'About <a href="'+directionsUrl+'" target="_blank">'+ data.distance + ' km</a> from you'
+		}
+		content.innerHTML = '<h2>'+data.title+'</h2><p>'+data.address+' – '+data.town+'</p><p class="info-box-direction">'+distanceLabel+'</p>'
 
 		var options = {
 			content: content,
 			boxClass: 'info-box',
 			maxWidth: 0,
-			pixelOffset: new google.maps.Size(-140, 0),
+			pixelOffset: new google.maps.Size(-150, 16),
 			infoBoxClearance: new google.maps.Size(1, 1),
 		}
 		return new InfoBox(options)
 	}
 
+	$scope.mapWindows = []
 	function toggleInfoBox(marker, data) {
 		console.log('toggleInfoBox', marker)
 		var ib = createInfoBox(marker, data)
+		angular.forEach($scope.mapWindows, function(w) {
+			w.close()
+		})
 		ib.open($scope.map.control.getGMap(), marker)
+		$scope.mapWindows.push(ib)
 	}
 
 
@@ -155,8 +189,10 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', '$filter', '
 			title: store.name,
 			address: store.address,
 			town: store.town,
-			"latitude": store.coords.latitude,
-			"longitude": store.coords.longitude,
+			zipCode: store.zipCode,
+			latitude: store.coords.latitude,
+			longitude: store.coords.longitude,
+			distance: store.distance
 		}
 		marker.onClicked = function() {
 			console.log("click")
@@ -237,6 +273,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', '$filter', '
 
 	$scope.showAll = function() {
 		$scope.resetMarkers()
+		$scope.searchQuery = ''
 		angular.forEach($scope.storesByTown, function(store) {
 			store.selected = undefined
 		})
@@ -297,6 +334,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', '$filter', '
 	}
 
 	$scope.selectTown = function(town) {
+		//self.getLocation(town)
 		$scope.deselectTown()
 		var currentTown = $scope.storesByTown[town]
 		currentTown.town = town
@@ -318,6 +356,20 @@ app.controller('StoreFinderCtrl', ['$scope', '$window', '$animate', '$filter', '
 		angular.forEach(items, function(val, key) {
 
 		})
+	}
+
+	$scope.toggleViewMode = function(viewMode) {
+		if(viewMode == 'map') {
+			$scope.showMap = true
+			$scope.showList = false
+			$timeout(function() {
+				//self.getLocation($scope.currentTown.town)
+				$scope.map.control.refresh($scope.map.options)
+			}, 1)
+		} else {
+			$scope.showMap = false
+			$scope.showList = true
+		}
 	}
 
 	$scope.centerMap = function() {

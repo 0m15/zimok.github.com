@@ -17,16 +17,48 @@
 		background: #fff;
 		color: #444;
 		padding: .5em 1em;
-		width: 280px;
+		width: 300px;
+		position: relative;
+		box-shadow: 0 4px 0 rgba(0, 0, 0, .15);
+	}
+
+	.info-box:after {
+		bottom: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(255, 255, 255, 0);
+		border-bottom-color: #fff;
+		border-width: 12px;
+		margin-left: -12px;
 	}
 
 	.info-box h2 {
-		font-size: 1.25em;
+		margin-top: .5em;
+		letter-spacing: 0;
+		line-height: 1;
+		font-size: 1.5em;
 		font-weight: bold;
+		font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, sans-serif;
 	}
 
 	.info-box p {
 		font-size: 1.25em;
+		line-height: 1;
+		margin: 0;
+	}
+
+	.info-box a {
+		color: #f60;
+	}
+
+	.info-box .info-box-direction {
+		margin: 1em 0;
+		color: #999;
 	}
 	</style>
 </head>
@@ -35,8 +67,8 @@
 
 		<div class="section-media" style="position:relative">
 			<video class="video" autoplay preload>
-				<!--<source src="assets/video.m4v">
-				<source src="assets/video.ogg">-->
+				<source src="assets/video.m4v">
+				<source src="assets/video.ogg">
 			</video>
 			<div class="main-brand">
 				<a href="#section-1" class="with-down-arrow logo-hover">
@@ -217,14 +249,45 @@
 
 			<div class="map-toolbar" style="padding-left: 3em">
 				<ul class="nav nav-tabs" role="tablist">
-					<li class="active"><a href="#" class="with-icon-left"><i class="glyphicon glyphicon-globe"></i> view map</a></li>
-					<li><a href="#" class="with-icon-left"><i class="glyphicon glyphicon-th"></i> list</a></li>
+					<li ng-class="{active: showMap}">
+						<a href ng-click="toggleViewMode('map')" class="with-icon-left"><i class="glyphicon glyphicon-globe"></i> view map</a>
+					</li>
+					<li ng-class="{active: showList}">
+						<a href ng-click="toggleViewMode('list')" class="with-icon-left"><i class="glyphicon glyphicon-th"></i> list</a>
+					</li>
+					<li ng-if="currentTown">
+						<a href ng-click="showAll()" class="with-icon-left"><i class="glyphicon glyphicon-cross"></i> show all</a>
+					</li>
 				</ul>
 			</div>
 
 			<div class="map-container">
 				<div class="search-bar clearfix">
-					<input type="text" ng-model-options="{debounce: 750}" ng-model="searchQuery" ng-change="filterStores()" class="text-input input-xl col-xs-12 col-md-12" placeholder="enter your zip, town or state">
+					<input type="text" ng-model-options="{debounce: 750}" ng-model="searchQuery" ng-change="filterStores()" class="text-input input-xl col-xs-12 col-md-12" placeholder="search for stores near: (enter a place)">
+				</div>
+				<div class="store-list-overlay clearfix" data-index="0.5" ng-if="showList">
+					<div class="container-fluid" data-index="-0.5">
+						<ul class="store-list">
+							<li
+								ng-repeat="(town, props) in storesByTown"
+								ng-show="props.selected == undefined || props.selected == true"
+								ng-class="{selected: props.selected, animated: true}"
+							>
+								<a href="" ng-click="selectTown(town)">{{town}}</a></li>
+						</ul>
+					</div>
+					<br>
+
+					<div class="current-area container" ng-show="currentTown">
+						<ul class="list-unstyled">
+							<li ng-repeat="store in currentTown.stores|orderBy:['town','distance']|limitTo:10" class="row store-detail">
+								<p class="store-town col-md-3">{{store.town}}</p>
+								<p class="store-name col-md-4">{{store.name}}</p>
+								<p class="store-address col-md-3">{{store.address}}</p>
+								<p class="store-name col-md-2"><a href class="with-icon-left"><i class="glyphicon glyphicon-map-marker" style="font-size:.75em"></i> view on map</a></p>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<google-map center="map.center" draggable="true" zoom="map.zoom" options="map.options" control="map.control">
 					<markers models="map.markers" click="'onClicked'" coords="'self'" fit="false"></markers>
@@ -237,38 +300,8 @@
 				<button type="button" class="btn btn-xl" ng-click="toggle()">find your local retailer</button>
 			</div> -->
 
-			<div class="clearfix">
-				<div class="col-md-10 col-md-offset-1 clearfix" data-index="0.5">
-					<div class="clearfix" data-index="-0.5">
-						<ul class="store-list clearfix">
-							<li
-								ng-show="currentTown"
-								>
-								<span class="pull-left">
-									<button class="btn btn-icon" ng-click="showAll()">&times; show all</button>
-								</span>
-							</li>
-							<li
-								ng-repeat="(town, props) in storesByTown"
-								ng-show="props.selected == undefined || props.selected == true"
-								ng-class="{selected: props.selected, animated: true}"
-							>
-								<a href="" ng-click="selectTown(town)">{{town}}</a></li>
-						</ul>
-					</div>
-					<br>
+			<div class="clearfix" ng-if="showList">
 
-					<div class="current-area" ng-show="currentTown">
-						<ul class="list-unstyled">
-							<li ng-repeat="store in currentTown.stores|orderBy:'distance'|limitTo:10" class="col-sm-4 col-md-3 store-detail">
-								<p class="store-town">{{store.town}}</p>
-								<p class="store-name">{{store.name}}</p>
-								<p class="store-address">{{store.address}}</p>
-								<p class="store-address"><strong>{{store.distance}}</strong> km from you</p>
-							</li>
-						</ul>
-					</div>
-				</div>
 			</div>
 		</div>
 

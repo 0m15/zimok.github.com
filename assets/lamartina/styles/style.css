@@ -341,8 +341,11 @@ body {
 		border-bottom: 2px solid transparent;
 	}
 	.navbar-nav > li a:hover,
-	.navbar-nav > li a.active {
+	.navbar-nav > li a.active,
+	.navbar-nav > li a.active:active {
 		border-bottom: 2px solid #fff;
+		background: transparent !important;
+		color: #fff !important;
 	}
 	.navbar-nav > li {
 		float: none;
@@ -350,6 +353,12 @@ body {
 	}
 }
 
+a:focus,
+li:focus,
+button:focus {
+	outline: none !important;
+	color: inherit !important;
+}
 /* sections
 ==============================================
 */
@@ -732,54 +741,54 @@ img.fade-in {
 }*/
 
 
-
-#stores .col-md-4 {
-	border-right: 1px solid rgba(255,255,255,.15);
-}
-
-#stores .col-md-4:last-child {
-	border-right: none;
-}
-
 #stores .row {
-	margin: 6em 0;
+	/*margin: 6em 0;*/
 }
 
 /* current area */
 .current-area {
-	min-height: 10px;
+	padding-bottom: 2em;
 }
 
 .current-area ul li {
-	margin-bottom: 2.5em;
+	border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.current-area ul li:last-child {
+	border-bottom: 0;
 }
 
 @media screen and (min-width: 800px) {
 	.current-area	ul li {
-		min-height: 110px;
 	}
 }
+.current-area p {
+	margin: 0;
+	font-size: 1.5rem;
+	line-height: 4.5rem;
+}
 .current-area .store-town {
-	padding-right: 40%;
-	font-size: 1.75rem;
 	text-transform: uppercase;
-	margin-bottom: .5em;
-	line-height: 1;
+	font-size: 2rem;
 }
 .current-area .store-name {
-	font-size: 1.5rem;
-	line-height: 1.15;
 	margin-bottom: 0;
-	padding-right: 50%;
-	margin-bottom: 0;
-	opacity: .45;
+
 }
 .current-area .store-address {
-	opacity: .45;
-	font-size: 1.25rem;
-	letter-spacing: .1rem;
 	text-transform: uppercase;
-	text-decoration: underline;
+	opacity: .5;
+}
+
+#stores .store-list-overlay {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding-top: 1em;
+	background: #121212;
+	height: 100%;
+	z-index: 9999;
+	overflow: scroll;
 }
 
 #stores .map-container {
@@ -862,7 +871,7 @@ img.fade-in {
 
 @media screen and (min-width: 1000px) {
 	#stores .store-list {
-		text-align: left;
+		text-align: center;
 		margin: 0;
 		padding: 0;
 	}

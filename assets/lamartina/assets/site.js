@@ -5,9 +5,17 @@ jQuery.fn.anchorAnimate = function() {
 		var caller = this
 		$(caller).click(function (event) {
 			event.preventDefault()
-
 			var elementClick = $(caller).attr("href")
+			console.log('=============================')
+			console.log('elementClick: ', elementClick)
+
+
+			if(elementClick.indexOf('#') < 0) elementClick = '#' + elementClick
 			var destination = $(elementClick).offset().top - 115
+
+			console.log('elementOffset: ', $(elementClick).offset())
+			console.log('destination: ', destination)
+			console.log('=============================')
 
 			// down
 			if(!$body.hasClass('with-navbar-fixed')) {
@@ -21,7 +29,7 @@ jQuery.fn.anchorAnimate = function() {
 				queue: false,
 				complete:function() {}
 			});
-		  	return false;
+	  	return false;
 		})
 	})
 }
