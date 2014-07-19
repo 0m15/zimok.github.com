@@ -7,8 +7,8 @@ var storeList = [
         "province": "CS",
         "region": "CALABRIA",
         "coords": {
-            "lat": 39.4997481,
-            "lng": 16.3909425
+            "latitude": 39.4997481,
+            "longitude": 16.3909425
         }
     },
     {
@@ -19,8 +19,8 @@ var storeList = [
         "province": "CS",
         "region": "CALABRIA",
         "coords": {
-            "lat": 39.627607,
-            "lng": 16.507443
+            "latitude": 39.627607,
+            "longitude": 16.507443
         }
     },
     {
@@ -31,8 +31,8 @@ var storeList = [
         "province": "CZ",
         "region": "CALABRIA",
         "coords": {
-            "lat": 38.968596,
-            "lng": 16.3202552
+            "latitude": 38.968596,
+            "longitude": 16.3202552
         }
     },
     {
@@ -43,8 +43,8 @@ var storeList = [
         "province": "RM",
         "region": "LAZIO",
         "coords": {
-            "lat": 41.9378863,
-            "lng": 12.467654
+            "latitude": 41.9378863,
+            "longitude": 12.467654
         }
     },
     {
@@ -55,8 +55,8 @@ var storeList = [
         "province": "MO",
         "region": "EMILIA ROMAGNA",
         "coords": {
-            "lat": 44.7840911,
-            "lng": 10.8896938
+            "latitude": 44.7840911,
+            "longitude": 10.8896938
         }
     },
     {
@@ -67,8 +67,8 @@ var storeList = [
         "province": "KR",
         "region": "CALABRIA",
         "coords": {
-            "lat": 39.0804253,
-            "lng": 17.1266418
+            "latitude": 39.0804253,
+            "longitude": 17.1266418
         }
     },
     {
@@ -79,8 +79,8 @@ var storeList = [
         "province": "RC",
         "region": "CALABRIA",
         "coords": {
-            "lat": 38.4892186,
-            "lng": 15.9745666
+            "latitude": 38.4892186,
+            "longitude": 15.9745666
         }
     },
     {
@@ -91,8 +91,8 @@ var storeList = [
         "province": "NA",
         "region": "CAMPANIA",
         "coords": {
-            "lat": 40.8445414,
-            "lng": 14.2280401
+            "latitude": 40.8445414,
+            "longitude": 14.2280401
         }
     },
     {
@@ -103,8 +103,8 @@ var storeList = [
         "province": "FE",
         "region": "EMILIA ROMAGNA",
         "coords": {
-            "lat": 45.5095549,
-            "lng": 7.9646609
+            "latitude": 45.5095549,
+            "longitude": 7.9646609
         }
     },
     {
@@ -115,8 +115,8 @@ var storeList = [
         "province": "VV",
         "region": "CALABRIA",
         "coords": {
-            "lat": 38.5594848,
-            "lng": 15.960865
+            "latitude": 38.5594848,
+            "longitude": 15.960865
         }
     },
     {
@@ -127,8 +127,8 @@ var storeList = [
         "province": "RA",
         "region": "EMILIA ROMAGNA",
         "coords": {
-            "lat": 44.2789595,
-            "lng": 12.3478872
+            "latitude": 44.2789595,
+            "longitude": 12.3478872
         }
     },
     {
@@ -139,8 +139,8 @@ var storeList = [
         "province": "TE",
         "region": "ABRUZZO",
         "coords": {
-            "lat": 42.836208,
-            "lng": 13.923878
+            "latitude": 42.836208,
+            "longitude": 13.923878
         }
     },
     {
@@ -151,8 +151,8 @@ var storeList = [
         "province": "TE",
         "region": "ABRUZZO",
         "coords": {
-            "lat": 42.6577987,
-            "lng": 13.7069577
+            "latitude": 42.6577987,
+            "longitude": 13.7069577
         }
     },
     {
@@ -163,8 +163,8 @@ var storeList = [
         "province": "MC",
         "region": "MARCHE",
         "coords": {
-            "lat": 43.3163622,
-            "lng": 13.6392334
+            "latitude": 43.3163622,
+            "longitude": 13.6392334
         }
     },
     {
@@ -175,8 +175,8 @@ var storeList = [
         "province": "AQ",
         "region": "ABRUZZO",
         "coords": {
-            "lat": 42.346848,
-            "lng": 13.3980111
+            "latitude": 42.346848,
+            "longitude": 13.3980111
         }
     },
     {
@@ -187,8 +187,8 @@ var storeList = [
         "province": "PU",
         "region": "MARCHE",
         "coords": {
-            "lat": 43.9117748,
-            "lng": 12.909663
+            "latitude": 43.9117748,
+            "longitude": 12.909663
         }
     },
     {
@@ -199,8 +199,8 @@ var storeList = [
         "province": "PU",
         "region": "MARCHE",
         "coords": {
-            "lat": 43.689108,
-            "lng": 12.80638
+            "latitude": 43.689108,
+            "longitude": 12.80638
         }
     },
     {
@@ -211,8 +211,8 @@ var storeList = [
         "province": "RC",
         "region": "CALABRIA",
         "coords": {
-            "lat": 37.919309,
-            "lng": 15.778587
+            "latitude": 37.919309,
+            "longitude": 15.778587
         }
     },
     {
@@ -223,8 +223,8 @@ var storeList = [
         "province": "FI",
         "region": "TOSCANA",
         "coords": {
-            "lat": 43.69089020000001,
-            "lng": 10.8981883
+            "latitude": 43.69089020000001,
+            "longitude": 10.8981883
         }
     },
     {
@@ -235,8 +235,8 @@ var storeList = [
         "province": "RM",
         "region": "LAZIO",
         "coords": {
-            "lat": 41.8878495,
-            "lng": 12.5130918
+            "latitude": 41.8878495,
+            "longitude": 12.5130918
         }
     },
     {
@@ -247,8 +247,8 @@ var storeList = [
         "province": "AR",
         "region": "TOSCANA",
         "coords": {
-            "lat": 43.52326720000001,
-            "lng": 11.5697256
+            "latitude": 43.52326720000001,
+            "longitude": 11.5697256
         }
     },
     {
@@ -259,8 +259,8 @@ var storeList = [
         "province": "AN",
         "region": "MARCHE",
         "coords": {
-            "lat": 43.6180185,
-            "lng": 13.5179295
+            "latitude": 43.6180185,
+            "longitude": 13.5179295
         }
     },
     {
@@ -271,8 +271,8 @@ var storeList = [
         "province": "GR",
         "region": "TOSCANA",
         "coords": {
-            "lat": 42.7669412,
-            "lng": 11.1156605
+            "latitude": 42.7669412,
+            "longitude": 11.1156605
         }
     },
     {
@@ -283,8 +283,8 @@ var storeList = [
         "province": "BI",
         "region": "PIEMONTE",
         "coords": {
-            "lat": 45.5612111,
-            "lng": 8.0514674
+            "latitude": 45.5612111,
+            "longitude": 8.0514674
         }
     },
     {
@@ -295,8 +295,8 @@ var storeList = [
         "province": "TO",
         "region": "PIEMONTE",
         "coords": {
-            "lat": 45.065208,
-            "lng": 7.696745599999999
+            "latitude": 45.065208,
+            "longitude": 7.696745599999999
         }
     },
     {
@@ -307,8 +307,8 @@ var storeList = [
         "province": "TE",
         "region": "ABRUZZO",
         "coords": {
-            "lat": 42.811528,
-            "lng": 13.72948
+            "latitude": 42.811528,
+            "longitude": 13.72948
         }
     },
     {
@@ -319,8 +319,8 @@ var storeList = [
         "province": "OR",
         "region": "SARDEGNA",
         "coords": {
-            "lat": 39.9109813,
-            "lng": 8.5905795
+            "latitude": 39.9109813,
+            "longitude": 8.5905795
         }
     },
     {
@@ -331,8 +331,8 @@ var storeList = [
         "province": "IM",
         "region": "LIGURIA",
         "coords": {
-            "lat": 43.81559,
-            "lng": 7.774369999999999
+            "latitude": 43.81559,
+            "longitude": 7.774369999999999
         }
     },
     {
@@ -343,8 +343,8 @@ var storeList = [
         "province": "AL",
         "region": "PIEMONTE",
         "coords": {
-            "lat": 44.9146249,
-            "lng": 8.6135714
+            "latitude": 44.9146249,
+            "longitude": 8.6135714
         }
     },
     {
@@ -355,8 +355,8 @@ var storeList = [
         "province": "RC",
         "region": "CALABRIA",
         "coords": {
-            "lat": 38.4069523,
-            "lng": 16.0766168
+            "latitude": 38.4069523,
+            "longitude": 16.0766168
         }
     },
     {
@@ -367,8 +367,8 @@ var storeList = [
         "province": "TO",
         "region": "PIEMONTE",
         "coords": {
-            "lat": 45.06886979999999,
-            "lng": 7.681605299999998
+            "latitude": 45.06886979999999,
+            "longitude": 7.681605299999998
         }
     },
     {
@@ -379,8 +379,8 @@ var storeList = [
         "province": "VT",
         "region": "LAZIO",
         "coords": {
-            "lat": 42.4189217,
-            "lng": 12.1056729
+            "latitude": 42.4189217,
+            "longitude": 12.1056729
         }
     },
     {
@@ -391,8 +391,8 @@ var storeList = [
         "province": "TP",
         "region": "SICILIA",
         "coords": {
-            "lat": 37.7997539,
-            "lng": 12.4343624
+            "latitude": 37.7997539,
+            "longitude": 12.4343624
         }
     },
     {
@@ -403,8 +403,8 @@ var storeList = [
         "province": "FG",
         "region": "PUGLIA",
         "coords": {
-            "lat": 41.4593411,
-            "lng": 15.5487438
+            "latitude": 41.4593411,
+            "longitude": 15.5487438
         }
     },
     {
@@ -415,8 +415,8 @@ var storeList = [
         "province": "RM",
         "region": "LAZIO",
         "coords": {
-            "lat": 41.8853879,
-            "lng": 12.511904
+            "latitude": 41.8853879,
+            "longitude": 12.511904
         }
     },
     {
@@ -427,8 +427,8 @@ var storeList = [
         "province": "PU",
         "region": "MARCHE",
         "coords": {
-            "lat": 43.843812,
-            "lng": 13.016005
+            "latitude": 43.843812,
+            "longitude": 13.016005
         }
     },
     {
@@ -439,8 +439,8 @@ var storeList = [
         "province": "RM",
         "region": "LAZIO",
         "coords": {
-            "lat": 41.9439217,
-            "lng": 12.5566529
+            "latitude": 41.9439217,
+            "longitude": 12.5566529
         }
     },
     {
@@ -451,8 +451,8 @@ var storeList = [
         "province": "AN",
         "region": "MARCHE",
         "coords": {
-            "lat": 43.62807859999999,
-            "lng": 13.3950605
+            "latitude": 43.62807859999999,
+            "longitude": 13.3950605
         }
     },
     {
@@ -463,8 +463,8 @@ var storeList = [
         "province": "TO",
         "region": "PIEMONTE",
         "coords": {
-            "lat": 45.0663317,
-            "lng": 7.6693599
+            "latitude": 45.0663317,
+            "longitude": 7.6693599
         }
     },
     {
@@ -475,8 +475,8 @@ var storeList = [
         "province": "MI",
         "region": "LOMBARDIA",
         "coords": {
-            "lat": 45.558189,
-            "lng": 8.9478154
+            "latitude": 45.558189,
+            "longitude": 8.9478154
         }
     },
     {
@@ -487,8 +487,8 @@ var storeList = [
         "province": "RM",
         "region": "LAZIO",
         "coords": {
-            "lat": 41.740603,
-            "lng": 12.913525
+            "latitude": 41.740603,
+            "longitude": 12.913525
         }
     },
     {
@@ -499,8 +499,8 @@ var storeList = [
         "province": "RM",
         "region": "LAZIO",
         "coords": {
-            "lat": 41.8432043,
-            "lng": 12.4084777
+            "latitude": 41.8432043,
+            "longitude": 12.4084777
         }
     },
     {
@@ -511,8 +511,8 @@ var storeList = [
         "province": "TN",
         "region": "TRENTINO ALTO ADIGE",
         "coords": {
-            "lat": 46.16110580000001,
-            "lng": 10.7654017
+            "latitude": 46.16110580000001,
+            "longitude": 10.7654017
         }
     },
     {
@@ -523,8 +523,8 @@ var storeList = [
         "province": "VR",
         "region": "VENETO",
         "coords": {
-            "lat": 45.1805982,
-            "lng": 11.0632036
+            "latitude": 45.1805982,
+            "longitude": 11.0632036
         }
     },
     {
@@ -535,8 +535,8 @@ var storeList = [
         "province": "RM",
         "region": "LAZIO",
         "coords": {
-            "lat": 41.9168369,
-            "lng": 12.4418205
+            "latitude": 41.9168369,
+            "longitude": 12.4418205
         }
     },
     {
@@ -547,8 +547,8 @@ var storeList = [
         "province": "SS",
         "region": "SARDEGNA",
         "coords": {
-            "lat": 40.7262969,
-            "lng": 8.5622819
+            "latitude": 40.7262969,
+            "longitude": 8.5622819
         }
     },
     {
@@ -559,8 +559,8 @@ var storeList = [
         "province": "VR",
         "region": "VENETO",
         "coords": {
-            "lat": 45.5529596,
-            "lng": 10.785885
+            "latitude": 45.5529596,
+            "longitude": 10.785885
         }
     },
     {
@@ -571,8 +571,8 @@ var storeList = [
         "province": "RM",
         "region": "LAZIO",
         "coords": {
-            "lat": 41.8853618,
-            "lng": 12.510245
+            "latitude": 41.8853618,
+            "longitude": 12.510245
         }
     },
     {
@@ -583,8 +583,8 @@ var storeList = [
         "province": "MI",
         "region": "LOMBARDIA",
         "coords": {
-            "lat": 45.4805371,
-            "lng": 9.247142799999999
+            "latitude": 45.4805371,
+            "longitude": 9.247142799999999
         }
     },
     {
@@ -595,8 +595,8 @@ var storeList = [
         "province": "MI",
         "region": "LOMBARDIA",
         "coords": {
-            "lat": 45.4800835,
-            "lng": 9.1992425
+            "latitude": 45.4800835,
+            "longitude": 9.1992425
         }
     },
     {
@@ -607,8 +607,8 @@ var storeList = [
         "province": "BG",
         "region": "LOMBARDIA",
         "coords": {
-            "lat": 45.687297,
-            "lng": 9.573625
+            "latitude": 45.687297,
+            "longitude": 9.573625
         }
     },
     {
@@ -619,8 +619,8 @@ var storeList = [
         "province": "BA",
         "region": "PUGLIA",
         "coords": {
-            "lat": 40.8155214,
-            "lng": 16.4182102
+            "latitude": 40.8155214,
+            "longitude": 16.4182102
         }
     },
     {
@@ -631,8 +631,8 @@ var storeList = [
         "province": "PG",
         "region": "UMBRIA",
         "coords": {
-            "lat": 42.7819352,
-            "lng": 12.4065686
+            "latitude": 42.7819352,
+            "longitude": 12.4065686
         }
     },
     {
@@ -643,8 +643,8 @@ var storeList = [
         "province": "PA",
         "region": "SICILIA",
         "coords": {
-            "lat": 38.1140338,
-            "lng": 13.3648758
+            "latitude": 38.1140338,
+            "longitude": 13.3648758
         }
     },
     {
@@ -655,8 +655,8 @@ var storeList = [
         "province": "TR",
         "region": "UMBRIA",
         "coords": {
-            "lat": 42.718272,
-            "lng": 12.1111419
+            "latitude": 42.718272,
+            "longitude": 12.1111419
         }
     },
     {
@@ -667,8 +667,8 @@ var storeList = [
         "province": "MC",
         "region": "MARCHE",
         "coords": {
-            "lat": 43.254373,
-            "lng": 13.008405
+            "latitude": 43.254373,
+            "longitude": 13.008405
         }
     },
     {
@@ -679,8 +679,8 @@ var storeList = [
         "province": "LU",
         "region": "TOSCANA",
         "coords": {
-            "lat": 43.9581563,
-            "lng": 10.1688154
+            "latitude": 43.9581563,
+            "longitude": 10.1688154
         }
     },
     {
@@ -691,8 +691,8 @@ var storeList = [
         "province": "FI",
         "region": "TOSCANA",
         "coords": {
-            "lat": 43.66921,
-            "lng": 11.454855
+            "latitude": 43.66921,
+            "longitude": 11.454855
         }
     },
     {
@@ -703,8 +703,8 @@ var storeList = [
         "province": "PG",
         "region": "UMBRIA",
         "coords": {
-            "lat": 40.9143467,
-            "lng": 14.4086126
+            "latitude": 40.9143467,
+            "longitude": 14.4086126
         }
     },
     {
@@ -715,8 +715,8 @@ var storeList = [
         "province": "RM",
         "region": "LAZIO",
         "coords": {
-            "lat": 41.8517129,
-            "lng": 12.4858609
+            "latitude": 41.8517129,
+            "longitude": 12.4858609
         }
     },
     {
@@ -727,8 +727,8 @@ var storeList = [
         "province": "PO",
         "region": "TOSCANA",
         "coords": {
-            "lat": 43.8817272,
-            "lng": 11.0943651
+            "latitude": 43.8817272,
+            "longitude": 11.0943651
         }
     },
     {
@@ -739,8 +739,8 @@ var storeList = [
         "province": "PD",
         "region": "VENETO",
         "coords": {
-            "lat": 45.225122,
-            "lng": 11.4965689
+            "latitude": 45.225122,
+            "longitude": 11.4965689
         }
     },
     {
@@ -751,8 +751,8 @@ var storeList = [
         "province": "VE",
         "region": "VENETO",
         "coords": {
-            "lat": 45.7777426,
-            "lng": 12.906906
+            "latitude": 45.7777426,
+            "longitude": 12.906906
         }
     },
     {
@@ -763,8 +763,8 @@ var storeList = [
         "province": "VR",
         "region": "VENETO",
         "coords": {
-            "lat": 45.54727,
-            "lng": 10.72131
+            "latitude": 45.54727,
+            "longitude": 10.72131
         }
     },
     {
@@ -775,8 +775,8 @@ var storeList = [
         "province": "PD",
         "region": "VENETO",
         "coords": {
-            "lat": 45.555278,
-            "lng": 12.003065
+            "latitude": 45.555278,
+            "longitude": 12.003065
         }
     },
     {
@@ -787,8 +787,8 @@ var storeList = [
         "province": "CA",
         "region": "SARDEGNA",
         "coords": {
-            "lat": 39.2147446,
-            "lng": 9.112246299999999
+            "latitude": 39.2147446,
+            "longitude": 9.112246299999999
         }
     },
     {
@@ -799,8 +799,8 @@ var storeList = [
         "province": "VR",
         "region": "VENETO",
         "coords": {
-            "lat": 45.1850669,
-            "lng": 11.255345
+            "latitude": 45.1850669,
+            "longitude": 11.255345
         }
     },
     {
@@ -811,8 +811,8 @@ var storeList = [
         "province": "AT",
         "region": "PIEMONTE",
         "coords": {
-            "lat": 45.0067,
-            "lng": 8.258438
+            "latitude": 45.0067,
+            "longitude": 8.258438
         }
     },
     {
@@ -823,8 +823,8 @@ var storeList = [
         "province": "CS",
         "region": "CALABRIA",
         "coords": {
-            "lat": 39.9358002,
-            "lng": 15.9774205
+            "latitude": 39.9358002,
+            "longitude": 15.9774205
         }
     },
     {
@@ -835,8 +835,8 @@ var storeList = [
         "province": "PT",
         "region": "TOSCANA",
         "coords": {
-            "lat": 43.87665699999999,
-            "lng": 10.757293
+            "latitude": 43.87665699999999,
+            "longitude": 10.757293
         }
     },
     {
@@ -847,8 +847,8 @@ var storeList = [
         "province": "SI",
         "region": "TOSCANA",
         "coords": {
-            "lat": 43.3198091,
-            "lng": 11.3313687
+            "latitude": 43.3198091,
+            "longitude": 11.3313687
         }
     }
 ]

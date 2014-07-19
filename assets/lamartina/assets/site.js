@@ -1,9 +1,9 @@
-jQuery.fn.anchorAnimate = function() {	 	
+jQuery.fn.anchorAnimate = function() {
 	$window = $(window)
 	$body = $('body')
 	return this.each(function(){
 		var caller = this
-		$(caller).click(function (event) {	
+		$(caller).click(function (event) {
 			event.preventDefault()
 
 			var elementClick = $(caller).attr("href")
@@ -17,8 +17,8 @@ jQuery.fn.anchorAnimate = function() {
 			$("html:not(:animated),body:not(:animated)").animate({
 				scrollTop: destination
 			}, {
-				duration:2000, 
-				queue: false, 
+				duration:2000,
+				queue: false,
 				complete:function() {}
 			});
 		  	return false;
@@ -26,21 +26,53 @@ jQuery.fn.anchorAnimate = function() {
 	})
 }
 
+// RequestAnimationFrame polyfill for older browsers
+var rafPolyfill = function() {
+  var lastTime, vendors, x;
+  lastTime = 0;
+  vendors = ["webkit", "moz"];
+  x = 0;
+  while (x < vendors.length && !window.requestAnimationFrame) {
+    window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
+    window.cancelAnimationFrame = window[vendors[x] + "CancelAnimationFrame"] || window[vendors[x] + "CancelRequestAnimationFrame"];
+    ++x;
+  }
+  if (!window.requestAnimationFrame) {
+    window.requestAnimationFrame = function(callback, element) {
+      var currTime, id, timeToCall;
+      currTime = new Date().getTime();
+      timeToCall = Math.max(0, 16 - (currTime - lastTime));
+      id = window.setTimeout(function() {
+        callback(currTime + timeToCall);
+      }, timeToCall);
+      lastTime = currTime + timeToCall;
+      return id;
+    };
+  }
+  if (!window.cancelAnimationFrame) {
+    window.cancelAnimationFrame = function(id) {
+      clearTimeout(id);
+    };
+  }
+};
+
 $(document).ready(function(){
+	rafPolyfill();
 
 	// Cache the Window object
 	var $window = $(window);
 	var $body = $('body')
   var isScrolling = false, _currentTimer = null
   var isMobile = $window.width() <= 600
+	var ticking = false
 
 	function initAnimateAnchor() {
 		if(isMobile) return
 		// animate anchors
-		$('.navbar a').anchorAnimate()	
+		$('.navbar a').anchorAnimate()
 	}
 	initAnimateAnchor()
-	
+
 	function bindWindowResize() {
     $window.on('resize', function() {
     	resizeVideo()
@@ -100,7 +132,7 @@ $(document).ready(function(){
 		var hRatio = 16 / 9
 		var vRatio = 9 / 16
 		var imgWidth = height * hRatio
-		
+
 		currentImg.width = imgWidth
 		currentImg.height = height
 
@@ -114,22 +146,33 @@ $(document).ready(function(){
 	resizeVideo()
 
   $(window).on('scroll', function() {
- 		isScrolling = true
+ 		onScroll()
  	})
+
+	// This will limit the calculation of the background position to
+  // 60fps as well as blocking it from running multiple times at once
+  function requestTick() {
+		console.log('requestTick')
+    if (!ticking) {
+      window.requestAnimationFrame(parallax);
+      ticking = true;
+    }
+  };
 
  	function timer() {
  		if(_currentTimer) clearTimeout(_currentTimer)
  		_currentTimer = setTimeout(onScroll, 10)
  	}
- 	
+
  	function onScroll() {
  		if(isMobile) return
- 		if(!isScrolling) return timer()
- 		isScrolling = false
- 		parallax()
- 		timer()
+ 		//if(!isScrolling) return timer()
+ 		//isScrolling = false
+ 		requestTick()
+		//parallax()
+		//timer()
  	}
- 	onScroll() 
+ 	onScroll()
 
  	// scroll parallax
  	var INITIAL_Y = 120
@@ -172,6 +215,7 @@ $(document).ready(function(){
   }
 
   function parallax() {
+
 	  var origCurrentY
 	  var i = 0
 
@@ -185,7 +229,7 @@ $(document).ready(function(){
 		  	$navbar.addClass('navbar-fixed-top')
 		  	$body.addClass('with-navbar-fixed')
 		  } else {
-		  	$navbar.removeClass('navbar-fixed-top')	
+		  	$navbar.removeClass('navbar-fixed-top')
 		  	$body.removeClass('with-navbar-fixed')
 		  }
 		}
@@ -193,9 +237,8 @@ $(document).ready(function(){
 		// pause video
 		if($window.scrollTop() >= $('.video').height() + $('.video').scrollTop()) {
 			fadeOutVolume(function() {
-				player.pause()	
+				player.pause()
 			})
-			
 		}
 
 	  function mapOpacity(el, scrolY) {
@@ -204,7 +247,7 @@ $(document).ready(function(){
 			var offsetYDiff = 0
 			var opacity
 
-			if(scrollY + treshold >= elOffset.top) {	
+			if(scrollY + treshold >= elOffset.top) {
 				offsetYDiff = elOffset.top - scrollY
 				opacity = 100 - (offsetYDiff / treshold) * 100
 			} else if (scrollY + treshold <= elOffset.top) {
@@ -219,7 +262,7 @@ $(document).ready(function(){
 		$('section').each(function() {
 			var $el = $(this)
 			// add active class to menu item
-	    if($window.scrollTop() + 200 >= $el.offset().top && 
+	    if($window.scrollTop() + 200 >= $el.offset().top &&
 	    	 $window.scrollTop() <= $el.offset().top + $el.height()) {
 				var $menuItem = $('.navbar-nav').find('a[href="#'+$el.attr('id')+'"]')
 				if($menuItem.length) {
@@ -253,7 +296,7 @@ $(document).ready(function(){
 
 	    if(adjust) adjust = 0
 
-    	_y = Math.floor(relativeScroll / speed) * -1	 
+    	_y = Math.floor(relativeScroll / speed) * -1
     	if(origCurrentY >= 0) {
     		yPos = _y + INITIAL_Y
     	} else {
@@ -262,6 +305,8 @@ $(document).ready(function(){
     	translateBg($el, yPos)
 			i++
 		})
+		ticking = false
+
 	}
 
 
@@ -269,7 +314,7 @@ $(document).ready(function(){
 	function enlarge(current) {
 		var url = current.attr('href')
 		var enlarged = document.createElement('div')
-		
+
 		if((enlarged = current.find('.picture-large'))) {
 			enlarged.addClass('on')
 			current.data('enlarged', 'true')
@@ -312,4 +357,4 @@ $(document).ready(function(){
 		$current.append(enlarged)
 		e.preventDefault()
 	})
-}); 
+});
