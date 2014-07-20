@@ -6,12 +6,18 @@ jQuery.fn.anchorAnimate = function() {
 		$(caller).click(function (event) {
 			event.preventDefault()
 			var elementClick = $(caller).attr("href")
-			console.log('=============================')
-			console.log('elementClick: ', elementClick)
 
+			console.log('=============================')
+			console.log('caller: ', caller)
+			console.log('elementClick: ', elementClick)
+			var modifier = 115
+
+			if(elementClick == '#section-1') {
+				modifier = -15
+			}
 
 			if(elementClick.indexOf('#') < 0) elementClick = '#' + elementClick
-			var destination = $(elementClick).offset().top - 115
+			var destination = $(elementClick).offset().top - modifier
 
 			console.log('elementOffset: ', $(elementClick).offset())
 			console.log('destination: ', destination)
@@ -77,7 +83,7 @@ $(document).ready(function(){
 	function initAnimateAnchor() {
 		if(isMobile) return
 		// animate anchors
-		$('.navbar a').anchorAnimate()
+		$('[data-anchor]').anchorAnimate()
 	}
 	initAnimateAnchor()
 
