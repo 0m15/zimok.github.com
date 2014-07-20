@@ -941,7 +941,6 @@ body.gallery-open {
 
 #footer .social-links {
 	margin: 2.5rem 0;
-	font-size: 80%;
 }
 
 #footer .social-link {
@@ -953,6 +952,7 @@ body.gallery-open {
 #footer .social-link img {
 	width: 6em;
 	height: 6em;
+	transform: scale(.7);
 }
 
 #footer .social-link span {
