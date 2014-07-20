@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>lamartina</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
@@ -67,8 +68,8 @@
 
 		<div class="section-media" style="position:relative">
 			<video class="video" autoplay preload>
-				<source src="assets/video.m4v">
-				<source src="assets/video.ogg">
+				<!-- <source src="assets/video.m4v">
+				<source src="assets/video.ogg"> -->
 			</video>
 			<div class="main-brand">
 				<a href="#section-1" class="with-down-arrow logo-hover" data-anchor>
@@ -194,7 +195,7 @@
 		<div class="container-fluid">
 			<div class="row" style="padding-top:4em">
 				<div class="col-md-4 col--with-separator" data-index="-1.5">
-					<div class="thumb" data-index="0.4">
+					<div class="thumb">
 						<a href="assets/gallery/06.jpg">
 							<img src="assets/gallery/06.jpg" class="img-responsive">
 						</a>
@@ -270,8 +271,9 @@
 						<ul class="store-list">
 							<li
 								ng-repeat="(town, props) in storesByTown"
-								ng-show="props.selected == undefined || props.selected == true"
+								ng-show="props.selected == undefined"
 								ng-class="{selected: props.selected, animated: true}"
+								class="col-md-6"
 							>
 								<a href="" ng-click="selectTown(town)">{{town}}</a></li>
 						</ul>
@@ -279,6 +281,7 @@
 					<br>
 
 					<div class="current-area container" ng-show="currentTown">
+						<h2>{{currentTown.town}}</h2>
 						<ul class="list-unstyled">
 							<li ng-repeat="store in currentTown.stores|orderBy:['town','distance']|limitTo:10" class="row store-detail">
 								<p class="store-town col-md-3">{{store.town}}</p>
@@ -295,11 +298,6 @@
 			</div>
 
 
-
-			<!-- <div class="text-center">
-				<button type="button" class="btn btn-xl" ng-click="toggle()">find your local retailer</button>
-			</div> -->
-
 			<div class="clearfix" ng-if="showList">
 
 			</div>
@@ -310,7 +308,7 @@
 	<section id="register" class="section" data-index="-3">
 		<div class="container-fluid">
 			<h1 class="section-headline">register your boot</h1>
-			<p class="text-center"><span class="label label-default label-subtitle">register your boot to access special features</span></p>
+			<p class="text-center"><span class="label label-default label-subtitle">access special features</span></p>
 
 			<div class="registration-form" data-index="-0.5">
 				<div class="row row--form">

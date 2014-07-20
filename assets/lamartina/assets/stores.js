@@ -492,7 +492,7 @@ var storeList = [
         }
     },
     {
-        "name": "GRUPPO LANGOLO DELLO SPORT SRL",
+        "name": "GRUPPO L'ANGOLO DELLO SPORT SRL",
         "address": "VIA DEL PONTE PISANO, 50",
         "zipCode": 148,
         "town": "ROMA",
@@ -516,7 +516,7 @@ var storeList = [
         }
     },
     {
-        "name": "CALZATUREDESIDERIOdi BERTASSELLO STEFANIA",
+        "name": "CALZATURE DESIDERIO di BERTASSELLO STEFANIA",
         "address": "Via XXV Aprile 14",
         "zipCode": 37054,
         "town": "NOGARA",
@@ -733,7 +733,7 @@ var storeList = [
     },
     {
         "name": "PASS COMPANY SRL",
-        "address": "DELLINDUSTRIA, 1/3",
+        "address": "VIALE DELL'INDUSTRIA, 1/3",
         "zipCode": 35044,
         "town": "Montagnana",
         "province": "PD",
@@ -804,7 +804,7 @@ var storeList = [
         }
     },
     {
-        "name": "E.LE..SHOES DI GAGLIARDI RITA",
+        "name": "E.LE. SHOES DI GAGLIARDI RITA",
         "address": "via cavour 35",
         "zipCode": 14100,
         "town": "Asti",

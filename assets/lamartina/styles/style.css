@@ -267,6 +267,7 @@ body {
 	}
 	.navbar.navbar-fixed-top {
 		position: fixed;
+		z-index: 2000;
 		/*opacity: 1;*/
 	}
 
@@ -513,6 +514,7 @@ img.fade-in {
 /* intro */
 #section-1 {
 	background: url(../assets/slide.jpg) 50% 0 fixed no-repeat;
+	z-index: 1;
 	background-size: cover;
 }
 
@@ -524,11 +526,13 @@ img.fade-in {
 
 #section-2 {
 	background: url(../assets/intro.jpg) 50% 0 fixed no-repeat;
+	z-index: 1;
 	background-size: cover;
 }
 
 #section-3 {
 	background: url(../assets/slide-04.jpg) 50% 0 fixed no-repeat;
+	z-index: 1;
 	background-size: cover;
 }
 
@@ -567,16 +571,19 @@ img.fade-in {
 
 #section-4 {
 	background: url(../assets/slide-03.jpg) 50% 0 fixed no-repeat;
+	z-index: 1;
 	background-size: cover;
 }
 
 #section-5 {
 	background: url(../assets/slide-02.jpg) 50% 0 fixed no-repeat;
+	z-index: 1;
 	background-size: cover;
 }
 
 #section-6 {
 	background: url(../assets/slide-01.jpg) 50% 0 fixed no-repeat;
+	z-index: 1;
 	background-size: cover;
 }
 
@@ -621,14 +628,40 @@ img.fade-in {
 	opacity: 1;
 }
 
+
+body.gallery-open {
+	position: relative;
+}
+
+.gallery-open:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.6);
+	z-index: 9000;
+}
+
+.gallery-open .navbar.navbar-fixed-top {
+	z-index: -1 !important;
+}
+
 #gallery .picture-large {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 9000;
 	text-align: center;
+	z-index: 9999;
+}
+
+#gallery .picture-large img {
+	cursor: -webkit-zoom-out;
+	cursor: zoom-out;
+	max-height: 100%;
 }
 
 /* stores */
@@ -661,19 +694,19 @@ img.fade-in {
 
 #stores .store-list {
 	list-style: none;
-	text-align: center;
 	margin: 0;
 	padding: 0;
+
 }
 
 #stores .store-list li {
 	display: inline-block;
+	text-align: left;
 }
 
 /* selected parent state */
 #stores .store-list li.selected {
 	display: block;
-	text-align: center;
 }
 
 #stores .store-list li.selected a {
@@ -908,20 +941,23 @@ img.fade-in {
 
 #footer .social-links {
 	margin: 2.5rem 0;
+	font-size: 80%;
 }
 
 #footer .social-link {
 	display: inline-block;
 	padding: 0 2em;
+	overflow: show;
 }
 
 #footer .social-link img {
-	width: 4em;
+	width: 6em;
+	height: 6em;
 }
 
 #footer .social-link span {
 	margin-top: 1.5rem;
-	font-size: .75em;
+	font-size: 1em;
 	display: block;
 	text-align: center;
 	text-transform: uppercase;

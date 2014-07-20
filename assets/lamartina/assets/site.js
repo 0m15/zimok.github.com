@@ -124,7 +124,10 @@ $(document).ready(function(){
 	}
 
 	// resize elements
-	new Backstretch(document.querySelectorAll('.px'))
+	function initBackstretch() {
+		new Backstretch(document.querySelectorAll('.px'))
+	}
+	initBackstretch()
 
 	// video controls
 	var player = null
@@ -166,7 +169,6 @@ $(document).ready(function(){
 	// This will limit the calculation of the background position to
   // 60fps as well as blocking it from running multiple times at once
   function requestTick() {
-		console.log('requestTick')
     if (!ticking) {
       window.requestAnimationFrame(parallax);
       ticking = true;
@@ -255,11 +257,11 @@ $(document).ready(function(){
 			})
 		}
 
-	  function mapOpacity(el, scrolY) {
+	  function mapOpacity(el, scrollY) {
 			var elOffset = $(el).offset()
 			var treshold = $(window).height()
 			var offsetYDiff = 0
-			var opacity
+			var opacity = 0
 
 			if(scrollY + treshold >= elOffset.top) {
 				offsetYDiff = elOffset.top - scrollY
@@ -299,6 +301,7 @@ $(document).ready(function(){
 	    	var str = $el.css('backgroundPosition')
 	    	var group = str.match(/(\d+)px/g)
 	    	if(!group) return 0
+				console.log('y:',parseInt(group[0]))
 	    	return parseInt(group[0])
 	    }
 
@@ -316,6 +319,7 @@ $(document).ready(function(){
     	} else {
     		yPos = _y
     	}
+			console.log(yPos)
     	translateBg($el, yPos)
 			i++
 		})
@@ -328,25 +332,20 @@ $(document).ready(function(){
 	function enlarge(current) {
 		var url = current.attr('href')
 		var enlarged = document.createElement('div')
-
-		if((enlarged = current.find('.picture-large'))) {
-			enlarged.addClass('on')
-			current.data('enlarged', 'true')
-			return
-		}
-
-		$(enlarged).addClass('picture-large', 'on')
-
 		enlarged.innerHTML = '<img src="'+url+'">'
+		$(enlarged).addClass('picture-large')
+			.addClass('on')
+			.addClass('px')
+		initBackstretch()
 		current.data('enlarged', 'true')
 		current.append(enlarged)
+		$('body').addClass('gallery-open')
 	}
 
 	function shrink(current) {
-		var enlarged = current[0].querySelectorAll('.picture-large')[0]
-		if(!enlarged) return
-		$(enlarged).removeClass('on')
+		$('.picture-large').remove()
 		current.data('enlarged', 'false')
+		$('body').removeClass('gallery-open')
 	}
 
 	$('#gallery .thumb a').click(function(e) {
@@ -354,7 +353,10 @@ $(document).ready(function(){
 		var $current = $(this)
 		var isEnlarged = $current.data('enlarged')
 
-		isEnlarged === 'true'
+		console.log('href', $current.attr('href'))
+		console.log('isEnlarged', isEnlarged)
+
+		isEnlarged == 'true'
 			? shrink($current)
 			: enlarge($current)
 
@@ -362,13 +364,13 @@ $(document).ready(function(){
 		e.stopPropagation()
 	})
 
-	$('#gallery .thumb a').click(function(e) {
-		var $current = $(this)
-		var url = $current.attr('href')
-		var enlarged = document.createElement('div')
-		enlarged.className = 'picture-large'
-		enlarged.innerHTML = '<img src="'+url+'">'
-		$current.append(enlarged)
-		e.preventDefault()
-	})
+	// $('#gallery .thumb a').click(function(e) {
+	// 	var $current = $(this)
+	// 	var url = $current.attr('href')
+	// 	var enlarged = document.createElement('div')
+	// 	enlarged.className = 'picture-large'
+	// 	enlarged.innerHTML = '<img src="'+url+'">'
+	// 	$current.append(enlarged)
+	// 	e.preventDefault()
+	// })
 });
