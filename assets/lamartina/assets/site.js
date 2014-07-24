@@ -6,21 +6,16 @@ jQuery.fn.anchorAnimate = function() {
 		$(caller).click(function (event) {
 			event.preventDefault()
 			var elementClick = $(caller).attr("href")
-
-			console.log('=============================')
-			console.log('caller: ', caller)
-			console.log('elementClick: ', elementClick)
-
 			if(elementClick.indexOf('#') < 0) elementClick = '#' + elementClick
 			var destination = $(elementClick).offset().top
 
-			console.log('elementOffset: ', $(elementClick).offset())
-			console.log('destination: ', destination)
-			console.log('=============================')
-
 			// down
 			if(!$body.hasClass('with-fixed-navbar')) {
-				destination -= 165
+				destination -= 118
+			}
+
+			if(elementClick == '#section-1') {
+				destination -= (165 - 118)
 			}
 
 			$("html:not(:animated),body:not(:animated)").animate({
