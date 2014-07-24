@@ -68,8 +68,8 @@
 
 		<div class="section-media" style="position:relative">
 			<video class="video" autoplay preload>
-				<source src="assets/video.m4v">
-				<source src="assets/video.ogg">
+				<!-- <source src="assets/video.m4v">
+				<source src="assets/video.ogg"> -->
 			</video>
 			<div class="main-brand">
 				<a href="#section-1" class="with-down-arrow logo-hover" data-anchor>
@@ -105,7 +105,7 @@
 		<div class="section-text section-text--bottom section-text--centered">
 			<div class="section-overlay" data-index="1">
 				<h1 class="section-headline">
-					the boot born<br> from the field
+					<span>the boot born</span><br> <span>from the field</span>
 				</h1>
 
 				<p class="section-copy">
@@ -122,7 +122,7 @@
 		<div class="section-text section-text--bottom section-text-center">
 			<div class="section-overlay" data-index="1">
 				<h1 class="section-headline">
-					handcrafted by the stars
+					<span>handcrafted</span><br><span>by the stars</span>
 				</h1>
 
 				<p class="section-copy">
@@ -191,12 +191,17 @@
 
 
 
-	<section id="gallery" class="section px" data-speed="5" data-adjust="900" data-type="background" style="padding-bottom:10%">
+	<section id="gallery" class="section px" data-speed="5" data-adjust="900" data-type="background" style="padding-bottom:10%"
+	ng-controller="GalleryCtrl">
+		<div class="picture-large" ng-show="currentPicture!=null">
+			<span class="close-handle" ng-click="close()">&times;</span>
+			<img ng-src="{{currentPicture.src}}" ng-click="close()">
+		</div>
 		<div class="container-fluid">
 			<div class="row" style="padding-top:4em">
 				<div class="col-md-4 col--with-separator" data-index="-1.5">
 					<div class="thumb">
-						<a href="assets/gallery/06.jpg">
+						<a href ng-click="open('06.jpg')">
 							<img src="assets/gallery/06.jpg" class="img-responsive">
 						</a>
 					</div>
@@ -204,19 +209,19 @@
 
 				<div class="col-md-4 col--with-separator" data-index="-0.5">
 					<div class="thumb">
-						<a href="assets/gallery/03.jpg">
-							<img src="assets/gallery/03-thumb.jpg" class="img-responsive">
+						<a href ng-click="open('test.gif')">
+							<img src="assets/gallery/test.gif" class="img-responsive">
 						</a>
 					</div>
 
 					<div class="thumb">
-						<a href="assets/gallery/04.jpg">
+						<a href ng-click="open('04.jpg')">
 							<img src="assets/gallery/04-thumb.jpg" class="img-responsive">
 						</a>
 					</div>
 
 					<div class="thumb">
-						<a href="assets/gallery/05.jpg">
+						<a href ng-click="open('05.jpg')">
 							<img src="assets/gallery/05-thumb.jpg" class="img-responsive">
 						</a>
 					</div>
@@ -226,12 +231,12 @@
 
 				<div class="col-md-4 col--with-separator" data-index="-1">
 					<div class="thumb">
-						<a href="assets/gallery/01.jpg">
+						<a href ng-click="open('01.jpg')">
 							<img src="assets/gallery/01-thumb.jpg" class="img-responsive">
 						</a>
 					</div>
 					<div class="thumb">
-						<a href="assets/gallery/02.jpg">
+						<a href ng-click="open('02.jpg')">
 							<img src="assets/gallery/02-thumb.jpg" class="img-responsive">
 						</a>
 					</div>
@@ -371,6 +376,7 @@
 	</section>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDToCE_kRLo_41eqc4NEk2quNQS5JjG5Dk"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular-animate.min.js"></script>
 	<script src="bower_components/lodash/dist/lodash.underscore.js"></script>
 	<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
@@ -380,6 +386,7 @@
 	<script src="assets/site.js"></script>
 	<script src="assets/stores.js"></script>
 	<script src="assets/storeFinder.js"></script>
+	<script src="assets/gallery.js"></script>
 
 
 </body>

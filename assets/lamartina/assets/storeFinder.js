@@ -1,4 +1,4 @@
-var app = angular.module("app", ['google-maps']);
+var app = angular.module("app", ['google-maps', 'ngAnimate']);
 
 app.filter('storeFilter', function() {
 	return function(items, filter) {
@@ -8,22 +8,16 @@ app.filter('storeFilter', function() {
 		var propsToMatch = ['town', 'region', 'zipCode']
 		var regex = new RegExp("\b("+filter.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&") + ")\b", "gi")
 		angular.forEach(items, function(region, props) {
-
 			angular.forEach(region.stores, function(store) {
-
 				angular.forEach(propsToMatch, function(prop) {
 					if(String(store[prop]).toLowerCase().indexOf(filter) > -1) {
 						if(results.indexOf(store) < 0) results.push(store)
 					}
 				})
-
 			})
-
 		})
-
 		return results
 	}
-
 })
 
 var MAX_DISTANCE_TRESHOLD = 150
@@ -31,7 +25,6 @@ var MAX_DISTANCE_TRESHOLD = 150
 // google maps initialization
 var map;
 var initialCenter = new google.maps.LatLng(42, 12);
-
 
 // var styledMapOptions = {};
 // var usRoadMapType = new google.maps.StyledMapType(roadAtlasStyles, styledMapOptions);

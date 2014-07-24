@@ -329,40 +329,40 @@ $(document).ready(function(){
 
 
 	// thumbnails enlarge/shrink handler
-	function enlarge(current) {
-		var url = current.attr('href')
-		var enlarged = document.createElement('div')
-		enlarged.innerHTML = '<img src="'+url+'">'
-		$(enlarged).addClass('picture-large')
-			.addClass('on')
-			.addClass('px')
-		initBackstretch()
-		current.data('enlarged', 'true')
-		current.append(enlarged)
-		$('body').addClass('gallery-open')
-	}
-
-	function shrink(current) {
-		$('.picture-large').remove()
-		current.data('enlarged', 'false')
-		$('body').removeClass('gallery-open')
-	}
-
-	$('#gallery .thumb a').click(function(e) {
-
-		var $current = $(this)
-		var isEnlarged = $current.data('enlarged')
-
-		console.log('href', $current.attr('href'))
-		console.log('isEnlarged', isEnlarged)
-
-		isEnlarged == 'true'
-			? shrink($current)
-			: enlarge($current)
-
-		e.preventDefault()
-		e.stopPropagation()
-	})
+	// function enlarge(current) {
+	// 	var url = current.attr('href')
+	// 	var enlarged = document.createElement('div')
+	// 	enlarged.innerHTML = '<img src="'+url+'">'
+	// 	$(enlarged).addClass('picture-large')
+	// 		.addClass('on')
+	// 		.addClass('px')
+	// 	initBackstretch()
+	// 	current.data('enlarged', 'true')
+	// 	current.append(enlarged)
+	// 	$('body').addClass('gallery-open')
+	// }
+	//
+	// function shrink(current) {
+	// 	$('.picture-large').remove()
+	// 	current.data('enlarged', 'false')
+	// 	$('body').removeClass('gallery-open')
+	// }
+	//
+	// $('#gallery .thumb a').click(function(e) {
+	//
+	// 	var $current = $(this)
+	// 	var isEnlarged = $current.data('enlarged')
+	//
+	// 	console.log('href', $current.attr('href'))
+	// 	console.log('isEnlarged', isEnlarged)
+	//
+	// 	isEnlarged == 'true'
+	// 		? shrink($current)
+	// 		: enlarge($current)
+	//
+	// 	e.preventDefault()
+	// 	e.stopPropagation()
+	// })
 
 	// $('#gallery .thumb a').click(function(e) {
 	// 	var $current = $(this)
