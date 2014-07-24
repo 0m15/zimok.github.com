@@ -957,6 +957,13 @@ img.fade-in {
 	padding-top: 6em;
 }
 
+#footer .section-head {
+	padding-top: 1em;
+}
+#footer .section-head img {
+	width: 12.5%;
+}
+
 #footer .address-card {
 	margin: 4em 0;
 	font-size: .9em;
