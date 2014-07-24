@@ -12,9 +12,9 @@ jQuery.fn.anchorAnimate = function() {
 			console.log('elementClick: ', elementClick)
 			var modifier = 115
 
-			if(elementClick == '#section-1') {
-				modifier = -15
-			}
+			// if(elementClick == '#section-1') {
+			// 	modifier = +85
+			// }
 
 			if(elementClick.indexOf('#') < 0) elementClick = '#' + elementClick
 			var destination = $(elementClick).offset().top - modifier
