@@ -6,24 +6,9 @@ jQuery.fn.anchorAnimate = function() {
 		$(caller).click(function (event) {
 			event.preventDefault()
 			var elementClick = $(caller).attr("href")
-
-			console.log('=============================')
-			console.log('caller: ', caller)
-			console.log('elementClick: ', elementClick)
-			var modifier = 115
-
-			// if(elementClick == '#section-1') {
-			// 	modifier = +85
-			// }
-
 			if(elementClick.indexOf('#') < 0) elementClick = '#' + elementClick
-			var destination = $(elementClick).offset().top - modifier
+			var destination = $(elementClick).offset().top
 
-			console.log('elementOffset: ', $(elementClick).offset())
-			console.log('destination: ', destination)
-			console.log('=============================')
-
-			// down
 			if(!$body.hasClass('with-navbar-fixed')) {
 				destination -= 165
 			}
@@ -241,7 +226,7 @@ $(document).ready(function(){
 			var $media = $('#media')
 	  	mapOpacity($navbar[0], $window.scrollTop())
 
-		  if($window.scrollTop() - 200 >= $media.height()) {
+		  if($window.scrollTop() - 220 >= $media.height()) {
 		  	$navbar.addClass('navbar-fixed-top')
 		  	$body.addClass('with-navbar-fixed')
 		  } else {

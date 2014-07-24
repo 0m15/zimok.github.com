@@ -12,8 +12,8 @@
 		height: 100%;
 		position: relative;
 	}
-	body.with-fixed-navbar {
-		padding-top: 0;
+	body.with-navbar-fixed {
+		padding-top: 40px;
 	}
 	.gallery-open {
 		overflow: hidden;
@@ -417,7 +417,7 @@ img.fade-in {
 		width: 100%;
 
 		/* Safari 4-5, Chrome 1-9 */
-  	background: -webkit-gradient(radial, center center, 0, center center, 600, from(rgba(0,0,0,.1)), to(rgba(0,0,0,.35)));
+  	/*background: -webkit-gradient(radial, center center, 0, center center, 600, from(rgba(0,0,0,.1)), to(rgba(0,0,0,.35)));*/
 	}
 
 	.section-text--bottom {
