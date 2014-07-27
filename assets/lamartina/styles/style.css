@@ -614,12 +614,13 @@ img.fade-in {
 }
 
 #section-6 {
-	background: url(../assets/slide-01.jpg) 50% 0 fixed no-repeat;
-	z-index: 1;
+	background: url(../assets/cortos-alt.jpg) -150% -50% fixed no-repeat;
 	background-size: cover;
+	z-index: 1;
 }
 
 #section-6 .section-text--bottom {
+	background: transparent;
 	background: #ebebeb;
 }
 
