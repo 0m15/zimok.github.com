@@ -136,8 +136,8 @@ $(document).ready(function(){
 	// adapt video
 	function resizeVideo() {
 		var currentImg = $('#media').find('video')[0]
-		var width = $window.width() - 200
-		var height = $window.height() - 400
+		var width = $window.width() - $window.width() / 12
+		var height = $window.height() - $window.width() / 6
 		var hRatio = 16 / 9
 		var vRatio = 9 / 16
 		var imgWidth = height * hRatio

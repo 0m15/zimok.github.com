@@ -5,6 +5,12 @@
 	position: relative;
 	z-index: 1000;
 }
+a,
+a:hover,
+a:active
+.active a {
+	background: transparent !important;
+}
 @media screen and (min-width: 800px) {
 	html,
 	body,
@@ -247,6 +253,7 @@ body {
 
 .text-secondary {
 	color: #333;
+	letter-spacing: .05em;
 }
 
 
@@ -521,7 +528,7 @@ img.fade-in {
 	width: 320px;
 	left: 50%;
 	margin-left: -160px;
-	bottom:10em;
+	bottom: 10em;
 }
 
 #media .main-brand span {
@@ -958,7 +965,7 @@ img.fade-in {
 /* footer */
 #footer {
 	margin-top: 5em;
-	padding-top: 6em;
+	padding: 3em 0 6em;
 }
 
 #footer .section-head {
@@ -990,8 +997,8 @@ img.fade-in {
 }
 
 #footer .social-link span {
-	margin-top: 1.5rem;
-	font-size: 1em;
+	margin-top: 0rem;
+	font-size: .75em;
 	display: block;
 	text-align: center;
 	text-transform: uppercase;

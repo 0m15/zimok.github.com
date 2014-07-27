@@ -1,4 +1,4 @@
-var app = angular.module("app", ['google-maps', 'ngAnimate']);
+var app = angular.module("app", ['google-maps']);
 
 app.filter('storeFilter', function() {
 	return function(items, filter) {
