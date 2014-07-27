@@ -12,11 +12,13 @@ jQuery.fn.anchorAnimate = function() {
 			// down
 			if(!$body.hasClass('with-fixed-navbar')) {
 				destination -= 118
+
+				// if(elementClick == '#section-1') {
+				// 	destination -= (150 - 118)
+				// }
 			}
 
-			if(elementClick == '#section-1') {
-				destination -= (165 - 118)
-			}
+
 
 			$("html:not(:animated),body:not(:animated)").animate({
 				scrollTop: destination
@@ -87,7 +89,7 @@ $(document).ready(function(){
   // resize slides accordingly to height
 	function Backstretch(elements) {
 		var width = window.innerWidth
-		var height = window.innerHeight
+		var height = window.innerHeight - $('.navbar').height() + 60
 		var elementsLength = elements.length
 		var i = 0
 		var currentImg = null
@@ -103,8 +105,8 @@ $(document).ready(function(){
 		function resize() {
 			for(; i < elementsLength; i++) {
 				var el = _this.elements[i]
-				if(height <= 800) {
-					el.style['min-height'] = height - 80 + 'px'
+				if(height <= 700) {
+					el.style['min-height'] = height + 'px'
 				} else {
 					el.style['min-height'] = 800 + 'px'
 
@@ -231,7 +233,7 @@ $(document).ready(function(){
 			var $media = $('#media')
 	  	mapOpacity($navbar[0], $window.scrollTop())
 
-		  if($window.scrollTop() - 200 >= $media.height()) {
+		  if($window.scrollTop() - 250 >= $media.height()) {
 		  	$navbar.addClass('navbar-fixed-top')
 		  	$body.addClass('with-navbar-fixed')
 		  } else {

@@ -13,7 +13,7 @@
 		position: relative;
 	}
 	body.with-navbar-fixed {
-		padding-top: 40px;
+		padding-top: 185px;
 	}
 	.gallery-open {
 		overflow: hidden;
@@ -264,6 +264,10 @@ body {
 	padding: 1.25em 0;
 }
 
+.navbar .main-brand img {
+	padding: 0px 0;
+}
+
 .navbar.on {
 	opacity: 1;
 }
@@ -449,7 +453,7 @@ img.fade-in {
 		margin-bottom: 2.25em;
 		font-weight: 400;
 		letter-spacing: .1em;
-		text-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+		text-shadow: 0 2px 0px rgba(0, 0, 0, .15);
 		text-align: center;
 
 	}
@@ -619,7 +623,6 @@ img.fade-in {
 	background: #ebebeb;
 }
 
-#gallery,
 #stores {
 	position: relative;
 	background: url(../assets/gallery/07-bw.jpg) 50% 0 fixed no-repeat;
