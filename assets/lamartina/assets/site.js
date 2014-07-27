@@ -106,9 +106,9 @@ $(document).ready(function(){
 			for(; i < elementsLength; i++) {
 				var el = _this.elements[i]
 				if(height <= 700) {
-					el.style['min-height'] = height + 'px'
+					el.style['minHeight'] = height + 'px'
 				} else {
-					el.style['min-height'] = 800 + 'px'
+					el.style['minHeight'] = 800 + 'px'
 
 				}
 			}
