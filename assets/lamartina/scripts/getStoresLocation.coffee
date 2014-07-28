@@ -1,13 +1,16 @@
-storeList = require("../assets/stores")
+#storeList = require("../assets/stores")
+#storeList = require("../assets/storesEurope")
+storeList = require("../assets/storesWorld")
+
 request = require("superagent")
 fs = require("fs")
 JSONStore = require('json-store')
 extend = require('util')._extend
-db = require("./store/stores.json")
+#dbWorld = require("./store/storesWorld.json")
 
 requests = []
 
-OUT = "./storeGeo.json"
+OUT = "./storeGeoWorld.json"
 
 #
 # google geocode api
@@ -27,7 +30,10 @@ makeRequest = (url) ->
 	request.get url
 
 getGeodata = (store, done, i) ->
-	url = getUrl "#{store.address} #{store.town}"
+	query = "#{store.address} #{store.town}"
+	if store.country
+		query = "#{query} #{store.country}"
+	url = getUrl query
 	req = makeRequest url
 	requests.push req
 	req.end (res) ->
@@ -50,7 +56,7 @@ getStoresLocation = ->
 	onDone = (store, data, i) ->
 		if typeof data is 'object'
 			_store = extend store, {}
-			_store.coords = {lat: data.lat, lng: data.lng}
+			_store.coords = {latitude: data.lat, longitude: data.lng}
 			storesGeo.push _store
 			console.log 'adding', data
 			if added >= storeList.length

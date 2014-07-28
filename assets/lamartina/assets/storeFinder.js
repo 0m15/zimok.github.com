@@ -39,10 +39,43 @@ var GEOCODE_URL = "&address=";
 
 app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', '$filter', '$http', function($scope, $timeout, $window, $animate, $filter, $http) {
 	$scope.stores = $window.storeList
+	$scope.storesEurope = $window.storeListEurope
+	$scope.storesWorld = $window.storeListWorld
+
 	$scope.markers = []
 	$scope.open = false
 	$scope.showMap = true
 	$scope.showList = false
+
+
+	$scope.setSource = function(key, source) {
+		$scope.currentSource = source
+		$scope.currentKey = key
+		if(!$scope.$$phase) $scope.$apply()
+	}
+
+
+
+	// stores
+	this.getStoresByKey = function(collection, key) {
+		var townList, storesByKey = {}, self=this
+		collection.forEach(function(store, idx) {
+			if(!storesByKey[store[key]]) {
+				storesByKey[store[key]] = {'stores':[], 'selected': undefined}
+			}
+			storesByKey[store[key]]['stores'].push(store)
+		})
+		var collectionName = "storesBy" + key.charAt(0).toUpperCase() + key.substr(1).toLowerCase()
+		$scope[collectionName] = storesByKey
+		if(!$scope.$$phase) $scope.$apply()
+	}
+	this.getStoresByKey($scope.stores, 'town') // all
+	this.getStoresByKey($scope.stores, 'region') // italy
+	this.getStoresByKey($scope.stores, 'country') // world
+	$scope.currentSource = $scope.storesByRegion
+	//this.getStoresByKey($scope.storesEurope, 'country') // europe
+	//this.getStoresByKey($scope.storesWorld, 'world') // europe
+
 	$scope.map = {
 		control: {},
 		markers: [],
@@ -84,7 +117,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 	// geocoding
 	//
 	this.getLocation = function(address) {
-		this.geocoder.geocode( { 'address': address + ' italy'}, function(results, status) {
+		this.geocoder.geocode( { 'address': address}, function(results, status) {
 			if(status == google.maps.GeocoderStatus.OK) {
 
 				$scope.userLocation = {
@@ -109,16 +142,29 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 			latitude: $scope.userLocation.latitude,
 			longitude: $scope.userLocation.longitude,
 		}
+		var nearestStores = []
 		angular.forEach($scope.stores, function(store) {
+			TRESHOLD = 200
 			if(store.coords) {
-				store.distance = parseInt(getPointsDistance(userLocation, store.coords))
+				var distance = parseInt(getPointsDistance(userLocation, store.coords))
+				console.log('distance',distance, store.town)
+				if(distance <= TRESHOLD) {
+						store.distance = distance
+						nearestStores.push(store)
+				}
+
 			}
 		})
 
-		var sortedStores = $scope.stores.sort(sortByDistance).slice(0,5)
+		if(!nearestStores.length) {
+			$scope.noResults = true
+			return
+		}
+
+		var sortedStores = nearestStores.sort(sortByDistance).slice(0,5)
 
 		$scope.deselectTown()
-		$scope.currentTown = {
+		$scope.currentSource = {
 			town: address,
 			region: address,
 			name: address,
@@ -143,7 +189,6 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 	}
 
 	function createInfoBox(marker, data) {
-		console.log('createInfoBox', marker)
 		var content = document.createElement('div')
 		var directionsUrl = getDirectionsUrl(data)
 		var distanceLabel = '<a href="'+directionsUrl+'" target="_blank">Get directions</a>'
@@ -201,12 +246,14 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 		$scope.map.markers.push(marker)
 	}
 
-	this.addMarkers = function() {
+	this.addMarkers = function(key, val) {
 		angular.forEach($scope.stores, function(store, idx) {
-			$scope.addMarker(store, idx)
+			if(store[key] && store[key].toLowerCase() == val) {
+				$scope.addMarker(store, idx)
+			}
 		})
 	}
-	this.addMarkers()
+	this.addMarkers('country', 'italy')
 
 	function sortByDistance(a, b) {
 		return a.distance-b.distance
@@ -234,43 +281,28 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
     return d.toFixed(3);
 	}
 
-	// stores
-	this.getStoresByTown = function() {
-		var townList, storesByTown = {}, self=this
-		$scope.stores.forEach(function(store, idx) {
-			if(!storesByTown[store.region]) {
-				storesByTown[store.region] = {'stores':[], 'selected': undefined}
-			}
-			storesByTown[store.region]['stores'].push(store)
-		})
-		$scope.storesByTown = storesByTown
-
-		if(!$scope.$$phase) $scope.$apply()
-	}
-	this.getStoresByTown()
-
 
 
 	$scope.deselectTown = function() {
-		angular.forEach($scope.storesByTown, function(store) {
+		angular.forEach($scope.currentSource, function(store) {
 			store.selected = false
 		})
-		$scope.currentTown = null
+		$scope.currentSource = null
 		if(!$scope.$$phase) $scope.$apply()
 	}
 
 	$scope.resetMarkers = function() {
 		$scope.map.markers = []
-		self.addMarkers()
+		self.addMarkers('country', 'italy')
 	}
 
 	$scope.showAll = function() {
 		$scope.resetMarkers()
 		$scope.searchQuery = ''
-		angular.forEach($scope.storesByTown, function(store) {
+		angular.forEach($scope.currentSource, function(store) {
 			store.selected = undefined
 		})
-		$scope.currentTown = null
+		$scope.currentSource = null
 		self.fitToPoints($scope.map.markers)
 		if(!$scope.$$phase) $scope.$apply()
 	}
@@ -286,12 +318,12 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 		var filter = newValue
 		self.getLocation(filter)
 
-		// var stores = $filter('storeFilter')($scope.storesByTown, filter)
+		// var stores = $filter('storeFilter')($scope.currentSource, filter)
 		//
 		// if(!stores.length) return
 		//
 		// $scope.deselectTown()
-		// $scope.currentTown = {
+		// $scope.currentSource = {
 		// 	town: filter,
 		// 	region: filter,
 		// 	name: filter,
@@ -329,12 +361,13 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 	$scope.selectTown = function(town) {
 		//self.getLocation(town)
 		$scope.deselectTown()
-		var currentTown = $scope.storesByTown[town]
-		currentTown.town = town
-		currentTown.selected = true
-		$scope.currentTown = currentTown
+		debugger
+		var currentSource = $scope.currentSource[town]
+		currentSource.town = town
+		currentSource.selected = true
+		$scope.currentSource = currentSource
 		$scope.map.markers = []
-		self.getMarkersFromStoreList(currentTown.stores)
+		self.getMarkersFromStoreList(currentSource.stores)
 		self.fitToPoints($scope.map.markers)
 		if(!$scope.$$phase) $scope.$apply()
 	}
@@ -356,7 +389,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 			$scope.showMap = true
 			$scope.showList = false
 			$timeout(function() {
-				//self.getLocation($scope.currentTown.town)
+				//self.getLocation($scope.currentSource.town)
 				$scope.map.control.refresh($scope.map.options)
 			}, 1)
 		} else {

@@ -4,7 +4,7 @@ var storeList = [
         "address": "VIA DELLA RESISTENZA",
         "zipCode": 87041,
         "town": "Acri",
-        "province": "CS",
+        "country": "italy", "province": "CS",
         "region": "CALABRIA",
         "coords": {
             "latitude": 39.4997481,
@@ -16,7 +16,7 @@ var storeList = [
         "address": "VIA FONTANELLE 153",
         "zipCode": 87064,
         "town": "Corigliano Calabro",
-        "province": "CS",
+        "country": "italy", "province": "CS",
         "region": "CALABRIA",
         "coords": {
             "latitude": 39.627607,
@@ -28,7 +28,7 @@ var storeList = [
         "address": "VIA XX SETTEMBRE 94",
         "zipCode": 88046,
         "town": "LAMEZIA TERME",
-        "province": "CZ",
+        "country": "italy", "province": "CZ",
         "region": "CALABRIA",
         "coords": {
             "latitude": 38.968596,
@@ -40,7 +40,7 @@ var storeList = [
         "address": "VIA FLAMINIA 467",
         "zipCode": 100,
         "town": "ROMA",
-        "province": "RM",
+        "country": "italy", "province": "RM",
         "region": "LAZIO",
         "coords": {
             "latitude": 41.9378863,
@@ -52,7 +52,7 @@ var storeList = [
         "address": "VIA ARIOSTO, 4/B",
         "zipCode": 41012,
         "town": "CARPI",
-        "province": "MO",
+        "country": "italy", "province": "MO",
         "region": "EMILIA ROMAGNA",
         "coords": {
             "latitude": 44.7840911,
@@ -64,7 +64,7 @@ var storeList = [
         "address": "VIA VITTORIO VENETO 14",
         "zipCode": 88900,
         "town": "Crotone",
-        "province": "KR",
+        "country": "italy", "province": "KR",
         "region": "CALABRIA",
         "coords": {
             "latitude": 39.0804253,
@@ -76,7 +76,7 @@ var storeList = [
         "address": "C.SO GARIBALDI 40",
         "zipCode": 89100,
         "town": "Reggio Calabria",
-        "province": "RC",
+        "country": "italy", "province": "RC",
         "region": "CALABRIA",
         "coords": {
             "latitude": 38.4892186,
@@ -88,7 +88,7 @@ var storeList = [
         "address": "VIA LUCA GIORDANO, 69/B/C",
         "zipCode": 80129,
         "town": "NAPOLI",
-        "province": "NA",
+        "country": "italy", "province": "NA",
         "region": "CAMPANIA",
         "coords": {
             "latitude": 40.8445414,
@@ -100,7 +100,7 @@ var storeList = [
         "address": "VIA GARIBALDI 56",
         "zipCode": 44100,
         "town": "Ferrara",
-        "province": "FE",
+        "country": "italy", "province": "FE",
         "region": "EMILIA ROMAGNA",
         "coords": {
             "latitude": 45.5095549,
@@ -112,7 +112,7 @@ var storeList = [
         "address": "C.SO VITTORIO EMANUELE III, 133",
         "zipCode": 89900,
         "town": "Vibo Valentia",
-        "province": "VV",
+        "country": "italy", "province": "VV",
         "region": "CALABRIA",
         "coords": {
             "latitude": 38.5594848,
@@ -124,7 +124,7 @@ var storeList = [
         "address": "VIA MATTEOTTI 44",
         "zipCode": 48016,
         "town": "CERVIA MILANO MARITTIMA",
-        "province": "RA",
+        "country": "italy", "province": "RA",
         "region": "EMILIA ROMAGNA",
         "coords": {
             "latitude": 44.2789595,
@@ -136,7 +136,7 @@ var storeList = [
         "address": "Viale della Vittoria 106",
         "zipCode": 64011,
         "town": "Alba Adriatica",
-        "province": "TE",
+        "country": "italy", "province": "TE",
         "region": "ABRUZZO",
         "coords": {
             "latitude": 42.836208,
@@ -148,7 +148,7 @@ var storeList = [
         "address": "Corso De Michetti, 16/18",
         "zipCode": 64100,
         "town": "Teramo",
-        "province": "TE",
+        "country": "italy", "province": "TE",
         "region": "ABRUZZO",
         "coords": {
             "latitude": 42.6577987,
@@ -160,7 +160,7 @@ var storeList = [
         "address": "VIA DON BOSCO 84",
         "zipCode": 62010,
         "town": "MONTECOSARO",
-        "province": "MC",
+        "country": "italy", "province": "MC",
         "region": "MARCHE",
         "coords": {
             "latitude": 43.3163622,
@@ -172,7 +172,7 @@ var storeList = [
         "address": "C.SO FEDERICO II 24",
         "zipCode": 67100,
         "town": "LAQUILA",
-        "province": "AQ",
+        "country": "italy", "province": "AQ",
         "region": "ABRUZZO",
         "coords": {
             "latitude": 42.346848,
@@ -184,7 +184,7 @@ var storeList = [
         "address": "CORSO XI SETTEMBRE,147/153",
         "zipCode": 61100,
         "town": "PESARO",
-        "province": "PU",
+        "country": "italy", "province": "PU",
         "region": "MARCHE",
         "coords": {
             "latitude": 43.9117748,
@@ -196,7 +196,7 @@ var storeList = [
         "address": "C.so Garibaldi 33",
         "zipCode": 61034,
         "town": "Fossombrone",
-        "province": "PU",
+        "country": "italy", "province": "PU",
         "region": "MARCHE",
         "coords": {
             "latitude": 43.689108,
@@ -208,7 +208,7 @@ var storeList = [
         "address": "VIA S. PERTINI, 16/B",
         "zipCode": 89063,
         "town": "MELITO DI PORTO SALVO",
-        "province": "RC",
+        "country": "italy", "province": "RC",
         "region": "CALABRIA",
         "coords": {
             "latitude": 37.919309,
@@ -220,7 +220,7 @@ var storeList = [
         "address": "Via II Giugno, 5",
         "zipCode": 50053,
         "town": "Empoli",
-        "province": "FI",
+        "country": "italy", "province": "FI",
         "region": "TOSCANA",
         "coords": {
             "latitude": 43.69089020000001,
@@ -232,7 +232,7 @@ var storeList = [
         "address": "VIALE CARLO FELICE, 101",
         "zipCode": 185,
         "town": "ROMA",
-        "province": "RM",
+        "country": "italy", "province": "RM",
         "region": "LAZIO",
         "coords": {
             "latitude": 41.8878495,
@@ -244,7 +244,7 @@ var storeList = [
         "address": "Via Trento, 52",
         "zipCode": 52025,
         "town": "Montevarchi",
-        "province": "AR",
+        "country": "italy", "province": "AR",
         "region": "TOSCANA",
         "coords": {
             "latitude": 43.52326720000001,
@@ -256,7 +256,7 @@ var storeList = [
         "address": "C.SO MATTEOTTI 114",
         "zipCode": 60100,
         "town": "Ancona",
-        "province": "AN",
+        "country": "italy", "province": "AN",
         "region": "MARCHE",
         "coords": {
             "latitude": 43.6180185,
@@ -268,7 +268,7 @@ var storeList = [
         "address": "Via della Pace, 126",
         "zipCode": 58100,
         "town": "Grosseto",
-        "province": "GR",
+        "country": "italy", "province": "GR",
         "region": "TOSCANA",
         "coords": {
             "latitude": 42.7669412,
@@ -280,7 +280,7 @@ var storeList = [
         "address": "VIA LAMARMORA14",
         "zipCode": 13900,
         "town": "Biella",
-        "province": "BI",
+        "country": "italy", "province": "BI",
         "region": "PIEMONTE",
         "coords": {
             "latitude": 45.5612111,
@@ -292,7 +292,7 @@ var storeList = [
         "address": "VIA BAVA 1/bis",
         "zipCode": 10100,
         "town": "Torino",
-        "province": "TO",
+        "country": "italy", "province": "TO",
         "region": "PIEMONTE",
         "coords": {
             "latitude": 45.065208,
@@ -304,7 +304,7 @@ var storeList = [
         "address": "VIA LEONARDO DA VINCI 9",
         "zipCode": 64016,
         "town": "SantEgidio alla Vibrata",
-        "province": "TE",
+        "country": "italy", "province": "TE",
         "region": "ABRUZZO",
         "coords": {
             "latitude": 42.811528,
@@ -316,7 +316,7 @@ var storeList = [
         "address": "VIA UMBRIA 2",
         "zipCode": 9170,
         "town": "ORISTANO",
-        "province": "OR",
+        "country": "italy", "province": "OR",
         "region": "SARDEGNA",
         "coords": {
             "latitude": 39.9109813,
@@ -328,7 +328,7 @@ var storeList = [
         "address": "VIA CARLI,3",
         "zipCode": 18038,
         "town": "SANREMO",
-        "province": "IM",
+        "country": "italy", "province": "IM",
         "region": "LIGURIA",
         "coords": {
             "latitude": 43.81559,
@@ -340,7 +340,7 @@ var storeList = [
         "address": "via migliara 39",
         "zipCode": 15121,
         "town": "Alessandria",
-        "province": "AL",
+        "country": "italy", "province": "AL",
         "region": "PIEMONTE",
         "coords": {
             "latitude": 44.9146249,
@@ -352,7 +352,7 @@ var storeList = [
         "address": "VIA TRIESTE , 11",
         "zipCode": 89024,
         "town": "Polistena",
-        "province": "RC",
+        "country": "italy", "province": "RC",
         "region": "CALABRIA",
         "coords": {
             "latitude": 38.4069523,
@@ -364,7 +364,7 @@ var storeList = [
         "address": "via santa teresa 6",
         "zipCode": 10121,
         "town": "Torino",
-        "province": "TO",
+        "country": "italy", "province": "TO",
         "region": "PIEMONTE",
         "coords": {
             "latitude": 45.06886979999999,
@@ -376,7 +376,7 @@ var storeList = [
         "address": "VIA DELLA SAPIENZA, 12",
         "zipCode": 1100,
         "town": "Viterbo",
-        "province": "VT",
+        "country": "italy", "province": "VT",
         "region": "LAZIO",
         "coords": {
             "latitude": 42.4189217,
@@ -388,7 +388,7 @@ var storeList = [
         "address": "VIA XI MAGGIO 121",
         "zipCode": 91025,
         "town": "Marsala",
-        "province": "TP",
+        "country": "italy", "province": "TP",
         "region": "SICILIA",
         "coords": {
             "latitude": 37.7997539,
@@ -400,7 +400,7 @@ var storeList = [
         "address": "Via G. Matteotti 81",
         "zipCode": 71100,
         "town": "Foggia",
-        "province": "FG",
+        "country": "italy", "province": "FG",
         "region": "PUGLIA",
         "coords": {
             "latitude": 41.4593411,
@@ -412,7 +412,7 @@ var storeList = [
         "address": "VIA TARANTO , 1",
         "zipCode": 100,
         "town": "ROMA",
-        "province": "RM",
+        "country": "italy", "province": "RM",
         "region": "LAZIO",
         "coords": {
             "latitude": 41.8853879,
@@ -424,7 +424,7 @@ var storeList = [
         "address": "VIA RAINERIO16",
         "zipCode": 61032,
         "town": "Fano",
-        "province": "PU",
+        "country": "italy", "province": "PU",
         "region": "MARCHE",
         "coords": {
             "latitude": 43.843812,
@@ -436,7 +436,7 @@ var storeList = [
         "address": "VIA C.LORENZINI,11",
         "zipCode": 100,
         "town": "ROMA",
-        "province": "RM",
+        "country": "italy", "province": "RM",
         "region": "LAZIO",
         "coords": {
             "latitude": 41.9439217,
@@ -448,7 +448,7 @@ var storeList = [
         "address": "VIA AURELIO SAFFI",
         "zipCode": 60033,
         "town": "Chiaravalle",
-        "province": "AN",
+        "country": "italy", "province": "AN",
         "region": "MARCHE",
         "coords": {
             "latitude": 43.62807859999999,
@@ -460,7 +460,7 @@ var storeList = [
         "address": "CORSO VITTORIO EMANUELE 90",
         "zipCode": 10121,
         "town": "Torino",
-        "province": "TO",
+        "country": "italy", "province": "TO",
         "region": "PIEMONTE",
         "coords": {
             "latitude": 45.0663317,
@@ -472,7 +472,7 @@ var storeList = [
         "address": "VIA SANTA MARIA, SNC",
         "zipCode": 20015,
         "town": "Parabiago",
-        "province": "MI",
+        "country": "italy", "province": "MI",
         "region": "LOMBARDIA",
         "coords": {
             "latitude": 45.558189,
@@ -484,7 +484,7 @@ var storeList = [
         "address": "C.SO BORGHESE, 26",
         "zipCode": 31,
         "town": "Artena",
-        "province": "RM",
+        "country": "italy", "province": "RM",
         "region": "LAZIO",
         "coords": {
             "latitude": 41.740603,
@@ -496,7 +496,7 @@ var storeList = [
         "address": "VIA DEL PONTE PISANO, 50",
         "zipCode": 148,
         "town": "ROMA",
-        "province": "RM",
+        "country": "italy", "province": "RM",
         "region": "LAZIO",
         "coords": {
             "latitude": 41.8432043,
@@ -508,7 +508,7 @@ var storeList = [
         "address": "VIA N.BOLOGNINI 45",
         "zipCode": 38086,
         "town": "PINZOLO",
-        "province": "TN",
+        "country": "italy", "province": "TN",
         "region": "TRENTINO ALTO ADIGE",
         "coords": {
             "latitude": 46.16110580000001,
@@ -520,7 +520,7 @@ var storeList = [
         "address": "Via XXV Aprile 14",
         "zipCode": 37054,
         "town": "NOGARA",
-        "province": "VR",
+        "country": "italy", "province": "VR",
         "region": "VENETO",
         "coords": {
             "latitude": 45.1805982,
@@ -532,7 +532,7 @@ var storeList = [
         "address": "VIA DELLA BALDUINA, 65",
         "zipCode": 136,
         "town": "ROMA",
-        "province": "RM",
+        "country": "italy", "province": "RM",
         "region": "LAZIO",
         "coords": {
             "latitude": 41.9168369,
@@ -544,7 +544,7 @@ var storeList = [
         "address": "VIA LUZZATTI, 16",
         "zipCode": 7100,
         "town": "Sassari",
-        "province": "SS",
+        "country": "italy", "province": "SS",
         "region": "SARDEGNA",
         "coords": {
             "latitude": 40.7262969,
@@ -556,7 +556,7 @@ var storeList = [
         "address": "VIA G.PASCOLI, 36",
         "zipCode": 37010,
         "town": "AFFI",
-        "province": "VR",
+        "country": "italy", "province": "VR",
         "region": "VENETO",
         "coords": {
             "latitude": 45.5529596,
@@ -568,7 +568,7 @@ var storeList = [
         "address": "VIA APPIA NUOVA, 1",
         "zipCode": 183,
         "town": "ROMA",
-        "province": "RM",
+        "country": "italy", "province": "RM",
         "region": "LAZIO",
         "coords": {
             "latitude": 41.8853618,
@@ -580,7 +580,7 @@ var storeList = [
         "address": "VIA CADUTI DI MARCINELLE 3",
         "zipCode": 20134,
         "town": "Milano",
-        "province": "MI",
+        "country": "italy", "province": "MI",
         "region": "LOMBARDIA",
         "coords": {
             "latitude": 45.4805371,
@@ -592,7 +592,7 @@ var storeList = [
         "address": "PIAZZA DELLA REPUBBLICA, 32",
         "zipCode": 20124,
         "town": "Milano",
-        "province": "MI",
+        "country": "italy", "province": "MI",
         "region": "LOMBARDIA",
         "coords": {
             "latitude": 45.4800835,
@@ -604,7 +604,7 @@ var storeList = [
         "address": "VIA LEGA LOMBARDA 1",
         "zipCode": 24040,
         "town": "BONATE SOPRA",
-        "province": "BG",
+        "country": "italy", "province": "BG",
         "region": "LOMBARDIA",
         "coords": {
             "latitude": 45.687297,
@@ -616,7 +616,7 @@ var storeList = [
         "address": "Via Milano n 1/3",
         "zipCode": 70024,
         "town": "Gravina in Puglia",
-        "province": "BA",
+        "country": "italy", "province": "BA",
         "region": "PUGLIA",
         "coords": {
             "latitude": 40.8155214,
@@ -628,7 +628,7 @@ var storeList = [
         "address": "LOC.PONTE RIO 79",
         "zipCode": 6059,
         "town": "Todi",
-        "province": "PG",
+        "country": "italy", "province": "PG",
         "region": "UMBRIA",
         "coords": {
             "latitude": 42.7819352,
@@ -640,7 +640,7 @@ var storeList = [
         "address": "VIA ROMA, 97",
         "zipCode": 90135,
         "town": "Palermo",
-        "province": "PA",
+        "country": "italy", "province": "PA",
         "region": "SICILIA",
         "coords": {
             "latitude": 38.1140338,
@@ -652,7 +652,7 @@ var storeList = [
         "address": "VIA DUOMO 13/15",
         "zipCode": 5018,
         "town": "Orvieto",
-        "province": "TR",
+        "country": "italy", "province": "TR",
         "region": "UMBRIA",
         "coords": {
             "latitude": 42.718272,
@@ -664,7 +664,7 @@ var storeList = [
         "address": "P.ZZA GARIBALDI 21",
         "zipCode": 62024,
         "town": "Matelica",
-        "province": "MC",
+        "country": "italy", "province": "MC",
         "region": "MARCHE",
         "coords": {
             "latitude": 43.254373,
@@ -676,7 +676,7 @@ var storeList = [
         "address": "VIA IV^ NOVEMBRE 10",
         "zipCode": 55042,
         "town": "FORTE DEI MARMI",
-        "province": "LU",
+        "country": "italy", "province": "LU",
         "region": "TOSCANA",
         "coords": {
             "latitude": 43.9581563,
@@ -688,7 +688,7 @@ var storeList = [
         "address": "Via dei Ciliegi, 25",
         "zipCode": 50066,
         "town": "Reggello",
-        "province": "FI",
+        "country": "italy", "province": "FI",
         "region": "TOSCANA",
         "coords": {
             "latitude": 43.66921,
@@ -700,7 +700,7 @@ var storeList = [
         "address": "VIA CARDUCCI 2",
         "zipCode": 6012,
         "town": "Citt di Castello",
-        "province": "PG",
+        "country": "italy", "province": "PG",
         "region": "UMBRIA",
         "coords": {
             "latitude": 40.9143467,
@@ -712,7 +712,7 @@ var storeList = [
         "address": "VIA C.COLOMBO 440",
         "zipCode": 145,
         "town": "ROMA",
-        "province": "RM",
+        "country": "italy", "province": "RM",
         "region": "LAZIO",
         "coords": {
             "latitude": 41.8517129,
@@ -724,7 +724,7 @@ var storeList = [
         "address": "Via Cesare Guasti, 32/34",
         "zipCode": 59100,
         "town": "Prato",
-        "province": "PO",
+        "country": "italy", "province": "PO",
         "region": "TOSCANA",
         "coords": {
             "latitude": 43.8817272,
@@ -736,7 +736,7 @@ var storeList = [
         "address": "VIALE DELL'INDUSTRIA, 1/3",
         "zipCode": 35044,
         "town": "Montagnana",
-        "province": "PD",
+        "country": "italy", "province": "PD",
         "region": "VENETO",
         "coords": {
             "latitude": 45.225122,
@@ -748,7 +748,7 @@ var storeList = [
         "address": "VIA NOBEL, 2",
         "zipCode": 30025,
         "town": "Fossalta di Portogruaro",
-        "province": "VE",
+        "country": "italy", "province": "VE",
         "region": "VENETO",
         "coords": {
             "latitude": 45.7777426,
@@ -760,7 +760,7 @@ var storeList = [
         "address": "CORSO UMBERTO I, 18",
         "zipCode": 37011,
         "town": "Bardolino",
-        "province": "VR",
+        "country": "italy", "province": "VR",
         "region": "VENETO",
         "coords": {
             "latitude": 45.54727,
@@ -772,7 +772,7 @@ var storeList = [
         "address": "Via Roma, 85",
         "zipCode": 35010,
         "town": "MASSANZAGO",
-        "province": "PD",
+        "country": "italy", "province": "PD",
         "region": "VENETO",
         "coords": {
             "latitude": 45.555278,
@@ -784,7 +784,7 @@ var storeList = [
         "address": "VIA BAYLLE,23",
         "zipCode": 9124,
         "town": "Cagliari",
-        "province": "CA",
+        "country": "italy", "province": "CA",
         "region": "SARDEGNA",
         "coords": {
             "latitude": 39.2147446,
@@ -796,7 +796,7 @@ var storeList = [
         "address": "VIA DANTONA, 10/12",
         "zipCode": 37048,
         "town": "S.PIETRO DI LEGNAGO",
-        "province": "VR",
+        "country": "italy", "province": "VR",
         "region": "VENETO",
         "coords": {
             "latitude": 45.1850669,
@@ -808,7 +808,7 @@ var storeList = [
         "address": "via cavour 35",
         "zipCode": 14100,
         "town": "Asti",
-        "province": "AT",
+        "country": "italy", "province": "AT",
         "region": "PIEMONTE",
         "coords": {
             "latitude": 45.0067,
@@ -820,7 +820,7 @@ var storeList = [
         "address": "P.ZZA I MAGGIO,18",
         "zipCode": 87100,
         "town": "COSENZA",
-        "province": "CS",
+        "country": "italy", "province": "CS",
         "region": "CALABRIA",
         "coords": {
             "latitude": 39.9358002,
@@ -832,7 +832,7 @@ var storeList = [
         "address": "Via Bruceto, 108",
         "zipCode": 51010,
         "town": "Massa e Cozzile",
-        "province": "PT",
+        "country": "italy", "province": "PT",
         "region": "TOSCANA",
         "coords": {
             "latitude": 43.87665699999999,
@@ -844,11 +844,275 @@ var storeList = [
         "address": "VIA BANCHI DI SOPRA,32",
         "zipCode": 53100,
         "town": "SIENA",
-        "province": "SI",
+        "country": "italy", "province": "SI",
         "region": "TOSCANA",
         "coords": {
             "latitude": 43.3198091,
             "longitude": 11.3313687
+        }
+    },
+    {
+        "name": "LUDWIG GOERTZ GmbH Abt. Controlling & Finanzen",
+        "address": "Spitalerstr. 10",
+        "zipCode": 20095,
+        "town": "HAMBURG",
+        "countryCode": "DE",
+        "country": "GERMANIA",
+        "coords": {
+            "latitude": 53.552139,
+            "longitude": 10.0030947
+        }
+    },
+    {
+        "name": "AVG MOwDEVERTRIEBS GmbH",
+        "address": "KAERNTNER STR. 19,",
+        "zipCode": "A1010",
+        "town": "WIEN",
+        "countryCode": "AT",
+        "country": "AUSTRIA",
+        "coords": {
+            "latitude": 48.2064034,
+            "longitude": 16.371678
+        }
+    },
+    {
+        "name": "LA MARTINA SYLT",
+        "address": "GAAT,4",
+        "zipCode": 25980,
+        "town": "KEITUM SYLT",
+        "countryCode": "DE",
+        "country": "GERMANIA",
+        "coords": {
+            "latitude": 54.89318,
+            "longitude": 8.37096
+        }
+    },
+    {
+        "name": "UEBERST HEIDI FOGED CHRISTIENSEN",
+        "address": "TORVEGADE 7",
+        "zipCode": 7100,
+        "town": "VEJLE",
+        "countryCode": null,
+        "country": "DANIMARCA",
+        "coords": {
+            "latitude": 55.7087526,
+            "longitude": 9.5330023
+        }
+    },
+    {
+        "name": "SCHUHE LUEKE GmbH",
+        "address": "SCHUSTERSTRASSE 33",
+        "zipCode": 79098,
+        "town": "FREIBURG",
+        "countryCode": "DE",
+        "country": "GERMANIA",
+        "coords": {
+            "latitude": 47.9946531,
+            "longitude": 7.853636300000001
+        }
+    },
+    {
+        "name": "AP STORE HISTORIE DE FEMMES SARL",
+        "address": "Boulevard Wilson, 146",
+        "zipCode": 6160,
+        "town": "JUAN LES PINS",
+        "countryCode": "FR",
+        "country": "FRANCIA",
+        "coords": {
+            "latitude": 43.5679846,
+            "longitude": 7.1125355
+        }
+    },
+    {
+        "name": "LODEN-FREY VERKAUFSHAUS GMBH & CO.KG",
+        "address": "Triebstr. 36/38",
+        "zipCode": 80993,
+        "town": "MUNCHEN",
+        "countryCode": "DE",
+        "country": "GERMANIA",
+        "coords": {
+            "latitude": 48.18686539999999,
+            "longitude": 11.5341416
+        }
+    },
+    {
+        "name": "EL CORTE INGLES, S.A.",
+        "address": "C/HERMOSILLA, 112",
+        "zipCode": 28009,
+        "town": "MADRID",
+        "countryCode": "ES",
+        "country": "SPAGNA",
+        "coords": {
+            "latitude": 40.4255777,
+            "longitude": -3.6706424
+        }
+    },
+    {
+        "name": "FRANC SA",
+        "address": "AV. ESTRASBURGO, 1",
+        "zipCode": 17250,
+        "town": "PLATJA DARO",
+        "countryCode": "ES",
+        "country": "SPAGNA",
+        "coords": {
+            "latitude": 41.8179488,
+            "longitude": 3.0668559
+        }
+    },
+    {
+        "name": "BESTING LIMITED",
+        "address": "5TH FLOOR, 86 JERMYN STREET",
+        "zipCode": "SW1Y",
+        "town": "6AW LONDON",
+        "countryCode": "UK",
+        "country": "INGHILTERRA",
+        "coords": {
+            "latitude": 51.50798169999999,
+            "longitude": -0.1374494
+        }
+    },
+    {
+        "name": "AGRESSIA GROUP LTD",
+        "address": "ROZHEN BLVD 22A",
+        "zipCode": 1220,
+        "town": "SOFIA",
+        "countryCode": "BG",
+        "country": "BULGARIA",
+        "coords": {
+            "latitude": 42.6977082,
+            "longitude": 23.3218675
+        }
+    },
+    {
+        "name": "ERNEST WALTER MOELLER",
+        "address": "BUTTERMARKT 3",
+        "zipCode": 47906,
+        "town": "KEMPEN",
+        "countryCode": "DE",
+        "country": "GERMANIA",
+        "coords": {
+            "latitude": 51.36402,
+            "longitude": 6.41871
+        }
+    },
+    {
+        "name": "PETER DEUBER MODEN",
+        "address": "Coburger Str. 7",
+        "zipCode": 96215,
+        "town": "LICHTENFELS",
+        "countryCode": "DE",
+        "country": "GERMANIA",
+        "coords": {
+            "latitude": 50.14687,
+            "longitude": 11.06282
+        }
+    },
+    {
+        "name": "PAPARAZZI BY NINOK LTD",
+        "address": "NAGELSHOF 11",
+        "zipCode": 49716,
+        "town": "MEPPEN",
+        "countryCode": "DE",
+        "country": "GERMANIA",
+        "coords": {
+            "latitude": 52.69012,
+            "longitude": 7.289879999999999
+        }
+    },
+    {
+        "name": "TYCOON TRADE SRL",
+        "address": "39-41, ACADEMIEI ST. 4TH FLOOR",
+        "zipCode": 1001,
+        "town": "BUCHAREST (ROMANIA)",
+        "countryCode": null,
+        "country": "ROMANIA",
+        "coords": {
+            "latitude": 44.438179,
+            "longitude": 26.0979567
+        }
+    },
+    {
+        "name": "SCHUHHAUS ZUMNORDE Gmbh & CO.",
+        "address": "SALZMANNSTRASSE,58",
+        "zipCode": 48147,
+        "town": "MUENSTER",
+        "countryCode": "DE",
+        "country": "GERMANIA",
+        "coords": {
+            "latitude": 51.98278,
+            "longitude": 7.617679999999999
+        }
+    },
+    {
+        "name": "SCHUH - MOHR GMBH",
+        "address": "Domstrasse 28",
+        "zipCode": 97070,
+        "town": "WURZBURG",
+        "countryCode": "DE",
+        "country": "GERMANIA",
+        "coords": {
+            "latitude": 49.7931761,
+            "longitude": 9.930385099999999
+        }
+    },
+    {
+        "name": "MIK MAK",
+        "address": null,
+        "zipCode": null,
+        "town": "Alessandria",
+        "countryCode": null,
+        "country": "EGITTO",
+        "coords": {
+            "latitude": 31.2221007,
+            "longitude": 29.9718363
+        }
+    },
+    {
+        "name": "LUXURY MARQUE SDN BHD",
+        "address": "LEVEL 19 WISMA UOA 2 21 JALAN PINANG",
+        "zipCode": 50450,
+        "town": "KUALA LAMPUR MALAYSIA",
+        "countryCode": null,
+        "country": "MALAYSIA",
+        "coords": {
+            "latitude": 3.15276,
+            "longitude": 101.711933
+        }
+    },
+    {
+        "name": "LUXURY VENTURES PTE. LTD",
+        "address": "LEVEL 19 WISMA OUA 2 21 JALAN PINANG",
+        "zipCode": null,
+        "town": "KUALA LUMPUR (MALAYSIA)",
+        "countryCode": null,
+        "country": "MALAYSIA",
+        "coords": {
+            "latitude": 3.15276,
+            "longitude": 101.711933
+        }
+    },
+    {
+        "name": "MAISON LORENZ BACH BAMOCO LTD",
+        "address": "Promenade 81 - Postfach 279",
+        "zipCode": 3780,
+        "town": "GSTAAD",
+        "countryCode": "CH",
+        "country": "SVIZZERA",
+        "coords": {
+            "latitude": 46.4706828,
+            "longitude": 7.2844744
+        }
+    },
+    {
+        "name": "LUXUS RETAIL PVT LTD",
+        "address": "7/17 SARVPRIYA VIHAR",
+        "zipCode": null,
+        "town": "110016 NEW DELHI (INDIA)",
+        "countryCode": null,
+        "country": "INDIA",
+        "coords": {
+            "latitude": 28.542944,
+            "longitude": 77.20549419999999
         }
     }
 ]

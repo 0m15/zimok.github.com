@@ -106,10 +106,10 @@ $(document).ready(function(){
 			for(; i < elementsLength; i++) {
 				var el = _this.elements[i]
 				if(height <= 700) {
-					el.style['minHeight'] = height + 'px'
+					$(el).css('min-height', height + 'px')
 				} else {
-					el.style['minHeight'] = 800 + 'px'
-
+					$(el).css('min-height', 800 + 'px')
+					//el.style['minHeight'] = 800 + 'px'
 				}
 			}
 		}
@@ -136,8 +136,8 @@ $(document).ready(function(){
 	// adapt video
 	function resizeVideo() {
 		var currentImg = $('#media').find('video')[0]
-		var width = $window.width() - $window.width() / 12
-		var height = $window.height() - $window.width() / 6
+		var width = $window.width() - 200
+		var height = $window.height() - 400
 		var hRatio = 16 / 9
 		var vRatio = 9 / 16
 		var imgWidth = height * hRatio
@@ -293,7 +293,6 @@ $(document).ready(function(){
 	    	var str = $el.css('backgroundPosition')
 	    	var group = str.match(/(\d+)px/g)
 	    	if(!group) return 0
-				console.log('y:',parseInt(group[0]))
 	    	return parseInt(group[0])
 	    }
 
@@ -311,7 +310,6 @@ $(document).ready(function(){
     	} else {
     		yPos = _y
     	}
-			console.log(yPos)
     	translateBg($el, yPos)
 			i++
 		})
