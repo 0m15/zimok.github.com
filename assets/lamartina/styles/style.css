@@ -951,6 +951,12 @@ img.fade-in {
 	#stores .store-list li a {
 		border-bottom: 1px solid #222;
 	}
+
+	#stores .store-list.group-selector li {
+		font-size: 1.5em;
+		display: inline-block;	
+		text-align: center;
+	}
 }
 
 /* registration */

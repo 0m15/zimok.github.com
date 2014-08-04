@@ -259,7 +259,7 @@
 					<li ng-class="{active: showList}">
 						<a href ng-click="toggleViewMode('list')" class="with-icon-left"><i class="glyphicon glyphicon-th"></i> list</a>
 					</li>
-					<li ng-if="currentTown">
+					<li ng-if="currentSource.selected">
 						<a href ng-click="showAll()" class="with-icon-left"><i class="glyphicon glyphicon-cross"></i> show all</a>
 					</li>
 				</ul>
@@ -269,9 +269,19 @@
 				<div class="search-bar clearfix">
 					<input type="text" ng-model-options="{debounce: 750}" ng-model="searchQuery" ng-change="filterStores()" class="text-input input-xl col-xs-12 col-md-12" placeholder="search for stores near: (enter a place)">
 				</div>
+
 				<div class="store-list-overlay clearfix" data-index="0.5" ng-if="showList">
 					<div class="container-fluid" data-index="-0.5">
-						<ul class="store-list">
+						<ul class="store-list group-selector" ng-show="!sourceListSelected">
+							<li>
+								<a href="" ng-click="selectGroup('italy')">italy</a>
+							</li>
+							<li>
+								<a href="" ng-click="selectGroup('world')">europe/world</a>
+							</li>
+						</ul>
+
+						<ul class="store-list" ng-if="!currentSource.selected && sourceListSelected">
 							<li
 								ng-repeat="(town, props) in currentSource"
 								ng-show="props.selected == undefined"
@@ -282,11 +292,11 @@
 						</ul>
 					</div>
 					<br>
-
-					<div class="current-area container" ng-show="currentTown">
-						<h2>{{currentTown.town}}</h2>
+					
+					<div class="current-area container" ng-show="currentSource.selected">
+						<h2>{{currentSource.town}}</h2>
 						<ul class="list-unstyled">
-							<li ng-repeat="store in currentTown.stores|orderBy:['town','distance']|limitTo:10" class="row store-detail">
+							<li ng-repeat="store in currentSource.stores|orderBy:['town','distance']|limitTo:10" class="row store-detail">
 								<p class="store-town col-md-3">{{store.town}}</p>
 								<p class="store-name col-md-4">{{store.name}}</p>
 								<p class="store-address col-md-3">{{store.address}}</p>

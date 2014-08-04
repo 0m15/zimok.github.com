@@ -54,7 +54,15 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 		if(!$scope.$$phase) $scope.$apply()
 	}
 
-
+	$scope.selectGroup = function(group) {
+		if(group == 'italy') {
+			$scope.currentSource = $scope.storesByRegion	
+		} else {
+			$scope.currentSource = $scope.storesByCountry
+		}
+		$scope.sourceListSelected = true
+		if(!$scope.$$phase) $scope.$apply()
+	}
 
 	// stores
 	this.getStoresByKey = function(collection, key) {
@@ -69,7 +77,6 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 		$scope[collectionName] = storesByKey
 		if(!$scope.$$phase) $scope.$apply()
 	}
-	this.getStoresByKey($scope.stores, 'town') // all
 	this.getStoresByKey($scope.stores, 'region') // italy
 	this.getStoresByKey($scope.stores, 'country') // world
 	$scope.currentSource = $scope.storesByRegion
@@ -287,7 +294,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 		angular.forEach($scope.currentSource, function(store) {
 			store.selected = false
 		})
-		$scope.currentSource = null
+		//$scope.currentSource.selected = false
 		if(!$scope.$$phase) $scope.$apply()
 	}
 
@@ -299,11 +306,15 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 	$scope.showAll = function() {
 		$scope.resetMarkers()
 		$scope.searchQuery = ''
+		self.getStoresByKey($scope.stores, 'region') // italy
+		self.getStoresByKey($scope.stores, 'country') // world
+		$scope.currentSource.selected = undefined
+		$scope.sourceListSelected = false	
 		angular.forEach($scope.currentSource, function(store) {
 			store.selected = undefined
 		})
-		$scope.currentSource = null
 		self.fitToPoints($scope.map.markers)
+		
 		if(!$scope.$$phase) $scope.$apply()
 	}
 
@@ -361,7 +372,6 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 	$scope.selectTown = function(town) {
 		//self.getLocation(town)
 		$scope.deselectTown()
-		debugger
 		var currentSource = $scope.currentSource[town]
 		currentSource.town = town
 		currentSource.selected = true
