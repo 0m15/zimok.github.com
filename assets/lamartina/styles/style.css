@@ -663,8 +663,8 @@ img.fade-in {
 @media screen and (min-width: 600px) {
 	#section-5 .section-text--centered,
 	#section-3 .section-text--centered {
-		width: 33.3%;
-		left: 33.3%;
+		width: 40%;
+		left: 30%;
 		text-shadow: none;
 		top: 2em;
 	}
@@ -674,7 +674,7 @@ img.fade-in {
 		bottom: 0;
 		background: #ebebeb;
 		right: 0;
-		width: 33.3%;
+		width: 40%;
 		left: auto;
 	}
 }
