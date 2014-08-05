@@ -11,7 +11,7 @@ a:active
 .active a {
 	background: transparent !important;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
 	html,
 	body,
 	.section > .container-fluid {
@@ -199,7 +199,7 @@ body {
 	font-size: 14px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
 	body {
 			font-size: 16px;
 		}
@@ -283,7 +283,7 @@ body {
 	position: inherit;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
 	body {
 
 	}
@@ -355,7 +355,7 @@ body {
 	border-bottom: none;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
 	.navbar-nav {
 		padding: 0;
 		border: none;
@@ -413,7 +413,7 @@ img.fade-in {
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
 	.section {
 		width: 100%;
 		margin: 0 auto;
@@ -549,12 +549,9 @@ img.fade-in {
 	opacity: 1;
 }
 
-
 /* intro */
 #section-1 {
-	background: url(../assets/slide.jpg) 50% 0 fixed no-repeat;
-	z-index: 1;
-	background-size: cover;
+	background: url(../assets/slide.jpg) 50% 0 no-repeat;
 }
 
 .section-text-centered {
@@ -564,18 +561,106 @@ img.fade-in {
 }
 
 #section-2 {
-	background: url(../assets/intro.jpg) 50% 0 fixed no-repeat;
+	background: url(../assets/intro.jpg) 50% 0 no-repeat;
 	z-index: 1;
 	background-size: cover;
 }
 
 #section-3 {
-	background: url(../assets/slide-04.jpg) 50% 0 fixed no-repeat;
+	background: #ebebeb;
 	z-index: 1;
 	background-size: cover;
 }
 
-@media screen and (min-width: 800px) {
+#section-1 .section-text,
+#section-2 .section-text,
+#section-4 .section-text,
+#section-5 .section-text {
+	margin-top: 70%;
+	margin-bottom: 5%;
+	padding: 0 2%;
+}
+
+#section-3 .section-text,
+#section-6 .section-text {
+	margin: 25% 0;
+}
+
+#section-4 {
+		background: url(../assets/slide-03.jpg) 50% 0 no-repeat;
+		z-index: 1;
+}
+
+#section-5 {
+	background: url(../assets/slide-02.jpg) 70% 0 no-repeat;
+	z-index: 1;
+}
+
+#section-6 {
+	background: #ebebeb;
+	z-index: 1;
+}
+
+#section-6 .section-text--bottom {
+	background: transparent;
+	background: #ebebeb;
+}
+
+
+@media screen and (min-width: 600px) {
+	/* intro */
+	#section-1 {
+		background: url(../assets/slide.jpg) 50% 0 fixed no-repeat;
+		z-index: 1;
+		background-size: cover;
+	}
+
+	#section-2 {
+		background: url(../assets/intro.jpg) 50% 0 fixed no-repeat;
+		z-index: 1;
+		background-size: cover;
+	}
+
+	#section-3 {
+		background: url(../assets/slide-04.jpg) 50% 0 fixed no-repeat;
+		z-index: 1;
+		background-size: cover;
+	}
+
+	#section-4 {
+		background: url(../assets/slide-03.jpg) 50% 0 fixed no-repeat;
+		z-index: 1;
+		background-size: cover;
+	}
+
+	#section-5 {
+		background: url(../assets/slide-02.jpg) 50% 0 fixed no-repeat;
+		z-index: 1;
+		background-size: cover;
+	}
+
+	#section-6 {
+		background: url(../assets/cortos-alt.jpg) -150% -50% fixed no-repeat;
+		background-size: cover;
+		z-index: 1;
+	}
+
+	#section-6 .section-text--bottom {
+		background: transparent;
+		background: #ebebeb;
+	}
+
+	#section-1 .section-text,
+	#section-2 .section-text,
+	#section-3 .section-text,
+	#section-4 .section-text,
+	#section-5 .section-text,
+	#section-6 .section-text {
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: 600px) {
 	#section-5 .section-text--centered,
 	#section-3 .section-text--centered {
 		width: 33.3%;
@@ -608,28 +693,7 @@ img.fade-in {
 	padding: 0 2.5em;
 }
 
-#section-4 {
-	background: url(../assets/slide-03.jpg) 50% 0 fixed no-repeat;
-	z-index: 1;
-	background-size: cover;
-}
 
-#section-5 {
-	background: url(../assets/slide-02.jpg) 50% 0 fixed no-repeat;
-	z-index: 1;
-	background-size: cover;
-}
-
-#section-6 {
-	background: url(../assets/cortos-alt.jpg) -150% -50% fixed no-repeat;
-	background-size: cover;
-	z-index: 1;
-}
-
-#section-6 .section-text--bottom {
-	background: transparent;
-	background: #ebebeb;
-}
 
 #stores {
 	position: relative;
@@ -825,7 +889,7 @@ img.fade-in {
 	border-bottom: 0;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
 	.current-area	ul li {
 	}
 }
