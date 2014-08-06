@@ -253,6 +253,18 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 		$scope.map.markers.push(marker)
 	}
 
+	this.fitToPoints = function(points) {
+		var pointsArray = []
+		var bounds = new google.maps.LatLngBounds()
+		angular.forEach(points, function(point) {
+			pointsArray.push(new google.maps.LatLng(point.latitude, point.longitude))
+		})
+		angular.forEach(pointsArray, function(point) {
+			bounds.extend(point)
+		})
+		$scope.map.control.getGMap().fitBounds(bounds)
+	}
+
 	this.addMarkers = function(key, val) {
 		angular.forEach($scope.stores, function(store, idx) {
 			if(store[key] && store[key].toLowerCase() == val) {
@@ -261,6 +273,14 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 		})
 	}
 	this.addMarkers('country', 'italy')
+	this.addMarkers('country', 'germania')
+	this.addMarkers('country', 'austria')
+	this.addMarkers('country', 'francia')
+	this.addMarkers('country', 'danimarca')
+	this.addMarkers('country', 'inghilterra')
+	this.addMarkers('country', 'spagna')
+	this.fitToPoints($scope.map.markers)
+
 
 	function sortByDistance(a, b) {
 		return a.distance-b.distance
@@ -357,17 +377,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 
 	}
 
-	this.fitToPoints = function(points) {
-		var pointsArray = []
-		var bounds = new google.maps.LatLngBounds()
-		angular.forEach(points, function(point) {
-			pointsArray.push(new google.maps.LatLng(point.latitude, point.longitude))
-		})
-		angular.forEach(pointsArray, function(point) {
-			bounds.extend(point)
-		})
-		$scope.map.control.getGMap().fitBounds(bounds)
-	}
+	
 
 	$scope.selectTown = function(town) {
 		//self.getLocation(town)

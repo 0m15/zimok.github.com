@@ -11,7 +11,7 @@ jQuery.fn.anchorAnimate = function() {
 
 			// down
 			if(!$body.hasClass('with-fixed-navbar')) {
-				destination -= 118
+				destination -= 117
 
 				// if(elementClick == '#section-1') {
 				// 	destination -= (150 - 118)
@@ -106,9 +106,9 @@ $(document).ready(function(){
 			for(; i < elementsLength; i++) {
 				var el = _this.elements[i]
 				if(height <= 700) {
-					$(el).css('min-height', height + 'px')
+					$(el).css('min-height', height + 1 + 'px')
 				} else {
-					$(el).css('min-height', 800 + 'px')
+					$(el).css('min-height', 800 + 1 + 'px')
 					//el.style['minHeight'] = 800 + 'px'
 				}
 			}
