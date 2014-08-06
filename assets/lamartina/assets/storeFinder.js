@@ -86,9 +86,9 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 	$scope.map = {
 		control: {},
 		markers: [],
-		zoom: 5,
+		zoom: 4,
 		center: {
-			latitude: 42,
+			latitude: 49,
 			longitude: 12
 		},
 		options: {
@@ -272,6 +272,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 			}
 		})
 	}
+
 	this.addMarkers('country', 'italy')
 	this.addMarkers('country', 'germania')
 	this.addMarkers('country', 'austria')
@@ -279,7 +280,8 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 	this.addMarkers('country', 'danimarca')
 	this.addMarkers('country', 'inghilterra')
 	this.addMarkers('country', 'spagna')
-	this.fitToPoints($scope.map.markers)
+	this.addMarkers('country', 'bulgaria')
+	this.addMarkers('country', 'romania')
 
 
 	function sortByDistance(a, b) {
