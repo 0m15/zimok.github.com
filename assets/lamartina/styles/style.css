@@ -663,9 +663,9 @@ img.fade-in {
 @media screen and (min-width: 600px) {
 	#section-5 .section-text--centered,
 	#section-3 .section-text--centered {
-		width: 40%;
-		padding-left: 2%;
-		padding-right: 4%;
+		width: 33.3%;
+		padding-left: 4%;
+		padding-right: 0%;
 		left: 31%;
 		text-shadow: none;
 		top: 2em;
