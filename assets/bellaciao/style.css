@@ -1,10 +1,27 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,700,700italic,400italic,300italic);
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+
 body,
 html {
-	font-family: Georgia;
+	font-family: Architects Daughter, Merriweather;
 }
 
 body {
-	background: #dea75f url(images/logo-bg.png) center center no-repeat;
+	background-image: -o-linear-gradient(bottom, #EB9719, #FFFFFF);
+	background-image: -moz-linear-gradient(bottom, #EB9719, #FFFFFF);
+	background-image: -ms-linear-gradient(bottom, #EB9719, #FFFFFF);
+	background-image: -webkit-linear-gradient(top, #EB9719, #FFFFFF);
+	background-image: linear-gradient(to bottom, #EB9719, #FFFFFF);*/
+	
+}
+
+.container-fluid {
+	max-width: 1280px;
+
+}
+
+.content {
+	background: url(images/logo-bg.png) no-repeat;
 }
 
 a, a:link {
@@ -16,7 +33,7 @@ h1,
 h2,
 h3,
 .nav-primary {
-	font-family: 'Shadows Into Light', cursive;
+	font-family: Architects Daughter, 'Shadows Into Light', cursive;
 	font-size: 1.75em;
 }
 
@@ -26,6 +43,7 @@ h2 {
 }
 
 .page-header {
+	font-size: 2.5rem;
 	border-bottom: 1px solid rgba(0, 0, 0, .25);
 }
 
@@ -37,6 +55,11 @@ p {
 .nav-primary {
 	margin-top: 3em;	
 	text-transform: uppercase;
+}
+
+/* header */
+.header {
+	text-align: center;
 }
 
 /* modules */
@@ -59,6 +82,7 @@ p {
 	margin-top: 10em;
 	border-top: 1px solid rgba(0,0,0,.2);
 	letter-spacing: .1em;
+	font-size: 1.25em;
 }
 
 .footer > div {
@@ -86,4 +110,36 @@ p {
 #map-canvas {
 	margin-top: 2em;
 	width: 100%;
+}
+
+/* prenotazioni */
+.input-rooms,
+.input-dates {
+	margin-bottom: 3em;
+}
+
+.input-rooms label {
+	margin-left: 5px;
+	position: relative;
+	top: 2px;
+}
+
+.input h2 {
+	margin-bottom: 1em;
+}
+
+.input label {
+	font-size: 1.25em;
+	font-weight: normal;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+/* datepicker */
+#ui-datepicker-div {
+	background: #fff;
+}
+
+.contacts-list {
+	font-size: 1.5em;
 }
