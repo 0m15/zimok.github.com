@@ -857,7 +857,7 @@ var storeList = [
         "zipCode": 20095,
         "town": "HAMBURG",
         "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "GERMANY",
         "coords": {
             "latitude": 53.552139,
             "longitude": 10.0030947
@@ -881,7 +881,7 @@ var storeList = [
         "zipCode": 25980,
         "town": "KEITUM SYLT",
         "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "GERMANY",
         "coords": {
             "latitude": 54.89318,
             "longitude": 8.37096
@@ -893,7 +893,7 @@ var storeList = [
         "zipCode": 7100,
         "town": "VEJLE",
         "countryCode": null,
-        "country": "DANIMARCA",
+        "country": "denmark",
         "coords": {
             "latitude": 55.7087526,
             "longitude": 9.5330023
@@ -905,7 +905,7 @@ var storeList = [
         "zipCode": 79098,
         "town": "FREIBURG",
         "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "GERMANY",
         "coords": {
             "latitude": 47.9946531,
             "longitude": 7.853636300000001
@@ -917,7 +917,7 @@ var storeList = [
         "zipCode": 6160,
         "town": "JUAN LES PINS",
         "countryCode": "FR",
-        "country": "FRANCIA",
+        "country": "france",
         "coords": {
             "latitude": 43.5679846,
             "longitude": 7.1125355
@@ -929,7 +929,7 @@ var storeList = [
         "zipCode": 80993,
         "town": "MUNCHEN",
         "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "GERMANY",
         "coords": {
             "latitude": 48.18686539999999,
             "longitude": 11.5341416
@@ -941,7 +941,7 @@ var storeList = [
         "zipCode": 28009,
         "town": "MADRID",
         "countryCode": "ES",
-        "country": "SPAGNA",
+        "country": "SPAIN",
         "coords": {
             "latitude": 40.4255777,
             "longitude": -3.6706424
@@ -953,7 +953,7 @@ var storeList = [
         "zipCode": 17250,
         "town": "PLATJA DARO",
         "countryCode": "ES",
-        "country": "SPAGNA",
+        "country": "SPAIN",
         "coords": {
             "latitude": 41.8179488,
             "longitude": 3.0668559
@@ -965,7 +965,7 @@ var storeList = [
         "zipCode": "SW1Y",
         "town": "6AW LONDON",
         "countryCode": "UK",
-        "country": "INGHILTERRA",
+        "country": "UK",
         "coords": {
             "latitude": 51.50798169999999,
             "longitude": -0.1374494
@@ -977,7 +977,7 @@ var storeList = [
         "zipCode": 1220,
         "town": "SOFIA",
         "countryCode": "BG",
-        "country": "BULGARIA",
+        "country": "BULGARY",
         "coords": {
             "latitude": 42.6977082,
             "longitude": 23.3218675
@@ -989,7 +989,7 @@ var storeList = [
         "zipCode": 47906,
         "town": "KEMPEN",
         "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "GERMANY",
         "coords": {
             "latitude": 51.36402,
             "longitude": 6.41871
@@ -1001,7 +1001,7 @@ var storeList = [
         "zipCode": 96215,
         "town": "LICHTENFELS",
         "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "GERMANY",
         "coords": {
             "latitude": 50.14687,
             "longitude": 11.06282
@@ -1013,7 +1013,7 @@ var storeList = [
         "zipCode": 49716,
         "town": "MEPPEN",
         "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "GERMANY",
         "coords": {
             "latitude": 52.69012,
             "longitude": 7.289879999999999
@@ -1023,9 +1023,9 @@ var storeList = [
         "name": "TYCOON TRADE SRL",
         "address": "39-41, ACADEMIEI ST. 4TH FLOOR",
         "zipCode": 1001,
-        "town": "BUCHAREST (ROMANIA)",
+        "town": "BUCHAREST (RUMENIA)",
         "countryCode": null,
-        "country": "ROMANIA",
+        "country": "RUMENIA",
         "coords": {
             "latitude": 44.438179,
             "longitude": 26.0979567
@@ -1037,7 +1037,7 @@ var storeList = [
         "zipCode": 48147,
         "town": "MUENSTER",
         "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "GERMANY",
         "coords": {
             "latitude": 51.98278,
             "longitude": 7.617679999999999
@@ -1049,7 +1049,7 @@ var storeList = [
         "zipCode": 97070,
         "town": "WURZBURG",
         "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "GERMANY",
         "coords": {
             "latitude": 49.7931761,
             "longitude": 9.930385099999999
@@ -1061,7 +1061,7 @@ var storeList = [
         "zipCode": null,
         "town": "Alessandria",
         "countryCode": null,
-        "country": "EGITTO",
+        "country": "EGYPT",
         "coords": {
             "latitude": 31.2221007,
             "longitude": 29.9718363
@@ -1097,7 +1097,7 @@ var storeList = [
         "zipCode": 3780,
         "town": "GSTAAD",
         "countryCode": "CH",
-        "country": "SVIZZERA",
+        "country": "SWITZERLAND",
         "coords": {
             "latitude": 46.4706828,
             "longitude": 7.2844744

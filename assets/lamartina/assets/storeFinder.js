@@ -274,14 +274,14 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 	}
 
 	this.addMarkers('country', 'italy')
-	this.addMarkers('country', 'germania')
+	this.addMarkers('country', 'germany')
 	this.addMarkers('country', 'austria')
 	this.addMarkers('country', 'francia')
-	this.addMarkers('country', 'danimarca')
-	this.addMarkers('country', 'inghilterra')
-	this.addMarkers('country', 'spagna')
-	this.addMarkers('country', 'bulgaria')
-	this.addMarkers('country', 'romania')
+	this.addMarkers('country', 'denmark')
+	this.addMarkers('country', 'uk')
+	this.addMarkers('country', 'spain')
+	this.addMarkers('country', 'bulgary')
+	this.addMarkers('country', 'rumenia')
 
 
 	function sortByDistance(a, b) {

@@ -86,6 +86,28 @@ $(document).ready(function(){
 	}
 	bindWindowResize()
 
+	var $logoEl = $('.logo-hover')
+	var hideTimeout, showTimeout
+
+	$('#media').on('mouseout', function() {
+		$logoEl.removeClass('hover')
+	})
+
+	// show hide logo on mousemove on media
+	$('#media').on('mousemove', function() {
+
+		if(hideTimeout) clearTimeout(hideTimeout)
+
+		showTimeout = setTimeout(function() {
+			$logoEl.addClass('hover')	
+		}, 250)
+
+		hideTimeout = setTimeout(function() {
+			if(showTimeout) clearTimeout(showTimeout)
+			$logoEl.removeClass('hover')
+		}, 1000)
+	})
+
   // resize slides accordingly to height
 	function Backstretch(elements) {
 		var width = window.innerWidth
@@ -108,7 +130,7 @@ $(document).ready(function(){
 				if(height <= 700) {
 					$(el).css('min-height', height + 1 + 'px')
 				} else {
-					$(el).css('min-height', 800 + 1 + 'px')
+					$(el).css('min-height', 701 + 'px')
 					//el.style['minHeight'] = 800 + 'px'
 				}
 			}

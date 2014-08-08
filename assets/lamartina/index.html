@@ -192,7 +192,7 @@
 
 	<section id="gallery" class="section px" data-speed="5" data-adjust="900" data-type="background" style="padding-bottom:10%"
 	ng-controller="GalleryCtrl">
-		<div class="picture-large" ng-show="currentPicture!=null">
+		<div class="picture-large" ng-show="currentPicture!=null" ng-cloak>
 			<span class="close-handle" ng-click="close()">&times;</span>
 			<img ng-src="{{currentPicture.src}}" ng-click="close()">
 		</div>
@@ -396,7 +396,6 @@
 	<script src="assets/site.js?v=2190481204"></script>
 	<script src="assets/stores.js"></script>
 	<script src="assets/storesEurope.js"></script>
-	<script src="assets/storesWorld.js"></script>
 	<script src="assets/storeFinder.js"></script>
 	<script src="assets/gallery.js"></script>
 </body>
