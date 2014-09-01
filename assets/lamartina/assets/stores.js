@@ -977,7 +977,7 @@ var storeList = [
         "zipCode": 1220,
         "town": "SOFIA",
         "countryCode": "BG",
-        "country": "BULGARY",
+        "country": "bulgaria",
         "coords": {
             "latitude": 42.6977082,
             "longitude": 23.3218675
