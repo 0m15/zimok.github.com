@@ -290,7 +290,7 @@
 								ng-class="{selected: props.selected, animated: true}"
 								class="col-md-6"
 							>
-								<a href="" ng-click="selectTown(town)">{{town}}</a></li>
+								<a href="" ng-click="selectTown(town)" ng-if="town !== 'undefined'">{{town}}</a></li>
 						</ul>
 					</div>
 					<br>

@@ -1106,9 +1106,9 @@ var storeList = [
     {
         "name": "LUXUS RETAIL PVT LTD",
         "address": "7/17 SARVPRIYA VIHAR",
-        "zipCode": null,
+        "zipCode": "00000",
         "town": "110016 NEW DELHI (INDIA)",
-        "countryCode": null,
+        "countryCode": "IN",
         "country": "INDIA",
         "coords": {
             "latitude": 28.542944,

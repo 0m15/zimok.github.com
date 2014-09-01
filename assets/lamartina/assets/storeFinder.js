@@ -71,7 +71,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 			if(!storesByKey[store[key]]) {
 				storesByKey[store[key]] = {'stores':[], 'selected': undefined}
 			}
-			storesByKey[store[key]]['stores'].push(store)
+			if(store[key] !== undefined) storesByKey[store[key]]['stores'].push(store)
 		})
 		var collectionName = "storesBy" + key.charAt(0).toUpperCase() + key.substr(1).toLowerCase()
 		$scope[collectionName] = storesByKey
