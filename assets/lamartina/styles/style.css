@@ -645,6 +645,28 @@ img.fade-in {
 		z-index: 1;
 	}
 
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+		#section-1,
+		#section-2,
+		#section-3,
+		#section-4,
+		#section-5,
+		#section-6 {
+			background-size: auto auto;
+		}
+	}
+
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+		#section-1,
+		#section-2,
+		#section-3,
+		#section-4,
+		#section-5,
+		#section-6 {
+			background-size: auto auto;
+		}
+	}
+
 	#section-6 .section-text--bottom {
 		background: transparent;
 		background: #ebebeb;
