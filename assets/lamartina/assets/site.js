@@ -247,7 +247,7 @@ $(document).ready(function(){
   }
 
   function parallax() {
-  	if(isIpad) return
+  	if(isiPad) return
 	  var origCurrentY
 	  var i = 0
 
@@ -305,8 +305,8 @@ $(document).ready(function(){
 		})
 
   	$('section[data-type="background"]').each(function(){
-  		if(isIpad) return
-  			
+  		if(isiPad) return
+
 	    var $el = $(this); // assigning the object
 	    var isScrolling = false, _currentTimer = null
 	    var yPos
