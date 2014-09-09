@@ -94,7 +94,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 			longitude: 12
 		},
 		options: {
-			draggable: !isMobile,
+			draggable: false,
 			scrollwheel: false,
 			styles: roadAtlasStyles,
 			navigationControl: false,
