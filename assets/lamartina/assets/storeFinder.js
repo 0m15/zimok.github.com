@@ -32,13 +32,14 @@ var initialCenter = new google.maps.LatLng(42, 12);
 // $scope.map.setMapTypeId('usroadatlas');
 
 var mapOptions = {}
-var ua = navigator.userAgent;
-var isMobile = $(window).width() <= 600 || /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua)
 var GEOCODE_API_KEY = "AIzaSyDToCE_kRLo_41eqc4NEk2quNQS5JjG5Dk";
 var GEOCODE_BASE_URL = "https://maps.googleapis.com/maps/api/geocode/jsonp?callback=callback&key=" + GEOCODE_API_KEY;
 var GEOCODE_URL = "&address=";
 
 app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', '$filter', '$http', function($scope, $timeout, $window, $animate, $filter, $http) {
+	var ua = navigator.userAgent;
+	var isMobile = $($window).width() <= 600 || /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua)
+
 	$scope.stores = $window.storeList
 	$scope.storesEurope = $window.storeListEurope
 	$scope.storesWorld = $window.storeListWorld
@@ -111,7 +112,6 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
         boxClass: 'info-box',
 				closeBoxMargin: "2px 2px 2px 2px",
 				closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
-
       },
       show: true
     }
