@@ -572,6 +572,8 @@ img.fade-in {
 	background-size: cover;
 }
 
+@media screen and(min-width:600px) {
+
 #section-1 .section-text,
 #section-2 .section-text,
 #section-4 .section-text,
@@ -580,10 +582,13 @@ img.fade-in {
 	margin-bottom: 5%;
 	padding: 0 2%;
 }
+}
 
+@media screen and(min-width:600px) {
 #section-3 .section-text,
 #section-6 .section-text {
 	margin: 25% 0;
+}
 }
 
 #section-4 {
