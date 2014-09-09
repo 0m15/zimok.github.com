@@ -32,7 +32,8 @@ var initialCenter = new google.maps.LatLng(42, 12);
 // $scope.map.setMapTypeId('usroadatlas');
 
 var mapOptions = {}
-var isMobile = $(window).width() <= 600
+var ua = navigator.userAgent;
+var isMobile = $(window).width() <= 600 || /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua)
 var GEOCODE_API_KEY = "AIzaSyDToCE_kRLo_41eqc4NEk2quNQS5JjG5Dk";
 var GEOCODE_BASE_URL = "https://maps.googleapis.com/maps/api/geocode/jsonp?callback=callback&key=" + GEOCODE_API_KEY;
 var GEOCODE_URL = "&address=";
