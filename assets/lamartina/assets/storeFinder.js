@@ -120,6 +120,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 
 	var self = this
 	this.geocoder = new google.maps.Geocoder()
+	if(isMobile) $scope.map.setOptions({draggable: false})
 
 	//
 	// geocoding
