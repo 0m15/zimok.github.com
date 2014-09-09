@@ -68,9 +68,11 @@ $(document).ready(function(){
 	// Cache the Window object
 	var $window = $(window);
 	var $body = $('body')
+	var ua = navigator.userAgent;
   var isScrolling = false, _currentTimer = null
   var isMobile = $window.width() <= 600
 	var ticking = false
+	var isiPad = /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua);
 
 	function initAnimateAnchor() {
 		if(isMobile) return
@@ -245,7 +247,7 @@ $(document).ready(function(){
   }
 
   function parallax() {
-
+  	if(isIpad) return
 	  var origCurrentY
 	  var i = 0
 
