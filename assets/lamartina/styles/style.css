@@ -665,6 +665,7 @@ img.fade-in {
 		#section-5,
 		#section-6 {
 			background-size: auto auto;
+			background-attachment: scroll;
 		}
 	}
 
