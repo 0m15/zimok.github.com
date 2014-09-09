@@ -305,7 +305,8 @@ $(document).ready(function(){
 		})
 
   	$('section[data-type="background"]').each(function(){
-
+  		if(isIpad) return
+  			
 	    var $el = $(this); // assigning the object
 	    var isScrolling = false, _currentTimer = null
 	    var yPos
