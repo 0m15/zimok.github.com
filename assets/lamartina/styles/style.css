@@ -607,7 +607,7 @@ img.fade-in {
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1025px) {
 	/* intro */
 	#section-1 {
 		background: url(../assets/slide.jpg) 50% 0 fixed no-repeat;
@@ -653,6 +653,7 @@ img.fade-in {
 		#section-5,
 		#section-6 {
 			background-size: auto auto;
+			background-attachment: scroll;
 		}
 	}
 
