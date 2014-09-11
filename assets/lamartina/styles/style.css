@@ -651,6 +651,11 @@ img.fade-in {
 	}
 
 	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+
+		.navbar-fixed-top {
+			position: static !important;
+		}
+		
 		#section-1,
 		#section-2,
 		#section-3,
@@ -663,6 +668,11 @@ img.fade-in {
 	}
 
 	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+		
+		.navbar-fixed-top {
+			position: static !important;
+		}
+
 		#section-1,
 		#section-2,
 		#section-3,
