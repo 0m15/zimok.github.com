@@ -520,7 +520,7 @@ body {
 }
 
 /* tablet overrides */
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 600) {
 	.section-text--bottom {
 		position: absolute;
 		width: 100%;
