@@ -75,7 +75,6 @@ $(document).ready(function(){
 	var isiPad = /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua);
 
 	function initAnimateAnchor() {
-		if(!isMobile || !isiPad) return
 		// animate anchors
 		$('[data-anchor]').anchorAnimate()
 	}
@@ -113,7 +112,7 @@ $(document).ready(function(){
   // resize slides accordingly to height
 	function Backstretch(elements) {
 		var width = window.innerWidth
-		var height = window.innerHeight - $('.navbar').height() + 60
+		var height = isiPad ? 645 : window.innerHeight - $('.navbar').height() + 60
 		var elementsLength = elements.length
 		var i = 0
 		var currentImg = null
@@ -123,25 +122,30 @@ $(document).ready(function(){
 		var _this = this
 		this.elements = elements
 
-		window.addEventListener('resize', resize)
 		resize()
 
 		function resize() {
 			for(; i < elementsLength; i++) {
 				var el = _this.elements[i]
-				if(height <= 700) {
-					$(el).css('min-height', height + 1 + 'px')
-				} else {
-					$(el).css('min-height', 701 + 'px')
-					//el.style['minHeight'] = 800 + 'px'
-				}
+				// if(height <= 700) {
+				// 	$(el).css('min-height', height + 1 + 'px')
+				// } else {
+				// 	$(el).css('min-height', 701 + 'px')
+				// 	//el.style['minHeight'] = 800 + 'px'
+				// }
+				if(isMobile) height = 645
+				$(el).css('min-height', height + 'px')
 			}
 		}
+
+		$(window).on('resize', function() {
+			resize()
+		})
 	}
 
 	// resize elements
 	function initBackstretch() {
-		if(!isMobile || !isiPad) return new Backstretch(document.querySelectorAll('.px'))
+		return new Backstretch(document.querySelectorAll('.px'))
 	}
 	initBackstretch()
 
@@ -197,7 +201,7 @@ $(document).ready(function(){
  	}
 
  	function onScroll() {
- 		if(isMobile || isiPad) return
+ 		//if(isMobile || isiPad) return
  		//if(!isScrolling) return timer()
  		//isScrolling = false
  		requestTick()
@@ -207,7 +211,7 @@ $(document).ready(function(){
  	onScroll()
 
  	// scroll parallax
- 	var INITIAL_Y = 120
+ 	var INITIAL_Y = 60
  	var currentIndex = 0
  	var i = 0
  	var $menuItems = $('.navbar-nav').find('li a')
@@ -216,6 +220,10 @@ $(document).ready(function(){
  		if(isMobile || isiPad) return
    	$('section[data-type="background"]').each(function(){
    		translateBg($(this), INITIAL_Y)
+
+   		$(window).on('resize', function() {
+				translateBg($(this), INITIAL_Y)   			
+   		})
    	})
  	}
  	initBackgroundTranslation()
@@ -247,7 +255,6 @@ $(document).ready(function(){
   }
 
   function parallax() {
-  	if(isiPad) return
 	  var origCurrentY
 	  var i = 0
 
@@ -305,7 +312,7 @@ $(document).ready(function(){
 		})
 
   	$('section[data-type="background"]').each(function(){
-  		if(isiPad) return
+  		if(isiPad || isMobile) return
 
 	    var $el = $(this); // assigning the object
 	    var isScrolling = false, _currentTimer = null
