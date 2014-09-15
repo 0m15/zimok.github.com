@@ -70,7 +70,7 @@ $(document).ready(function(){
 	var $body = $('body')
 	var ua = navigator.userAgent;
   var isScrolling = false, _currentTimer = null
-  var isMobile = $window.width() <= 600
+  var isMobile = $window.width() <= 1025
 	var ticking = false
 	var isiPad = /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua);
 

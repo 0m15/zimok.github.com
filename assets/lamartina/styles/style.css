@@ -389,6 +389,7 @@ body {
 .section {
 	background-repeat: no-repeat;
 	position: relative;
+	background-position: bottom left;
 }
 
 @media screen and (min-width: 1025px) {
@@ -417,7 +418,7 @@ body {
 
 #section-3 .section-headline,
 #section-3 .section-copy {
-	color: #fff;
+	color: #444;
 }
 
 #section-4 {
@@ -530,16 +531,17 @@ body {
 	.section-text--bottom .section-copy-full {
 		padding: 0 12em;
 	}
-
+	
 	.section-text--left,
 	.section-text--small {
 		max-width: 35%;
 	}
 
 	#section-3 .section-text {
-		float: right;
-		max-width: 50%;
-		padding-top: 4rem;
+		float: none;
+		max-width: 30%;
+		margin: 0 auto;
+		padding: 4rem 2rem;
 	}
 }
 
@@ -581,12 +583,6 @@ body {
 		left: 2em;
 	}
 
-	#section-3 .section-text {
-		float: none;
-		max-width: 30%;
-		margin: 0 auto;
-		padding: 4rem 2rem;
-	}
 
 	.section-text--small.section-text--center {
 		padding-top: 12rem;
