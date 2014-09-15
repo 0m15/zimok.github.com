@@ -520,12 +520,16 @@ body {
 }
 
 /* tablet overrides */
-@media screen and (min-width: 600) {
+@media screen and (min-width: 600px) {
 	.section-text--bottom {
 		position: absolute;
 		width: 100%;
 		bottom: 2em;
 	}	
+
+	.section-text--bottom .section-copy-full {
+		padding: 0 12em;
+	}
 
 	.section-text--left,
 	.section-text--small {
