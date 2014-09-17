@@ -1,36 +1,4 @@
-jQuery.fn.anchorAnimate = function() {
-	$window = $(window)
-	$body = $('body')
-	return this.each(function(){
-		var caller = this
-		$(caller).click(function (event) {
-			event.preventDefault()
-			var elementClick = $(caller).attr("href")
-			if(elementClick.indexOf('#') < 0) elementClick = '#' + elementClick
-			var destination = $(elementClick).offset().top
 
-			// down
-			if(!$body.hasClass('with-fixed-navbar')) {
-				destination -= 117
-
-				// if(elementClick == '#section-1') {
-				// 	destination -= (150 - 118)
-				// }
-			}
-
-
-
-			$("html:not(:animated),body:not(:animated)").animate({
-				scrollTop: destination
-			}, {
-				duration:2000,
-				queue: false,
-				complete:function() {}
-			});
-	  	return false;
-		})
-	})
-}
 
 // RequestAnimationFrame polyfill for older browsers
 var rafPolyfill = function() {
@@ -74,6 +42,40 @@ $(document).ready(function(){
 	var ticking = false
 	var isiPad = /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua);
 
+	jQuery.fn.anchorAnimate = function() {
+	$window = $(window)
+	$body = $('body')
+	return this.each(function(){
+		var caller = this
+		$(caller).click(function (event) {
+			event.preventDefault()
+			var elementClick = $(caller).attr("href")
+			if(elementClick.indexOf('#') < 0) elementClick = '#' + elementClick
+			var destination = $(elementClick).offset().top
+
+			// down
+			if(!$body.hasClass('with-fixed-navbar') && !isMobile && !isiPad) {
+				destination -= 117
+
+				// if(elementClick == '#section-1') {
+				// 	destination -= (150 - 118)
+				// }
+			}
+
+
+
+			$("html:not(:animated),body:not(:animated)").animate({
+				scrollTop: destination
+			}, {
+				duration:2000,
+				queue: false,
+				complete:function() {}
+			});
+	  	return false;
+		})
+	})
+}
+
 	function initAnimateAnchor() {
 		// animate anchors
 		$('[data-anchor]').anchorAnimate()
@@ -83,6 +85,7 @@ $(document).ready(function(){
 	function bindWindowResize() {
     $window.on('resize', function() {
     	resizeVideo()
+    	isMobile = $window.width() <= 1025
     })
 	}
 	bindWindowResize()
