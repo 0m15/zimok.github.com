@@ -1,0 +1,66 @@
+[
+    {
+        "name": "MIK MAK",
+        "nameExtended ": null,
+        "address ": null,
+        "zipCode": null,
+        "town": "Alessandria",
+        "country": "EGITTO"
+    },
+    {
+        "name": "DELTA TRADING (AL KHAYYAT INVESTMEN",
+        "nameExtended ": null,
+        "address ": "P.O.BOX 11245",
+        "zipCode": null,
+        "town": "DUBAI,UAE",
+        "country": "EMIRATI ARABI"
+    },
+    {
+        "name": "AL MUTAWA AND AL KHATEEB",
+        "nameExtended ": null,
+        "address ": "READY CLOTHES CO - KUWAIT",
+        "zipCode": null,
+        "town": null,
+        "country": "KUWAIT"
+    },
+    {
+        "name": "AISHTI",
+        "nameExtended ": null,
+        "address ": "AISHITI BLDG, IAL ELDIB",
+        "zipCode": null,
+        "town": "BEIRUT LEBANON",
+        "country": "LIBANO"
+    },
+    {
+        "name": "LUXURY MARQUE SDN BHD",
+        "nameExtended ": null,
+        "address ": "LEVEL 19 WISMA UOA 2 21 JALAN PINANG",
+        "zipCode": 50450,
+        "town": "KUALA LAMPUR MALAYSIA",
+        "country": "MALAYSIA"
+    },
+    {
+        "name": "LUXURY VENTURES PTE. LTD",
+        "nameExtended ": null,
+        "address ": "LEVEL 19 WISMA OUA 2 21 JALAN PINANG",
+        "zipCode": null,
+        "town": "KUALA LUMPUR (MALAYSIA)",
+        "country": "MALAYSIA"
+    },
+    {
+        "name": "LUXUS RETAIL PVT LTD",
+        "nameExtended ": null,
+        "address ": "7/17 SARVPRIYA VIHAR",
+        "zipCode": null,
+        "town": "110016 NEW DELHI (INDIA)",
+        "country": "INDIA"
+    },
+    {
+        "name": "MAISON LORENZ BACH BAMOCO LTD",
+        "nameExtended ": "MAISON LORENZ BACH BAMOCO",
+        "address ": "Promenade 81 - Postfach 279",
+        "zipCode": 3780,
+        "town": "GSTAAD",
+        "country": "SVIZZERA"
+    }
+]

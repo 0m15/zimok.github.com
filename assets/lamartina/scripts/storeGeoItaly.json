@@ -1,0 +1,730 @@
+[
+    {
+        "Cliente": "FA.MI SRL",
+        "name": "FA.MI ",
+        "address ": "VIA FONTANELLE 153",
+        "zipCode": 87064,
+        "town": "Corigliano Calabro",
+        "province": "CS",
+        "region": "CALABRIA",
+        "coords": {
+            "latitude": 39.5941841,
+            "longitude": 16.5201016
+        }
+    },
+    {
+        "Cliente": "SHYLOCK SRL",
+        "name": "SHYLOCK",
+        "address ": "VIA DON BOSCO 84",
+        "zipCode": 62010,
+        "town": "MONTECOSARO",
+        "province": "MC",
+        "region": "MARCHE",
+        "coords": {
+            "latitude": 43.3163622,
+            "longitude": 13.6392334
+        }
+    },
+    {
+        "Cliente": "CALZOLERIA PARMIGIANA 1887 SNC DI ANTONELLA MOTTA &",
+        "name": "CALZOLERIA PARMIGIANA",
+        "address ": "via migliara 39",
+        "zipCode": 15121,
+        "town": "Alessandria",
+        "province": "AL",
+        "region": "PIEMONTE",
+        "coords": {
+            "latitude": 44.9072727,
+            "longitude": 8.6116796
+        }
+    },
+    {
+        "Cliente": "PIEMMEFFE SAS",
+        "name": "M&F",
+        "address ": "C.SO VITTORIO EMANUELE III, 133",
+        "zipCode": 89900,
+        "town": "Vibo Valentia",
+        "province": "VV",
+        "region": "CALABRIA",
+        "coords": {
+            "latitude": 38.6757774,
+            "longitude": 16.0983488
+        }
+    },
+    {
+        "Cliente": "LA MARTINA STORE FORTE DEI MARMI",
+        "name": "LA MARTINA STORE FORTE DEI MARMI",
+        "address ": "VIA IV^ NOVEMBRE 10",
+        "zipCode": 55042,
+        "town": "FORTE DEI MARMI",
+        "province": "LU",
+        "region": "TOSCANA",
+        "coords": {
+            "latitude": 43.95796170000001,
+            "longitude": 10.1672792
+        }
+    },
+    {
+        "Cliente": "VI.VI. SRL",
+        "name": "VANTO",
+        "address ": "VIA BAVA 1/bis",
+        "zipCode": 10100,
+        "town": "Torino",
+        "province": "TO",
+        "region": "PIEMONTE",
+        "coords": {
+            "latitude": 45.070312,
+            "longitude": 7.686856499999999
+        }
+    },
+    {
+        "Cliente": "EMPORIO GIGLIO SRL",
+        "name": "GIGLIO BOUTIQUE",
+        "address ": "P.ZZA I MAGGIO,18",
+        "zipCode": 87100,
+        "town": "COSENZA",
+        "province": "CS",
+        "region": "CALABRIA",
+        "coords": {
+            "latitude": 39.2982629,
+            "longitude": 16.2537357
+        }
+    },
+    {
+        "Cliente": "MADDALENA FERRARA",
+        "name": "MADDALENA FERRARA",
+        "address ": "CORSO VITTORIO EMANUELE 90",
+        "zipCode": 10121,
+        "town": "Torino",
+        "province": "TO",
+        "region": "PIEMONTE",
+        "coords": {
+            "latitude": 45.070312,
+            "longitude": 7.686856499999999
+        }
+    },
+    {
+        "Cliente": "SPATARELLA VOMERO S.R.L.",
+        "name": "SPATARELLA",
+        "address ": "VIA LUCA GIORDANO, 69/B/C",
+        "zipCode": 80129,
+        "town": "NAPOLI",
+        "province": "NA",
+        "region": "CAMPANIA",
+        "coords": {
+            "latitude": 40.8517746,
+            "longitude": 14.2681244
+        }
+    },
+    {
+        "Cliente": "SERPICO 80 SHOES DI LOCONTE PINA",
+        "name": "SERPICO 80 SHOES",
+        "address ": "C.SO BORGHESE, 26",
+        "zipCode": 31,
+        "town": "Artena",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "latitude": 41.741883,
+            "longitude": 12.9118412
+        }
+    },
+    {
+        "Cliente": "PIERROT SRL",
+        "name": "PIERROT",
+        "address ": "VIA C.COLOMBO 440",
+        "zipCode": 145,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "latitude": 41.8723889,
+            "longitude": 12.4801802
+        }
+    },
+    {
+        "Cliente": "MANCINI PIERO SRL",
+        "name": "MANCINI",
+        "address ": "CORSO XI SETTEMBRE,147/153",
+        "zipCode": 61100,
+        "town": "PESARO",
+        "province": "PU",
+        "region": "MARCHE",
+        "coords": {
+            "latitude": 43.9124756,
+            "longitude": 12.9155494
+        }
+    },
+    {
+        "Cliente": "BALDUCCI CALZATURE S.R.L.",
+        "name": "BALDUCCI",
+        "address ": "Corso De Michetti, 16/18",
+        "zipCode": 64100,
+        "town": "Teramo",
+        "province": "TE",
+        "region": "ABRUZZO",
+        "coords": {
+            "latitude": 42.6611431,
+            "longitude": 13.6986639
+        }
+    },
+    {
+        "Cliente": "I GEMELLI SRL",
+        "name": "MODIGLIANI BOUTIQUE",
+        "address ": "VIA RAINERIO16",
+        "zipCode": 61032,
+        "town": "Fano",
+        "province": "PU",
+        "region": "MARCHE",
+        "coords": {
+            "latitude": 43.8398164,
+            "longitude": 13.0194201
+        }
+    },
+    {
+        "Cliente": "LA MARTINA STORE MILANO MARITTIMA",
+        "name": "LA MARTINA STORE MILANO MARITTIMA",
+        "address ": "VIA MATTEOTTI 44",
+        "zipCode": 48016,
+        "town": "CERVIA MILANO MARITTIMA",
+        "province": "RA",
+        "region": "EMILIA ROMAGNA",
+        "coords": {
+            "latitude": 45.4654219,
+            "longitude": 9.1859243
+        }
+    },
+    {
+        "Cliente": "CARESSE DI MARISA ORTOLANI",
+        "name": "CARESSE",
+        "address ": "P.ZZA GARIBALDI 21",
+        "zipCode": 62024,
+        "town": "Matelica",
+        "province": "MC",
+        "region": "MARCHE",
+        "coords": {
+            "latitude": 43.2511531,
+            "longitude": 13.0091955
+        }
+    },
+    {
+        "Cliente": "MAXMODA S.P.A.",
+        "name": "RITMO SHOES",
+        "address ": "VIA SANTA MARIA, SNC",
+        "zipCode": 20015,
+        "town": "Parabiago",
+        "province": "MI",
+        "region": "LOMBARDIA",
+        "coords": {
+            "latitude": 45.558189,
+            "longitude": 8.9478154
+        }
+    },
+    {
+        "Cliente": "EFFELLE FASHION SAS DI PENNESTRI T.M. & C.",
+        "name": "EFFELLE FASHION",
+        "address ": "VIA S. PERTINI, 16/B",
+        "zipCode": 89063,
+        "town": "MELITO DI PORTO SALVO",
+        "province": "RC",
+        "region": "CALABRIA",
+        "coords": {
+            "latitude": 37.9207033,
+            "longitude": 15.7840128
+        }
+    },
+    {
+        "Cliente": "VIMAR",
+        "name": "CALZATURE LA MODERNA",
+        "address ": "VIA C.LORENZINI,11",
+        "zipCode": 100,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "latitude": 41.8723889,
+            "longitude": 12.4801802
+        }
+    },
+    {
+        "Cliente": "NATI CON LA CAMICIA TREVISANI DAVIDE",
+        "name": "NATI CON LA CAMICIA",
+        "address ": "VIA GARIBALDI 56",
+        "zipCode": 44100,
+        "town": "Ferrara",
+        "province": "FE",
+        "region": "EMILIA ROMAGNA",
+        "coords": {
+            "latitude": 44.8381237,
+            "longitude": 11.619787
+        }
+    },
+    {
+        "Cliente": "HASSAN STORE SRL",
+        "name": "HASSAN",
+        "address ": "VIA DELLA BALDUINA, 65",
+        "zipCode": 136,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "latitude": 41.8723889,
+            "longitude": 12.4801802
+        }
+    },
+    {
+        "Cliente": "CANNIZZARO CONCETTA",
+        "name": "CANNIZZARO",
+        "address ": "VIA TRIESTE , 11",
+        "zipCode": 89024,
+        "town": "Polistena",
+        "province": "RC",
+        "region": "CALABRIA",
+        "coords": {
+            "latitude": 38.4055976,
+            "longitude": 16.0729747
+        }
+    },
+    {
+        "Cliente": "BERTOLDO di Bertoldo Renzo",
+        "name": "BERTOLDO",
+        "address ": "Via Roma, 85",
+        "zipCode": 35010,
+        "town": "MASSANZAGO",
+        "province": "PD",
+        "region": "VENETO",
+        "coords": {
+            "latitude": 45.5554745,
+            "longitude": 12.004631
+        }
+    },
+    {
+        "Cliente": "SABBADINI S.R.L.",
+        "name": "SABBADINI",
+        "address ": "VIA APPIA NUOVA, 1",
+        "zipCode": 183,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "latitude": 41.8723889,
+            "longitude": 12.4801802
+        }
+    },
+    {
+        "Cliente": "GRUPPO LANGOLO DELLO SPORT SRL",
+        "name": "LANGOLO DELLO SPORT",
+        "address ": "VIA DEL PONTE PISANO, 50",
+        "zipCode": 148,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "latitude": 41.8723889,
+            "longitude": 12.4801802
+        }
+    },
+    {
+        "Cliente": "SCIALB SAS DI SCIARRONE E ALBANESE",
+        "name": "SCIALB",
+        "address ": "C.SO GARIBALDI 40",
+        "zipCode": 89100,
+        "town": "Reggio Calabria",
+        "province": "RC",
+        "region": "CALABRIA",
+        "coords": {
+            "latitude": 38.1113006,
+            "longitude": 15.6472914
+        }
+    },
+    {
+        "Cliente": "PIERGIGLI CALZATURE S.R.L.",
+        "name": "PIERGIGLI",
+        "address ": "Viale della Vittoria 106",
+        "zipCode": 64011,
+        "town": "Alba Adriatica",
+        "province": "TE",
+        "region": "ABRUZZO",
+        "coords": {
+            "latitude": 42.8270607,
+            "longitude": 13.9293014
+        }
+    },
+    {
+        "Cliente": "PASS COMPANY SRL",
+        "name": "GALANTE",
+        "address ": "DELLINDUSTRIA, 1/3",
+        "zipCode": 35044,
+        "town": "Montagnana",
+        "province": "PD",
+        "region": "VENETO",
+        "coords": {
+            "latitude": 45.2308365,
+            "longitude": 11.4624091
+        }
+    },
+    {
+        "Cliente": "GAIA SRL",
+        "name": "GAIA CALZATURE",
+        "address ": "VIA ROMA, 97",
+        "zipCode": 90135,
+        "town": "Palermo",
+        "province": "PA",
+        "region": "SICILIA",
+        "coords": {
+            "latitude": 38.1156879,
+            "longitude": 13.3612671
+        }
+    },
+    {
+        "Cliente": "PROFUMERIA DURANTI SAS DI SILVIA PELLICCIA",
+        "name": "DURANTI CALZ.",
+        "address ": "VIA DUOMO 13/15",
+        "zipCode": 5018,
+        "town": "Orvieto",
+        "province": "TR",
+        "region": "UMBRIA",
+        "coords": {
+            "latitude": 42.7185068,
+            "longitude": 12.1107446
+        }
+    },
+    {
+        "Cliente": "NARDIS SPORT SAS DI MANZONI F.& C.",
+        "name": "NARDIS SPORT ",
+        "address ": "VIA N.BOLOGNINI 45",
+        "zipCode": 38086,
+        "town": "PINZOLO",
+        "province": "TN",
+        "region": "TRENTINO ALTO ADIGE",
+        "coords": {
+            "latitude": 46.1597701,
+            "longitude": 10.7650269
+        }
+    },
+    {
+        "Cliente": "F.LLI COLOMBINO DI CARLO E PAOLO COLOMBINO SAS",
+        "name": "COLOMBINO",
+        "address ": "VIA LUZZATTI, 16",
+        "zipCode": 7100,
+        "town": "Sassari",
+        "province": "SS",
+        "region": "SARDEGNA",
+        "coords": {
+            "latitude": 40.7259269,
+            "longitude": 8.5556826
+        }
+    },
+    {
+        "Cliente": "MAGIC DI DALLICANI ANTONELLA E C. SAS",
+        "name": "NEXT",
+        "address ": "CORSO UMBERTO I, 18",
+        "zipCode": 37011,
+        "town": "Bardolino",
+        "province": "VR",
+        "region": "VENETO",
+        "coords": {
+            "latitude": 45.551817,
+            "longitude": 10.7214679
+        }
+    },
+    {
+        "Cliente": "RAGGIO MARCO GIUSEPPE & C. SNC",
+        "name": "RAGGIO",
+        "address ": "VIA UMBRIA 2",
+        "zipCode": 9170,
+        "town": "ORISTANO",
+        "province": "OR",
+        "region": "SARDEGNA",
+        "coords": {
+            "latitude": 39.906182,
+            "longitude": 8.5883863
+        }
+    },
+    {
+        "Cliente": "CUOIERIA FIORENTINA SRL",
+        "name": "CUOIERIA FIORENTINA",
+        "address ": "Via dei Ciliegi, 25",
+        "zipCode": 50066,
+        "town": "Reggello",
+        "province": "FI",
+        "region": "TOSCANA",
+        "coords": {
+            "latitude": 43.6831091,
+            "longitude": 11.5327495
+        }
+    },
+    {
+        "Cliente": "G.R.G. SRL",
+        "name": "TOUT LE MONDE",
+        "address ": "VIA TIBURTINA VALERIA KM 69,00",
+        "zipCode": 67061,
+        "town": "CARSOLI",
+        "province": "AQ",
+        "region": "ABRUZZO",
+        "coords": {
+            "latitude": 42.1003467,
+            "longitude": 13.0894267
+        }
+    },
+    {
+        "Cliente": "FRANCESCA PIU DI BOLOGNOSI GIULIANA",
+        "name": "FRANCESCA PIU",
+        "address ": "Via della Pace, 126",
+        "zipCode": 58100,
+        "town": "Grosseto",
+        "province": "GR",
+        "region": "TOSCANA",
+        "coords": {
+            "latitude": 42.7635254,
+            "longitude": 11.1123634
+        }
+    },
+    {
+        "Cliente": "DE RISO CALZATURE DI CAMILLO DE RISO",
+        "name": "DE RISO",
+        "address ": "VIA BAYLLE,23",
+        "zipCode": 9124,
+        "town": "Cagliari",
+        "province": "CA",
+        "region": "SARDEGNA",
+        "coords": {
+            "latitude": 39.2238411,
+            "longitude": 9.1216613
+        }
+    },
+    {
+        "Cliente": "COM.CA S.R.L",
+        "name": "COM.CA",
+        "address ": "VIA DANTONA, 10/12",
+        "zipCode": 37048,
+        "town": "S.PIETRO DI LEGNAGO",
+        "province": "VR",
+        "region": "VENETO",
+        "coords": {
+            "latitude": 45.1935965,
+            "longitude": 11.303213
+        }
+    },
+    {
+        "Cliente": "IMPRONTE SNC",
+        "name": "IMPRONTE",
+        "address ": "Via Milano n 1/3",
+        "zipCode": 70024,
+        "town": "Gravina in Puglia",
+        "province": "BA",
+        "region": "PUGLIA",
+        "coords": {
+            "latitude": 40.8171447,
+            "longitude": 16.418512
+        }
+    },
+    {
+        "Cliente": "MASSETANI SNC",
+        "name": "MASSETANI",
+        "address ": "Via Bruceto, 108",
+        "zipCode": 51010,
+        "town": "Massa e Cozzile",
+        "province": "PT",
+        "region": "TOSCANA",
+        "coords": {
+            "latitude": 43.9094305,
+            "longitude": 10.7431877
+        }
+    },
+    {
+        "Cliente": "VERGELIO CALZATURE S.P.A.",
+        "name": "MARILENA ",
+        "address ": "VIA CADUTI DI MARCINELLE 3",
+        "zipCode": 20134,
+        "town": "Milano",
+        "province": "MI",
+        "region": "LOMBARDIA",
+        "coords": {
+            "latitude": 45.4654219,
+            "longitude": 9.1859243
+        }
+    },
+    {
+        "Cliente": "MISHELLE S.R.L.",
+        "name": "RE MISHELLE",
+        "address ": "VIA TARANTO , 1",
+        "zipCode": 100,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "latitude": 41.8723889,
+            "longitude": 12.4801802
+        }
+    },
+    {
+        "Cliente": "LM RETAIL S.R.L. UNIPERSONALE",
+        "name": "LA MARTINA STORE MILANO",
+        "address ": "PIAZZA DELLA REPUBBLICA, 32",
+        "zipCode": 20124,
+        "town": "Milano",
+        "province": "MI",
+        "region": "LOMBARDIA",
+        "coords": {
+            "latitude": 45.4654219,
+            "longitude": 9.1859243
+        }
+    },
+    {
+        "Cliente": "ENNIO SHOES SRL",
+        "name": "ENNIO SHOES",
+        "address ": "VIA FLAMINIA 467",
+        "zipCode": 100,
+        "town": "ROMA",
+        "province": "RM",
+        "region": "LAZIO",
+        "coords": {
+            "latitude": 41.8723889,
+            "longitude": 12.4801802
+        }
+    },
+    {
+        "Cliente": "MAZZITTI LEATHER SAS DI MAZZITTI R. & C.",
+        "name": "MAZZITTI LEATHER",
+        "address ": "C.SO FEDERICO II 24",
+        "zipCode": 67100,
+        "town": "LAQUILA",
+        "province": "AQ",
+        "region": "ABRUZZO",
+        "coords": {
+            "latitude": 42.3498479,
+            "longitude": 13.3995091
+        }
+    },
+    {
+        "Cliente": "CALZATURE ALADINO SNC",
+        "name": "ALADINO",
+        "address ": "Via Trento, 52",
+        "zipCode": 52025,
+        "town": "Montevarchi",
+        "province": "AR",
+        "region": "TOSCANA",
+        "coords": {
+            "latitude": 43.530781,
+            "longitude": 11.5639528
+        }
+    },
+    {
+        "Cliente": "ROSE ROSA SRL",
+        "name": "SCARPELLI",
+        "address ": "Via Cesare Guasti, 32/34",
+        "zipCode": 59100,
+        "town": "Prato",
+        "province": "PO",
+        "region": "TOSCANA",
+        "coords": {
+            "latitude": 43.8777049,
+            "longitude": 11.102228
+        }
+    },
+    {
+        "Cliente": "PRIMO PIANO DI BORGHESI PAOLA",
+        "name": "PRIMO PIANO ",
+        "address ": "VIA LAMARMORA14",
+        "zipCode": 13900,
+        "town": "Biella",
+        "province": "BI",
+        "region": "PIEMONTE",
+        "coords": {
+            "latitude": 45.56288420000001,
+            "longitude": 8.0583397
+        }
+    },
+    {
+        "Cliente": "ROSSO PICCANTE SNC DI ESPOSTI LARA & C.",
+        "name": "ROSSO PICCANTE",
+        "address ": "C.so Garibaldi 33",
+        "zipCode": 61034,
+        "town": "Fossombrone",
+        "province": "PU",
+        "region": "MARCHE",
+        "coords": {
+            "latitude": 43.6886585,
+            "longitude": 12.8033192
+        }
+    },
+    {
+        "Cliente": "DIGIE CALZATURE DI LENTICCHIA D. SNC",
+        "name": "DIGIE CALZ.",
+        "address ": "LOC.PONTE RIO 79",
+        "zipCode": 6059,
+        "town": "Todi",
+        "province": "PG",
+        "region": "UMBRIA",
+        "coords": {
+            "latitude": 42.7819352,
+            "longitude": 12.4065686
+        }
+    },
+    {
+        "Cliente": "GOTHA SRL",
+        "name": "JADICICCO DAL 1890",
+        "address ": "VIA DELLA SAPIENZA, 12",
+        "zipCode": 1100,
+        "town": "Viterbo",
+        "province": "VT",
+        "region": "LAZIO",
+        "coords": {
+            "latitude": 42.4206766,
+            "longitude": 12.107669
+        }
+    },
+    {
+        "Cliente": "GIGLIO BOUTIQUE S.R.L.",
+        "name": "GIGLIO BOUTIQUE",
+        "address ": "VIA XX SETTEMBRE 94",
+        "zipCode": 88046,
+        "town": "LAMEZIA TERME",
+        "province": "CZ",
+        "region": "CALABRIA",
+        "coords": {
+            "latitude": 38.962912,
+            "longitude": 16.3092719
+        }
+    },
+    {
+        "Cliente": "GALLES SRL",
+        "name": "GALLES ",
+        "address ": "via santa teresa 6",
+        "zipCode": 10121,
+        "town": "Torino",
+        "province": "TO",
+        "region": "PIEMONTE",
+        "coords": {
+            "latitude": 45.070312,
+            "longitude": 7.686856499999999
+        }
+    },
+    {
+        "Cliente": "TUTTI TIPI SRL",
+        "name": "TUTTI TIPI",
+        "address ": "C.SO MATTEOTTI 114",
+        "zipCode": 60100,
+        "town": "Ancona",
+        "province": "AN",
+        "region": "MARCHE",
+        "coords": {
+            "latitude": 43.6158299,
+            "longitude": 13.518915
+        }
+    },
+    {
+        "Cliente": "G&G COLLECTION SRL",
+        "name": "G&G",
+        "address ": "VIA VITTORIO VENETO 14",
+        "zipCode": 88900,
+        "town": "Crotone",
+        "province": "KR",
+        "region": "CALABRIA",
+        "coords": {
+            "latitude": 39.0807932,
+            "longitude": 17.1271102
+        }
+    }
+]

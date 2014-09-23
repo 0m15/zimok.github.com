@@ -1,6 +1,6 @@
-#storeList = require("../assets/stores")
-#storeList = require("../assets/storesEurope")
-storeList = require("../assets/storesWorld")
+#storeList = require("./store/stores")
+#storeList = require("./store/storesEurope")
+storeList = require("./store/storesWorld")
 
 request = require("superagent")
 fs = require("fs")
@@ -33,6 +33,8 @@ getGeodata = (store, done, i) ->
 	query = "#{store.address} #{store.town}"
 	if store.country
 		query = "#{query} #{store.country}"
+	console.log store
+	console.log 'query:', query
 	url = getUrl query
 	req = makeRequest url
 	requests.push req

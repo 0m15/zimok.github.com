@@ -2,7 +2,7 @@
 (function() {
   var GEOCODE_API_KEY, GEOCODE_BASE_URL, GEOCODE_URL, JSONStore, OUT, added, extend, fs, getGeodata, getResults, getStoresLocation, getUrl, makeRequest, request, requests, storeList, storesGeo;
 
-  storeList = require("../assets/storesWorld");
+  storeList = require("./store/storesWorld");
 
   request = require("superagent");
 
@@ -38,6 +38,8 @@
     if (store.country) {
       query = "" + query + " " + store.country;
     }
+    console.log(store);
+    console.log('query:', query);
     url = getUrl(query);
     req = makeRequest(url);
     requests.push(req);
@@ -68,8 +70,8 @@
       if (typeof data === 'object') {
         _store = extend(store, {});
         _store.coords = {
-          lat: data.lat,
-          lng: data.lng
+          latitude: data.lat,
+          longitude: data.lng
         };
         storesGeo.push(_store);
         console.log('adding', data);

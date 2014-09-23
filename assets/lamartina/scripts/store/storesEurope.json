@@ -1,0 +1,160 @@
+var storelist = [
+    {
+        "name": "avg mowdevertriebs gmbh",
+        "address": "kaerntner str. 19,",
+        "zipcode": "a1010",
+        "town": "wien",
+        "countrycode": "at",
+        "country": "austria"
+    },
+    {
+        "name": "commercial multi development d.o.o.",
+        "address": "rz matulji ii, trtni 78",
+        "zipcode": 51211,
+        "town": "matulji (croatia)",
+        "countrycode": null,
+        "country": "croazia"
+    },
+    {
+        "name": "ueberst heidi foged christiensen",
+        "address": "torvegade 7",
+        "zipcode": 7100,
+        "town": "vejle",
+        "countrycode": null,
+        "country": "danimarca"
+    },
+    {
+        "name": "ap store historie de femmes sarl",
+        "address": "boulevard wilson, 146",
+        "zipcode": 6160,
+        "town": "juan les pins",
+        "countrycode": "fr",
+        "country": "francia"
+    },
+    {
+        "name": "ernest walter moeller",
+        "address": "buttermarkt 3",
+        "zipcode": 47906,
+        "town": "kempen",
+        "countrycode": "de",
+        "country": "germania"
+    },
+    {
+        "name": "la martina sylt",
+        "address": "gaat,4",
+        "zipcode": 25980,
+        "town": "keitum sylt",
+        "countrycode": "de",
+        "country": "germania"
+    },
+    {
+        "name": "loden-frey verkaufshaus gmbh & co.kg",
+        "address": "triebstr. 36/38",
+        "zipcode": 80993,
+        "town": "munchen",
+        "countrycode": "de",
+        "country": "germania"
+    },
+    {
+        "name": "ludwig goertz gmbh abt. controlling & finanzen",
+        "address": "spitalerstr. 10",
+        "zipcode": 20095,
+        "town": "hamburg",
+        "countrycode": "de",
+        "country": "germania"
+    },
+    {
+        "name": "paparazzi by ninok ltd",
+        "address": "nagelshof 11",
+        "zipcode": 49716,
+        "town": "meppen",
+        "countrycode": "de",
+        "country": "germania"
+    },
+    {
+        "name": "peter deuber moden",
+        "address": "coburger str. 7",
+        "zipcode": 96215,
+        "town": "lichtenfels",
+        "countrycode": "de",
+        "country": "germania"
+    },
+    {
+        "name": "schuh - mohr gmbh",
+        "address": "domstrasse 28",
+        "zipcode": 97070,
+        "town": "wurzburg",
+        "countrycode": "de",
+        "country": "germania"
+    },
+    {
+        "name": "schuhe lueke gmbh",
+        "address": "schusterstrasse 33",
+        "zipcode": 79098,
+        "town": "freiburg",
+        "countrycode": "de",
+        "country": "germania"
+    },
+    {
+        "name": "schuhhaus zumnorde gmbh & co.",
+        "address": "salzmannstrasse,58",
+        "zipcode": 48147,
+        "town": "muenster",
+        "countrycode": "de",
+        "country": "germania"
+    },
+    {
+        "name": "notos com holdings s.a.",
+        "address": "5 kalyftaki str., 145 64, kifissia,",
+        "zipcode": null,
+        "town": "athens,greece",
+        "countrycode": null,
+        "country": "grecia"
+    },
+    {
+        "name": "besting limited",
+        "address": "5th floor, 86 jermyn street",
+        "zipcode": "sw1y",
+        "town": "6aw london",
+        "countrycode": "uk",
+        "country": "inghilterra"
+    },
+    {
+        "name": "el corte ingles, s.a.",
+        "address": "c/hermosilla, 112",
+        "zipcode": 28009,
+        "town": "madrid",
+        "countrycode": "es",
+        "country": "spagna"
+    },
+    {
+        "name": "franc sa",
+        "address": "av. estrasburgo, 1",
+        "zipcode": 17250,
+        "town": "platja daro",
+        "countrycode": "es",
+        "country": "spagna"
+    },
+    {
+        "name": "tycoon trade srl",
+        "address": "39-41, academiei st. 4th floor",
+        "zipcode": 1001,
+        "town": "bucharest (romania)",
+        "countrycode": null,
+        "country": "romania"
+    },
+    {
+        "name": "agressia group ltd",
+        "address": "rozhen blvd 22a",
+        "zipcode": 1220,
+        "town": "sofia",
+        "countrycode": "bg",
+        "country": "bulgaria"
+    }
+]
+
+if(typeof module !== "undefined") {
+  module.exports = storelist
+} else {
+  window.storelist = storelist
+}

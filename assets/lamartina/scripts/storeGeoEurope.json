@@ -1,206 +1,194 @@
 [
     {
-        "name": "LUDWIG GOERTZ GmbH Abt. Controlling & Finanzen",
-        "address": "Spitalerstr. 10",
-        "zipCode": 20095,
-        "town": "HAMBURG",
-        "countryCode": "DE",
-        "country": "GERMANIA",
-        "coords": {
-            "lat": 53.552139,
-            "lng": 10.0030947
-        }
-    },
-    {
-        "name": "AVG MOwDEVERTRIEBS GmbH",
-        "address": "KAERNTNER STR. 19,",
-        "zipCode": "A1010",
-        "town": "WIEN",
-        "countryCode": "AT",
-        "country": "AUSTRIA",
-        "coords": {
-            "lat": 48.2064034,
-            "lng": 16.371678
-        }
-    },
-    {
-        "name": "LA MARTINA SYLT",
-        "address": "GAAT,4",
-        "zipCode": 25980,
-        "town": "KEITUM SYLT",
-        "countryCode": "DE",
-        "country": "GERMANIA",
-        "coords": {
-            "lat": 54.89318,
-            "lng": 8.37096
-        }
-    },
-    {
+        "nameExtended": "UEBERST HEIDI FOGED CHRISTIENSEN",
         "name": "UEBERST HEIDI FOGED CHRISTIENSEN",
         "address": "TORVEGADE 7",
         "zipCode": 7100,
         "town": "VEJLE",
-        "countryCode": null,
-        "country": "DANIMARCA",
+        "country": "danimarca",
         "coords": {
-            "lat": 55.7087526,
-            "lng": 9.5330023
+            "latitude": 55.7087526,
+            "longitude": 9.5330023
         }
     },
     {
-        "name": "SCHUHE LUEKE GmbH",
-        "address": "SCHUSTERSTRASSE 33",
-        "zipCode": 79098,
-        "town": "FREIBURG",
-        "countryCode": "DE",
-        "country": "GERMANIA",
+        "nameExtended": "AVG MODEVERTRIEBS GmbH",
+        "name": "STEFFL",
+        "address": "KAERNTNER STR. 19,",
+        "zipCode": "A1010",
+        "town": "WIEN",
+        "country": "austria",
         "coords": {
-            "lat": 47.9946531,
-            "lng": 7.853636300000001
+            "latitude": 48.2064034,
+            "longitude": 16.371678
         }
     },
     {
-        "name": "AP STORE HISTORIE DE FEMMES SARL",
+        "nameExtended": "AP STORE HISTORIE DE FEMMES SARL",
+        "name": "AP STORE HISTORIE DE FEMMES ",
         "address": "Boulevard Wilson, 146",
         "zipCode": 6160,
         "town": "JUAN LES PINS",
-        "countryCode": "FR",
-        "country": "FRANCIA",
+        "country": "francia",
         "coords": {
-            "lat": 43.5679846,
-            "lng": 7.1125355
+            "latitude": 43.5679846,
+            "longitude": 7.1125355
         }
     },
     {
-        "name": "LODEN-FREY VERKAUFSHAUS GMBH & CO.KG",
-        "address": "Triebstr. 36/38",
-        "zipCode": 80993,
-        "town": "MUNCHEN",
-        "countryCode": "DE",
-        "country": "GERMANIA",
-        "coords": {
-            "lat": 48.18686539999999,
-            "lng": 11.5341416
-        }
-    },
-    {
-        "name": "EL CORTE INGLES, S.A.",
-        "address": "C/HERMOSILLA, 112",
-        "zipCode": 28009,
-        "town": "MADRID",
-        "countryCode": "ES",
-        "country": "SPAGNA",
-        "coords": {
-            "lat": 40.4255777,
-            "lng": -3.6706424
-        }
-    },
-    {
-        "name": "FRANC SA",
-        "address": "AV. ESTRASBURGO, 1",
-        "zipCode": 17250,
-        "town": "PLATJA DARO",
-        "countryCode": "ES",
-        "country": "SPAGNA",
-        "coords": {
-            "lat": 41.8179488,
-            "lng": 3.0668559
-        }
-    },
-    {
-        "name": "BESTING LIMITED",
-        "address": "5TH FLOOR, 86 JERMYN STREET",
-        "zipCode": "SW1Y",
-        "town": "6AW LONDON",
-        "countryCode": "UK",
-        "country": "INGHILTERRA",
-        "coords": {
-            "lat": 51.50798169999999,
-            "lng": -0.1374494
-        }
-    },
-    {
-        "name": "AGRESSIA GROUP LTD",
-        "address": "ROZHEN BLVD 22A",
-        "zipCode": 1220,
-        "town": "SOFIA",
-        "countryCode": "BG",
-        "country": "BULGARIA",
-        "coords": {
-            "lat": 42.6977082,
-            "lng": 23.3218675
-        }
-    },
-    {
+        "nameExtended": "ERNEST WALTER MOELLER",
         "name": "ERNEST WALTER MOELLER",
         "address": "BUTTERMARKT 3",
         "zipCode": 47906,
         "town": "KEMPEN",
-        "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "germania",
         "coords": {
-            "lat": 51.36402,
-            "lng": 6.41871
+            "latitude": 51.36402,
+            "longitude": 6.41871
         }
     },
     {
+        "nameExtended": "LA MARTINA SYLT",
+        "name": "LA MARTINA SYLT",
+        "address": "GAAT,4",
+        "zipCode": 25980,
+        "town": "KEITUM SYLT",
+        "country": "germania",
+        "coords": {
+            "latitude": 54.89318,
+            "longitude": 8.37096
+        }
+    },
+    {
+        "nameExtended": "SCHUH - MOHR GMBH",
+        "name": "SCHUH - MOHR ",
+        "address": "Domstrasse 28",
+        "zipCode": 97070,
+        "town": "WURZBURG",
+        "country": "germania",
+        "coords": {
+            "latitude": 49.7931761,
+            "longitude": 9.930385099999999
+        }
+    },
+    {
+        "nameExtended": "LODEN-FREY VERKAUFSHAUS GMBH & CO.KG",
+        "name": "LODEN-FREY",
+        "address": "Triebstr. 36/38",
+        "zipCode": 80993,
+        "town": "MUNCHEN",
+        "country": "germania",
+        "coords": {
+            "latitude": 48.1868651,
+            "longitude": 11.5341439
+        }
+    },
+    {
+        "nameExtended": "BESTING LIMITED",
+        "name": "GUARDS POLO CLUB STORE BY LA MARTINA",
+        "address": "5TH FLOOR, 86 JERMYN STREET",
+        "zipCode": "SW1Y",
+        "town": "6AW LONDON",
+        "country": "inghilterra",
+        "coords": {
+            "latitude": 51.50798169999999,
+            "longitude": -0.1374494
+        }
+    },
+    {
+        "nameExtended": "LUDWIG GOERTZ GmbH Abt. Controlling & Finanzen",
+        "name": "LUDWIG GOERTZ ",
+        "address": "Spitalerstr. 10",
+        "zipCode": 20095,
+        "town": "HAMBURG",
+        "country": "germania",
+        "coords": {
+            "latitude": 53.552139,
+            "longitude": 10.0030947
+        }
+    },
+    {
+        "nameExtended": "EL CORTE INGLES, S.A.",
+        "name": "EL CORTE INGLES",
+        "address": "C/HERMOSILLA, 112",
+        "zipCode": 28009,
+        "town": "MADRID",
+        "country": "spagna",
+        "coords": {
+            "latitude": 40.4255777,
+            "longitude": -3.6706424
+        }
+    },
+    {
+        "nameExtended": "PETER DEUBER MODEN",
         "name": "PETER DEUBER MODEN",
         "address": "Coburger Str. 7",
         "zipCode": 96215,
         "town": "LICHTENFELS",
-        "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "germania",
         "coords": {
-            "lat": 50.14687,
-            "lng": 11.06282
+            "latitude": 50.14687,
+            "longitude": 11.06282
         }
     },
     {
-        "name": "PAPARAZZI BY NINOK LTD",
+        "nameExtended": "AGRESSIA GROUP LTD",
+        "name": "AGRESSIA ",
+        "address": "ROZHEN BLVD 22A",
+        "zipCode": 1220,
+        "town": "SOFIA",
+        "country": "bulgaria",
+        "coords": {
+            "latitude": 42.6977082,
+            "longitude": 23.3218675
+        }
+    },
+    {
+        "nameExtended": "SCHUHE LUEKE GmbH",
+        "name": "SCHUHE LUEKE ",
+        "address": "SCHUSTERSTRASSE 33",
+        "zipCode": 79098,
+        "town": "FREIBURG",
+        "country": "germania",
+        "coords": {
+            "latitude": 47.9946531,
+            "longitude": 7.853636300000001
+        }
+    },
+    {
+        "nameExtended": "PAPARAZZI BY NINOK LTD",
+        "name": "PAPARAZZI BY NINOK",
         "address": "NAGELSHOF 11",
         "zipCode": 49716,
         "town": "MEPPEN",
-        "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "germania",
         "coords": {
-            "lat": 52.69012,
-            "lng": 7.289879999999999
+            "latitude": 52.69012,
+            "longitude": 7.289879999999999
         }
     },
     {
-        "name": "TYCOON TRADE SRL",
-        "address": "39-41, ACADEMIEI ST. 4TH FLOOR",
-        "zipCode": 1001,
-        "town": "BUCHAREST (ROMANIA)",
-        "countryCode": null,
-        "country": "ROMANIA",
-        "coords": {
-            "lat": 44.438179,
-            "lng": 26.0979567
-        }
-    },
-    {
-        "name": "SCHUHHAUS ZUMNORDE Gmbh & CO.",
+        "nameExtended": "SCHUHHAUS ZUMNORDE Gmbh & CO.",
+        "name": "SCHUHHAUS ZUMNORDE ",
         "address": "SALZMANNSTRASSE,58",
         "zipCode": 48147,
         "town": "MUENSTER",
-        "countryCode": "DE",
-        "country": "GERMANIA",
+        "country": "germania",
         "coords": {
-            "lat": 51.98278,
-            "lng": 7.617679999999999
+            "latitude": 51.98278,
+            "longitude": 7.617679999999999
         }
     },
     {
-        "name": "SCHUH - MOHR GMBH",
-        "address": "Domstrasse 28",
-        "zipCode": 97070,
-        "town": "WURZBURG",
-        "countryCode": "DE",
-        "country": "GERMANIA",
+        "nameExtended": "FRANC SA",
+        "name": "MAR FRANC",
+        "address": "AV. ESTRASBURGO, 1",
+        "zipCode": 17250,
+        "town": "PLATJA DARO",
+        "country": "spagna",
         "coords": {
-            "lat": 49.7931761,
-            "lng": 9.930385099999999
+            "latitude": 41.8179488,
+            "longitude": 3.0668559
         }
     }
 ]
