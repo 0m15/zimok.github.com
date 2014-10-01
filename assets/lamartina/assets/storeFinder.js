@@ -232,6 +232,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 
 
 	$scope.addMarker = function(store, id) {
+		console.log('addMarker', store)
 		var marker = {
 			id: id,
 			title: store.name,
@@ -242,9 +243,8 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 			longitude: store.coords.longitude,
 			distance: store.distance
 		}
-		marker.onClicked = function() {
-			console.log("click")
 
+		marker.onClicked = function() {
 			var _marker = new google.maps.Marker({
 				map: $scope.map.control.getGMap(),
 				draggable: false,
@@ -254,6 +254,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 			toggleInfoBox(_marker, marker)
 		}
 		$scope.map.markers.push(marker)
+		if(!$scope.$$phase) $scope.$apply()
 	}
 
 	this.fitToPoints = function(points) {
@@ -270,21 +271,32 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 
 	this.addMarkers = function(key, val) {
 		angular.forEach($scope.stores, function(store, idx) {
+
 			if(store[key] && store[key].toLowerCase() == val) {
+				console.log('store', store, idx, key, val)
 				$scope.addMarker(store, idx)
 			}
 		})
 	}
 
+	
 	this.addMarkers('country', 'italy')
-	this.addMarkers('country', 'germania')
+	this.addMarkers('country', 'germany')
 	this.addMarkers('country', 'austria')
-	this.addMarkers('country', 'francia')
-	this.addMarkers('country', 'danimarca')
-	this.addMarkers('country', 'inghilterra')
-	this.addMarkers('country', 'spagna')
+	this.addMarkers('country', 'france')
+	this.addMarkers('country', 'denmark')
+	this.addMarkers('country', 'england')
+	this.addMarkers('country', 'spain')
 	this.addMarkers('country', 'bulgaria')
-	this.addMarkers('country', 'romania')
+	this.addMarkers('country', 'india')
+	this.addMarkers('country', 'malaysia')
+	this.addMarkers('country', 'egypt')
+	this.addMarkers('country', 'switzerland')
+	this.addMarkers('country', 'kuwait')
+	this.addMarkers('country', 'lebanon')
+	this.addMarkers('country', 'uk')
+	this.addMarkers('country', 'united arab emirates')
+
 
 
 	function sortByDistance(a, b) {

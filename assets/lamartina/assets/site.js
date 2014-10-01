@@ -1,4 +1,7 @@
-
+if(!window.console) {
+	window.console = {}
+	window.console.log = window.console.info = function() {}
+}
 
 // RequestAnimationFrame polyfill for older browsers
 var rafPolyfill = function() {

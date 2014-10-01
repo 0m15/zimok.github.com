@@ -733,7 +733,7 @@ var storeList = [
         "address": "TORVEGADE 7",
         "zipCode": "7100",
         "town": "vejle",
-        "country": "danimarca",
+        "country": "denmark",
         "coords": {
             "latitude": 55.7087526,
             "longitude": 9.5330023
@@ -757,7 +757,7 @@ var storeList = [
         "address": "Boulevard Wilson, 146",
         "zipCode": 6160,
         "town": "JUAN LES PINS",
-        "country": "francia",
+        "country": "france",
         "coords": {
             "latitude": 43.5679846,
             "longitude": 7.1125355
@@ -769,7 +769,7 @@ var storeList = [
         "address": "BUTTERMARKT 3",
         "zipCode": 47906,
         "town": "KEMPEN",
-        "country": "germania",
+        "country": "germany",
         "coords": {
             "latitude": 51.36402,
             "longitude": 6.41871
@@ -781,7 +781,7 @@ var storeList = [
         "address": "GAAT,4",
         "zipCode": 25980,
         "town": "KEITUM SYLT",
-        "country": "germania",
+        "country": "germany",
         "coords": {
             "latitude": 54.89318,
             "longitude": 8.37096
@@ -793,7 +793,7 @@ var storeList = [
         "address": "Domstrasse 28",
         "zipCode": 97070,
         "town": "WURZBURG",
-        "country": "germania",
+        "country": "germany",
         "coords": {
             "latitude": 49.7931761,
             "longitude": 9.930385099999999
@@ -805,7 +805,7 @@ var storeList = [
         "address": "Triebstr. 36/38",
         "zipCode": 80993,
         "town": "MUNCHEN",
-        "country": "germania",
+        "country": "germany",
         "coords": {
             "latitude": 48.1868651,
             "longitude": 11.5341439
@@ -817,7 +817,7 @@ var storeList = [
         "address": "5TH FLOOR, 86 JERMYN STREET",
         "zipCode": "SW1Y",
         "town": "6AW LONDON",
-        "country": "inghilterra",
+        "country": "uk",
         "coords": {
             "latitude": 51.50798169999999,
             "longitude": -0.1374494
@@ -829,7 +829,7 @@ var storeList = [
         "address": "Spitalerstr. 10",
         "zipCode": 20095,
         "town": "HAMBURG",
-        "country": "germania",
+        "country": "germany",
         "coords": {
             "latitude": 53.552139,
             "longitude": 10.0030947
@@ -841,7 +841,7 @@ var storeList = [
         "address": "C/HERMOSILLA, 112",
         "zipCode": 28009,
         "town": "MADRID",
-        "country": "spagna",
+        "country": "spain",
         "coords": {
             "latitude": 40.4255777,
             "longitude": -3.6706424
@@ -853,7 +853,7 @@ var storeList = [
         "address": "Coburger Str. 7",
         "zipCode": 96215,
         "town": "LICHTENFELS",
-        "country": "germania",
+        "country": "germany",
         "coords": {
             "latitude": 50.14687,
             "longitude": 11.06282
@@ -877,7 +877,7 @@ var storeList = [
         "address": "SCHUSTERSTRASSE 33",
         "zipCode": 79098,
         "town": "FREIBURG",
-        "country": "germania",
+        "country": "germany",
         "coords": {
             "latitude": 47.9946531,
             "longitude": 7.853636300000001
@@ -889,7 +889,7 @@ var storeList = [
         "address": "NAGELSHOF 11",
         "zipCode": 49716,
         "town": "MEPPEN",
-        "country": "germania",
+        "country": "germany",
         "coords": {
             "latitude": 52.69012,
             "longitude": 7.289879999999999
@@ -901,7 +901,7 @@ var storeList = [
         "address": "SALZMANNSTRASSE,58",
         "zipCode": 48147,
         "town": "MUENSTER",
-        "country": "germania",
+        "country": "germany",
         "coords": {
             "latitude": 51.98278,
             "longitude": 7.617679999999999
@@ -913,10 +913,106 @@ var storeList = [
         "address": "AV. ESTRASBURGO, 1",
         "zipCode": 17250,
         "town": "PLATJA DARO",
-        "country": "spagna",
+        "country": "spain",
         "coords": {
             "latitude": 41.8179488,
             "longitude": 3.0668559
+        }
+    },
+    {
+        "name": "MIK MAK",
+        "address": null,
+        "zipCode": null,
+        "town": "Alessandria",
+        "countryCode": "EG",
+        "country": "egypt",
+        "coords": {
+            "latitude": 31.2221007,
+            "longitude": 29.9718363
+        }
+    },
+    {
+        "name": "LUXURY MARQUE SDN BHD",
+        "address": "LEVEL 19 WISMA UOA 2 21 JALAN PINANG",
+        "zipCode": 50450,
+        "town": "KUALA LAMPUR MALAYSIA",
+        "countryCode": "ML",
+        "country": "malaysia",
+        "coords": {
+            "latitude": 3.15276,
+            "longitude": 101.711933
+        }
+    },
+    {
+        "name": "LUXURY VENTURES PTE. LTD",
+        "address": "LEVEL 19 WISMA OUA 2 21 JALAN PINANG",
+        "zipCode": null,
+        "town": "KUALA LUMPUR (MALAYSIA)",
+        "countryCode": "ML",
+        "country": "malaysia",
+        "coords": {
+            "latitude": 3.15276,
+            "longitude": 101.711933
+        }
+    },
+    {
+        "name": "MAISON LORENZ BACH BAMOCO LTD",
+        "address": "Promenade 81 - Postfach 279",
+        "zipCode": 3780,
+        "town": "GSTAAD",
+        "countryCode": "CH",
+        "country": "switzerland",
+        "coords": {
+            "latitude": 46.4706828,
+            "longitude": 7.2844744
+        }
+    },
+    {
+        "name": "LUXUS RETAIL PVT LTD",
+        "address": "7/17 SARVPRIYA VIHAR",
+        "zipCode": "00100",
+        "town": "110016 NEW DELHI (INDIA)",
+        "countryCode": "IN",
+        "country": "india",
+        "coords": {
+            "latitude": 28.542944,
+            "longitude": 77.20549419999999
+        }
+    },
+    {
+        "name": "AISHTI",
+        "address": "AISHITI BLDG",
+        "zipCode": "00100",
+        "town": "JAL ELDIB",
+        "countryCode": "IN",
+        "country": "lebanon",
+        "coords": {
+            "latitude": 33.9088,
+            "longitude": 35.582
+        }
+    },
+    {
+        "name": "AL MUTAWA AND AL KHATEEB ",
+        "address": "READY CLOTHES CO",
+        "zipCode": "00100",
+        "town": "Kuwait City",
+        "countryCode": "IN",
+        "country": "kuwait",
+        "coords": {
+            "latitude": 29.3697,
+            "longitude": 47.9783
+        }
+    },
+    {
+        "name": "DELTA TRADING ",
+        "address": "P.O.BOX 11245",
+        "zipCode": "00100",
+        "town": "DUBAI",
+        "countryCode": "IN",
+        "country": "united arab emirates",
+        "coords": {
+            "latitude": 25.2711,
+            "longitude": 55.3075
         }
     }
 
