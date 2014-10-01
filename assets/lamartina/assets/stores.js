@@ -1014,7 +1014,20 @@ var storeList = [
             "latitude": 25.2711,
             "longitude": 55.3075
         }
+    },
+    {
+        "name": "NOTOS",
+        "address": "5 KALYFTAKI, 145 64, KIFISSIA",
+        "zipCode": "00100",
+        "town": "Athens",
+        "countryCode": "GR",
+        "country": "greece",
+        "coords": {
+            "latitude": 38.079122, 
+            "longitude": 23.793642
+        }
     }
+
 
 ]
 

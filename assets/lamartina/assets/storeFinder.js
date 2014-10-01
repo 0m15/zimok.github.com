@@ -296,6 +296,7 @@ app.controller('StoreFinderCtrl', ['$scope', '$timeout', '$window', '$animate', 
 	this.addMarkers('country', 'lebanon')
 	this.addMarkers('country', 'uk')
 	this.addMarkers('country', 'united arab emirates')
+	this.addMarkers('country', 'greece')
 
 
 
