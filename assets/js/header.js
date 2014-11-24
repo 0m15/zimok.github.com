@@ -224,4 +224,4 @@ function Header() {
 
 setTimeout(function() {
   var head = new Header()
-}, 1000)
+}, 0)
