@@ -1,6 +1,11 @@
+// adapted with lot of kudos from: http://tympanus.net/codrops/2014/09/23/animated-background-headers/
+// changes:
+// - add pixel density support
+// TODO:
+// - improve code,
+// - code cleaning,
+// - try a faster implementation of delaunay
 function Header() {
-
-
     var EDGE_STROKE_COLOR = 'rgba(150,150,150,.4)'
     var CIRCLE_FILL_COLOR = 'rgba(150,150,150,.4)'
 
@@ -14,6 +19,15 @@ function Header() {
     initAnimation();
     addListeners();
 
+    function setCanvasSize(canvas) {
+      canvas.width = width * devicePixelRatio;
+      canvas.height = height * devicePixelRatio;
+      canvas.style.width = width + "px"
+      canvas.style.height = height + "px"
+      ctx = canvas.getContext('2d');
+      ctx.scale(devicePixelRatio, devicePixelRatio)
+    }
+
     function initHeader() {
         width = window.innerWidth;
         height = window.innerHeight;
@@ -23,12 +37,7 @@ function Header() {
         largeHeader.style.height = height+'px';
 
         canvas = document.getElementById('canvas');
-        canvas.width = width * devicePixelRatio;
-        canvas.height = height * devicePixelRatio;
-        canvas.style.width = width + "px"
-        canvas.style.height = height + "px"
-        ctx = canvas.getContext('2d');
-        ctx.scale(devicePixelRatio, devicePixelRatio)
+        setCanvasSize(canvas)
 
         // create points
         points = []
@@ -102,11 +111,12 @@ function Header() {
     }
 
     function resize() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        largeHeader.style.height = height+'px';
-        canvas.width = width;
-        canvas.height = height;
+        // width = window.innerWidth;
+        // height = window.innerHeight;
+        // largeHeader.style.height = height+'px';
+        // canvas.width = width;
+        // canvas.height = height;
+        setCanvasSize(canvas);
     }
 
     // animation
