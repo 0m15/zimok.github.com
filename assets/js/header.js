@@ -1,6 +1,4 @@
-
-
-(function() {
+function Header() {
 
 
     var EDGE_STROKE_COLOR = 'rgba(150,150,150,.4)'
@@ -57,7 +55,7 @@
                 {x: 5, y: 87},
                 {x: 5, y: 5},
                 {x: 126, y: 5},
-                {x: 126, y: 5}    
+                {x: 126, y: 5}
             ]
         }
 
@@ -70,7 +68,7 @@
             ['v0','v1','v2'].forEach(function(k) {
                 var vertex = triangles[i][k]
                 var c = new Circle(vertex, 2+Math.random()*2, CIRCLE_FILL_COLOR);
-                vertex.circle = c;    
+                vertex.circle = c;
             })
         }
     }
@@ -121,7 +119,7 @@
 
     function animate() {
       var currentPoint, currentPointDistance
-        
+
         if(animateHeader) {
             // clear the context
             ctx.clearRect(0,0,width,height);
@@ -151,14 +149,14 @@
                 ctx.beginPath();
                 drawLines(currentPoint);
                 ctx.closePath();
-                currentPoint['v0'].circle.draw();    
-                
+                currentPoint['v0'].circle.draw();
+
             }
         }
         requestAnimationFrame(animate);
     }
 
-    
+
 
 
     function shiftPoint(p) {
@@ -175,7 +173,7 @@
     // Canvas manipulation
     function drawLines(p) {
         if(!p.active) return;
-        
+
         // for(var i in p.closest) {
         //     triangle = triangles[i]
         //     ctx.beginPath();
@@ -186,7 +184,7 @@
         //     ctx.lineWidth= 1
         //     ctx.stroke();
         // }
-        
+
         //for(var i = 0; i < triangles.length; i++) {
             var triangle = p//triangles[i]
             ctx.lineWidth = 1
@@ -222,4 +220,8 @@
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
 
-})();
+};
+
+setTimeout(function() {
+  var head = new Header()
+}, 1000)
