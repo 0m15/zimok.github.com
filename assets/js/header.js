@@ -10,7 +10,7 @@ function Header() {
     var CIRCLE_FILL_COLOR = 'rgba(150,150,150,.4)'
 
     var width, height, largeHeader, canvas, ctx, points, target, triangles, animateHeader = true;
-    var pointDistanceRatio = window.innerWidth / 75
+    var pointDistanceRatio = window.innerWidth / 120
     console.log(pointDistanceRatio)
 
     var devicePixelRatio = window.devicePixelRatio || 1
@@ -123,8 +123,8 @@ function Header() {
     // animation
     function initAnimation() {
         animate();
-        // for(var i in points) {
-        //     shiftPoint(points[i]);
+        // for(var i in triangles) {
+        //     shiftPoint(triangles[i]);
         // }
     }
 
@@ -171,40 +171,28 @@ function Header() {
 
 
     function shiftPoint(p) {
-        // TweenLite
-        //   .to(p, 6+1*Math.random(), {
-        //       x: p.originX-70+Math.random()*120,
-        //       y: p.originY-70+Math.random()*120, ease:Power4.easeInOut,
-        //       onComplete: function() {
-        //           shiftPoint(p);
-        //       }
-        //   });
+        TweenLite
+          .to(p.v0, 6+1*Math.random(), {
+              x: p.originX-70+Math.random()*120,
+              y: p.originY-70+Math.random()*120, ease:Power4.easeInOut,
+              onComplete: function() {
+                  shiftPoint(p);
+              }
+          });
     }
 
     // Canvas manipulation
     function drawLines(p) {
         if(!p.active) return;
-
-        // for(var i in p.closest) {
-        //     triangle = triangles[i]
-        //     ctx.beginPath();
-        //     ctx.moveTo(triangles[i].v0.x, triangles[i].v0.y);
-        //     ctx.lineTo(triangle.v1.x, triangle.v1.y);
-        //     ctx.lineTo(p.closest[i].x, p.closest[i].y);
-        //     ctx.strokeStyle = 'rgba(120,120,150,'+ p.active+')';
-        //     ctx.lineWidth= 1
-        //     ctx.stroke();
-        // }
-
-        //for(var i = 0; i < triangles.length; i++) {
-            var triangle = p//triangles[i]
-            ctx.lineWidth = 1
-            ctx.moveTo(triangle.v0.x, triangle.v0.y);
-            ctx.lineTo(triangle.v1.x, triangle.v1.y);
-            ctx.lineTo(triangle.v2.x, triangle.v2.y);
-            ctx.strokeStyle = 'rgba(120,120,150,'+p.active+')';
-            ctx.stroke();
-        //}
+          var triangle = p//triangles[i]
+          ctx.lineWidth = 1
+          ctx.moveTo(triangle.v0.x, triangle.v0.y);
+          ctx.lineTo(triangle.v1.x, triangle.v1.y);
+          ctx.lineTo(triangle.v2.x, triangle.v2.y);
+          ctx.fillStyle = 'rgba(255,120,150,'+p.active+')';
+          ctx.strokeStyle = 'rgba(255,120,150,'+p.active+')';
+          ctx.stroke();
+          ctx.fill();
     }
 
     function Circle(pos,rad,color) {
@@ -221,7 +209,7 @@ function Header() {
             if(!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius * _this.radiusRatio, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(100,100,100,'+ _this.active+')';
+            ctx.fillStyle = 'rgba(255,100,100,'+ _this.active+')';
             ctx.fill();
         };
     }
