@@ -10,7 +10,8 @@ function Header() {
     var CIRCLE_FILL_COLOR = 'rgba(150,150,150,.4)'
 
     var width, height, largeHeader, canvas, ctx, points, target, triangles, animateHeader = true;
-    var pointDistanceRatio = 8
+    var pointDistanceRatio = window.innerWidth / 75
+    console.log(pointDistanceRatio)
 
     var devicePixelRatio = window.devicePixelRatio || 1
 
