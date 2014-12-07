@@ -43,8 +43,8 @@ function Header() {
         // create points
         points = []
 
-        for(var x = 0; x < width; x = x + width/pointDistanceRatio) {
-            for(var y = 0; y < height; y = y + height/pointDistanceRatio) {
+        for(var x = -80; x < width + 80; x = x + width/pointDistanceRatio) {
+            for(var y = -80; y < height + 80; y = y + height/pointDistanceRatio) {
                 var px = x + Math.random()*width/pointDistanceRatio;
                 var py = y + Math.random()*height/pointDistanceRatio;
                 var p = {0: x, 1: y, x: px, originX: px, y: py, originY: py };
@@ -140,21 +140,25 @@ function Header() {
                 currentPoint.x = currentPoint.v0.x
                 currentPoint.y = currentPoint.v0.y
                 currentPointDistance = Math.abs(getDistance(target, currentPoint))
-                if(currentPointDistance < 4000) {
-                    currentPoint.active = 0.2;
-                    currentPoint['v0'].circle.active = 0.3
+                if(currentPointDistance < 3000) {
+                    currentPoint.active = 0.15;
+                    currentPoint['v0'].circle.active = 0.15
                     currentPoint['v0'].circle.radiusRatio = 1.25
                 } else if(currentPointDistance < 20000) {
-                    currentPoint.active = 0.125;
-                    currentPoint['v0'].circle.active = 0.2
+                    currentPoint.active = 0.12;
+                    currentPoint['v0'].circle.active = 0.12
                     currentPoint['v0'].circle.radiusRatio = 0.8
                 } else if(currentPointDistance < 40000) {
-                    currentPoint.active = 0.05;
+                    currentPoint.active = 0.1;
                     currentPoint['v0'].circle.active = 0.1
                     currentPoint['v0'].circle.radiusRatio = 0.5
+                } else if(currentPointDistance < 60000) {
+                    currentPoint.active = 0.075;
+                    currentPoint['v0'].circle.active = 0.075
+                    currentPoint['v0'].circle.radiusRatio = 0.5
                 } else {
-                    currentPoint.active = 0.025;
-                    currentPoint['v0'].circle.active = 0.025
+                    currentPoint.active = 0.02;
+                    currentPoint['v0'].circle.active = 0.02
                     currentPoint['v0'].circle.radiusRatio = 0.3
                 }
                 ctx.beginPath();
@@ -189,8 +193,8 @@ function Header() {
           ctx.moveTo(triangle.v0.x, triangle.v0.y);
           ctx.lineTo(triangle.v1.x, triangle.v1.y);
           ctx.lineTo(triangle.v2.x, triangle.v2.y);
-          ctx.fillStyle = 'rgba(255,120,150,'+p.active+')';
-          ctx.strokeStyle = 'rgba(255,120,150,'+p.active+')';
+          ctx.fillStyle = 'rgba(174, 168, 211,'+0+')';
+          ctx.strokeStyle = 'rgba(174, 168, 211,'+p.active+')';
           ctx.stroke();
           ctx.fill();
     }
@@ -209,7 +213,7 @@ function Header() {
             if(!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius * _this.radiusRatio, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(255,100,100,'+ _this.active+')';
+            ctx.fillStyle = 'rgba(253,100,100,'+ _this.active+')';
             ctx.fill();
         };
     }
