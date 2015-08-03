@@ -10,7 +10,8 @@ function Header() {
     var CIRCLE_FILL_COLOR = 'rgba(150,150,150,.4)'
 
     var width, height, largeHeader, canvas, ctx, points, target, triangles, animateHeader = true;
-    var pointDistanceRatio = window.innerWidth / 120
+    var pointDistanceRatio = window.innerWidth / 240
+
     console.log(pointDistanceRatio)
 
     var devicePixelRatio = window.devicePixelRatio || 1
@@ -34,7 +35,7 @@ function Header() {
         height = window.innerHeight;
         target = {x: width/2, y: height/2};
 
-        largeHeader = document.getElementById('large-header');
+        largeHeader = document.getElementById('hero');
         largeHeader.style.height = height+'px';
 
         canvas = document.getElementById('canvas');
@@ -88,8 +89,8 @@ function Header() {
         if(!('ontouchstart' in window)) {
             window.addEventListener('mousemove', mouseMove);
         }
-        window.addEventListener('scroll', scrollCheck);
-        window.addEventListener('resize', resize);
+        // window.addEventListener('scroll', scrollCheck);
+        // window.addEventListener('resize', resize);
     }
 
     function mouseMove(e) {
@@ -112,11 +113,6 @@ function Header() {
     }
 
     function resize() {
-        // width = window.innerWidth;
-        // height = window.innerHeight;
-        // largeHeader.style.height = height+'px';
-        // canvas.width = width;
-        // canvas.height = height;
         setCanvasSize(canvas);
     }
 
@@ -193,8 +189,8 @@ function Header() {
           ctx.moveTo(triangle.v0.x, triangle.v0.y);
           ctx.lineTo(triangle.v1.x, triangle.v1.y);
           ctx.lineTo(triangle.v2.x, triangle.v2.y);
-          ctx.fillStyle = 'rgba(174, 168, 211,'+0+')';
-          ctx.strokeStyle = 'rgba(174, 168, 211,'+p.active+')';
+          ctx.fillStyle = 'rgba(255, 250, 273,'+0+')';
+          ctx.strokeStyle = 'rgba(255, 250, 273,'+p.active+')';
           ctx.stroke();
           ctx.fill();
     }
@@ -213,7 +209,7 @@ function Header() {
             if(!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius * _this.radiusRatio, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(253,100,100,'+ _this.active+')';
+            ctx.fillStyle = 'rgba(255,250,173,'+ _this.active+')';
             ctx.fill();
         };
     }

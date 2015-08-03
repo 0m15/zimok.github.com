@@ -7,6 +7,7 @@
     <meta name="description" content="Based in Bologna, Italy. Formerly at stereomood, Rome. Currently working at musixmatch. Creative developer and user interface designer.">
     <title>simone carella | ui designer &amp; creative coder</title>
 
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
     <link href="/assets/css/style.css" rel="stylesheet">
@@ -19,42 +20,51 @@
     <![endif]-->
   </head>
   <body>
-    <section class="section section-hero" id="large-header">
-      <canvas id="canvas"></canvas>
-      <div class="container">
-        <div class="logo" data-velocity>
-          <svg viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
-          <polygon fill="none" stroke="#f60" stroke-width="4" stroke-linejoin="bevel" stroke-miterlimit="10" points="184.573,169.311
-          	152.962,169.311 114.279,169.311 5.543,169.311 5.543,5.575 5.543,5.575 "/>
-          <polygon fill="none" stroke="#f60" stroke-width="4" stroke-linejoin="bevel" stroke-miterlimit="10" points="126.536,5.575
-          	5.543,87.442 5.543,5.575 126.536,5.575 "/>
-          </svg>
-        </div>
-        <h1 data-velocity><span>simone carella</span></h1>
-        <p data-velocity>
-          based in <a href="https://www.google.it/maps/place/Bologna/@44.4991182,11.3316855,12z" target="_blank">bologna, italy</a><br>
-          currently at <a target="_blank" class="mxm" href="http://musixmatch.com">musixmatch</a> &bull;
-          formerly at <a target="_blank" class="stereomood" href="http://stereomood.com">stereomood</a>
-        </p>
+    
+    <canvas id="canvas"></canvas>
 
-        <h3 data-velocity>Elsewhere</h3>
-        <ul class="list-unstyled">
-          <li data-velocity>
-            <a target="_blank" href="https://twitter.com/fe_uer">twitter</a>
-          </li>
-          <li data-velocity>
-            <a target="_blank" href="https://dribbble.com/simo">dribbble</a>
-          </li>
-          <li data-velocity>
-            <a target="_blank" href="https://hackerleague.org/users/zimok">hackerleague</a>
-          </li>
-          <li data-velocity>
-            <a target="_blank" href="https://github.com/zimok">github</a>
-          </li>
-          <li data-velocity>
-            <a href="mailto:simonecarella@gmail.com">email</a>
-          </li>
-        </ul>
+    <section class="sc-section" id="hero" role="banner">
+      <div class="sc-container">    
+        <div class="sc-hero">
+          <h1 class="sc-section__title">
+            simone<br/> 
+            carella<br/>
+            full<br/>
+            stack<br/>
+            design&mdash;<br/>
+            er
+          </h1>
+
+          <p class="sc-section__copy">
+            I take care of digital products from concept and prototyping to
+            the effective launch. Been working in the industry for more than 12 years.
+            I've worked for dozens of small-to-big startups and agencies. <br/><br/>
+            Want to work with me? Let me know via <a href="mailto:simonecarella@gmail.com">email</a>.
+          </p>
+
+        </div>
+
+        <div class="sc-elsewhere">
+          <h3 class="sc-section__subhead">Elsewhere</h3>
+          <ul class="sc-elsewhere__list">
+            <li data-velocity>
+              <a target="_blank" href="https://twitter.com/fe_uer">Twitter</a>
+            </li>
+            <li data-velocity>
+              <a target="_blank" href="https://dribbble.com/simo">Dribbble</a>
+            </li>
+            <li data-velocity>
+              <a target="_blank" href="https://hackerleague.org/users/zimok">Hackerleague</a>
+            </li>
+            <li data-velocity>
+              <a target="_blank" href="https://github.com/zimok">Github</a>
+            </li>
+            <li data-velocity>
+              <a href="mailto:simonecarella@gmail.com">Email</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </section>
     <script>
@@ -66,16 +76,16 @@
     ga('create', 'UA-41590826-1', 'auto');
     ga('send', 'pageview');
     </script>
-    <script src="/assets/js/tweenlite.min.js"></script>
-    <script src="/assets/js/easepack.min.js"></script>
+    <!--<script src="/assets/js/tweenlite.min.js"></script>
+    <script src="/assets/js/easepack.min.js"></script>-->
     <script src="/assets/js/delaunay.js"></script>
     <script src="/assets/js/raf.js"></script>
-    <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/assets/bower_components/velocity/velocity.min.js"></script>
-    <script src="/assets/bower_components/velocity/velocity.ui.min.js"></script>
+    <!--<script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>-->
+    <!--<script src="/assets/bower_components/velocity/velocity.min.js"></script>-->
+    <!--<script src="/assets/bower_components/velocity/velocity.ui.min.js"></script>-->
     <script src="/assets/js/header.js"></script>
     <script>
-      $('[data-velocity]').velocity("transition.slideLeftIn", { stagger: 75, duration: 750 })
+      // $('[data-velocity]').velocity("transition.slideLeftIn", { stagger: 75, duration: 750 })
     </script>
   </body>
 </html>
