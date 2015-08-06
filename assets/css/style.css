@@ -33,7 +33,7 @@ body {
   border-right: 12px solid #2574A9;*/
   background: #48424f;/*#175ce6;*/
   color: #f1f1e6; /* #fef454 */
-  font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
+  font-family: 'Work Sans', Helvetica Neue, Helvetica, sans-serif;
 }
 
 .sc-container {
@@ -51,11 +51,12 @@ body {
 }
 
 .sc-section__title {
-  font-size: 8rem;
+  font-size: 7rem;
   line-height: 1.25;
   letter-spacing: .5em;
   text-transform: uppercase;
   text-align: left;
+  font-weight: 600;
 }
 
 .sc-section__subhead {
