@@ -164,7 +164,7 @@ function Header() {
 
             }
         }
-        requestAnimationFrame(animate);
+        //requestAnimationFrame(animate);
     }
 
 
