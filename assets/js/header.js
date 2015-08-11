@@ -8,8 +8,8 @@
 function Header() {
     // var EDGE_STROKE_COLOR = 'rgba(150,150,150,.4)'
     // var CIRCLE_FILL_COLOR = 'rgba(150,150,150,.4)'
-    var EDGE_STROKE_COLOR = 'rgba(0,0,0,.65)'
-    var CIRCLE_FILL_COLOR = 'rgba(0,0,50,.9)'
+    var EDGE_STROKE_COLOR = 'rgba(0, 0, 0, .65)'
+    var CIRCLE_FILL_COLOR = 'rgb(255, 0, 200)'
 
     var width, height, largeHeader, canvas, ctx, points, target, triangles, animateHeader = true;
     var pointDistanceRatio = window.innerWidth / 240
@@ -35,7 +35,7 @@ function Header() {
     function initHeader() {
         width = window.innerWidth;
         height = window.innerHeight;
-        target = {x: width/2, y: height/2};
+        target = {x: 100, y: 100};
 
         largeHeader = document.getElementById('hero');
         largeHeader.style.height = height+'px';
@@ -97,14 +97,17 @@ function Header() {
 
     function mouseMove(e) {
         var posx = posy = 0;
+
         if (e.pageX || e.pageY) {
-            posx = e.pageX;
-            posy = e.pageY;
+            posx = e.pageX - window.scrollX;
+            posy = e.pageY - window.scrollY;
         }
+
         else if (e.clientX || e.clientY)    {
             posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
             posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
         }
+
         target.x = posx;
         target.y = posy;
     }
@@ -127,8 +130,7 @@ function Header() {
     }
 
     function animate() {
-      var currentPoint, currentPointDistance
-
+      var currentPoint, currentPointDistance, ratio
         if(animateHeader) {
             // clear the context
             ctx.clearRect(0,0,width,height);
@@ -138,27 +140,34 @@ function Header() {
                 currentPoint.x = currentPoint.v0.x
                 currentPoint.y = currentPoint.v0.y
                 currentPointDistance = Math.abs(getDistance(target, currentPoint))
-                if(currentPointDistance < 3000) {
-                    currentPoint.active = 0.15;
-                    currentPoint['v0'].circle.active = 0.15
-                    currentPoint['v0'].circle.radiusRatio = 1.25
-                } else if(currentPointDistance < 20000) {
-                    currentPoint.active = 0.12;
-                    currentPoint['v0'].circle.active = 0.12
-                    currentPoint['v0'].circle.radiusRatio = 0.8
-                } else if(currentPointDistance < 40000) {
-                    currentPoint.active = 0.1;
-                    currentPoint['v0'].circle.active = 0.1
-                    currentPoint['v0'].circle.radiusRatio = 0.5
-                } else if(currentPointDistance < 60000) {
-                    currentPoint.active = 0.075;
-                    currentPoint['v0'].circle.active = 0.075
-                    currentPoint['v0'].circle.radiusRatio = 0.5
-                } else {
-                    currentPoint.active = 0.02;
-                    currentPoint['v0'].circle.active = 0.02
-                    currentPoint['v0'].circle.radiusRatio = 0.3
-                }
+                // currentPoint.active = 1 - currentPointDistance / 100000
+                currentPoint.active = 0 + (currentPointDistance / 20000000)
+                currentPoint['v0'].circle.active = currentPointDistance / 100
+                currentPoint['v0'].circle.radiusRatio = (currentPointDistance / 2000000)
+
+                console.log('currentPointDistance', currentPointDistance)
+
+                // if(currentPointDistance < 3000) {
+                //     currentPoint.active = 0.15;
+                //     currentPoint['v0'].circle.active = 0.15
+                //     currentPoint['v0'].circle.radiusRatio = 1.25
+                // } else if(currentPointDistance < 20000) {
+                //     currentPoint.active = 0.12;
+                //     currentPoint['v0'].circle.active = 0.12
+                //     currentPoint['v0'].circle.radiusRatio = 0.8
+                // } else if(currentPointDistance < 40000) {
+                //     currentPoint.active = 0.1;
+                //     currentPoint['v0'].circle.active = 0.1
+                //     currentPoint['v0'].circle.radiusRatio = 0.5
+                // } else if(currentPointDistance < 60000) {
+                //     currentPoint.active = 0.075;
+                //     currentPoint['v0'].circle.active = 0.075
+                //     currentPoint['v0'].circle.radiusRatio = 0.5
+                // } else {
+                //     currentPoint.active = 0.02;
+                //     currentPoint['v0'].circle.active = 0.02
+                //     currentPoint['v0'].circle.radiusRatio = 0.3
+                // }
                 ctx.beginPath();
                 drawLines(currentPoint);
                 ctx.closePath();
@@ -212,7 +221,8 @@ function Header() {
             if(!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius * _this.radiusRatio, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(255,250,173,'+ _this.active+')';
+            // ctx.fillStyle = 'rgba(255,250,173,'+ _this.active+')';
+            ctx.fillStyle = 'rgba(90,90,250,'+ _this.active+')';
             ctx.fill();
         };
     }
