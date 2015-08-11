@@ -6,8 +6,10 @@
 // - code cleaning,
 // - try a faster implementation of delaunay
 function Header() {
-    var EDGE_STROKE_COLOR = 'rgba(150,150,150,.4)'
-    var CIRCLE_FILL_COLOR = 'rgba(150,150,150,.4)'
+    // var EDGE_STROKE_COLOR = 'rgba(150,150,150,.4)'
+    // var CIRCLE_FILL_COLOR = 'rgba(150,150,150,.4)'
+    var EDGE_STROKE_COLOR = 'rgba(0,0,0,.65)'
+    var CIRCLE_FILL_COLOR = 'rgba(0,0,50,.9)'
 
     var width, height, largeHeader, canvas, ctx, points, target, triangles, animateHeader = true;
     var pointDistanceRatio = window.innerWidth / 240
@@ -161,7 +163,6 @@ function Header() {
                 drawLines(currentPoint);
                 ctx.closePath();
                 currentPoint['v0'].circle.draw();
-
             }
         }
         //requestAnimationFrame(animate);
@@ -189,8 +190,10 @@ function Header() {
           ctx.moveTo(triangle.v0.x, triangle.v0.y);
           ctx.lineTo(triangle.v1.x, triangle.v1.y);
           ctx.lineTo(triangle.v2.x, triangle.v2.y);
-          ctx.fillStyle = 'rgba(255, 250, 273,'+0+')';
-          ctx.strokeStyle = 'rgba(255, 250, 273,'+p.active+')';
+          // ctx.fillStyle = 'rgba(255, 250, 273,'+0+')';
+          ctx.fillStyle = 'rgba(0, 0, 10,'+0+')';
+          // ctx.strokeStyle = 'rgba(255, 250, 273,'+p.active+')';
+          ctx.strokeStyle = 'rgba(0, 0, 50,'+p.active+')';
           ctx.stroke();
           ctx.fill();
     }
