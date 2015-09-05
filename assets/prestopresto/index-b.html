@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>presto - a design &amp; development company</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/presto.css">
+  <link rel="stylesheet" type="text/css" href="css/presto-a.css">
+  <link rel="stylesheet" type="text/css" href="css/presto-b.css">
+</head>
+<body>
+
+
+  <div class="pst-root">
+    <svg class="pst-svg" width="1335px" height="1336px" viewBox="0 0 1335 1336" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+      <g class="pst-px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path class="pst-px" d="M1,2 L1333.46326,1334.46326" id="Stroke-8" stroke="#222BE2" stroke-width="0.5" sketch:type="MSShapeGroup"></path>
+      </g>
+    </svg>  
+  
+
+  <section class="pst-hero">
+    <h1 class="pst-logo" style="">
+      <span class="pst-px  pst-turqoise">P</span><span class="pst-px  pst-violet">r</span><span class="pst-px  pst-orange">e</span><span class="pst-px  pst-blue">s</span><span class="pst-px  pst-red">t</span><span class="pst-px  pst-yellow">o</span>
+    </h1>
+    <h2 class="pst-logo-subtitle">a design &amp; development company</h2>
+  </section>
+
+  <section class="pst-founders" style="margin-top:250px;padding: 10em">
+    <h2>who we are</h2><br/>
+    <p class="pst-text pst-text--small" style="font-size:28px;font-weight:400">
+      A group of developers, designers 
+      and strategists.
+      We launched together presto in
+      late 2015 after working for several
+      years for small-to-big companies, 
+      startups and online brands.
+      We've worked for companies like TIM, Musixmatch, CONI, Lamborghini.</p>
+  </section>
+
+
+  <p class="pst-contact-text pst-px">work@prestopresto.com</p>
+
+</div>
+<script>
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    var pxElements = document.querySelectorAll('.pst-px')
+    var moveRatio = 60
+    var mouseX = 0
+    var mouseY = 0
+    var elLength = pxElements.length
+    var i = 0
+
+    function translate(el, x, y, degX, degY) {
+      el.style.transform = 'translate3d('+x+'px, '+y+'px, 0px)'
+      //el.style.transform = 'translate3d('+x+'px, '+y+'px, 0px) rotateX('+degX+'deg) rotateY('+degY+'deg)'
+    }
+
+    function setOpacity(el, opacity) {
+      el.style.opacity = opacity
+    }
+
+    var coords = { x: 0, y: 0}
+
+    document.addEventListener('mousemove', function(ev) {
+      mouseX = ev.clientX
+      mouseY = ev.clientY
+    })
+
+    function moveChildren(elements) {
+
+    }
+
+    function animate(elements) {
+      elements || (elements = pxElements)
+      for(; i < elLength; i++) {
+        var x, y, z
+        var currentElement = pxElements[i]
+        var elRect = currentElement.getBoundingClientRect()
+
+
+        coords.x = Math.round(mouseX - elRect.left)
+        coords.y = Math.round(mouseY - elRect.top) + (window.pageYOffset / i * 10) * -1
+
+        x = (coords.x * -1) / moveRatio
+        y = (coords.y + window.pageYOffset * -1) / moveRatio
+
+        var degX = (x + y * -1) / 2
+        var degY = (x + y * 1) / 2
+        translate(currentElement, x, y, degX, degY)
+
+      }
+      i = 0
+      requestAnimationFrame(animate)
+    }
+
+    animate()
+
+
+
+
+
+  })
+})();
+</script>
+</body>
+</html>

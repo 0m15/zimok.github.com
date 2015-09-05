@@ -1,0 +1,231 @@
+
+@font-face {
+    font-family: 'Apercu Regular';
+    src: url('http://f.fontdeck.com/f/1/SEI3TktyNnkAALDvh1kUp6HVbMzoW/lL1pn7qRgPHj2XOtvtv18AmkfBCM/QBPfak1G/8dL6YG8lD2V71EaGAQAL74LSq5CTDsl0CuCkszlWIGlIu9SBKTYxIBttVSleA1SrWEVCIzNxHMK20ujLIsu4ony/1mevTpTREgKmP3oY5lvR9EDW3Gh8aLSoz6MU66A.eot');
+    src: url('http://f.fontdeck.com/f/1/SEI3TktyNnkAALDvh1kUp6HVbMzoW/lL1pn7qRgPHj2XOtvtv18AmkfBCM/QBPfak1G/8dL6YG8lD2V71EaGAQAL74LSq5CTDsl0CuCkszlWIGlIu9SBKTYxIBttVSleA1SrWEVCIzNxHMK20ujLIsu4ony/1mevTpTREgKmP3oY5lvR9EDW3Gh8aLSoz6MU66A.eot?') format('embedded-opentype'),
+    url('http://f.fontdeck.com/f/1/SEI3TktyNnkAALDvh1kUp6HVbMzoW/lL1pn7qRgPHj2XOtvtv18AmkfBCM/QBPfak1G/8dL6YG8lD2V71EaGAQAL74LSq5CTDsl0CuCkszlWIGlIu9SBKTYxIBttVSleA1SrWEVCIzNxHMK20ujLIsu4ony/1mevTpTREgKmP3oY5lvR9EDW3Gh8aLSoz6MU66A.woff') format('woff'),
+    url('http://f.fontdeck.com/f/1/SEI3TktyNnkAALDvh1kUp6HVbMzoW/lL1pn7qRgPHj2XOtvtv18AmkfBCM/QBPfak1G/8dL6YG8lD2V71EaGAQAL74LSq5CTDsl0CuCkszlWIGlIu9SBKTYxIBttVSleA1SrWEVCIzNxHMK20ujLIsu4ony/1mevTpTREgKmP3oY5lvR9EDW3Gh8aLSoz6MU66A.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Bold';
+    src: url('http://f.fontdeck.com/f/1/Tm84TG13dDkAAF1VXlBUO+bygThUCv5Dyz7NEbZP+dDo88fLqeefQoPl8UgCktOEQ9E/FC8085oGb6gJOYM40YvmoG59PansBSzpFitRc1NzoPPm7Wjsu/JOIaUBAFO7JXeqdWwS5COoU1+5TJ9hJ741q5Vaa+kA0DNvGlEFv2dYzVhxsyNDvMGzfAEIngXkV60.eot');
+    src: url('http://f.fontdeck.com/f/1/Tm84TG13dDkAAF1VXlBUO+bygThUCv5Dyz7NEbZP+dDo88fLqeefQoPl8UgCktOEQ9E/FC8085oGb6gJOYM40YvmoG59PansBSzpFitRc1NzoPPm7Wjsu/JOIaUBAFO7JXeqdWwS5COoU1+5TJ9hJ741q5Vaa+kA0DNvGlEFv2dYzVhxsyNDvMGzfAEIngXkV60.eot?') format('embedded-opentype'),
+    url('http://f.fontdeck.com/f/1/Tm84TG13dDkAAF1VXlBUO+bygThUCv5Dyz7NEbZP+dDo88fLqeefQoPl8UgCktOEQ9E/FC8085oGb6gJOYM40YvmoG59PansBSzpFitRc1NzoPPm7Wjsu/JOIaUBAFO7JXeqdWwS5COoU1+5TJ9hJ741q5Vaa+kA0DNvGlEFv2dYzVhxsyNDvMGzfAEIngXkV60.woff') format('woff'),
+    url('http://f.fontdeck.com/f/1/Tm84TG13dDkAAF1VXlBUO+bygThUCv5Dyz7NEbZP+dDo88fLqeefQoPl8UgCktOEQ9E/FC8085oGb6gJOYM40YvmoG59PansBSzpFitRc1NzoPPm7Wjsu/JOIaUBAFO7JXeqdWwS5COoU1+5TJ9hJ741q5Vaa+kA0DNvGlEFv2dYzVhxsyNDvMGzfAEIngXkV60.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Mono Regular';
+    src: url('http://f.fontdeck.com/f/1/LWZFRXp2eW0AB8qoQKMTpggmU+9rS9k544kYf8BuMKhmONCYoq5IheaUAyMwIBN5FpeYFeLh4VGbaBdkocX4Xpo01ru2O/Z5E1g760An0ZhkSwPyZdJMBdQJjT0GsiZ+pcQFJSFiUFB1U7HjhuQ9V/c2CJU3hohK0qEnQOUZGyZuxH6zVxz9muYmj0ZGGncIKRswaHVzsOBNdA.eot');
+    src: url('http://f.fontdeck.com/f/1/LWZFRXp2eW0AB8qoQKMTpggmU+9rS9k544kYf8BuMKhmONCYoq5IheaUAyMwIBN5FpeYFeLh4VGbaBdkocX4Xpo01ru2O/Z5E1g760An0ZhkSwPyZdJMBdQJjT0GsiZ+pcQFJSFiUFB1U7HjhuQ9V/c2CJU3hohK0qEnQOUZGyZuxH6zVxz9muYmj0ZGGncIKRswaHVzsOBNdA.eot?') format('embedded-opentype'),
+    url('http://f.fontdeck.com/f/1/LWZFRXp2eW0AB8qoQKMTpggmU+9rS9k544kYf8BuMKhmONCYoq5IheaUAyMwIBN5FpeYFeLh4VGbaBdkocX4Xpo01ru2O/Z5E1g760An0ZhkSwPyZdJMBdQJjT0GsiZ+pcQFJSFiUFB1U7HjhuQ9V/c2CJU3hohK0qEnQOUZGyZuxH6zVxz9muYmj0ZGGncIKRswaHVzsOBNdA.woff') format('woff'),
+    url('http://f.fontdeck.com/f/1/LWZFRXp2eW0AB8qoQKMTpggmU+9rS9k544kYf8BuMKhmONCYoq5IheaUAyMwIBN5FpeYFeLh4VGbaBdkocX4Xpo01ru2O/Z5E1g760An0ZhkSwPyZdJMBdQJjT0GsiZ+pcQFJSFiUFB1U7HjhuQ9V/c2CJU3hohK0qEnQOUZGyZuxH6zVxz9muYmj0ZGGncIKRswaHVzsOBNdA.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Italic';
+    src: url('http://f.fontdeck.com/f/1/VloxYlRMTXEAB7LZMpbKS1v/4LnXAoA41KfqFRy7LGpnme5dQCj3X7X+ARHjwfTSoy4vePzoJWuwbxph15rHQKK7+zfToBJJz2jYqyXP/YyQZM012OiNUPbg1Z31dpJ0meDroLB6rSIx0NJYRcjIcFl4Lbz9EqPjdnwgd6YPnhP7y/U3dIf9MIC6ZdxT21BuPLKhZ3PPliSGvQ.eot');
+    src: url('http://f.fontdeck.com/f/1/VloxYlRMTXEAB7LZMpbKS1v/4LnXAoA41KfqFRy7LGpnme5dQCj3X7X+ARHjwfTSoy4vePzoJWuwbxph15rHQKK7+zfToBJJz2jYqyXP/YyQZM012OiNUPbg1Z31dpJ0meDroLB6rSIx0NJYRcjIcFl4Lbz9EqPjdnwgd6YPnhP7y/U3dIf9MIC6ZdxT21BuPLKhZ3PPliSGvQ.eot?') format('embedded-opentype'),
+    url('http://f.fontdeck.com/f/1/VloxYlRMTXEAB7LZMpbKS1v/4LnXAoA41KfqFRy7LGpnme5dQCj3X7X+ARHjwfTSoy4vePzoJWuwbxph15rHQKK7+zfToBJJz2jYqyXP/YyQZM012OiNUPbg1Z31dpJ0meDroLB6rSIx0NJYRcjIcFl4Lbz9EqPjdnwgd6YPnhP7y/U3dIf9MIC6ZdxT21BuPLKhZ3PPliSGvQ.woff') format('woff'),
+    url('http://f.fontdeck.com/f/1/VloxYlRMTXEAB7LZMpbKS1v/4LnXAoA41KfqFRy7LGpnme5dQCj3X7X+ARHjwfTSoy4vePzoJWuwbxph15rHQKK7+zfToBJJz2jYqyXP/YyQZM012OiNUPbg1Z31dpJ0meDroLB6rSIx0NJYRcjIcFl4Lbz9EqPjdnwgd6YPnhP7y/U3dIf9MIC6ZdxT21BuPLKhZ3PPliSGvQ.ttf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+html,
+body {
+  font-family: Work Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+body {
+  background: #FFE6EA;
+  /*background: #fff;*/
+  color: #201F1E;
+  position: relative;
+  padding-bottom: 50vh;
+}
+
+body:after {
+  content:"";
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+  height: 150px;
+  background-image: linear-gradient(#FFE6EA, transparent);
+  z-index: 1000;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.275;
+  margin: 0;
+  font-weight: 500;
+}
+
+a {
+  color: #5F5754;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+/* 
+  common accent color 
+*/ 
+.pst-accent {
+  color: #222BE2;
+}
+
+.pst-accent-bg {
+  background: #222BE2;
+}
+
+
+/* 
+  root
+*/
+.pst-root {
+  position: relative;
+}
+
+/* 
+  section containers shared rules
+*/
+.pst-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 
+  svg backgrounds shared rules
+*/
+.pst-svg {
+  position: absolute;
+  overflow: hidden;
+}
+
+.pst-svg-top {
+  height: 100%;
+}
+
+
+/* 
+  spacings
+*/
+.pst-spacing--1 {
+  padding-left: 160px;
+}
+
+.pst-spacing--3 {
+  padding-left: 440px;
+}
+
+.pst-spacing--6 {
+  padding-left: 880px;
+}
+
+/*
+  svg-top
+*/
+
+.pst-svg-top {
+  padding-top: 6rem;
+  padding-left: 110px;
+}
+
+/* text */
+.pst-text {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.pst-text--small {
+  
+}
+
+/* subhead */
+.pst-subhead {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.pst-subhead span {
+  display: block;
+  position: relative;
+}
+
+.pst-subhead span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1.85em;
+  height: 6px;
+  width: 25%;
+  max-width: 160px;
+  background: #222BE2;
+}
+
+/*
+  hero 
+*/
+.pst-hero-text {
+  padding-top: 176px;
+  letter-spacing: -.1em;
+}
+
+.pst-hero-text__header {
+  font-size: 42px;
+  font-weight: 500;
+}
+
+
+/* 
+  about
+*/
+.pst-about-text__header {
+  padding-top: 180px;
+  font-size: 32px
+}
+
+/* 
+  who
+*/
+
+.pst-who-text {
+  margin-top: -32px;
+}
+
+/* 
+  who
+*/
+
+.pst-see-text {
+  padding-top: 180px;
+}
+
+/* footer*/
+.pst-footer--section {
+  padding-top: 220px;
+}
+
+/* animations */
+.pst-px {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform-origin: center;
+}

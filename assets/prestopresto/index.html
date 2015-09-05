@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>presto - a digital agency</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/presto.css">
+</head>
+<body>
+
+  <div class="pst-root">
+    
+    <svg class="pst-svg pst-svg-top" id="square-hero" width="100%" height="677px"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="" stroke="#222BE2" stroke-width="3">
+          <rect class="pst-px" id="Rectangle-5" x="0" y="247" width="426" height="426"></rect>
+          <rect class="pst-px" id="Rectangle-5" x="198" y="0" width="426" height="426"></rect>
+          <rect class="pst-px" id="Rectangle-3" fill="#222BE2" x="0" y="248" width="198" height="178"></rect>
+          <rect class="pst-px" id="Rectangle-3" fill="#222BE2" x="320" y="635" width="100%" height="38"></rect>
+        </g>
+      </g>
+    </svg>
+
+    <section class="pst-px pst-section pst-hero-section">
+      <div class="pst-hero-text pst-spacing--1">
+        <h1 class="pst-hero-text__header">
+          <span class="pst-accent">presto</span> is a design and<br/> development company.<br/>
+          we build digital products<br/> and
+          online experiences.
+        </h1>
+      </div>
+    </section>
+
+    <section class="pst-px pst-section pst-about--section">
+      <div class="pst-about-text pst-spacing--3">
+        <h2 class="pst-about-text__header pst-accent">
+          we design digital products<br/>
+          focused on performance, research<br/>
+          and user experience
+        </h2>
+      </div>
+    </section>
+
+    <section class="pst-px pst-section pst-footer--section">
+      <div class="pst-about-text pst-spacing--1">
+        <h3 class="pst-subhead">
+          <span>work with us?</span>
+        </h3>
+        <p class="pst-text"><a href="#">work@prestopresto.com</a></p>
+      </div>
+
+      <div class="pst-px pst-who-text pst-spacing--6">
+        <h3 class="pst-subhead">
+          <span>who we are?</span>
+        </h3>
+        <p class="pst-text pst-text--small">a group of developers, designers<br/> 
+        and strategists. <br/>
+        we launched together presto in<br/>
+        late 2015 after working for several</br>
+        years for small-to-big companies,<br/> 
+        startups and online brands. </p>
+      </div>
+
+      <div class="pst-px pst-see-text pst-spacing--3">
+        <h3 class="pst-subhead">
+          <span>want to see how do we do?</span>
+        </h3>
+        <p class="pst-text">give us an idea,<br/>
+          we give you back<br/> 
+          a free shot*<br/>
+          shot@prestopresto.com</p>
+      </div>
+    </section>
+
+  </div>
+
+<script>
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    var pxElements = document.querySelectorAll('.pst-px')
+    var moveRatio = 1.125
+    var mouseX = 0
+    var mouseY = 0
+    var elLength = pxElements.length
+    var i = 0
+
+    function translate(el, x, y, degX, degY) {
+      el.style.transform = 'translate3d('+x+'px, '+y+'px, 0px)'
+      //el.style.transform = 'translate3d('+x+'px, '+y+'px, 0px) rotateX('+degX+'deg) rotateY('+degY+'deg)'
+    }
+
+    var coords = { x: 0, y: 0}
+
+    document.addEventListener('mousemove', function(ev) {
+      mouseX = ev.clientX
+      mouseY = ev.clientY
+    })
+
+    function animate() {
+      for(; i < elLength; i++) {
+        var x, y, z
+        var currentElement = pxElements[i]
+        var elRect = currentElement.getBoundingClientRect()
+
+        coords.x = Math.round(mouseX - elRect.left)
+        coords.y = Math.round(mouseY - elRect.top) + (window.pageYOffset / i * 10)
+
+        x = (coords.x * -1) / 60
+        y = (coords.y + window.pageYOffset * -1) / 60
+
+        var degX = (x + y * -1) / 2
+        var degY = (x + y * 1) / 2
+        translate(currentElement, x, y, degX, degY)
+      }
+      i = 0
+      requestAnimationFrame(animate)
+    }
+
+    animate()
+
+
+
+
+
+  })
+})();
+</script>
+</body>
+</html>

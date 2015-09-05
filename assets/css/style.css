@@ -15,12 +15,25 @@ body {
 
 ul, ol {
   padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+p {
+  font-size: 1.25rem;
+  max-width: 720px;
 }
 
 a, a:link {
   color: inherit;
+  text-decoration: none;
 }
+
+.img-responsive {
+  max-width: 1140px;
+  width: 100%;
+}
+
 
 /*
   color combinations
@@ -37,20 +50,31 @@ body {
   font-family: 'Work Sans', Helvetica Neue, Helvetica, sans-serif;
 }
 
+/* text modifiers */
+
+/* TODO: webkit only */
+.sc-text--rainbow {
+  background-image: -webkit-linear-gradient(#0743f0, #f00754);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1px solid #ccc;
+}
+
+/* layout */
 .sc-container {
   margin: 0 40px;
 }
 
+/* sections */
 .sc-section {
   min-height: 100vh;
   min-height: 100%;
-}
-
-.sc-section {
   position: relative;
   z-index: 10;
 }
 
+
+/* maybe it should me renamed to sc-hero__title */
 .sc-section__title {
   font-size: 3.5rem;
   line-height: 2.35;
@@ -64,10 +88,9 @@ body {
 }
 
 .sc-section__subhead {
-  font-size: 1.125rem;  
-  text-transform: uppercase;
-  letter-spacing: .1em;
+  font-size: 3rem;  
   margin-bottom: 1em;
+  letter-spacing: -.05em;
   /*color: #f832ff;*/
 }
 
@@ -77,7 +100,7 @@ body {
   margin: 1em 0;
 }
 
-.sc-elsewhere {
+.sc-section {
   margin: 5rem 0;
 }
 
@@ -88,6 +111,39 @@ body {
   text-decoration: none;
 }
 
+/* cards */
+.sc-cards-container {
+  display: flex;
+  align-items: flex-start;
+  align-items: space-between;
+}
+
+.sc-card {
+  min-height: 200px;
+  max-width: 600px;
+  border: 1px solid #efefef;
+  padding: 20px;
+  -webkit-filter: blur(4px);
+}
+
+.sc-card__title {
+  font-size: .5rem;
+  color: #999;
+}
+
+.sc-card__text {
+  font-size: 1.5rem;
+  margin-top: 5em;
+  font-weight: 300;
+}
+
+/* media */
+.sc-media {
+  margin: 3rem 0;
+  padding: 10px;
+  border: 1px solid #efefef;
+  background: #fff;
+}
 
 #canvas {
   position: fixed;

@@ -1,0 +1,126 @@
+html,
+body {
+  color: #4A4A4A;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: AkzidenzGrotesk;
+  -webkit-font-smoothing: antialias;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+  padding-bottom: 0px;
+}
+
+body:after {
+  display: none;
+}
+
+.pst-root {
+  padding: 8em 12em;
+  font-size: 13px;
+  padding-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .pst-root {
+    font-size: 14px;
+  }  
+}
+
+@media screen and (min-width: 980px) {
+  .pst-root {
+    font-size: 18px;
+  }  
+}
+
+
+.pst-col {
+  max-width: 280px;
+  margin-bottom: 120px;
+}
+
+.pst-svg {
+  position: fixed;
+  right: 0%;
+  left: 0;
+  top: 0;
+}
+
+.pst-hero {
+  position: relative;
+  z-index: 1500;
+  padding-bottom: 200px;
+  padding-top: 50px;
+}
+
+.pst-navbar {
+  font-size: 16px;
+  position: fixed;
+  width: 100%;
+  top: 20px;
+  left: 20px;
+  z-index: 1500;
+}
+
+.pst-navbar__nav {
+  position: absolute;
+  right: 200px;
+  display: block;
+  font-size: 14px;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.pst-logo {
+  font-size: 72px;
+  letter-spacing: .5em;
+}
+
+.pst-hero h1 {
+  line-height: 1.65;
+}
+
+.pst-contact-text {
+  text-align: center;
+  padding-top: 250px;
+  margin-bottom: 250px;
+  font-size: 22px;
+}
+
+.pst-turqoise {
+  color: #2CB294;
+}
+
+.pst-purple {
+  color: #A65EE4;
+}
+
+.pst-violet {
+  color: #BD10E0;
+}
+
+.pst-red {
+  color: #DA322A;
+}
+
+.pst-blue {
+  color: #222BE2;
+}
+
+.pst-lightBlue {
+  color: #4A90E2;
+}
+
+.pst-orange {
+  color: #F9952D;
+}
+
+.pst-yellow {
+  color: #F8E71C;
+}
