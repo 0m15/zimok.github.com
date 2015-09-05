@@ -1,19 +1,36 @@
 html,
 body {
-  color: #4A4A4A;
+  color: #fff;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Apercu Regular",Calibri,sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: AkzidenzGrotesk;
   -webkit-font-smoothing: antialias;
+}
+
+#canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }
 
 body {
   overflow-x: hidden;
-  background: #fff;
+  background: #535a68;
   padding-bottom: 0px;
 }
 
@@ -78,8 +95,10 @@ body:after {
 }
 
 .pst-logo {
-  font-size: 72px;
+  font-size: 14px;
   letter-spacing: .5em;
+  float: left;
+  width: 50%;
 }
 
 .pst-hero h1 {
@@ -110,7 +129,7 @@ body:after {
 }
 
 .pst-blue {
-  color: #222BE2;
+  color: #0054ff;
 }
 
 .pst-lightBlue {

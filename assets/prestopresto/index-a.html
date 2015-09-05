@@ -8,21 +8,13 @@
 </head>
 <body>
 
+<canvas id="canvas"></canvas>
+
 <div class="pst-navbar">
     <h1 class="pst-logo">Presto</h1>
-    <nav class="pst-navbar__nav">
-      <a href="#">about</a>
-      <a href="#">contacts</a>
-    </nav>
   </div>
 
   <div class="pst-root">
-    <svg class="pst-svg" width="1335px" height="1336px" viewBox="0 0 1335 1336" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-      <g class="pst-px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path class="pst-px" d="M1,2 L1333.46326,1334.46326" id="Stroke-8" stroke="#222BE2" stroke-width="0.5" sketch:type="MSShapeGroup"></path>
-      </g>
-    </svg>  
-    
 
 
   <section class="pst-px pst-hero">
@@ -33,7 +25,7 @@
     </h1>
   </section>
 
-  <section class="pst-px pst-founders" style="margin-top:250px">
+  <section class="pst-px pst-founders" style="margin-top:250px;position:relative;z-index:1000">
     <h2>who we are</h2><br/>
     <p class="pst-text pst-text--small" style="font-size:24px;font-weight:400">
       A group of developers, designers 
@@ -112,5 +104,8 @@
   })
 })();
 </script>
+<script src="javascripts/js/delaunay.js"></script>
+<script src="javascripts/js/raf.js"></script>
+<script src="javascripts/js/header.js"></script>
 </body>
 </html>

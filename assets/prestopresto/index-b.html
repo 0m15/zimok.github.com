@@ -19,8 +19,8 @@
   
 
   <section class="pst-hero">
-    <h1 class="pst-logo" style="">
-      <span class="pst-px  pst-turqoise">P</span><span class="pst-px  pst-violet">r</span><span class="pst-px  pst-orange">e</span><span class="pst-px  pst-blue">s</span><span class="pst-px  pst-red">t</span><span class="pst-px  pst-yellow">o</span>
+    <h1 class="pst-px pst-logo" style="">
+      <span class="pst-px  pst-turqoise">P</span><span class="pst-px  pst-violet">r</span><span class="pst-px  pst-orange">e</span><span class="pst-px pst-lightBlue">s</span><span class="pst-px  pst-red">t</span><span class="pst-px  pst-yellow">o</span>
     </h1>
     <h2 class="pst-logo-subtitle">a design &amp; development company</h2>
   </section>
@@ -38,7 +38,7 @@
   </section>
 
 
-  <p class="pst-contact-text pst-px">work@prestopresto.com</p>
+  <p class="pst-contact-text">work@prestopresto.com</p>
 
 </div>
 <script>
@@ -82,9 +82,9 @@
 
         coords.x = Math.round(mouseX - elRect.left)
         coords.y = Math.round(mouseY - elRect.top) + (window.pageYOffset / i * 10) * -1
-
+        var rand = Math.floor(Math.random() * 10)
         x = (coords.x * -1) / moveRatio
-        y = (coords.y + window.pageYOffset * -1) / moveRatio
+        y = (coords.y + (window.pageYOffset * 6 ) * -1 * i) / moveRatio
 
         var degX = (x + y * -1) / 2
         var degY = (x + y * 1) / 2
@@ -102,6 +102,19 @@
 
 
   })
+})();
+</script>
+<script type="text/javascript">
+WebFontConfig = { fontdeck: { id: '59607' } };
+
+(function() {
+  var wf = document.createElement('script');
+  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
 })();
 </script>
 </body>
