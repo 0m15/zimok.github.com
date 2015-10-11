@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="230px" height="234px" viewBox="0 0 230 234" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 190 + Path 723 + Path 724 + Path 164</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-1101.000000, -1773.000000)">
+            <g id="Rectangle-190-+-Path-723-+-Path-724-+-Path-164" sketch:type="MSLayerGroup" transform="translate(1101.000000, 1775.000000)">
+                <rect id="Rectangle-190" fill="#EBE5FF" sketch:type="MSShapeGroup" x="0" y="197" width="230" height="35"></rect>
+                <g id="Path-723-+-Path-724-+-Path-164" transform="translate(72.000000, 0.000000)" stroke="#9464EF" sketch:type="MSShapeGroup">
+                    <path d="M-0.177758855,165.200104 L1.60443421,127.770562 L74.7917754,1.00636868 L104.177759,17.9723741 L31.3757681,144.069121 L-0.177758855,165.200104 Z" id="Path-723" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" fill="#D8D8D8"></path>
+                    <path d="M12.2711089,130.000002 L78.7310416,14.1757025" id="Path-724" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M0.5,149.939146 L12.9728283,156.332986" id="Path-164" stroke-width="4"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

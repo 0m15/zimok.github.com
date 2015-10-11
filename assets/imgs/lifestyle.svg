@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="656px" height="645px" viewBox="0 0 656 645" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-857.000000, -806.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(857.000000, 807.000000)">
+                <g id="Group-+-Rectangle-717-+-Rectangle-718-+-Oval-378" sketch:type="MSShapeGroup">
+                    <g id="Group" transform="translate(0.500000, 0.000000)">
+                        <rect id="Rectangle-719" stroke="#92AFEB" stroke-width="3" fill="#92AFEB" x="10.0925353" y="251.697695" width="115.053707" height="90.0906734" rx="9"></rect>
+                        <path d="M122.129011,314.225674 L165.517636,300.694377 L181.277876,306.195638 L153.430218,372.31287 L138.460927,365.680728 L117.265851,324.654904 L122.129011,314.225674 Z" id="Path-783" stroke="#92AFEB" stroke-width="3" fill="#92AFEB"></path>
+                        <path d="M488.312022,428.244082 C488.994828,429.318021 489.363842,429.935337 489.363842,429.935337 L504.878406,208.066726 L507.5,170.57619 L293.39713,193.278513 L278.478518,406.624856 C271.509107,401.987393 263.182504,399.01955 254.106157,398.38487 C227.385596,396.516386 204.285535,415.576995 202.510727,440.957931 C200.735919,466.338867 220.958448,488.428887 247.679009,490.29737 C274.399571,492.165854 297.499632,473.105245 299.27444,447.724309 C299.283935,447.588523 299.2928,447.452832 299.301038,447.317237 L299.301038,447.317237 L303.405497,451.334162 L319.006002,228.236536 C319.006002,228.236536 423.292947,216.801456 478.735467,210.785151 C480.497546,210.593941 468.157382,332.831945 465.43465,381.423651 C458.845639,376.78244 451.258051,373.694862 443.201719,373.131509 C416.477061,371.262738 393.373678,390.323115 391.598871,415.704051 C389.824063,441.084987 410.049912,463.175239 436.774571,465.044009 C462.845942,466.867097 484.544767,449.512502 488.312022,428.244082 Z" id="Oval-375" stroke="#E76C63" stroke-width="11.125" fill="#E76C63"></path>
+                        <path d="M507.60692,621.678489 L532.672572,569.517757 L499.016608,522.5437 L556.214799,530.26319 L590.41588,483.60192 L600.700653,540.533559 L655.494048,558.669364 L604.652196,586.135562 L604.315296,644.005377 L562.60853,604.048782" id="Star-1" fill="#FFC440"></path>
+                        <rect id="Rectangle-717" stroke="#80EE99" stroke-width="3" fill="#80EE99" x="530.496662" y="8.16380828" width="101.669452" height="165.073487" rx="15.75"></rect>
+                        <ellipse id="Oval-378" stroke="#80EE99" stroke-width="1.125" fill="#574E6E" cx="604.189159" cy="143.499792" rx="11.4983309" ry="11.5308686"></ellipse>
+                        <g id="Rectangle-717-+-Rectangle-718-+-Oval-378" transform="translate(526.500000, 21.000000)" stroke="#80EE99" stroke-width="1.125" fill="#574E6E">
+                            <rect id="Rectangle-718" x="12.9354009" y="7.79799418" width="73.8313876" height="94.6745" rx="9"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,122 @@
+
+
+/* typography */
+
+html,
+body {
+	font-family: "Apercu", San Francisco, Roboto, sans-serif;
+}
+
+body {
+  line-height: 1.4;
+}
+
+/* grid */
+.sc-container {
+	max-width: 1140px;
+	margin: 0 auto;
+  padding: 0 1em;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .sc-flex-container {
+  	display: flex;
+  	justify-content: center;
+  	align-items: flex-end;
+  }
+}
+
+/* navbar */
+.sc-navbar-container {
+  display: flex;
+}
+
+.sc-nav {
+  margin-left: auto;  
+}
+
+/* home: intro */
+.sc-site-title {
+  font-weight: 400;
+  font-size: 42px;
+}
+
+.sc-site-subtitle {
+  display: block;
+  color: #777;
+  font-style: normal;
+  font-weight: 200;
+  font-size: .55em;
+}
+
+.sc-intro {
+	text-align: center;
+  padding-top: 8em;
+}
+
+.sc-works {
+  /*margin-left: -1em;
+  margin-right: -1em;*/
+}
+
+.sc-works__work {
+  height: 255px;
+  padding: 1em;
+  margin: 1em;
+  /*background-image: url(../imgs/noise.png);*/
+  background-color: #eee;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sc-works .sc-work__img {
+	max-width: 100%;
+}
+
+.sc-works__work-train {
+  background-color: #BBD4D4;
+}
+
+.sc-works__work-lifestyle {
+  background-color: #574E6E;
+}
+
+.sc-works__work-link {
+  background-color: #D4BBC5;
+}
+
+
+.sc-works__work-train .sc-work__img,
+.sc-works__work-link .sc-work__img {
+  width: 200px;
+  height: 200px;
+}
+
+.sc-works__work-lifestyle .sc-work__img {
+  margin-left: -3em;
+  margin-top: -.5em;
+}
+
+
+/* footer contacts */
+.sc-footer-contacts {
+  text-align: center;
+  padding-bottom: 8em;
+}
+
+.sc-footer-contacts__text {
+
+}
+
+.sc-footer-contacts__pencil {
+  width: 115px;
+  margin: 12em 0 1.5em;
+}
+
+.sc-footer-contacts__text {
+  font-size: 24px;
+  font-weight: 200;
+}
