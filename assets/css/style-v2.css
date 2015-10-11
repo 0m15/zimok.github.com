@@ -95,6 +95,7 @@ a:hover,active {
 
 .sc-works .sc-work__img {
 	max-width: 100%;
+  width: 100%;
 }
 
 .sc-works__work-train {
