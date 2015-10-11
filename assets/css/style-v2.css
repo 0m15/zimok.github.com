@@ -11,6 +11,15 @@ body {
   line-height: 1.4;
 }
 
+a {
+  color: #9464EF;
+  text-decoration: none;
+}
+
+a:hover,active {
+  text-decoration: underline;
+}
+
 /* grid */
 .sc-container {
 	max-width: 1140px;
@@ -32,8 +41,18 @@ body {
   display: flex;
 }
 
+.sc-logo {
+  padding: 1em 0;
+}
+
 .sc-nav {
   margin-left: auto;  
+}
+
+.sc-nav a {
+  display: inline-block;
+  margin-left: 2em;
+  padding: 1em 0;
 }
 
 /* home: intro */
