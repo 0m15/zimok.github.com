@@ -9,6 +9,7 @@ body {
 
 body {
   line-height: 1.4;
+  color: #4F4950;
 }
 
 a {
@@ -51,8 +52,9 @@ a:hover,active {
 
 .sc-nav a {
   display: inline-block;
-  margin-left: 2em;
+  margin-left: 1em;
   padding: 1em 0;
+  color: #4F4950;
 }
 
 /* home: intro */
