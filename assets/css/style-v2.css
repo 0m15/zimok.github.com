@@ -5,6 +5,8 @@
 html,
 body {
 	font-family: "Apercu", "Apercu Regular", "San Francisco Display", "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -25,8 +27,7 @@ a:hover,active {
 .sc-container {
 	max-width: 1140px;
 	margin: 0 auto;
-  padding: 0 1em;
-  overflow-x: hidden;
+  padding: 0 .5em;
 }
 
 @media screen and (min-width: 768px) {
@@ -34,6 +35,10 @@ a:hover,active {
   	display: flex;
   	justify-content: center;
   	align-items: flex-end;
+  }
+
+  .sc-row {
+    margin-left: -1em;
   }
 }
 
@@ -77,20 +82,13 @@ a:hover,active {
 }
 
 .sc-works {
-  /*margin-left: -1em;
-  margin-right: -1em;*/
+  padding-top: 2em;
 }
 
 .sc-works__work {
-  height: 255px;
-  padding: 1em;
-  margin: 1em;
   /*background-image: url(../imgs/noise.png);*/
-  background-color: #eee;
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-left: 1em;
 }
 
 .sc-works .sc-work__img {
@@ -98,15 +96,24 @@ a:hover,active {
   width: 100%;
 }
 
+.sc-works__work-lifestyle,
+.sc-works__work-link,
 .sc-works__work-train {
+  width: 100%;
   background-color: #BBD4D4;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sc-works__work-lifestyle {
+  width: 100%;
   background-color: #574E6E;
 }
 
 .sc-works__work-link {
+  width: 100%;
   background-color: #D4BBC5;
 }
 
@@ -117,9 +124,10 @@ a:hover,active {
   height: 200px;
 }
 
+
 .sc-works__work-lifestyle .sc-work__img {
   margin-left: -3em;
-  margin-top: -.5em;
+  margin-top: 0em;
 }
 
 
