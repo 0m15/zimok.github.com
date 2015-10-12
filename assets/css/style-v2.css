@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  line-height: 1.4;
+  line-height: 1.55;
   color: #4F4950;
 }
 
@@ -75,7 +75,7 @@ a:hover,active {
   color: #777;
   font-style: normal;
   font-weight: 200;
-  font-size: .55em;
+  font-size: .65em;
 }
 
 .sc-intro {
@@ -154,16 +154,29 @@ a:hover,active {
   font-weight: 200;
 }
 
- .sc-about__text {
+.sc-about {
+  padding-top: 8em;
+  text-align: center;
+}
+
+.sc-about__img {
+  padding-top: 2em;
+}
+
+.sc-about__text {
   font-size: 1.5em;
-  padding:2em 0;
-  font-weight:100
+  padding: 2em 0;
+  font-weight:100;
  }
 
+
  @media screen and (min-width: 768px) {
+
   .sc-about__text {
-    font-size: 1.5em;
-    padding:2em 4em;
-    font-weight:100
+    font-size: 1.35em;
+    font-weight: 100;
+    text-align: left;
+    padding-left: 10em;
+    padding-right: 10em;
   }  
  }
