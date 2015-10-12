@@ -27,7 +27,7 @@ a:hover,active {
 .sc-container {
 	max-width: 1140px;
 	margin: 0 auto;
-  padding: 0 .5em;
+  padding: 0 1em;
 }
 
 @media screen and (min-width: 768px) {
@@ -37,10 +37,12 @@ a:hover,active {
   	align-items: flex-end;
   }
 
-  .sc-row {
+  
+}
+
+.sc-row {
     margin-left: -1em;
   }
-}
 
 /* navbar */
 .sc-navbar-container {
@@ -89,6 +91,7 @@ a:hover,active {
   /*background-image: url(../imgs/noise.png);*/
   flex: 1;
   padding-left: 1em;
+  padding-bottom: 1em;
 }
 
 .sc-works .sc-work__img {
