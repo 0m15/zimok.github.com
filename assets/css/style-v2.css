@@ -100,7 +100,7 @@ a:hover,active {
 }
 
 .sc-works__work-lifestyle,
-.sc-works__work-link,
+.sc-works__work-lamp,
 .sc-works__work-train {
   width: 100%;
   background-color: #BBD4D4;
@@ -115,14 +115,14 @@ a:hover,active {
   background-color: #574E6E;
 }
 
-.sc-works__work-link {
+.sc-works__work-lamp {
   width: 100%;
-  background-color: #D4BBC5;
+  background-color: #F8E1D2;
 }
 
 
 .sc-works__work-train .sc-work__img,
-.sc-works__work-link .sc-work__img {
+.sc-works__work-lamp .sc-work__img {
   width: 200px;
   height: 200px;
 }
