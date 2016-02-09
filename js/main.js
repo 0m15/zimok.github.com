@@ -226,14 +226,15 @@
     if(parseInt(time) % 3 == 0) {
       animateCamera()
     }
-    
+
     //renderer.render(scene, camera)
     composer.render(scene, camera);
   }
 
   function animateCamera() {
     var camPosition = camera.position
-    camera.position.setX(Math.random() * 20)
+    camera.position.setX(Math.random() * 12)
+    camera.position.setY(Math.random() * 6)
   }
 
 
