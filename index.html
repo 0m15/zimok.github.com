@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="I'm an user interface designer and developer. I'm based in Italy, I travel often between Rome and Bologna">
     <meta name="theme-color" content="#9464EF">
     <title>simone carella | user interface designer</title>
-    <link href="/assets/css/style-v3.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    
-    <div class="sc-navbar">
-      <div class="sc-container sc-navbar-container">
-        <div class="sc-logo">sc</div>
-        <nav class="sc-nav">
-          <a href="/">Work</a>
-          <a href="/about.html">About</a>
-          <!--<a href="#">Contacts</a>-->
-        </nav>
-      </div>
-    </div>      
+		<meta charset="utf-8">
+		<style>
+			body {
+				margin: 0px;
+				overflow: hidden;
+				font-family: Apercu;	
+				color: #444;
+			}
 
-    <div class="sc-intro">
+			.sc-hero {
+				z-index: 1;
+				position: absolute;
+				top: 1em;
+				left: 1em;
+			}
 
-      <div class="sc-container">
-        <h1 class="sc-site-title">
-          Simone Carella
-          <em class="sc-site-subtitle">User Interface Designer &amp; Developer</em>
-        </h1>
-      </div>
+			.sc-contacts {
+				position: absolute;
+				z-index: 1;
+				bottom: 1em;
+				right: 1em;
+			}
 
-      <div class="sc-works">
-        <div class="sc-container">
-          <div class="sc-flex-container sc-row">
-            <div class="sc-works__work">
-              <div class="sc-works__work-train">
-                <img src="/assets/imgs/train.png" class="sc-work__img">
-              </div>
-            </div>
+			.sc-contacts a {
+				font-size: 2em;
+				text-decoration: none;
+				color: #8853ff;
+				font-weight: 600;
+			}
+			
+			.sc-hero__title,
+			.sc-hero__subtitle {
+				font-size: 2.5em;
+				margin: 0;
+				line-height: 1;
+			}
 
-            <div class="sc-works__work">
-              <div class="sc-works__work-lifestyle">
-                <img src="/assets/imgs/lifestyle.png" class="sc-work__img">
-              </div>
-            </div>
+			.sc-hero__title {
+				color: #8853ff;
+				font-weight: 100;
+			}
 
-            <div class="sc-works__work">
-              <div class="sc-works__work-lamp">
-                <img src="/assets/imgs/lamp.png" class="sc-work__img">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+			.sc-hero__subtitle {
+				text-transform: uppercase;
+				font-size: .7em;
+				max-width: 120px;
+				line-height: 1.2;
+				margin-top: .5em;
+				color: #fafafa;
+			}
 
-    <div class="sc-footer-contacts">
-      <img src="assets/imgs/pencil.svg" class="sc-footer-contacts__pencil">
-      <p class="sc-footer-contacts__text">
-        Want to work with me?<br/>
-        Drop a line via <a href="mailto:simonecarella@gmail.com">email</a>
-      </p>
-    </div>
-    
-    <script type="text/javascript">
+			canvas {
+				position: fixed;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="sc-hero">
+			<h1 class="sc-hero__title">simc</h1>
+			<h2 class="sc-hero__subtitle">user interface &amp; interactive designer</h2>
+		</div>
+
+		<div class="sc-contacts">
+			<a href="mailto:simonecarella@gmail.com">contact me</a>
+		</div>
+
+
+		<script type="text/javascript">
     WebFontConfig = { fontdeck: { id: '59607' } };
 
     (function() {
@@ -90,5 +98,24 @@
     ga('create', 'UA-41590826-1', 'auto');
     ga('send', 'pageview');
     </script>
-  </body>
+
+    <!--threejs stuff-->
+		<script src="js/three.min.js"></script>
+		<script src="js/CopyShader.js"></script>
+		<!--<script src="js/BokehShader.js"></script>-->
+		<!--<script src="js/DigitalGlitch.js"></script>-->
+		<script src="js/DotScreenShader.js"></script>
+		<script src="js/RGBShiftShader.js"></script>
+		<script src="js/EffectComposer.js"></script>
+		<script src="js/RenderPass.js"></script>
+		<script src="js/MaskPass.js"></script>
+		<script src="js/ShaderPass.js"></script>
+		<!--<script src="js/GlitchPass.js"></script>-->
+		<!--<script src="js/BokehPass.js"></script>-->
+
+		<script src="js/main.js"></script>
+
+	
+
+	</body>
 </html>
