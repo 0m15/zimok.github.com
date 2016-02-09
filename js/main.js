@@ -19,22 +19,24 @@
   init();
   animate();
 
-  function init() {
+  function intervalDrawer() {
+    setTimeout(function() {
+      clear()
+      draw()
+      intervalDrawer()
+    }, Math.random() * 4000)
+  }
+  intervalDrawer()
 
-    renderer = new THREE.WebGLRenderer();
-    renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight );
-  
-    renderer.setClearColor( 0x222222, 1);
-    document.body.appendChild( renderer.domElement );
-    
-    camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 2000 );
-    camera.position.z = 1250;
-    scene = new THREE.Scene();
-    scene.fog = new THREE.Fog( 0x222222, 0.1, 2000 );
-    
-    scene.add( object );
+  function clear() {
+    for ( var i = 0; i < OBJECT_ARRAY.length; i ++ ) {
+      var mesh = OBJECT_ARRAY[i]
+      object.remove(mesh)
+    }
+  }
 
+  function draw() {
+    
     var geometry = new THREE.SphereGeometry( 1, 1, 1 );
     var material = new THREE.MeshLambertMaterial( { 
       //wireframe: true,
@@ -52,7 +54,28 @@
       mesh.rotation.set( Math.random() * 2, Math.random() * 2, Math.random() * 2 );
       mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 100;
       object.add( mesh );
+      OBJECT_ARRAY.push(mesh)
     }
+  }
+
+  function init() {
+
+    renderer = new THREE.WebGLRenderer();
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( window.innerWidth, window.innerHeight );
+  
+    renderer.setClearColor( 0x222222, 1);
+    document.body.appendChild( renderer.domElement );
+    
+    camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 2000 );
+    camera.position.z = 1250;
+    scene = new THREE.Scene();
+    scene.fog = new THREE.Fog( 0x222222, 0.1, 2000 );
+    
+    scene.add( object );
+
+    draw()
+    
 
     //LIGHT
     scene.add( new THREE.AmbientLight( 0x5539ff) );
