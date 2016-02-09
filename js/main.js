@@ -7,6 +7,7 @@
   //GLOBAL
   var camera, scene, renderer, composer;
   var object, light;
+  var clock;
   var effect;
   var targetRotation = 0;
   var targetRotationOnMouseDown = 0;
@@ -16,6 +17,9 @@
   var windowHalfX = window.innerWidth / 2;
   var windowHalfY = window.innerHeight / 2;
 
+  clock = new THREE.Clock();
+  var time, delta;
+
   init();
   animate();
 
@@ -24,7 +28,7 @@
       clear()
       draw()
       intervalDrawer()
-    }, 3000)
+    }, Math.random() * 5000)
   }
   intervalDrawer()
 
@@ -32,6 +36,7 @@
     for ( var i = 0; i < OBJECT_ARRAY.length; i ++ ) {
       var mesh = OBJECT_ARRAY[i]
       mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 100;
+      mesh.position.multiplyScalar( Math.random() * 250 );
       object.remove(mesh)
     }
   }
@@ -80,6 +85,7 @@
 
     //LIGHT
     scene.add( new THREE.AmbientLight( 0x5539ff) );
+    
     light = new THREE.DirectionalLight( 0xff3300);
     light.position.set( 1, 1, 1 );
     scene.add( light );
@@ -104,19 +110,30 @@
     // composer.addPass( bokehPass );
 
     // effect = new THREE.ShaderPass( THREE.DotScreenShader );
-    // effect.uniforms[ 'scale' ].value = 4.0;
+    // effect.uniforms[ 'scale' ].value = 4;
+    // effect.renderToScreen = true;
     // composer.addPass( effect );
 
-    effect = new THREE.ShaderPass( THREE.RGBShiftShader );
-    effect.uniforms[ 'amount' ].value = 0.004;
-    effect.renderToScreen = true;
-    composer.addPass( effect );
+    // effect = new THREE.ShaderPass( THREE.RGBShiftShader );
+    // effect.uniforms[ 'amount' ].value = 0.001;
+    // effect.renderToScreen = true;
+    // composer.addPass( effect );
+
+    var effectCopy = new THREE.ShaderPass(THREE.CopyShader);
+    effectCopy.renderToScreen = true;
+
 
     // var glitcher = new THREE.GlitchPass();
     // glitcher.renderToScreen = true;
     // composer.addPass( glitcher );
-    
 
+    // effect = new THREE.BloomPass(1);
+    // effect.uniforms
+    // effect.renderToScreen = true
+    
+    //composer.addPass( effect );
+    composer.addPass( effectCopy );
+    
     document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
     document.addEventListener( 'touchstart', onDocumentTouchStart, false );
@@ -195,28 +212,40 @@
 
 
   //RENDER
+  
+
   function animate() {
+    time = clock.getElapsedTime();    
+
     requestAnimationFrame( animate );
     object.rotation.x += 0.001;
     object.rotation.y += 0.001;
+
     render();
+    
+    if(parseInt(time) % 3 == 0) {
+      animateCamera()
+    }
+    
     //renderer.render(scene, camera)
     composer.render(scene, camera);
   }
 
+  function animateCamera() {
+    var camPosition = camera.position
+    camera.position.setX(Math.random() * 20)
+  }
+
 
   var counter = 2;
+  
 
   function render() {
 
     counter += 2;
-
-    // effect.uniforms[ 'amount' ].value = 0.002;
+    //effect.uniforms[ 'amount' ].value = 0.001;
     object.rotation.x += ( targetRotation - object.rotation.x ) * 0.05;
-    // effect.uniforms[ 'amount' ].value += targetRotation/500 ;
-
-
-
+    //effect.uniforms[ 'amount' ].value += targetRotation/500 ;
   }
 
 })();
