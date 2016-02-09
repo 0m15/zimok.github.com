@@ -24,13 +24,14 @@
       clear()
       draw()
       intervalDrawer()
-    }, Math.random() * 4000)
+    }, 3000)
   }
   intervalDrawer()
 
   function clear() {
     for ( var i = 0; i < OBJECT_ARRAY.length; i ++ ) {
       var mesh = OBJECT_ARRAY[i]
+      mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 100;
       object.remove(mesh)
     }
   }
