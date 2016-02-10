@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="I'm an user interface designer and developer. I'm based in Italy, I travel often between Rome and Bologna">
     <meta name="theme-color" content="#9464EF">
+<!--    <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>-->
     <title>simone carella | user interface designer</title>
 		<meta charset="utf-8">
 		<style>
 			body {
 				margin: 0px;
 				overflow: hidden;
-				font-family: '-apple-system', Apercu, sans-serif;	
+				font-family: '-apple-system',  Cutive Mono, 'Lora', 'Slabo 27px', sans-serif;	
 				color: #444;
+        -webkit-font-smoothing: antialiased;
 			}
 
 			.sc-hero {
@@ -34,7 +36,7 @@
 				font-size: 2em;
 				text-decoration: none;
 				color: #8853ff;
-				font-weight: 600;
+				font-weight: 100;
 			}
 			
 			.sc-hero__title,
@@ -47,16 +49,24 @@
 			.sc-hero__title {
 				color: #fff;
 				font-weight: 100;
+        letter-spacing: .25em;
 			}
 
 			.sc-hero__subtitle {
 				text-transform: uppercase;
-				font-size: .7em;
+				font-size: .85em;
 				max-width: 120px;
 				line-height: 1.2;
 				margin-top: .5em;
 				color: #fafafa;
 			}
+
+      .sc--c {
+        display: inline-block;
+        transform: scaleX(-1);
+        position: relative;
+        left: -.215em;
+      }
 
 			canvas {
 				position: fixed;
@@ -67,12 +77,16 @@
 	<body>
 
 		<div class="sc-hero">
-			<h1 class="sc-hero__title">simc</h1>
-			<h2 class="sc-hero__subtitle">user interface &amp; interactive designer</h2>
+			<h1 class="sc-hero__title">sim<span class="sc--c">c</span></h1>
+			<h2 class="sc-hero__subtitle">
+        user interface &amp; interactive designer
+      </h2>
 		</div>
 
 		<div class="sc-contacts">
-			<a href="mailto:simonecarella@gmail.com">contact me</a>
+			<a href="mailto:simonecarella@gmail.com">
+        email
+      </a>
 		</div>
 
 
@@ -104,6 +118,13 @@
 		<script src="js/CopyShader.js"></script>
 		<!--<script src="js/BokehShader.js"></script>-->
 		<!--<script src="js/DigitalGlitch.js"></script>-->
+    <script src="js/BleachBypassShader.js"></script>
+    <script src="js/BlendShader.js"></script>
+    <script src="js/FXAAShader.js"></script>
+    <script src="js/HorizontalTiltShiftShader.js"></script>
+    <script src="js/VerticalTiltShiftShader.js"></script>
+    <script src="js/TriangleBlurShader.js"></script>
+    <script src="js/VignetteShader.js"></script>
     <script src="js/ConvolutionShader.js"></script>
 		<script src="js/DotScreenShader.js"></script>
 		<script src="js/RGBShiftShader.js"></script>

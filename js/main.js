@@ -14,8 +14,10 @@
   var targetReverse = 0;
   var mouseX = 0;
   var mouseXOnMouseDown = 0;
-  var windowHalfX = window.innerWidth / 2;
-  var windowHalfY = window.innerHeight / 2;
+  var SCREEN_WIDTH = window.innerWidth
+  var SCREEN_HEIGHT = window.innerHeight
+  var windowHalfX = SCREEN_WIDTH / 2;
+  var windowHalfY = SCREEN_HEIGHT / 2;
 
   clock = new THREE.Clock();
   var time, delta;
@@ -68,12 +70,12 @@
 
     renderer = new THREE.WebGLRenderer();
     renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
   
     renderer.setClearColor( 0x222222, 1);
     document.body.appendChild( renderer.domElement );
     
-    camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 2000 );
+    camera = new THREE.PerspectiveCamera( 70, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 2000 );
     camera.position.z = 1250;
     scene = new THREE.Scene();
     scene.fog = new THREE.Fog( 0x222222, 0.1, 2000 );
@@ -94,45 +96,33 @@
     light.position.set( 1, 1, 1 );
     scene.add( light );
 
-    composer = new THREE.EffectComposer( renderer );
+    var renderTarget = new THREE.WebGLRenderTarget( SCREEN_WIDTH, SCREEN_HEIGHT );
+
+    //var effectBlend = new THREE.ShaderPass( THREE.BlendShader, "tDiffuse1" );
+    var effectFXAA = new THREE.ShaderPass( THREE.FXAAShader );
+    effectFXAA.uniforms[ 'resolution' ].value.set( 1 / SCREEN_WIDTH, 1 / SCREEN_HEIGHT );
+
+    //var effectBleach = new THREE.ShaderPass( THREE.BleachBypassShader );
+
+    // tilt shift
+    var hblur = new THREE.ShaderPass( THREE.HorizontalTiltShiftShader );
+    var vblur = new THREE.ShaderPass( THREE.VerticalTiltShiftShader );
+    
+    hblur.uniforms[ 'h' ].value = 4 / SCREEN_WIDTH;
+    vblur.uniforms[ 'v' ].value = 4 / SCREEN_HEIGHT;
+
+    //var effectBloom = new THREE.BloomPass(0.3);
+    //effectBloom.renderToScreen = true
+    
+    composer = new THREE.EffectComposer( renderer, renderTarget );
+    vblur.renderToScreen = true
+
+    composer = new THREE.EffectComposer( renderer, renderTarget );
     composer.addPass( new THREE.RenderPass( scene, camera ) );
 
-    // var bokehPass = new THREE.BokehPass( scene, camera, {
-    //  focus:    1.0,
-    //  aperture: 0.0025,
-    //  maxblur:  0.5,
-
-    //  width: window.innerWidth,
-    //  height: window.innerHeight
-    // } );
-
-    // bokehPass.renderToScreen = true;
-    // composer.addPass( bokehPass );
-
-    // effect = new THREE.ShaderPass( THREE.DotScreenShader );
-    // effect.uniforms[ 'scale' ].value = 4;
-    // effect.renderToScreen = true;
-    // composer.addPass( effect );
-
-    // effect = new THREE.ShaderPass( THREE.RGBShiftShader );
-    // effect.uniforms[ 'amount' ].value = 0.001;
-    // effect.renderToScreen = true;
-    // composer.addPass( effect );
-
-    var effectCopy = new THREE.ShaderPass(THREE.CopyShader);
-    effectCopy.renderToScreen = true;
-
-
-    // var glitcher = new THREE.GlitchPass();
-    // glitcher.renderToScreen = true;
-    // composer.addPass( glitcher );
-
-    // effect = new THREE.BloomPass(1);
-    // effect.uniforms
-    // effect.renderToScreen = true
-    
-    //composer.addPass( effect );
-    composer.addPass( effectCopy );
+    composer.addPass( effectFXAA );
+    composer.addPass( hblur );
+    composer.addPass( vblur );
     
     document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
